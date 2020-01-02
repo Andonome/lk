@@ -1,4 +1,5 @@
-#Intro
+# Intro
+
 Taken from [this](https://r4nd0m6uy.ch/unpriviledged-containers-in-void-linux.html)
 Void linux requires additional steps to set up, as Systemd is no present to automatically take care of everything.
 
@@ -13,7 +14,6 @@ Next, startup services:
 > sudo sv start dbus
 
 > sudo sv start cgmanager
-
 
 > sudo sv start dbus
 
@@ -58,7 +58,5 @@ Next, do this at *every boot* (or script it):
 > sudo cgm chown all $USER $(id -u) $(id -g)
 
 > cgm movepid all $USER $$
-
-
 
 

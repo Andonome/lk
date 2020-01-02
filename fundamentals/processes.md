@@ -50,7 +50,7 @@ Or continue running a stopped job with:
 
 # Nice
 
-This changes how nice a program is, from -20 (horrid) to 19.
+This changes how nice a program is, from -20 to 19.
 
 Install a program, but nicely, at nice value '10':
 
