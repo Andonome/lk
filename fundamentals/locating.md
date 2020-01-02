@@ -1,10 +1,12 @@
 # Quick Search for Files
 
-`locate file*`
+You'll need to set up `locate` for this by installing `mlocate`.  `mlocate` needs a list of all files on the machine, so run:
 
-Locate is fast because it only accesses a database of files which it regularly updates.  You can update this with:
+> sudo updatedb
 
-`sudo updatedb`
+Then to find a file called 'my-cats.jpg', run:
+
+> locate cats
 
 # Whereis
 
@@ -12,9 +14,15 @@ Locate is fast because it only accesses a database of files which it regularly u
 
 ... shows where the angband program is, along with configuration files, and binaries.
 
-Also `which` shows where a binary file is, and `type` shows aliases.
+Also `which` shows where a binary file (the program) is, 
 
-`which cmus`
+> which cmus
 
-`type cmus`
+That's a lot of files for `cmus`, but you can find out exactly *which* is the program with:
+
+> which cmus
+
+`type` shows aliases:
+
+> type cmus
 
