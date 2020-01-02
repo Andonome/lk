@@ -1,67 +1,101 @@
-# Basic Git
+# Starting
 
-Move to the directory containing the project.
-
-> git status
-
-Add this folder (or just any dir)
-
-> git add .
-
-History:
-
-> git log
-
-# Commits
-
-Add current changes to current config.
-
-> git add .
-
-Make a comment:
-
-> git commit -m "Created service"
-
-Type out a message:
-
-> git commit
-
-Push your stuff out:
-
-> git push
-
-Add a single line: 
-
-> git log --oneline
-
-Get recent changes:
-
-> git pull
-
-# New Project
-
-> git init
-
-# New Machines
+## New Machines
 
 > git config --global user.email "malinfreeborn@tutamail.com" 
 
 > git config --global user.name "Malin Freeborn" 
 
+## New Git
+
+Start a git:
+
+> git init
+
+Add whatever's in the folder.
+
+> git add .
+
+Then make the initial commit:
+
+> git commit
+
+# Working
+
+Once you make a change to some file ("file.sh"), add it and make a commit explaining it.
+
+> git add file.sh
+
+> git commit -m"change file.sh"
+
+Check your history:
+
+> git log
+
+# Remotes
+
+Get the url of your git remote and add it, with the name "origin":
+
+> git remove add origin git@gitlab.com:FirstBloodRPG/first-blood.git
+
+Tell git you're pushing the branch "master" to the remote repo "origin": 
+
+> git push -u master origin
+
+If someone makes a change on the remote, pull it down with:
+
+> git pull
+
 # Branches
 
-To make a new branch, make sure you're up to date, then:
+A branch is a full copy of the project to test additional ideas.
+You can make a new branch called 'featurez' like this:
 
-> git checkout -b [branchname]
+> git branch featurez
 
-Check otu all branches with
+Have a look at all your branches:
 
-> git branch -a 
+> git branch
 
-Add the new branch to a git:
+Switch to your new branch:
 
-> git push origin [branchname]
+> git checkout featurez
 
+And if your changes are rubbish, checkout the "master" branch again, then delete "featurez":
+
+> git branch -D featurez
+
+Or if it's a good branch, push it to the remote:
+
+> git push origin featurez
+
+## Merging
+
+Once you like the feature, merge it into the main branch.  Switch to master then merge it:
+
+> git merge featurez
+
+# Subtree
+
+The project has subdirectories sub-1,sub-2,sub-3.  The first should be its own repository, but should also retain its own history.
+
+First, we extract its history as an independent item, and make that into a seprate branch.
+
+> git subtree split --prefix=sub-1 -b sub
+
+If you want something a few directories deep, you can use `--prefix=sub-1/dir-2/dir-3
+
+Then go and create a new git somewhere else:
+
+> cd ..;mkdir sub-1;cd sub-1;git init --bare
+
+Then go back to your initial git repo, and do the following:
+
+git push ../subtest sub:master
+
+Finally, you can clone this repo from your original.
+
+> git clone ../subtest
 
 # Tricks
 
@@ -80,28 +114,4 @@ Add the new branch to a git:
 > git push -f origin master
 
 Gitlab requires more changes, such as going to `settings > repository` and switching the main branch, then stripping protection.
-
-# Subtree
-
-The project has subdirectories sub-1,sub-2,sub-3.  The first should be its own repository, but should also retain its own history.
-
-First, we extract its history as an independent item, and make that into a seprate branch.
-
-> git subtree split --prefix=sub-1 -b sub
-
-If you want something a few directories deep, you can use `--prefix=sub-1/dir-2/dir-3
-
-Then go and create a new git somewhere else:
-
-> cd ..;mkdir sub-1;cd sub-1;git init --bare
-
-
-Then go back to your initial git repo, and do the following:
-
-git push ../subtest sub:master
-
-Finally, you can clone this repo from your original.
-
-> git clone ../subtest
-
 
