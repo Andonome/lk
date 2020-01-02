@@ -27,3 +27,5 @@ This is a list of quickstart guides for Linux programs.
 
 This started as a few personal notes, and will probably continue to look like that for some time.
 It's a bit of a mess.
+
+Systemd is taken as a default.  Non-systemd commands we relegate to their respective distros, e.g. runit for Void Linux.

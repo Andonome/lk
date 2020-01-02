@@ -2,8 +2,6 @@
 
 wpa_supplicant configurations are stored in /etc/wpa_supplicant/wpa_supplicant-wlan0 (or equivalent).
 
-A default is presented.
-
 # Generating Keys Manually
 
 > wpa_passphrase [ssid] [password]

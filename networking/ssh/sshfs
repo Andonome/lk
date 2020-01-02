@@ -1,4 +1,0 @@
-Auto-mounting an sshfs directory can be done with an /etc/fstab entry:
-
-`sshfs#pi@belgradecats.tk:/home/pi/cats /home/ghost/cuties fuse defaults,allow_other,reconnect,delay_connect 0 0`
-
