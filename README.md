@@ -23,6 +23,7 @@ This is a list of quickstart guides for Linux programs.
 - Too short to get you started on many programs.
 - Poor understanding of priority (`git stash` is covered byfore `git commit`).
 
-# History
+# Current State
 
-It started as a few personal notes, and will probably continue to look like that for some time.
+This started as a few personal notes, and will probably continue to look like that for some time.
+It's a bit of a mess.
