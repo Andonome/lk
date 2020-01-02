@@ -1,4 +1,5 @@
 #!/bin/bash
+# script currently not working
 
 export TASKDDATA=/var/lib/taskd
 

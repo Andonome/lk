@@ -44,7 +44,3 @@ Get yours with
 
 > /otr myfp
 
-# omemo
-
-Cannot find anyone for this on Arch Wiki, problem is therefore impossible.
-

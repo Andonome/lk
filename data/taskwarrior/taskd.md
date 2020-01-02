@@ -1,3 +1,5 @@
+(instructions currently not working)
+
 Switch to root to make things easier.
 
 > yay -S
@@ -107,7 +109,8 @@ Do a non-daemon version with
 This needs to be edited for "$TASKDDATA", "$TASKDUSER", and "$TASKDGROUP".
 
 
----
+```
+
 Unit]
 Description=Secure server providing multi-user, multi-client access to Taskwarrior data
 Requires=network.target
@@ -127,7 +130,7 @@ ReadOnlyDirectories=/etc /usr
 [Install]
 WantedBy=multi-user.target
 
----
+```
 
 Enable all this by copying the file to `/etc/systemd/system`, reload daemon, then start it.
 
@@ -173,6 +176,4 @@ You can also show how important the Attribute makes something:
 Alias `delete' to `rm' with:
 
 task config alias.rm delete
-
-
 

@@ -1,7 +1,8 @@
 # Setup
+
 Below commands mostly deal with timew alone.  With taskwarrior installed as well, `locate on-modify-time`, then add it to ~/.task/hooks and make it executable.
 
-#Summaries
+# Summaries
 
 Try:
 
@@ -127,6 +128,7 @@ task end.after:today-1wk completed
 # Errors with Python3
 
 Replace 
+
 `os.system('timew start ' + combined + ' :yes')`
 
 with:
@@ -141,16 +143,9 @@ with:
 
 `os.system('timew stop ' + combined.decode() + ' :yes')`
 
-
-
 # Fixing Errors
 
 > curl -O https://taskwarrior.org/download/timew-dbcorrection.py
 
 > python timew-dbcorrections.py
-
-
-
-
-
 

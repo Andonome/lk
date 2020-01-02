@@ -7,6 +7,8 @@ echo "deb https://dl.bintray.com/hawkeye116477/waterfox-deb release main" | sudo
 curl https://bintray.com/user/downloadSubjectPublicKey?username=hawkeye116477 | sudo apt-key add -
 sudo apt-get update && sudo apt-get install waterfox
 
+```
+
 echo "deb http://http.kali.org/ /kali main contrib non-free
 deb http://http.kali.org/ /wheezy main contrib non-free
 deb http://http.kali.org/kali kali-dev main contrib non-free
@@ -17,6 +19,8 @@ deb http://http.kali.org/kali kali main/debian-installer
 deb-src http://http.kali.org/kali kali main contrib non-free
 deb http://security.kali.org/kali-security kali/updates main contrib non-free
 deb-src http://security.kali.org/kali-security kali/updates main contrib non-free" >> /etc/apt/sources.list
+
+```
 
 setxkbmap gb
 
@@ -70,7 +74,6 @@ apt install libfftw3-dev libncursesw5-dev libpulse-dev
 ./install.sh
 
 cd
-
 
 mkdir Images;mkdir Images/Wallpapers;mkdir Images/Screenshots
 
