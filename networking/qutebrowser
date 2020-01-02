@@ -1,0 +1,6 @@
+set tabs.position left
+
+# Download css files to theme.
+
+:set content.user_stylesheets
+

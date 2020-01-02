@@ -1,0 +1,15 @@
+[ no network ] --> [ Is there an IP address? ]
+
+[ Is there an IP address? ] -- no --> [ Check NIC driver, dmesg ]
+
+[ Is there an IP address? ] -- yes --> [ Can you ping the router? ]
+
+[ Can you ping the router? ] -- no --> [ Check cables, router, and switches ]
+
+[ Can you ping the router? ] -- yes --> [ Can you ping a DNS address? ]
+
+[ Can you ping a DNS address? ] -- no --> [ Trying pinging 8.8.8.8 ]
+
+[ Can you ping a DNS address? ] -- yes --> [ Traceroute ]
+
+

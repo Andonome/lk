@@ -1,0 +1,67 @@
+#From Laptop
+
+> ssh -f -N -T -R[highport]:localhost:22 [server username]@[server public ip]
+
+#From Server
+
+> sudo ssh -p [highport] -D localhost:22 [laptop username]@localhost
+
+## Example
+
+From laptop, type:
+
+> ssh -f -N -T -R9022:localhost:22 pi@89.216.113.126
+
+Then from server, type:
+
+> ssh -p 2210 [laptop username]@localhost
+
+#Explanations
+
+The -f switch feels out for connections in the background.
+
+The -N switch is 'No commands', as you don't actually need to tunnel to anywhere.
+
+The -T disables pseudo-tty allocation (???).
+
+#Longterm
+
+To set this up for permanent access, add this to the ~/.ssh/config:
+
+> host remotehostname
+    > User remoteusername
+    > Hostname localhost
+    > Port 22222
+
+'Remotehostname' can be anything, but 'remoteusername' must match.
+
+For example
+
+```
+
+host hostelche
+	User hostelche
+	Hostname localhost
+	Port 9071
+
+```
+
+# Automatic startup
+
+set file in /etc/network/if-up.d/phone-home
+
+> chmod 755 /etc/network/if-up.d/phone-home
+
+set file /etc/rc.local
+
+> chmod 755 rc.local
+
+Both files contain:
+
+```
+#!/bin/bash
+sleep 60
+ssh -f -N -T -R2049:localhost:22 pi@89.216.113.126
+
+```
+

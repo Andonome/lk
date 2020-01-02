@@ -1,0 +1,25 @@
+
+
+Find metadata.
+
+> exiftool image.jpg
+
+Find info on all images in current directory.
+
+> exiftool -ext .png .
+
+You can make this recurring with the -r switch.
+
+And overwrite all metadata:
+
+> exiftool -all= -overwrite_original -ext jpg .
+
+Or just GPS data:
+
+> exiftool -gps:all= *.jpg
+
+You can also use the imagemagick tool:
+
+> identify -verbose
+
+
