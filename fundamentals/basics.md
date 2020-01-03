@@ -1,93 +1,246 @@
-# Processes
+# Absolute Bloody Basics
 
-Process id 1 is systemd.  All other processes are child processes.
+You need about a dozen commands to move around Linux.
+After that, you look up the rest as you go.
+Don't worry about understanding any of it, just type it in and the habit forms pretty quickly.
 
-> ps -sH
+You start in a dark room. You have a 'look-see' what's in front of you:
 
-This has every process on the system, and -H shows the hierarchy.  This can be piped to less to view easily.
+> ls
 
-> ps -u ghost
+If you get no response, the list of items is "", meaning "nothing here".
 
-Looking at processes spawned from user 'ghost'.
+Have a look at **a**ll the files:
 
-> ps -e --forest
+> ls -a
 
-Like tree, but more.
+`. ..`
 
-> ps -sfH
+So `.` means 'here' and `..` means 'you see stairs leading downwards'.
 
-The fucking lot.
+Find out where you are by **p**rinting out your **c**urrent '**d**irectory' (i.e. 'location'):
 
-All of this is from /proc, which is a direct line to the kernel.  Commands like `free', `top' et c. pulls from /proc.
+> pwd
 
-# Top
+Change directory (`cd`) down one level:
 
-In `top' we can take the pid and then press `k' in order to kill that process.
+> cd ..
 
-# check what's going on with qutebrowser
+Look where you are again with `pwd`, then go back up.  Use `ls`, and if you see `bob`, then:
 
-> ps aux | grep qutebrowser
+> cd bob
 
-# Check open ports
-sudo netstat -tulpn
+Move around the directories.  The place at the bottom is the 'root', and is known as `/`.  Go to the root:
 
-#Check that udev process
-systemctl status udev
+> cd /
 
-# Show net interface
-> ip addr show
+Do `ls` again and change into `etc`.  Look at how much space those folders are taking up:
 
-This can also take arguments, such as the name of an interface.
+> du iptables
 
-# Find
+That's the number of kilobytes the file is taking up.  Do the same again, but in a human-readable format:
 
-> find . -name 'bob cv'
+> du -h iptables
 
-Find file 'bob cv'
+The `du` program has `-h` for 'human', '-s' for 'short', and a bunch of other commands.  Have a look at the manual and try another command:
 
-> find . -size +7G
+> man du
 
-Find files of 7Gig or more.
+Once you're done, press 'q' to quit the manual page and try the extra `du` flag you've found.
 
-> find -name *hidden* -type l
+Now you can try to gain super-powers and take over the system:
 
-Find a symbolic link containing 'hidden' in the name.
+> sudo -i
 
-> find -name *txt -delete
+At this point, you are 'root'. All your commands will be executed, even if they're unsafe, or even if you ask to delete the entire machine.  Best to exit out of the root account:
 
-Delete all files from here of the *txt type.
+> exit
 
-> find -type d -empty
+Go find a file that isn't a directory.  You can tell which is which with:
 
-Find empty directories.
+> ls -l
 
-> find . mtime 50
+A directory starts with a 'd', like this:
 
-Find all file modified precisely 50 days ago.  There's also:
+`drwxr-xr-x 79 root root 4096 Jan  3 05:15 /etc/`
 
-* -mtime +20
-   * file modified more than 20 days ago.
-* -atime -13
-   * file *accessed* less than 13 days ago.
-* -cmin 20
-   * file *modified* 20 minutes ago.
-* -mmin +70
-   * files modified more than 70 minutes ago.
+A standard file starts with '-', like this:
 
+`-rw-r--r-- 1 root root 8 Dec 11 17:26 hostname`
 
-# Logs
+Look inside the file /etc/hostname to find out your computer's name:
 
-> cat /var/logs/auth.log | grep fail
+> cat /etc/hostname
 
+Print out the words "hello world":
 
-# Files
+> echo "hello world"
 
-> file example.txt
+Move back to your home directory:
 
-This shows info about a file.
+> cd
 
-# Further reading
+Take the words 'hello world', and put them in 'my_file':
 
-[Hund](https://hund0b1.gitlab.io/2019/02/11/a-collection-of-handy-ways-of-manipulating-text-in-bash.html) has some fantastic examples.
+> echo 'hello world' > my_file
 
+Measure the disk usage of that file, then put the results at the bottom of the file:
+
+> du my_file >> my_file
+
+And check the results:
+
+> cat my_file
+
+# Autocompletion
+
+Press tab after a few keys and bash will guess what you're trying to  type.
+
+# Permissions
+
+Look at your file's owner:
+
+> ls -l my_file
+
+If it says `-rw-r--r-- 1 root root 8 Dec 11 17:26 hostname` then the file is owned by 'root'.
+
+Take your file and change the owner to root:
+
+> sudo chown root my_file
+
+Change the same file so it's owned by the group 'audio':
+
+> sudo chown :audio my_file
+
+Check you did that correctly:
+
+> ls -l my_file
+
+`-rw-r--r-- 1 root audio 0 Jan  3 19:20 my_file`
+
+Read the start of that line.  Root can 'read' and 'write' to or delete the file.  Try to remove (delete) it:
+
+> rm my_file
+
+You'll see you're not allowed, because you don't own it.
+
+Look at which groups you're in:
+
+> groups
+
+Change the file so that members of the audio group can write to the file:
+
+> sudo chmod g+w my_file
+
+Check you got it right with `ls -l`:
+
+> -rw-rw-r-- 1 root audio 0 Jan  3 19:20 my_file
+
+Try to delete the file again:
+
+> rm my_file
+
+If you can't, you're not in the audio group.  Add yourself.  You'll need to *modify* your *user account*, by **a**ppending 'audio' to your list of groups.
+Use `-a` to **a**ppend, and `-G`, to say you're modifying groups:
+
+> sudo usermod -a -G audio [ your username here ]
+
+Now you should be able to remove (delete) the file.  Remember, that using 'rm file' will not send it to a recycling bin. The file is gone.
+
+# Directories
+
+Make a directory called 'new test':
+
+> mkdir 'new test'
+
+Make two directories, called 'A', and 'Z':
+
+> mkdir A Z
+
+# Text Searches
+
+Measure the disk usage of everything ('\*' means 'everything'), and put it in a file called 'disk usage.txt':
+
+> du -sch * > A/'disk usage'.txt
+
+Look at your file:
+
+> cat A/'disk usage.txt'
+
+If you think you have too much information, use `grep` to just get the one line of text you want:
+
+> grep total A/disk\ usage.txt
+
+The `grep` program also has a manual ('man page').  You should find out what that `-c` flag does, but the manual is too long to read.
+
+Start the manual:
+
+> man du
+
+Then search for `-c` by pressing `/`.  Your final keys should be `man du`, then `/-c`
+
+Find out if the `ls` program also has a 'human readable' format by using `grep` to search for the word 'human':
+
+> man ls | grep human
+
+Now use that flag that you've found in combinatin with the `-l` flag to look at a file.
+
+Remove the directory 'Z':
+
+> rmdir Z
+
+Remove the directory 'Z':
+
+> rmdir Z
+
+And then remove all the rest:
+
+> rmdir *
+
+The 'A' directory will not budge as it's not empty.  Remove it recursively, so the computer will remove the things inside the directory as well as the directory itself:
+
+> rm -r A
+
+# Installation
+
+You get a package mangaer which installs programs, fonts, et c.  If you're on something like Debian, you'll have `apt`, or if you're on something like Red Hat, you'll have `yum`.  If unsure, ask where a program is:
+
+> whereis yum
+
+> whereis apt
+
+If you get a hit, you can use whatever program that is to install things.
+
+Set a reminder of your package manager:
+
+> echo my package manager is yum | lolcat
+
+That failed because you don't have `lolcat` installed.  Install lolcat:
+
+> sudo apt install lolcat
+
+Try the same command again.
+
+Search for things you want, like `libreoffice`, or `gimp`:
+
+> apt search libreoffice
+
+... then install one of them with:
+
+> apt install [ thing ]
+
+Remove `lolcat`, because it's useless:
+
+> sudo apt remove lolcat
+
+... and that's pretty much it.  You can move, create, destroy, install things, and look things up.
+
+# Review
+
+- Search for random things with your package manager and install the interesting ones.
+  * Read the manual with `man thing`
+  * If it's useless, remember to uninstall it.
+- Have a look around the file system in `/`.
+- Look in the `.config` folder in your home directory.
+  * If you copy a program's config to another machine, the program will behave just like you set it up in your own machine.
 
