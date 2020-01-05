@@ -57,7 +57,6 @@ This prints from 10 until 2.
 
 ```
 
-
 There's also 'until', which stops when something is true, rather than keeping going when something is true.
 
 # For

@@ -48,6 +48,8 @@ Back up an unmounted partition with ssh:
 
 # img.xz
 
+Install `xz`.
+
 Unzip the image with:
 
 > unxz void.img.xz

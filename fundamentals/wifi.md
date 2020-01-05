@@ -1,23 +1,25 @@
 # Netstat Stuff
 
-iftop -p -n
 Stats on local net usage within domain.
+> iftop -p -n
 
-whois domain.com
+> whois domain.com
 
-dig domain.com
-info on domain, whether it's taken, et c.
+Info on domain, whether it's taken, et c.:
+
+> dig domain.com
 
 > ifconfig
-	Like ipconfig.
+
+Versatile wifi tool:
 
 > nmcli
-	Versatile wifi tool.
 
 # Examples
-	You want to connect to the internet.
 
->sudo iwconfig
+You want to connect to the internet.
+
+> sudo iwconfig
 
 Get knowledge of wireless state.  The output might be: 
 
@@ -56,5 +58,6 @@ This tells you that your ESSID is 'Gandalf WajFaj', and the access point name is
 	Alternatively, you can use
 
 > nmcli -ask device wifi connect [SSID]
+
 	And it'll ask for your password, so you're not typing it in in full view.
 

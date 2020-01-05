@@ -25,8 +25,6 @@ As a result, grep cannot read these characters as literal characters unless they
 
 ... will search the string 'wtf?' in the file log.txt.  Another version is egrep (now used with 'grep -e') which uses more characters as special characters, or fgrep, which treats all characters as literal strings.
 
-
-
 # Environmental Variables
 PWD, USER, PATH
 

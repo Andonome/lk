@@ -8,7 +8,6 @@ For example:
 
 This would run crontab every 7 days, and wait 15 minutes until after boot to run.
 
-
 Various services from cron exist, e.g.
 
 > sudo apt -y install cronie
@@ -34,7 +33,6 @@ To run something as root, do:
 For example, you can update the database, meaning searches with 'locate' command will be faster.
 
 > */30 * * * * /usr/bin/updatedb
-
 
 # Testing with runparts
 

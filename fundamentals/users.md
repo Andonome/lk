@@ -18,14 +18,11 @@ will require sudo.
 
 add user 'maestro'
 
-
 This depends upon the settings in the /etc/default/useradd file and /etc/login.defs
-
 
 > sudo useradd -m pinkie 
 
 add user 'pinkie' with a home directory
-
 
 > sudo adduser -m -e 2017-04-25 temp 
 
@@ -67,48 +64,35 @@ add user maestro to group sudo
 
 list users' passwords (and therefore users)
 
-
-
 > groupadd awesome 
 
 create the group 'awesome'
 
-
-
  passwords are stored in /etc/shadow.
 
-
  there are user accounts for processes such as 'bin' and 'nobody' which are locked, so they're unusable.
-
-
 
 > passwd -l bin 
 
 lock the user 'bin'
 
-
-
 > more /etc/passwd | grep games 
 
 we find the name, password and user id of the user 'games'. I.e. the password is 'x', and the user id is '5'.  The password is an impossible hash, so no input password could match.
-
 
 > groupdel learners | delete the group 'learners'
 
 > gpasswd -d pi games | remove user 'pi' from the group 'games'
 
-
 > id games 
 
 find the id number of group 'games' (60)
-
 
 > usermod -aG sudo maestro 
 
 add user to group 'maestro'
 
 user info is stored in /etc's passwd, shadow, group and gshadow
-
 
 # Defaults
 
@@ -145,7 +129,6 @@ usermod -L henry
 -s adds the user to a shell.
 
 -u let's you manually specifiy a UID.
-
 
 # Groups
 
@@ -218,5 +201,4 @@ Then have a look at resource usage per user.
 > sudo chmod u+s process.sh
 
 This will modify process.sh to that instead of being simply executable, anyone executing it will have the permissions as if owner while executing it.
-
 
