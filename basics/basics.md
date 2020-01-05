@@ -94,7 +94,7 @@ And check the results:
 
 # Autocompletion
 
-Press tab after a few keys and bash will guess what you're trying to  type.
+Press tab after typing a few keys and bash will guess what you're trying to  type.
 
 # Permissions
 
@@ -197,13 +197,15 @@ And then remove all the rest:
 
 > rmdir *
 
-The 'A' directory will not budge as it's not empty.  Remove it recursively, so the computer will remove the things inside the directory as well as the directory itself:
+The 'A' directory will not budge because it's not empty.  Remove it recursively, so the computer will remove the things inside the directory as well as the directory itself:
 
 > rm -r A
 
 # Installation
 
-You get a package mangaer which installs programs, fonts, et c.  If you're on something like Debian, you'll have `apt`, or if you're on something like Red Hat, you'll have `yum`.  If unsure, ask where a program is:
+You get a package manager which installs programs, fonts, et c.
+If you're on something like Debian, you'll have `apt`, or if you're on something like Red Hat, you'll have `yum`.
+If unsure, ask where a program is:
 
 > whereis yum
 
@@ -215,7 +217,8 @@ Set a reminder of your package manager:
 
 > echo my package manager is yum | lolcat
 
-That failed because you don't have `lolcat` installed.  Install lolcat:
+If that failed it's because you don't have `lolcat` installed.
+Install lolcat:
 
 > sudo apt install lolcat
 
