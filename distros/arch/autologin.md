@@ -1,36 +1,20 @@
-# Automatic Login On TTY1
+# Automatic Login
 
-Create a new autologin service:
+Edit /etc/systemd/syste/getty@tty1.service.d/override.conf by typing:
 
-> cp -R /etc/sv/agetty-tty1 /etc/sv/agetty-autologin-tty1
+> sudo systemctl edit getty@tty1
 
-Note: The name of the custom service file must end with -tty1 (or another valid port). Otherwise the run-script will not work.
-
-> vim /etc/sv/agetty-autologin-tty1/conf:
+The put in the following, changing $USER to your username.
 
 ```
 
- GETTY_ARGS="--autologin yourusernamehere --noclear"
- BAUD_RATE=38400
- TERM_NAME=linux
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin $USER -s %I 115200,38400,9600 vt102
 
 ```
 
-If you are logged in on tty1 right now, logout, switch to tty2 (with CTRL+ALT+F2) and re-login there.
-
-Disable the regular tty1 service and enable autologin:
-
-> rm /var/service/agetty-tty1
-
-> ln -s /etc/sv/agetty-autologin-tty1 /var/service
-
-Now switch to tty1 and you should already be logged in there automatically.
-
-Autostart Graphical Environment on Login
-
-Add the following to your shell's profile file to start X and lock the tty session:
-
-# Autologin on tty1
+# Automatically Start X
 
 In `bashrc`.
 
