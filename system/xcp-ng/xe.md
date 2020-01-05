@@ -20,7 +20,6 @@ And destroy the domain:
 
 > /opt/xensource/debug/xenops destroy_domain -domid <DOMID from step 7>
 
-
 # Error: "Internal error:xenopsd internal error: Storage_interface.Illegal_transition" in XenServer
 
 ## Symptoms or Error
@@ -64,7 +63,6 @@ This creates a UUID for the new directory:
 # Import
 
 xe vm-import filename=/mnt/blah.xva
-
 
 # USB
 
