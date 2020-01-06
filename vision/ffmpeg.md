@@ -1,1 +1,1 @@
-sound/ffmpeg.md
+../sound/ffmpeg.md
