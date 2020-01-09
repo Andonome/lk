@@ -6,7 +6,7 @@ This is a list of quickstart guides for Linux programs.
 2. The statements should go in order of how likely they are to be used: if `git add` has to be used by everyone, then it should go first.
 3. The scripts should get someone up and running in the shortest possible time.
 4. No explanations for the program.  This isn't an introduction or advert, it's a guide for someone who already wants to use a program but doesn't know how.
-5. No presumed knowledge.
+5. No presumed knowledge (except for information held in `basics.md`).
 6. Easy reference.
 
 As little knowledge as possible should be presumed, with required knowledge being internally linked.  If general knowledge is presumed, it should be placed into a file named 'basics'.
