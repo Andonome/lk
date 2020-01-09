@@ -1,6 +1,7 @@
 # Netstat Stuff
 
 Stats on local net usage within domain.
+
 > iftop -p -n
 
 > whois domain.com
