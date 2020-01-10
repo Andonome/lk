@@ -1,7 +1,3 @@
-`at` must be installed with:
-
-> sudo apt-get install at
-
 Then jobs can be specified with absolute time, such as:
 
 > at 16:20
@@ -30,5 +26,4 @@ This will print all pending IDs.  Remove a job by the ID with:
 
 > atrm 2
 
-Check /var/spool/cron/
-
+Check /var/spool/atd/

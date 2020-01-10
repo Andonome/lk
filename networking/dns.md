@@ -2,7 +2,8 @@
 
 On Debian, a file might gain DNS services by adding the following to /etc/network/interfaces:
 
-----------------
+```
+
 auto eth0
 iface eth0 inet static 
    address 10.0.0.23
@@ -11,7 +12,7 @@ iface eth0 inet static
    dns-nameservers 208.67.222.222 208.67.220.220
    dns-search example.com
 
-----------------
+```
 
 # URL Aliases
 

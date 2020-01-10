@@ -32,18 +32,6 @@ Ctrl+c at boot then add in
 
 None of this is used by humans anymore - it's all systemd.
 
-# Systemd
-
-See what's running with ....
-
-> systemctl list-units
-
-Stop, start, whatever with:
-
-systemctl enable|stop|start httpd
-
-This starts httpd (Fedora's word for Apache2).
-
 # Boot Records
 
 'File System Tab' under /etc/fstab keeps track of the partitions and boot order.

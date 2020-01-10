@@ -15,6 +15,7 @@ A double pipe will try one, and do the other if that fails.
 > cp -r ~/Archive ~/Backup || tar czf Archive.tar.gz *
 
 # REGEX
+
 Regular expression characters include:
 
 \\ ^ $ . | ? * + () [] {}
@@ -26,6 +27,7 @@ As a result, grep cannot read these characters as literal characters unless they
 ... will search the string 'wtf?' in the file log.txt.  Another version is egrep (now used with 'grep -e') which uses more characters as special characters, or fgrep, which treats all characters as literal strings.
 
 # Environmental Variables
+
 PWD, USER, PATH
 
 To display all environmental (but not local) variables, use
@@ -79,6 +81,7 @@ The sort function arranges lines alphabetically.  Use -r to reverse and -n to so
 Edit all examples of hey to hoi in greetings and print that to the file.
 
 # Measurement
+
 Measure how long a script takes for super-autism powers.
 
 > time [bash script]

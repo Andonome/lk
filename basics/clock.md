@@ -1,4 +1,4 @@
-# Basics
+# `date`
 
 Show system time:
 
@@ -19,6 +19,18 @@ Change hardware time to match system time:
 Manually set the hardware time to a specified date:
 
 > sudo hwclock --set --date="8/25/19 13:30:00"
+
+## Normal Date
+
+> date +%d/%m/%y
+
+# Unix Time
+
+Computers started counting time on January 1st, 1970, and added one second-per-second.  If your clock shows you're in the 70's, it's reset to the start.
+
+Track the time in Unix-time:
+
+> date +%s
 
 # Network Time Providers
 

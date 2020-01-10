@@ -49,7 +49,3 @@ Copy to and from with:
 or
 
 > rclone copyto foo google:test
-
-
-
-

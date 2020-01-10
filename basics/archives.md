@@ -1,14 +1,10 @@
-# Automatic Backups with `find`
-
-> find /home/"$(whoami)" -type f -size -2M | xargs zip -u backup
-
 # Tar Archives
 
-Create ze files:
+*C*reate *z*e *f*iles!
 
 > tar czf file.tar.gz file1 file2
 
-Extract ze files:
+E*x*tract *z*e *f*iles:
 
 > tar xzf file.tar.gz
 
@@ -16,29 +12,11 @@ The .tar extension means two or more files are bundled together into a single fi
 
 Tarballs come with a number of arguments.
 
-- c means 'create'.
+## More Compression
 
-- v means 'verbose'.
+Extremely compressed files take longer to compress, but take up less disk space.
 
-- f means 'this is the file' and must always be the ultimate argument.
-
-- z means compression.
-
-So we can compress file1 and file2 into a single tar called 'archive' with:
-
-> tar czvf archive.tar.gz file1 file2
-
-Extraction uses 'x' instead of 'c'.
-
-> tar xzvf archive.tar.gz
-
-Create a very compressed file:
-
-> tar cfj super-compressed.tar.gz file1 file2
-
-# Example - Compressing all Latex Files in /home/
-
-> sudo find ~ -maxdepth 4 -name "*.txt" | xargs tar cvf latex-bundle.tar.gz
+> tar cfj super-compressed.tar.bz2 file1 file2
 
 # ssh backup
 
@@ -46,7 +24,7 @@ Back up an unmounted partition with ssh:
 
 > sudo dd if=/dev/sda1 | ssh -C ghost@192.168.0.10 "dd of=/home/ghost/backup.img" status=progress
 
-# img.xz
+# `xz`
 
 Install `xz`.
 
@@ -57,4 +35,24 @@ Unzip the image with:
 This then deletes the .xz file.  To keep it:
 
 > unxz --keep void.img.xz
+
+# `zip`
+
+Zip file1-3, and make a zip file called 'newsip.zip'.
+
+> zip newsip file1 file2 file3
+
+# Automatic Backups with `find`
+
+## `tar`
+
+Compressing all Latex Files in /home/.
+
+> sudo find ~ -maxdepth 4 -name "*.txt" | xargs tar cvf latex-bundle.tar.gz
+
+## `zip
+
+Install `zip`.
+
+> find /home/"$(whoami)" -type f -size -2M | xargs zip -u backup
 
