@@ -115,3 +115,16 @@ Finally, you can clone this repo from your original.
 
 Gitlab requires more changes, such as going to `settings > repository` and switching the main branch, then stripping protection.
 
+## Find Binary Blobs
+
+```
+
+git rev-list --objects --all \
+| git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' \
+| sed -n 's/^blob //p' \
+| sort --numeric-sort --key=2 \
+| cut -c 1-12,41- \
+| $(command -v gnumfmt || echo numfmt) --field=2 --to=iec-i --suffix=B --padding=7 --round=nearest
+
+```
+
