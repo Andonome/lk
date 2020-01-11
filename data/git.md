@@ -115,6 +115,15 @@ Finally, you can clone this repo from your original.
 
 Gitlab requires more changes, such as going to `settings > repository` and switching the main branch, then stripping protection.
 
+## Clean up Bloated Repo
+
+> git fsck --full
+
+> git gc --prune=now --aggressive
+
+> git repack
+
+
 ## Find Binary Blobs
 
 ```
