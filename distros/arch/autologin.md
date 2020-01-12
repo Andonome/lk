@@ -1,6 +1,6 @@
 # Automatic Login
 
-Edit /etc/systemd/syste/getty@tty1.service.d/override.conf by typing:
+Edit /etc/systemd/system/getty@tty1.service.d/override.conf by typing:
 
 > sudo systemctl edit getty@tty1
 
