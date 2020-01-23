@@ -4,7 +4,7 @@ cd yay
 
 makepkg -si
 
-yay -S perl-graph-easy signal-desktop sc-im ncpamixer xdg-utils-mimeo
+yay -S perl-graph-easy signal-desktop sc-im ncpamixer xdg-utils-mimeo torrench
 
 yay -S ttf-tengwar-annatar
 

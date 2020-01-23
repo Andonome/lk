@@ -12,8 +12,8 @@ echo 'LANG=en_GB.UTF-8' >> /etc/locale.conf
 
 locale-gen
 
-pacman -S base-devel htop ranger tmux lolcat fortune-mod texlive-most darkhttpd git figlet rxvt-unicode task timew calcurse fail2ban
-
+pacman -S base-devel htop ranger tmux lolcat fortune-mod git figlet rxvt-unicode task timew calcurse fail2ban
+# texlive-most 
 if [[ $2 == all || $1 == all ]]; then
 	pacman -S nnn feh dmenu rofi xf86-video-fbdev xorg xorg-xinit xorg-server xorg-server-utils xterm
 fi
@@ -36,12 +36,12 @@ fi
 
 cd /var/cache/swap
 
-sudo dd if=/dev/zero of=swapfile bs=1K count=2M
+dd if=/dev/zero of=swapfile bs=1K count=2M
 
-sudo chmod 600 swapfile
+chmod 600 swapfile
 
-sudo mkswap swapfile
+mkswap swapfile
 
-sudo swapon swapfile
+swapon swapfile
 
-echo "/var/cache/swap/swapfile none swap sw 0 0" | sudo tee -a /etc/fstab
+echo "/var/cache/swap/swapfile none swap sw 0 0" > /etc/fstab
