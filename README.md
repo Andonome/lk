@@ -24,7 +24,7 @@ As little knowledge as possible should be presumed, with required knowledge bein
 
 - Doesn't have the programs I like.
 - Too short to get you started on many programs.
-- Poor understanding of priority (`git stash` is covered byfore `git commit`).
+- Poor understanding of priority (`git stash` is covered before `git commit`).
 
 # Current State
 
