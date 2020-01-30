@@ -45,3 +45,10 @@ mkswap swapfile
 swapon swapfile
 
 echo "/var/cache/swap/swapfile none swap sw 0 0" > /etc/fstab
+
+# fail2ban
+
+[ -e sshd.local ] && \
+pacman -S fail2ban && \
+mv sshd.local /etc/fail2ban/jail.d && \
+systemctl start fail2ban
