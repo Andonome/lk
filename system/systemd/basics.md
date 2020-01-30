@@ -7,3 +7,10 @@
 > sudo systemctl taskd.service start
 
 > sudo systemctl status taskd.service
+
+# Startup
+
+> sudo systemd-analyze
+
+> sudo systemd-analyze blame
+
