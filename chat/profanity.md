@@ -10,7 +10,13 @@ Sign up to an account somewhere.
 
 > theme load batman
 
-# OTR
+# omemo
+
+> /omemo gen
+
+> /omemo start
+
+# otr
 
 Install libotr-dev or libotr5-dev or whatever..
 
