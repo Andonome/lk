@@ -1,3 +1,9 @@
+Get the basic config:
+
+> mkdir ~/.config/khard
+
+> cp /usr/share/doc/khard/examples/khard/khard.conf.example ~/.config/khard.conf
+
 Short list
 
 > khard list
