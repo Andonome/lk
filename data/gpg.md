@@ -2,13 +2,13 @@
 
 Generate keys:
 
-> gpg --full-gen-key
+> gpg --gen-key
 
 Follow the guide.
 
 # Encrypting a file
 
-> gpg -r malinfreeborn@googlemail.com -e file
+> gpg -r malinfreeborn@tutamail.com -e file
 
 `-r` specifies the recipient.
 
