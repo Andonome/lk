@@ -1,7 +1,7 @@
 
 > yay -S signal-cli
 
-Choose option 3 for Arch Arm - `jdk8-openjdk`.
+Choose option 4 for Arch Arm - `jdk8-openjdk`.
 
 Register your number, including the country's area code:
 
