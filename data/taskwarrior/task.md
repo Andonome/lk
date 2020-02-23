@@ -32,3 +32,15 @@ View list of tasks completed in the last week:
 
 > timew tags
 
+# User Defined Attributes
+
+Make a UDA 'size'.
+
+> task config uda.size.type string
+
+> task config uda.size.label Size
+
+> task config uda.size.values large,medium,small
+
+> uda.size.default=medium
+
