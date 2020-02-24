@@ -9,5 +9,18 @@ This creates a UUID for the new directory:
 
 `e94e25bb-bcdc-801b-b62a-b51b686a3bdc`
 
+# Main Console
+
+> xsconsole
+
+# Volumes
+
+List volumes:
+
+> lvs
+
+List groups:
+
+> vgs
 
 

@@ -1,3 +1,17 @@
+# Basic VM Management
+
+> xe vm-list
+
+Start, stop, et c. all done with `xe`:
+
+> xe vm-start vm=TTS
+
+> xe vm-shutdown vm=Bob
+
+Destruction requires the uuid.
+
+> xe vm-destroy uuid=243b1165-14aa-37f6-496f-44879d05b3f2
+
 # Shut Down VM
 
 List VMs.
@@ -20,7 +34,7 @@ And destroy the domain:
 
 > /opt/xensource/debug/xenops destroy_domain -domid <DOMID from step 7>
 
-# Error: "Internal error:xenopsd internal error: Storage_interface.Illegal_transition" in XenServer
+# Error: `Internal error:xenopsd internal error: Storage_interface.Illegal_transition` in XenServer
 
 ## Symptoms or Error
 
@@ -66,7 +80,7 @@ xe vm-import filename=/mnt/blah.xva
 
 # USB
 
-## Attack
+## Attach
 
 Put in the USB.
 
@@ -87,4 +101,8 @@ For passthrough, use this:
 (requires reboot of guest)
 
 [link](https://github.com/xcp-ng/xcp/wiki/USB-Pass-Through)
+
+# Storage Spaces - "SR"
+
+> xe sr-list
 
