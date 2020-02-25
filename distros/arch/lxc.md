@@ -1,8 +1,22 @@
-This is an untested mess.
+# Distro Specifics
 
-# Required
+Arch dependencies: `arch-install-scripts` `dnsmasq`
 
-> sudo pacman -S lxc arch-install-scripts dnsmasq
+# Basic Setup
+
+Make and start a linux container called 'playtime':
+
+> # lxc-create -n playtime -t download
+
+> # lxc-ls --fancy
+
+> # lxc-start playtime
+
+Attach it:
+
+> # lxc-attach playtime
+
+# Networking
 
 Place the following in /etc/default/lxc-net to configure the network:
 
@@ -58,7 +72,7 @@ file for the lxcbr0
 
 Then start the lxc NAT:
 
-> sudo systemctl start lxc-net
+> sudo systemctl restart lxc-net
 
 > sudo systemctl restart NetworkManager
 
