@@ -81,6 +81,12 @@ and delete featurez as you've already merged it:
 
 # Subtree
 
+## Pulling another git repo into a subtree
+
+> git subtree add -P config git@gitlab.com:bindrpg/config.git master
+
+## Pulling a Subtree from an existing git
+
 The project has subdirectories sub-1,sub-2,sub-3.  The first should be its own repository, but should also retain its own history.
 
 First, we extract its history as an independent item, and make that into a seprate branch.
