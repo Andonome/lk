@@ -29,3 +29,6 @@ If you're constantly getting 'everything corrupted, nothing upgraded', try runni
 
 > sudo pacman -S archlinux-keyring
 
+List all orphaned packages:
+
+> sudo pacman -Qtdq
