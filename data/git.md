@@ -36,7 +36,7 @@ Check your history:
 
 Get the url of your git remote and add it, with the name "origin":
 
-> git remove add origin git@gitlab.com:FirstBloodRPG/first-blood.git
+> git remote add origin git@gitlab.com:bindrpg/core
 
 Tell git you're pushing the branch "master" to the remote repo "origin": 
 
@@ -75,7 +75,17 @@ Once you like the feature, merge it into the main branch.  Switch to master then
 
 > git merge featurez
 
+and delete featurez as you've already merged it:
+
+> git branch -d featurez
+
 # Subtree
+
+## Pulling another git repo into a subtree
+
+> git subtree add -P config git@gitlab.com:bindrpg/config.git master
+
+## Pulling a Subtree from an existing git
 
 The project has subdirectories sub-1,sub-2,sub-3.  The first should be its own repository, but should also retain its own history.
 
@@ -122,7 +132,6 @@ Gitlab requires more changes, such as going to `settings > repository` and switc
 > git gc --prune=now --aggressive
 
 > git repack
-
 
 ## Find Binary Blobs
 
