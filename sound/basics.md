@@ -1,3 +1,7 @@
+# Pulse
+If you have pulse, use pulse.
+Check with `which pulseaudio`. No output means you need to use alsa (below).
+
 # Volume Control
 
 > pactl set sink @DEFAULT_SINK@ +5%
@@ -22,4 +26,17 @@ amixer scontrols
 # Restart everything
 
 pulseaudio -k && sudo alsa force-reload
+
+# Alsa
+
+Toggle, mute, increase or decrase audio:
+
+> amixer sset Master toggle
+
+> amixer sset Master mute
+
+> amixer sset Master 5%+
+
+> amixer sset Master 5%-
+
 
