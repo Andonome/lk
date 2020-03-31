@@ -62,7 +62,7 @@ Use pacstrap to get the base install.
 
 > mount /dev/sda1 /mnt/boot
 
-> pacstrap /mnt base base-devl vim
+> pacstrap /mnt base base-devel vim
 
 Make fstab notes for new system.
 
