@@ -106,3 +106,10 @@ For passthrough, use this:
 
 > xe sr-list
 
+# Exporting and Exporting VMs
+
+> xe vm-export vm=<Name> filename=/full/path.xva
+
+> xe vm-import vm=<Name> filename=/full/path.xva
+
+

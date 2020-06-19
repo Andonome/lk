@@ -1,4 +1,3 @@
-
 # Make a local iso repository
 
 > mkdir -p /var/opt/xen/ISO_Store
@@ -22,5 +21,4 @@ List volumes:
 List groups:
 
 > vgs
-
 
