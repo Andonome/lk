@@ -1,5 +1,3 @@
-
-
 Keyboard layout changed.
 
 > ls /usr/share/kbd/keymaps/**/*.map.gz
@@ -49,7 +47,6 @@ mkpart ESP fat32 1MiB 200MiB
 set 1 boot on
 name 1 efi
 
-
 Use pacstrap to get the base install.
 
 > mount /dev/sda3 /mnt/
@@ -62,7 +59,7 @@ Use pacstrap to get the base install.
 
 > mount /dev/sda1 /mnt/boot
 
-> pacstrap /mnt base base-devel vim
+> pacstrap /mnt base base-devel vim linux linux-firmware
 
 Make fstab notes for new system.
 
@@ -74,7 +71,17 @@ Make fstab notes for new system.
 
 > pacman -Sy networkmanager grub
 
+For legacy:
+
 > grub-install --target=i386-pc /dev/sda
+
+For EFI:
+
+> sudo pacman -S efibootmgr
+
+> mkdir /boot/efi
+
+> grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --remmovable
 
 > grub-mkconfig -o /boot/grub/grub.cfg
 
@@ -92,12 +99,12 @@ Make your keyboard changes permenent with:
 
 > vi /etc/vconsole.conf
 
-then set: `KEYMAP=uk.map.gz`
+Then set: `KEYMAP=uk.map.gz`
 unsure about this bit - is this name just for the loadkeys function?
 
-make a hostname
+Make a hostname
 
-echo pc > /etc/hostname
+> echo pc > /etc/hostname
 
 Set hostnames for network, or at least your own.
 
