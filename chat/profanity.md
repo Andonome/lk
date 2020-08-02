@@ -1,6 +1,21 @@
+
 # Pre Setup
 
 Sign up to an account somewhere.
+
+> /connect bob@bobserver.org
+
+Check if someone wants to be your friend:
+
+> /sub received
+
+Accept a friend's subscription request:
+
+> /sub add alice@aliceserver.org
+
+Join a room:
+
+> /join room1@bobserver.org
 
 # Starting
 
