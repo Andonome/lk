@@ -8,9 +8,9 @@ Show your gpg secret it:
 
 Then use the id number under `sec` to make a pass repo:
 
-pass init 187233O300300814PQ793NSSS539SQ1O6O184532
+> pass init 187233O300300814PQ793NSSS539SQ1O6O184532
 
-To insert a basic password, e.g. for an encrypted tarball, use:
+To add a basic password, e.g. for an encrypted tarball, use:
 
 > pass add my-tar-gar.gz
 
