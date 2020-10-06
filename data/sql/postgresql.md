@@ -4,6 +4,12 @@ Install postgres and start it as a service, then start with:
 
 > psql
 
+## Arch setup
+
+> su -l postgres
+
+> initdb -D /var/lib/postgres/data
+
 ## Make a database as the new user postgres
 
 > sudo su postgres
