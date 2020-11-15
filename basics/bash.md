@@ -102,9 +102,24 @@ Measure how long a script takes for super-autism powers.
 
 # Functions
 
-> function my_funct(){ do_thing $1; }
+Make a function which checks if something is a file, and if so, shows it on screen with `cat`:
 
-Remove a function with
+> function show(){
+> file "$1" | grep text &\>/dev/null && cat "$1"
+> }
+
+That `$1` refers to the first argument typed after the command.
+If you want to run this on a file called `list`, then use:
+
+> show list
+
+...and the list will output, only if it is text.
+
+In total, this functions the same as typing:
+
+> file list | grep text &\>/dev/null && list 
+
+Remove a function with:
 
 > unset my_function
 
