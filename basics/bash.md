@@ -22,7 +22,7 @@ Regular expression characters include:
 
 As a result, grep cannot read these characters as literal characters unless they are escaped.  E.g.
 
-> grep wtf\? log.txt
+> grep wtf\\? log.txt
 
 ... will search the string 'wtf?' in the file log.txt.  Another version is egrep (now used with 'grep -e') which uses more characters as special characters, or fgrep, which treats all characters as literal strings.
 
@@ -46,9 +46,19 @@ Export this to the entire system using:
 
 > export colour=blue
 
-# Search commands
+# Search for Programs
+
+Search for commands relevant to `cat`.
 
 > apropos cat
+
+Show files used in the `cat` program.
+
+> whereis cat
+
+Show *which* file is the actual code which runs when you type `cat`:
+
+> which cat
 
 # Working with Text
 
@@ -76,9 +86,13 @@ The sort function arranges lines alphabetically.  Use -r to reverse and -n to so
 
 # Sed
 
-> sed -i s/hey/hoi/g greetings.txt
+Change all examples of hey to hoi in greetings and show that output (does not change file).
 
-Edit all examples of hey to hoi in greetings and print that to the file.
+> sed 's/hey/hoi/g greetings.txt'
+
+Change each example of 'cat' to 'dog' in the file 'animals.md'.
+
+> sed 's/cat/dog/g' animals.md
 
 # Measurement
 

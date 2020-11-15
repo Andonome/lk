@@ -50,7 +50,7 @@ Compressing all Latex Files in /home/.
 
 > sudo find ~ -maxdepth 4 -name "*.txt" | xargs tar cvf latex-bundle.tar.gz
 
-## `zip
+## `zip`
 
 Install `zip`.
 

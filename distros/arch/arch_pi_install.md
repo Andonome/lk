@@ -28,7 +28,7 @@ Download and extract the root filesystem (as root, not via sudo):
 
 Move boot files to the first partition:
 
-> mv root/boot/* boot
+> mv root/boot/\* boot
 > Unmount the two partitions:
 > umount boot root
 
