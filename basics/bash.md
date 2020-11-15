@@ -100,6 +100,16 @@ Measure how long a script takes for super-autism powers.
 
 > time [bash script]
 
+# Aliases
+
+Make one word equal a longer command with `alias`.
+
+E.g.:
+
+> alias wot='sudo systemd-analyze blame && free -h '
+
+Now when you type 'go', it will perform that entire operation.
+
 # Functions
 
 Make a function which checks if something is a file, and if so, shows it on screen with `cat`:
@@ -124,6 +134,7 @@ Remove a function with:
 > unset my_function
 
 # Paths
+
 Every shell has various paths from where it can execute binary files.  Find out your current one with:
 
 > echo $PATH
