@@ -56,6 +56,16 @@ do convert "$i" $(ls "$i" | sed s#jpg\$#svg#)
 done
 ```
 
+# SVG
+
+The above script has crappy results.
+It's better to use potrace.
+
+```
+$convert input.jpg output.ppm
+$potrace -s output.ppm -o svgout.svg
+```
+
 # Writing Words
 
 [docs](https://www.imagemagick.org/Usage/text/)
