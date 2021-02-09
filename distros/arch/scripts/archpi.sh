@@ -52,3 +52,6 @@ echo "/var/cache/swap/swapfile none swap sw 0 0" > /etc/fstab
 pacman -S fail2ban && \
 mv sshd.local /etc/fail2ban/jail.d && \
 systemctl start fail2ban
+
+# If it won't reboot, install `arch-install-scripts` then try again and firstly:
+# genfstab / > /etc/fstab
