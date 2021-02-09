@@ -1,6 +1,6 @@
 # SSH Daemon Jail
 
-> sudo vim /etc/fail2ban/jail.d/ssh.local
+> sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.d/ssh.local
 
 ```
 [sshd]
