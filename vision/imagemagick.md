@@ -48,14 +48,22 @@ The 'fuzz' option tells the computer that 'close to white' is fine.  You might w
 
 # Mass convert
 
-This script converts all jpg and png files in a directory to svg.
+This script converts all jpg files in a directory to svg.
 
 ```
-for i in *png *jpg
-do for j in *$i
-do convert $j -resize 2048 $(ls $j | sed s#.$i\$#.svg#)
+for i in  *jpg
+do convert "$i" $(ls "$i" | sed s#jpg\$#svg#)
 done
-done
+```
+
+# SVG
+
+The above script has crappy results.
+It's better to use potrace.
+
+```
+$convert input.jpg output.ppm
+$potrace -s output.ppm -o svgout.svg
 ```
 
 # Writing Words
