@@ -11,6 +11,19 @@ This is a list of quickstart guides for Linux programs.
 
 As little knowledge as possible should be presumed, with required knowledge being internally linked.  If general knowledge is presumed, it should be placed into a file named 'basics'.
 
+## Style
+
+The basic style should be something between a very well-commented script and a very short guide.
+
+### Example
+
+```
+How to see which websites you're actively accessing:
+
+> ss -tr dst :443
+
+```
+
 # What's wrong with everything else?
 
 ## Man pages
