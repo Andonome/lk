@@ -1,27 +1,26 @@
-
-# List Out DNS
-
-> echo "addn-hosts=/etc/pihole/lan.list" | sudo tee /etc/dnsmasq.d/02-lan.conf
-
-Then edit that list
-
-> sudo vim /etc/dnsmasq.d/02-lan.conf
-
-`192.168.0.10    ratking.lan    ratking`
-
-Then restart the pihole's dns:
-
-> sudo pihole restartdns
-
-#View DNS traffic
+View DNS traffic
 
 > pihole -t
 
-#Change password 
+Change password 
 
 > pihole -a -p
 
-# Get new list of cancer
+Get new list of cancer
 
 > pihole -g
+
+Change upstream DNS
+
+> sudo vim /etc/dnsmasq/pihol*
+
+## Troubleshooting
+
+> sudo usermod -aG pihole $USER
+
+> sudo systemctl stop systemd-resolved
+
+> sudo rm -f /dev/shm/FTL-*
+
+> pihole -g -r
 
