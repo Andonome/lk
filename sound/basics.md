@@ -39,4 +39,14 @@ Toggle, mute, increase or decrase audio:
 
 > amixer sset Master 5%-
 
+# Finicky Sound Cards
+
+Start with:
+
+> alsamixer
+
+Then press `F6` to see available sound cards.
+If you find a sound card called 'PinePhone', then you can select an audio source there, and adjust with:
+
+> amixer -c PinePhone set 'Headphone' 50%
 
