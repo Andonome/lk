@@ -16,9 +16,9 @@ Have a look at **a**ll the files:
 
 `. ..`
 
-So `.` means 'here' and `..` means 'you see stairs leading downwards'.
+So `.` means 'here' and `..` means 'you see stairs leading downwards' (e.g. 'the directory behind you').
 
-Find out where you are by **p**rinting out your **c**urrent '**d**irectory' (i.e. 'location'):
+Find out where you are by **p**rinting out your **w**orking '**d**irectory' (i.e. 'location'):
 
 > pwd
 
@@ -156,6 +156,10 @@ Make a directory called 'new test':
 Make two directories, called 'A', and 'Z':
 
 > mkdir A Z
+
+Make a single directory called 'A Z'
+
+> mkdir 'A Z'
 
 # Text Searches
 

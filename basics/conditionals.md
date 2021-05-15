@@ -39,21 +39,17 @@ case $CRE in
 esac
 
 # While and Until
-This prints from 10 until 2.
+This prints from 1 until 9.
 
-> declare -i COUNTER
+> COUNTER=1
 
-> COUNTER=10
+> while [ $COUNTER -lt 2 ]; do
 
-> while [ $COUNTER -gt 2 ]; do
+        > ((COUNTER++))
 
-        > echo The counter is $COUNTER
-
-        > COUNTER=COUNTER-1
+        > echo $COUNTER
 
 > done
-
-> exit 0
 
 ```
 

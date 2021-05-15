@@ -1,22 +1,14 @@
-Anacron manages crontabs which might not have run because the machine was turned off.  The first value shows the days between runs, the second shows how many minutes to wait after a boot to run.
-
-For example:
-
-> cat /etc/anacrontab
-
-`7 15 cron.daily run-parts --report /etc/cron.daily`
-
-This would run crontab every 7 days, and wait 15 minutes until after boot to run.
+# Cron
 
 Various services from cron exist, e.g.
 
 > sudo apt -y install cronie
 
-start the cronie with
+Start the cronie with
 
-> sudo systemctl start cronie
+> sudo systemctl enable --now cronie
 
-start a cron with 
+Specify a cron job with:
 
 > cron -e
 
@@ -33,6 +25,26 @@ To run something as root, do:
 For example, you can update the database, meaning searches with 'locate' command will be faster.
 
 > */30 * * * * /usr/bin/updatedb
+
+## Syntax
+
+`* * * * *`
+
+These five points refer to:
+
+`minute hour day month weekday`
+
+So '3pm every Sunday' would be:
+
+`0 15 * * 7`
+
+Here 'Sunday' is indicated by "7", and '3pm' is 'the 15th hour'.
+The minute is '0' (i.e. '0 minutes past three pm').
+
+Doing the same thing, but only in February, would be:
+
+`0 15 * 2 7`
+
 
 # Testing with runparts
 

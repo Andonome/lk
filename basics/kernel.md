@@ -10,3 +10,7 @@ Or remove one with
 
 > sudo modprove uvcvideo
 
+The PC's irritating speaker beep can be really annoying. Disable it with:
+
+> sudo rmmod pcspeaker
+

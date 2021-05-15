@@ -4,6 +4,10 @@ Set layout to British English.
 
 > setxkbmap -layout gb
 
+Or Polish with:
+
+> setxkbmap -layout pl
+
 | Language | short |
 |:--------|:------|
 | Polish  | pl |
