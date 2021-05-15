@@ -1,19 +1,15 @@
-This is a list of quickstart guides for Linux programs.
+# Linux Knowledgebase
 
-# Purpose
+This is a list of quickstart guides for Linux programs, designed to get the user up and running as fast as possible.
+
+# Style
 
 1. Minimal theory, maximum practical.
 2. The statements should go in order of how likely they are to be used: if `git add` has to be used by everyone, then it should go first.
-3. The scripts should get someone up and running in the shortest possible time.
+3. Documents should be similar to well-documented scripts.
 4. No explanations for the program.  This isn't an introduction or advert, it's a guide for someone who already wants to use a program but doesn't know how.
-5. No presumed knowledge (except for information held in `basics.md`).
-6. Easy reference.
-
-As little knowledge as possible should be presumed, with required knowledge being internally linked.  If general knowledge is presumed, it should be placed into a file named 'basics'.
-
-## Style
-
-The basic style should be something between a very well-commented script and a very short guide.
+5. It's better explain how to set something up three times than to link or reference a setup.
+6. If general knowledge must be presumed, it should be placed into a file named 'basics'.
 
 ### Example
 

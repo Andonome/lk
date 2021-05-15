@@ -1,6 +1,8 @@
 # Tar Archives
 
-*C*reate *z*e *f*iles!
+To create an archive file, just remember:
+
+*C*reate *z*e *f*ile!
 
 > tar czf file.tar.gz file1 file2
 
@@ -18,7 +20,7 @@ Extremely compressed files take longer to compress, but take up less disk space.
 
 > tar cfj super-compressed.tar.bz2 file1 file2
 
-# ssh backup
+# ssh backup of partitions
 
 Back up an unmounted partition with ssh:
 
@@ -38,7 +40,7 @@ This then deletes the .xz file.  To keep it:
 
 # `zip`
 
-Zip file1-3, and make a zip file called 'newsip.zip'.
+Zip file1-3, into a zip file called 'newzip.zip'.
 
 > zip newsip file1 file2 file3
 

@@ -1,3 +1,13 @@
+Install with:
+
+> sudo apt install at
+
+> sudo pacman -S at
+
+Enable the daemon service with:
+
+> sudo systemctl enable --now atd
+
 Then jobs can be specified with absolute time, such as:
 
 > at 16:20
@@ -7,6 +17,10 @@ Then jobs can be specified with absolute time, such as:
 > at midnight
 
 > at teatime
+
+Type in your command, e.g.:
+
+> touch /tmp/myFile.txt
 
 The jobs can also be specified relative to the current time:
 
