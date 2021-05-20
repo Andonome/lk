@@ -24,28 +24,9 @@ Check disks
 
 Make partition
 
-> fdisk -l
+> parted -s /dev/sda mkpart primary ext2 2512 100%
 
-- Boot: 200M
-
-- Swap: Double Ram's a nice standard.
-
-- \/: 15G
-
-- Home: The rest
-
-- var: probably doesn't need a partition, but can be nice if you're 
-
-   * Worried about filling up with logs.
-
-   * Intending to fill up with torrents, which land in /var/.
-
-parted alternative
-
-mklabel gpt
-mkpart ESP fat32 1MiB 200MiB
-set 1 boot on
-name 1 efi
+> parted -s /dev/sda set 1 boot on
 
 Use pacstrap to get the base install.
 
