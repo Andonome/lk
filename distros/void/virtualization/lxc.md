@@ -65,3 +65,4 @@ Setup by starting the lxd service, and adding your user to the group "lxd", then
 > sudo lxd init
 
 Default port is 8443.
+
