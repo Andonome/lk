@@ -2,11 +2,11 @@
 
 Various services from cron exist, e.g.
 
-> sudo apt -y install cronie
+> sudo apt -y install cron
 
 Start the cronie with
 
-> sudo systemctl enable --now cronie
+> sudo systemctl enable --now cron
 
 Specify a cron job with:
 
@@ -44,7 +44,6 @@ The minute is '0' (i.e. '0 minutes past three pm').
 Doing the same thing, but only in February, would be:
 
 `0 15 * 2 7`
-
 
 # Testing with runparts
 

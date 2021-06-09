@@ -2,8 +2,6 @@ Install with:
 
 > sudo apt install at
 
-> sudo pacman -S at
-
 Enable the daemon service with:
 
 > sudo systemctl enable --now atd

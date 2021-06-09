@@ -27,14 +27,14 @@ Make it permanent for the entire system by editing:
 
 While generally set together, the variables setable are:
 
-| Variable      | Description |
-|:-------------:|:------------|
-| LC_TIME | Date and time |
-| LC_NUMERIC | Nonmonetary numeric formats |
-| LC_PAPER | A4 vs wrong paper |
-| LC_ADDRESS | Address formats, for those amazingly concise Polish addresses. |
-| LC_TELEPHONE | Telephone number formats. |
-| LC_MEASUREMENT | Metric or Imperial, but no Impetric available. |
-| LC_IDENTIFICATION | Metadata about the locale information |
-| LC_ALL | Just everything at once. |
+| Variable                              | Description                                                    |
+|:-------------------------------------:|:---------------------------------------------------------------|
+| LC_TIME                               | Date and time                                                  |
+| LC_NUMERIC                            | Nonmonetary numeric formats                                    |
+| LC_PAPER                              | A4 vs wrong paper                                              |
+| LC_ADDRESS                            | Address formats, for those amazingly concise Polish addresses. |
+| LC_TELEPHONE                          | Telephone number formats.                                      |
+| LC_MEASUREMENT                        | Metric or Imperial, but no Impetric available.                 |
+| LC_IDENTIFICATION                     | Metadata about the locale information                          |
+| LC_ALL                                | Just everything at once.                                       |
 
