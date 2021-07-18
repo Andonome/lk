@@ -24,21 +24,19 @@ Check disks
 
 Make partition
 
-> parted -s /dev/sda mkpart primary ext2 2512 100%
+> parted -s /dev/sda mklabel gpt
+
+> parted -s /dev/sda mklabel msdos
+
+> parted  -s /dev/sda mkpart primary ext4 512 100%
 
 > parted -s /dev/sda set 1 boot on
 
+> mkfs.ext4 /dev/sda1
+
 Use pacstrap to get the base install.
 
-> mount /dev/sda3 /mnt/
-
-> mkdir /mnt/home
-
-> mkdir /mnt/boot
-
-> mount /dev/sda3 /mnt/home
-
-> mount /dev/sda1 /mnt/boot
+> mount /dev/sda1 /mnt/
 
 > pacstrap /mnt base base-devel vim linux linux-firmware
 
