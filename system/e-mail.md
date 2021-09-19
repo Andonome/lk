@@ -27,7 +27,7 @@ The mail is kept in /var/mail/ and you can read it with:
 
 Aliases are groups of mail recipients.  The lists are kept under /etc/aliases.
 
-`crew: matthewlynas@gmail.com,ghost,danial@yahoo.com`
+`crew: matthew@gmail.com,ghost,danial@yahoo.com`
 
 Update the list of aliases from this with:
 

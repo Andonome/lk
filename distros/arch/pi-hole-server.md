@@ -1,23 +1,31 @@
 
-> yay -S pi-hole-server pi-hole-ftl
+> yay -S pi-hole-server
 
-> sudo systemctl disable systemd-resolved
+> sudo systemctl enable --now pihole-FTL
 
-> sudo systemctl stop systemd-resolved
+> sudo systemctl disable --now systemd-resolved
 
-> sudo systemctl enable pi-hole-server pihole-FTL
+Add yourself as a pihole user, then logout, and log back in.
 
-> sudo systemctl start pi-hole-server pihole-FTL
+> sudo usermod -aG pihole $USER
 
 Remove that google dns server.
 
-> pihole -a setdns 1.1.1.1 1.0.0.1
+> pihole -a setdns 9.9.9.9 1.0.0.1
 
 Disable pihole password by setting a blank password.
 
 > pihole -a -p
 
+Get a new list of blocked domains, then reload:
+
+> pihole -g -r
+
+Every so often, run `pihole -g` again (perhaps put it in crontab).
+
 # Configure cloudflare DNS
+
+This is optional.
 
 > yay -S cloudflared-bin
 
