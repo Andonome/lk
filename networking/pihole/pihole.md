@@ -12,7 +12,7 @@ Get new list of cancer
 
 Change upstream DNS
 
-> sudo vim /etc/dnsmasq/pihol*
+> sudo vim /etc/dnsmasq/01-pihole.conf
 
 ## Troubleshooting
 
