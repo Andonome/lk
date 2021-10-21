@@ -63,9 +63,9 @@ This is a fingerprint.
 
 You can now decide the trust level (this stays on your computer).
 
-> gpg edit (some fingerprint)
+> gpg edit-key (some fingerprint)
 
-Once you're in the interface, type `trust [some fingerprint]`.
+Once you're in the interface, type `trust`.
 
 > gpg --sign-key alice@posteo.net
 
