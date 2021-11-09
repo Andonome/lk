@@ -19,10 +19,6 @@ Install agate by placing the binary somewhere or (on Arch):
 
 > echo 'Hello Gemworld!' > gemini/index.gmi
 
-> cd /usr/share/gemini/certs
-
-> openssl req -new -subj "/CN=belgradecats.tk" -x509 -newkey ec pkeyopt ec_paramgen_curve:prime256v1 -days 3000 -nodes -out cert.pem keyout key.pem
-
 Make a service file.
 
 > sudo vim /etc/systemd/system/multi-user.target.wants/agate.service
