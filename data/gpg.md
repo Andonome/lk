@@ -63,11 +63,15 @@ This is a fingerprint.
 
 You can now decide the trust level (this stays on your computer).
 
-> gpg edit-key (some fingerprint)
+> gpg --edit-key (some fingerprint)
 
 Once you're in the interface, type `trust`.
 
 > gpg --sign-key alice@posteo.net
+
+Then send those trusted keys up to a server, so people can see you have verified them:
+
+> gpg --keyserver sks.hklbgd.org --send-keys 024C6B1C84449BD1CB4DF7A152295D2377F4D70F
 
 # Refresh Keys
 
