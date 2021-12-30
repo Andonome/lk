@@ -23,3 +23,25 @@ Then run a live image:
 
 > docker run -it debian
 
+# Delete
+
+Check currently running containers with
+
+> docker ps
+
+Check all containers with
+
+> docker ps -a
+
+Now we can get a list of all containers.
+
+To delete one, take the id, e.g. '97796727e883', and run:
+
+> docker rm 97796727e883
+
+# Networking
+
+Get a list of docker container ips
+
+> docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' *container_name_or_id*
+
