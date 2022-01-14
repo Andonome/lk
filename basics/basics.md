@@ -4,7 +4,11 @@ You need about a dozen commands to move around Linux.
 After that, you look up the rest as you go.
 Don't worry about understanding any of it, just type it in and the habit forms pretty quickly.
 
-You start in a dark room. You have a 'look-see' what's in front of you:
+You start in a dark room. You want to know where you are by **p**rinting out your **w**orking '**d**irectory' (i.e. 'location'):
+
+> pwd
+
+Have a look at what is here:
 
 > ls
 
@@ -17,10 +21,6 @@ Have a look at **a**ll the files:
 `. ..`
 
 So `.` means 'here' and `..` means 'you see stairs leading downwards' (e.g. 'the directory behind you').
-
-Find out where you are by **p**rinting out your **w**orking '**d**irectory' (i.e. 'location'):
-
-> pwd
 
 Change directory (`cd`) down one level:
 
