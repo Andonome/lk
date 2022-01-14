@@ -25,16 +25,5 @@ You should see `State : clean`. If you see it is `degraded`, then a disk has bro
 
 ## Replacing a Disk
 
-First, prepare the disk with both a gpt partition table, and a partition:
-
-> sudo parted --script /dev/sdb mklabel gpt mkpart primary 1MiB -2048s
-
-Add the appropriate file system to it, e.g.:
-
-> sudo mkfs.ext4 /dev/sdb1
-
-Then finally, add the disk:
-
 > sudo mdadm --add /dev/md127 /dev/sdb1
-
 
