@@ -1,3 +1,7 @@
+---
+title: "search"
+tags: [ "Documentation", "vim" ]
+---
 Search and replace the first 'one' found with 'two':
 
 > :%s/one/two/

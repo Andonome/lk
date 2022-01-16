@@ -1,3 +1,7 @@
+---
+title: "basics"
+tags: [ "Documentation", "networking" ]
+---
 # You
 
 Check how your computer connects to the net:

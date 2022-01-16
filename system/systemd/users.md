@@ -1,3 +1,7 @@
+---
+title: "users"
+tags: [ "Documentation", "system" ]
+---
 # Automatic Login
 
 > cp /usr/lib/systemd/system/getty@.service /etc/systemd/system/getty1@.service 

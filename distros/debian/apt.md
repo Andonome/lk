@@ -1,3 +1,7 @@
+---
+title: "apt"
+tags: [ "Documentation", "distros" ]
+---
 ## apt
 
 ### Configurations?

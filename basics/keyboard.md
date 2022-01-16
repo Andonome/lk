@@ -1,3 +1,7 @@
+---
+title: "keyboard"
+tags: [ "Documentation", "basics" ]
+---
 # Set Layout
 
 Set layout to British English.

@@ -1,3 +1,7 @@
+---
+title: "time"
+tags: [ "Documentation", "basics" ]
+---
 # systemd
 
 Set time to synchronize with an ntp server:

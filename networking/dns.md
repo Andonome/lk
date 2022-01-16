@@ -1,3 +1,7 @@
+---
+title: "dns"
+tags: [ "Documentation", "networking" ]
+---
 # Designate DNS
 
 On Debian, a file might gain DNS services by adding the following to /etc/network/interfaces:

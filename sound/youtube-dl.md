@@ -1,3 +1,7 @@
+---
+title: "youtube-dl"
+tags: [ "Documentation", "sound" ]
+---
 > youtube-dl --write-auto-sub <URL>
 
 It will default to English, but you can specify another language with the flag --sub-lang:

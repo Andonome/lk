@@ -1,3 +1,7 @@
+---
+title: "autologin"
+tags: [ "Documentation", "distros" ]
+---
 # Automatic Login
 
 Edit /etc/systemd/system/getty@tty1.service.d/override.conf by typing:

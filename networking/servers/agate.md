@@ -1,3 +1,7 @@
+---
+title: "agate"
+tags: [ "Documentation", "networking" ]
+---
 Make sure your dns is in order.
 My domain name is `belgradecats.tk`, so put your own in there.
 

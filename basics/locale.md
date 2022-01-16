@@ -1,3 +1,7 @@
+---
+title: "locale"
+tags: [ "Documentation", "basics" ]
+---
 
 A list of supported locales is available at /usr/share/i18n/SUPPORTED
 

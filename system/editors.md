@@ -1,3 +1,7 @@
+---
+title: "editors"
+tags: [ "Documentation", "system" ]
+---
 The system's default text editor can be defined within /etc/profile.  It's given the variable `EDITOR`.
 
 Add these lines to /etc/profile:

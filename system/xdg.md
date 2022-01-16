@@ -1,3 +1,7 @@
+---
+title: "xdg"
+tags: [ "Documentation", "system" ]
+---
 
 What filetype is this file?
 

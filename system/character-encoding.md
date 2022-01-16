@@ -1,3 +1,7 @@
+---
+title: "character-encoding"
+tags: [ "Documentation", "system" ]
+---
 Convert a text file from one encoding type to another with:
 
 > iconv -f ascii -t utf8 oldfilename > newfilename

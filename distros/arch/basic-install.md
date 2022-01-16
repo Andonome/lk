@@ -1,3 +1,7 @@
+---
+title: "basic-install"
+tags: [ "Documentation", "distros" ]
+---
 Keyboard layout changed.
 
 > ls /usr/share/kbd/keymaps/**/*.map.gz

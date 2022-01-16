@@ -1,3 +1,7 @@
+---
+title: "partitions"
+tags: [ "Documentation", "system" ]
+---
 # FDisk Basics
 
 > sudo fdisk /dev/sda

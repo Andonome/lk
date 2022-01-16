@@ -1,3 +1,7 @@
+---
+title: "lxc"
+tags: [ "Documentation", "distros" ]
+---
 # Distro Specifics
 
 Arch dependencies: `arch-install-scripts` `dnsmasq`

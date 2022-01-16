@@ -1,3 +1,7 @@
+---
+title: "xmodmap"
+tags: [ "Documentation", "hardware" ]
+---
 Ensure you're not stuck in CAPS on mode:
 
 > xmodmap -e 'clear Lock' 

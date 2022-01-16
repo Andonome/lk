@@ -1,3 +1,7 @@
+---
+title: "basics"
+tags: [ "Documentation", "distros" ]
+---
 
 # vkpurge
 

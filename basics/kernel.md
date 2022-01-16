@@ -1,3 +1,7 @@
+---
+title: "kernel"
+tags: [ "Documentation", "basics" ]
+---
 # Living Space
 
 Kernel modules live in lib/modules/$(uname -r)

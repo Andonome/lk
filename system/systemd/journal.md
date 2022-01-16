@@ -1,3 +1,7 @@
+---
+title: "journal"
+tags: [ "Documentation", "system" ]
+---
 
 Find errors since November
 

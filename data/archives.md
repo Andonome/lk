@@ -1,3 +1,7 @@
+---
+title: "archives"
+tags: [ "Documentation", "data" ]
+---
 # GPG Archives
 
 Create an encrypted archive with `gpg`:

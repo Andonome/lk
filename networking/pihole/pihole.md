@@ -1,3 +1,7 @@
+---
+title: "pihole"
+tags: [ "Documentation", "networking" ]
+---
 View DNS traffic
 
 > pihole -t

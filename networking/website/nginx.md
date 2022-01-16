@@ -1,3 +1,7 @@
+---
+title: "nginx"
+tags: [ "Documentation", "networking" ]
+---
 Install nginx:
 
 > sudo apt-get install nginx

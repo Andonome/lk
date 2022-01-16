@@ -1,3 +1,7 @@
+---
+title: "blackarch"
+tags: [ "Documentation", "distros" ]
+---
 
 ## Basics
 

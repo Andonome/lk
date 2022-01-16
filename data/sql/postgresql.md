@@ -1,3 +1,7 @@
+---
+title: "postgresql"
+tags: [ "Documentation", "data" ]
+---
 # Setup
 
 Install postgres and start it as a service, then start with:
