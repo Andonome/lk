@@ -1,3 +1,7 @@
+---
+title: "lxc"
+tags: [ "Documentation", "distros" ]
+---
 # Intro
 
 Taken from [this](https://r4nd0m6uy.ch/unpriviledged-containers-in-void-linux.html)

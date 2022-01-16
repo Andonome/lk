@@ -1,3 +1,7 @@
+---
+title: "irssi"
+tags: [ "Documentation", "chat" ]
+---
 In program:
 
 > /NETWORK LIST

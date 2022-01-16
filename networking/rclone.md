@@ -1,3 +1,7 @@
+---
+title: "rclone"
+tags: [ "Documentation", "networking" ]
+---
 The manpage's 'Synopsis' provides a fast reference.
 
 We'll assume a folder in Google Drive called 'test', and local folder called 'foo'.

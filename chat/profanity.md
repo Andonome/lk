@@ -1,3 +1,7 @@
+---
+title: "profanity"
+tags: [ "Documentation", "chat" ]
+---
 
 # Pre Setup
 

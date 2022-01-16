@@ -1,3 +1,7 @@
+---
+title: "tmux"
+tags: [ "Documentation", "system" ]
+---
 Start with:
 
 > tmux

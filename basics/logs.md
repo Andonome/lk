@@ -1,4 +1,8 @@
-# Syslog Management Protocols
+---
+title: "logs"
+tags: [ "Documentation", "basics" ]
+---
+## Syslog Management Protocols
 
 Let's look at the programs filling in things on our /var/log/ directory.
 

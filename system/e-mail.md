@@ -1,3 +1,7 @@
+---
+title: "e-mail"
+tags: [ "Documentation", "system" ]
+---
 # Terminology
 
 |MTA | Mail transfer agent |

@@ -1,3 +1,7 @@
+---
+title: "lxc"
+tags: [ "Documentation", "distros" ]
+---
 
 LXC creates miniature virtual machines to play with.
 

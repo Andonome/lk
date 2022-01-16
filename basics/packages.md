@@ -1,3 +1,7 @@
+---
+title: "packages"
+tags: [ "Documentation", "basics" ]
+---
 # Looking
 
 Your package has something to do with unzipping.  Find out more:

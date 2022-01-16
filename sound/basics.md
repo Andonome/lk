@@ -1,3 +1,7 @@
+---
+title: "basics"
+tags: [ "Documentation", "sound" ]
+---
 # Pulse
 If you have pulse, use pulse.
 Check with `which pulseaudio`. No output means you need to use alsa (below).

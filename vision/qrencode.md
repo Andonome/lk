@@ -1,3 +1,7 @@
+---
+title: "qrencode"
+tags: [ "Documentation", "vision" ]
+---
 
 Make a QR Coded message:
 

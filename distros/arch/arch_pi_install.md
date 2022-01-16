@@ -1,3 +1,7 @@
+---
+title: "arch_pi_install"
+tags: [ "Documentation", "distros" ]
+---
 # Initial Setup
 <!-- modified since testing
 -->
@@ -32,28 +36,28 @@ Move boot files to the first partition:
 > Unmount the two partitions:
 > umount boot root
 
-echo belgradecats > /etc/hostname
-echo "# /etc/hosts: static lookup table for host names
+> echo [ hostname ] > /etc/hostname
 
+Then edit the `/etc/hosts` file.
 
 ```
 
 <ip-address>		<hostname.domain.org>	<hostname>
-127.0.0.1		belgradecats.localdomain	belgradecats
-::1			belgradecats.localdomain	belgradecats ip6-localhost
+127.0.0.1		localhost.localdomain	localhost
+::1			localhost.localdomain	localhost ip6-localhost
 
 ```
 
-# End of file" > /etc/hosts
-
 # Get audio on
 
-echo dtparam=audio=on >> /boot/config.txt
+> echo dtparam=audio=on >> /boot/config.txt
 
-pacman-key --init
-pacman-key --populate archlinuxarm
+Start pacman keyring.
 
-pacman -Syyu base-devel git alsa-utils xf86-video-fbdev 
+> pacman-key --init
+> pacman-key --populate archlinuxarm
 
-timedatectl set-timezone Europe/Belgrade
+> pacman -Syyu base-devel git alsa-utils xf86-video-fbdev 
+
+> timedatectl set-timezone Europe/Belgrade
 

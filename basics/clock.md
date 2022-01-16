@@ -1,4 +1,7 @@
-# `date`
+---
+title: "clock"
+tags: [ "Documentation", "basics" ]
+---
 
 Show system time:
 

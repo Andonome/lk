@@ -1,3 +1,7 @@
+---
+title: "kernels"
+tags: [ "Documentation", "distros" ]
+---
 
 # vkpurge
 

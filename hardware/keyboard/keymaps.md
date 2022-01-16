@@ -1,3 +1,7 @@
+---
+title: "keymaps"
+tags: [ "Documentation", "hardware" ]
+---
 Find easy-to-read keymapping lists in `/usr/share/X11/xkb/keycodes/symbols/pc`.
 
 If this doesn't work, try keymaps.

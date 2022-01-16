@@ -1,3 +1,7 @@
+---
+title: "imagemagick"
+tags: [ "Documentation", "vision" ]
+---
 [Source](http://lxlinux.com/imagemagick.html)
 
 Convert jpg to png.

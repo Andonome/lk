@@ -1,3 +1,7 @@
+---
+title: "mpd"
+tags: [ "Documentation", "sound" ]
+---
 # Setup
 
 ## Configuration

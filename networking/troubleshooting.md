@@ -1,3 +1,7 @@
+---
+title: "troubleshooting"
+tags: [ "Documentation", "networking" ]
+---
 
 # Do you have an IP?
 

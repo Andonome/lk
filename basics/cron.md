@@ -1,3 +1,7 @@
+---
+title: "cron"
+tags: [ "Documentation", "basics" ]
+---
 # Cron
 
 Various services from cron exist, e.g.

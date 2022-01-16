@@ -1,3 +1,7 @@
+---
+title: "sdcv"
+tags: [ "Documentation", "data" ]
+---
 # Install New Dictionaries
 
 If the path doesn't exist then:

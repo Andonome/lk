@@ -1,3 +1,7 @@
+---
+title: "shell"
+tags: [ "Documentation", "basics" ]
+---
 # Shells
 
 Dash - fast but limited funcionality, great for scripts.

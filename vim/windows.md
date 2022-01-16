@@ -1,3 +1,7 @@
+---
+title: "windows"
+tags: [ "Documentation", "vim" ]
+---
 
 | Command | Keys |
 |:-----|:----:|

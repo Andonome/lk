@@ -1,3 +1,7 @@
+---
+title: "email"
+tags: [ "Documentation", "chat" ]
+---
 # Sendmail
 
 Compose a message like this:

@@ -1,3 +1,7 @@
+---
+title: "xkbmap"
+tags: [ "Documentation", "system" ]
+---
 # Language Layouts
 
 Polish
