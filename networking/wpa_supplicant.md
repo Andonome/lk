@@ -2,7 +2,6 @@
 title: "wpa_supplicant"
 tags: [ "Documentation", "networking" ]
 ---
-# Intro
 
 wpa_supplicant configurations are stored in /etc/wpa_supplicant/wpa_supplicant-wlan0 (or equivalent).
 

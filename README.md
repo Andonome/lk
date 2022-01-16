@@ -1,3 +1,7 @@
+---
+title: "Knowledge Base"
+---
+
 # Linux Knowledgebase
 
 This is a list of quickstart guides for Linux programs, designed to get the user up and running as fast as possible.
