@@ -2,7 +2,6 @@
 title: "basics"
 tags: [ "Documentation", "basics" ]
 ---
-# Absolute Bloody Basics
 
 You need about a dozen commands to move around Linux.
 After that, you look up the rest as you go.
