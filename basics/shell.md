@@ -2,11 +2,10 @@
 title: "shell"
 tags: [ "Documentation", "basics" ]
 ---
-# Shells
 
-Dash - fast but limited funcionality, great for scripts.
+Dash - fast but limited funcionality, great for scripts
 
-sh - primitive and ubiquitous.
+sh - a simple link to whatever your default shell is
 
 bash - the standard
 
