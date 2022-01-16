@@ -1,3 +1,7 @@
+---
+title: "khard"
+tags: [ "Documentation", "data" ]
+---
 Get the basic config:
 
 > mkdir ~/.config/khard

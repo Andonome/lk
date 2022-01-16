@@ -1,3 +1,7 @@
+---
+title: "kernel"
+tags: [ "Documentation", "system" ]
+---
 Check which kernet modules are loaded into memory
 
 > sudo /sbin/lsmod 

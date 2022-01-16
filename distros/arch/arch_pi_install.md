@@ -1,3 +1,7 @@
+---
+title: "arch_pi_install"
+tags: [ "Documentation", "distros" ]
+---
 # Initial Setup
 <!-- modified since testing
 -->

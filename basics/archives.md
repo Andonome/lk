@@ -1,3 +1,7 @@
+---
+title: "archives"
+tags: [ "Documentation", "basics" ]
+---
 # Tar Archives
 
 To create an archive file, just remember:

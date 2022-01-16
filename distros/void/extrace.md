@@ -1,3 +1,7 @@
+---
+title: "extrace"
+tags: [ "Documentation", "distros" ]
+---
 Monitor all processes:
 
 > extrace

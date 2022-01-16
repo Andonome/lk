@@ -1,3 +1,7 @@
+---
+title: "basics"
+tags: [ "Documentation", "system" ]
+---
 > systemctl list-units
 
 > sudo systemctl status mpd

@@ -1,3 +1,7 @@
+---
+title: "gpg"
+tags: [ "Documentation", "data" ]
+---
 # Making keys
 
 Generate keys:

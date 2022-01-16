@@ -1,3 +1,7 @@
+---
+title: "awk"
+tags: [ "Documentation", "system" ]
+---
 # Basics
 
 See a file's contents:

@@ -1,3 +1,7 @@
+---
+title: "users"
+tags: [ "Documentation", "basics" ]
+---
 # Basic Information
 
 Let's get some entries with 'getent', e.g. passwd or group.

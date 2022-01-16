@@ -1,3 +1,7 @@
+---
+title: "timew"
+tags: [ "Documentation", "data" ]
+---
 # Setup
 
 Below commands mostly deal with timew alone.  With taskwarrior installed as well, `locate on-modify-time`, then add it to ~/.task/hooks and make it executable.

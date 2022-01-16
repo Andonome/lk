@@ -1,3 +1,7 @@
+---
+title: "networking"
+tags: [ "Documentation", "distros" ]
+---
 # Bridged adapters
 
 Virtual machines can use a bridge to connect to the internet.  Access the manual with 

@@ -1,3 +1,7 @@
+---
+title: "snaps"
+tags: [ "Documentation", "system" ]
+---
 > sudo apt-get purge -y snapd
 
 #Hiding from Nautilus

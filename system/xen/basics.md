@@ -1,3 +1,7 @@
+---
+title: "basics"
+tags: [ "Documentation", "system" ]
+---
 # Make a local iso repository
 
 > mkdir -p /var/opt/xen/ISO_Store

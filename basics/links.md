@@ -1,3 +1,7 @@
+---
+title: "links"
+tags: [ "Documentation", "basics" ]
+---
 Link from X to Y.
 
 > ln -s X ../otherdir/Y

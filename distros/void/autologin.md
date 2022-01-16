@@ -1,3 +1,7 @@
+---
+title: "autologin"
+tags: [ "Documentation", "distros" ]
+---
 
 Make the autologin service:
 

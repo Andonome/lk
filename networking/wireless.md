@@ -1,3 +1,7 @@
+---
+title: "wireless"
+tags: [ "Documentation", "networking" ]
+---
 
 # Check wifi's working
 > lspci -k

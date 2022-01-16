@@ -1,3 +1,7 @@
+---
+title: "pass"
+tags: [ "Documentation", "data" ]
+---
 [Video instructions](https://www.hooktube.com/watch?v=hlRQTj1D9LA)
 
 Setup [gpg](./gpg.md) keys.

@@ -1,3 +1,7 @@
+---
+title: "completion"
+tags: [ "Documentation", "vim" ]
+---
 
 Complete the word:
 

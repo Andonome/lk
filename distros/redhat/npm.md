@@ -1,3 +1,7 @@
+---
+title: "npm"
+tags: [ "Documentation", "distros" ]
+---
 package.json is the basic configuration file.
 
 Everything is per-directory.

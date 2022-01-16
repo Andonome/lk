@@ -1,3 +1,7 @@
+---
+title: "fail2ban"
+tags: [ "Documentation", "networking" ]
+---
 # SSH Daemon Jail
 
 > sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.d/ssh.local

@@ -1,3 +1,7 @@
+---
+title: "X"
+tags: [ "Documentation", "system" ]
+---
 X is a server which listens to requests for display.
 
 Basic configurations are under /etc/X11, but xorg.conf is generally no longer used.

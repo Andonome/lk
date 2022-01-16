@@ -1,3 +1,7 @@
+---
+title: "logs"
+tags: [ "Documentation", "system" ]
+---
 
 # Basic
 Keeping track of health problems.  Mostly under /var/log/.

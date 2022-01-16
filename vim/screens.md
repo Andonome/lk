@@ -1,3 +1,7 @@
+---
+title: "screens"
+tags: [ "Documentation", "vim" ]
+---
 
 Make a horizontal split with:
 

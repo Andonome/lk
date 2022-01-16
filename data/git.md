@@ -1,3 +1,7 @@
+---
+title: "git"
+tags: [ "Documentation", "data" ]
+---
 # Starting
 
 ## New Machines

@@ -1,3 +1,7 @@
+---
+title: "bash_tricks"
+tags: [ "Documentation", "system" ]
+---
 # Automatic mp3 Tagging
 
 /u/OneTurnMore on Reddit:

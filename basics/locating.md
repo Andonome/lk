@@ -1,3 +1,7 @@
+---
+title: "locating"
+tags: [ "Documentation", "basics" ]
+---
 # Whereis the Program
 
 Ask where the `angband` program is, along with all its configuration files:
