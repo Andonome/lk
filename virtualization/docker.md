@@ -1,4 +1,7 @@
-
+---
+title: "Docker"
+tags: [ "Documentation", "Virtualization" ]
+---
 > sudo pacman -S docker
 
 > sudo usermod -aG docker $USER
