@@ -1,3 +1,7 @@
+---
+title: "mdadm"
+tags: [ "Documentation", "RAID" ]
+---
 # RAID5
 
 You will need 4 disks and the `mdadm` package.
