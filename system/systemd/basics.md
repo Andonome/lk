@@ -1,6 +1,6 @@
 ---
-title: "basics"
-tags: [ "Documentation", "system" ]
+title: "systemd"
+tags: [ "Documentation", "systemd" ]
 ---
 > systemctl list-units
 
