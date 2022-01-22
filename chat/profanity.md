@@ -55,7 +55,7 @@ Or if you already havea  conversation windows open, switch to otr using:
 
 Finally, verify!
 
-/otr question "Who the fuck are you?" bob
+/otr question "Who are you?" bob
 
 Bob is verified upon the answer, 'bob'.
 
