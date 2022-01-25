@@ -1,3 +1,7 @@
+---
+title: "Making Services"
+tags: [ "Documentation", "system" ]
+---
 # Basics
 
 A service can consist of two files - the .sh script to run, and the .service file which describes its run conditions.

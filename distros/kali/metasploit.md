@@ -1,3 +1,7 @@
+---
+title: "metasploit"
+tags: [ "Documentation", "distros" ]
+---
 > service postgresql start
 
 > systemctl status postgresql

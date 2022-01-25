@@ -1,3 +1,7 @@
+---
+title: "sc-im"
+tags: [ "Documentation", "data" ]
+---
 # Basic Commands
 
 > H = highest part

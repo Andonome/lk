@@ -1,3 +1,7 @@
+---
+title: "swap"
+tags: [ "Documentation", "basics" ]
+---
 # Making a Swap File
 
 > sudo mkdir -v /var/cache/swap

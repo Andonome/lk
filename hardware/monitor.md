@@ -1,3 +1,7 @@
+---
+title: "monitor"
+tags: [ "Documentation", "hardware" ]
+---
 See screen size
 
 > xrandr -q

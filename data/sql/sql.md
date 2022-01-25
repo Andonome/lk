@@ -1,3 +1,7 @@
+---
+title: "sql"
+tags: [ "Documentation", "data" ]
+---
 MySQL, Aurora and the Maria Database work similarly, and mostly with the same commands.
 
 MySQL requires 160 Megs of disk space.

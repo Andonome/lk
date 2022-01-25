@@ -1,3 +1,7 @@
+---
+title: "conditionals"
+tags: [ "Documentation", "basics" ]
+---
 # If statements
 
 Test statement equality as so:

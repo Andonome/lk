@@ -1,3 +1,7 @@
+---
+title: "pip"
+tags: [ "Documentation", "networking" ]
+---
 
 Upgrade all packages
 

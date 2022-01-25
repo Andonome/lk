@@ -1,3 +1,7 @@
+---
+title: "kill"
+tags: [ "Documentation", "basics" ]
+---
 If you want to kill a program in a graphical environment, open a terminal and typeL
 
 ## Graphical Programs

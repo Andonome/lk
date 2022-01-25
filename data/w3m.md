@@ -1,3 +1,7 @@
+---
+title: "w3m"
+tags: [ "Documentation", "data" ]
+---
 'H' for help.  
 
 Ctrl+u to go to new url.

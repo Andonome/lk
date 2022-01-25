@@ -1,3 +1,7 @@
+---
+title: "sshfs"
+tags: [ "Documentation", "networking" ]
+---
 # Mount 
 
 > sshfs alfred@192.168.0.14:Sync/Alfred

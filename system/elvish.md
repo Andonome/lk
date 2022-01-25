@@ -1,3 +1,7 @@
+---
+title: "elvish"
+tags: [ "Documentation", "system" ]
+---
 # Setup
 To run a shell as non-root, the shell must be listed in /etc/shells.
 

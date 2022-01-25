@@ -1,3 +1,7 @@
+---
+title: "navigate"
+tags: [ "Documentation", "vim" ]
+---
 
 | Move | Command      |
 |:-----|:-------------|

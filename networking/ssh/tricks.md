@@ -1,3 +1,7 @@
+---
+title: "tricks"
+tags: [ "Documentation", "networking" ]
+---
 
 Mount a remote filesystem locally with fuse-sshfs:
 

@@ -1,3 +1,7 @@
+---
+title: "pi-hole-server"
+tags: [ "Documentation", "distros" ]
+---
 
 > yay -S pi-hole-server
 

@@ -1,3 +1,7 @@
+---
+title: "xe"
+tags: [ "Documentation", "system" ]
+---
 # Basic VM Management
 
 > xe vm-list

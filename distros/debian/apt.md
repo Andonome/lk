@@ -1,8 +1,12 @@
+---
+title: "apt"
+tags: [ "Documentation", "distros" ]
+---
 ## apt
 
 ### Configurations?
 
-Fucked up a package's configuration files?
+Messed up a package's configuration files?
 
 > sudo apt-get purge [thing]
 

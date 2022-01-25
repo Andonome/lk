@@ -1,3 +1,7 @@
+---
+title: "lubuntu"
+tags: [ "Documentation", "distros" ]
+---
 
 # Videos not working
 

@@ -1,3 +1,7 @@
+---
+title: "virtualbox"
+tags: [ "Documentation", "system" ]
+---
 # Setup
 
 ## Arch Linux
@@ -8,7 +12,7 @@
 
 > # vboxreload
 
-# Make dd image into vdi
+Make dd image into vdi
 
 > VBoxManage convertdd base.dd output.vdi --format VDI
 
@@ -16,7 +20,7 @@ If this doesn't work, try to make a new bite size with just
 
 > sudo dd if=image.dd of=image2.dd bs=512 conv=sync
 
-# CLI Management
+## CLI Management
 
 List boxes:
 
@@ -40,7 +44,7 @@ You can do a number of things to virtualboxes this way:
 
 - poweroff
 
-# Creating Disks
+## Creating Disks
 
 Creating a VM requires registering it:
 

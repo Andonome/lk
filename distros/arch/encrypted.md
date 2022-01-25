@@ -1,3 +1,7 @@
+---
+title: "encrypted"
+tags: [ "Documentation", "distros" ]
+---
 > # taken from https://0x00sec.org/t/arch-linux-with-lvm-on-luks-dm-crypt-disk-encryption-installation-guide-legacy-bios-system/1479
  
 > # if you need wifi

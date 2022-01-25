@@ -1,3 +1,7 @@
+---
+title: "fonts"
+tags: [ "Documentation", "distros" ]
+---
 # Basics
 
 Update font-cache:

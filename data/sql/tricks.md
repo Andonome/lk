@@ -1,3 +1,7 @@
+---
+title: "tricks"
+tags: [ "Documentation", "data" ]
+---
 
 # Find data from any table
 

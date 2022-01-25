@@ -1,3 +1,7 @@
+---
+title: "xbps"
+tags: [ "Documentation", "distros" ]
+---
 Install cowsay
 
 > xbps-install cowsay

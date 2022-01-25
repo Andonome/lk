@@ -1,3 +1,7 @@
+---
+title: "ffmpeg"
+tags: [ "Documentation", "sound" ]
+---
 # Basics 
 
 ffmpeg -i [input file] output_file.mkv
