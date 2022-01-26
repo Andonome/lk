@@ -1,6 +1,6 @@
 ---
 title: "archives"
-tags: [ "Documentation", "data" ]
+tags: [ "Documentation", "backups" ]
 ---
 # GPG Archives
 
