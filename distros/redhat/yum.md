@@ -1,6 +1,6 @@
 ---
 title: "yum"
-tags: [ "Documentation", "distros" ]
+tags: [ "Documentation", "Distros" ]
 ---
 # Overview
 
@@ -21,6 +21,4 @@ Major features: reliable, shit package selection.
 > yum update
 
 yum remove [package1] [package2]
-
-
 

@@ -1,6 +1,6 @@
 ---
 title: "wpa_supplicant"
-tags: [ "Documentation", "networking" ]
+tags: [ "Documentation", "Networking" ]
 ---
 
 wpa_supplicant configurations are stored in /etc/wpa_supplicant/wpa_supplicant-wlan0 (or equivalent).
@@ -33,28 +33,27 @@ This has a number of commands to input.  In order:
 
 > scan_results
 
-> add_network
+> add_Network
 
-This outputs a network number, e.g. '3'.  This is the new network you'll work with.
+This outputs a Network number, e.g. '3'.  This is the new Network you'll work with.
 
-> set_network 3 ssid "Kosachok Cafe"
+> set_Network 3 ssid "Kosachok Cafe"
 
-> set_network 3 psk "Kosachok2019"
+> set_Network 3 psk "Kosachok2019"
 
 OR
 
-> set_network 3 key_mgmt NONE
+> set_Network 3 key_mgmt NONE
 
-> enable_network 3
+> enable_Network 3
 
 > save_config
 
-... and possibly:
+...and possibly:
 
 > sudo sv restart dhcpcd 
 
 or maybe:
 
 > dhcpd wlp3s0 
-
 

@@ -1,6 +1,6 @@
 ---
 title: "youtube-dl"
-tags: [ "Documentation", "sound" ]
+tags: [ "Documentation", "Sound" ]
 ---
 > youtube-dl --write-auto-sub <URL>
 

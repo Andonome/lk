@@ -1,6 +1,6 @@
 ---
 title: "nmap"
-tags: [ "Documentation", "networking" ]
+tags: [ "Documentation", "Networking" ]
 ---
 
 Example:

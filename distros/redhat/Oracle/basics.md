@@ -1,6 +1,6 @@
 ---
 title: "basics"
-tags: [ "Documentation", "distros" ]
+tags: [ "Documentation", "Distros" ]
 ---
 
 > cd /etc/yum.repos.d/

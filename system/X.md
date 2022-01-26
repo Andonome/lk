@@ -1,6 +1,6 @@
 ---
 title: "X"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 X is a server which listens to requests for display.
 

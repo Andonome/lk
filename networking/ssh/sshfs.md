@@ -1,6 +1,6 @@
 ---
 title: "sshfs"
-tags: [ "Documentation", "networking" ]
+tags: [ "Documentation", "Networking" ]
 ---
 # Mount 
 

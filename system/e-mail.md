@@ -1,6 +1,6 @@
 ---
 title: "e-mail"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 # Terminology
 

@@ -1,6 +1,6 @@
 ---
 title: "groff"
-tags: [ "Documentation", "data" ]
+tags: [ "Documentation", "Data" ]
 ---
 # Basic Documents
 

@@ -1,6 +1,6 @@
 ---
 title: "agate"
-tags: [ "Documentation", "networking" ]
+tags: [ "Documentation", "Networking" ]
 ---
 Make sure your dns is in order.
 My domain name is `belgradecats.tk`, so put your own in there.
@@ -31,7 +31,7 @@ Make a service file.
 ```
 [Unit]
 Description=agate
-After=network.target
+After=Network.target
 
 [Service]
 User=gemini

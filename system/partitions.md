@@ -1,6 +1,6 @@
 ---
 title: "partitions"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 # FDisk Basics
 
@@ -27,7 +27,7 @@ Note the asterisk marking the boot partition.
 
 fdisk will not help with a GPT formatted drive.  For this, use gdisk, which is mostly the same.
 
-Now that we have a partition, we can make it into a filesystem.  Most will use:
+Now that we have a partition, we can make it into a fileSystem.  Most will use:
 
 > sudo mkfs -t ext4 /dev/sdc1
 
@@ -35,7 +35,7 @@ or if you're making a swap partition, you can use:
 
 > sudo mkswap /dev/sdb2
 
-or for the reiser filesystem, we can use:
+or for the reiser fileSystem, we can use:
 
 > sudo mkreiserfs /dev/sdc2
 
@@ -65,7 +65,7 @@ or  divide things by inode - the thing which records where files are?
 
 > df -i
 
-Examine a filesystem with:
+Examine a fileSystem with:
 
 > sudo dumpe2fs /dev/sda1 | less
 
@@ -78,12 +78,12 @@ This will check sda1 every 30 boots.  It can also be checked every month.
 
 > sudo tune2fs -i 1m /dev/sda1
 
-This thing can also make a new label for the system:
+This thing can also make a new label for the System:
 
 > sudo tune2fs -L new_name /dev/sdb3
 
 # Repair
-Start by unmounting the filesystem.
+Start by unmounting the fileSystem.
 
 > sudo umount /dev/sdc1
 
@@ -112,15 +112,15 @@ or if you don't know the type, just try the lot:
 # File Systems
 xfs and zfs can only be expanded.
 
-# Shrink Filesystem
+# Shrink FileSystem
 
 NB: When I followed these instructions, the process destroyed my data. Seemed fine on the YouTube video.
 
-Check the filesystem's health:
+Check the fileSystem's health:
 
 > sudo e2fsck -f /dev/sdb1
 
-Resize the file system to something smaller than what you want, so here I want 500G and so I resize to 450 G.
+Resize the file System to something smaller than what you want, so here I want 500G and so I resize to 450 G.
 
 > resize2fs /dev/sdb1 450G
 
@@ -130,7 +130,7 @@ Then delete the partition with either gdisk or fdisk, depending upon the layout.
 
 > d
 
-Then make a new filesystem of the desired type with:
+Then make a new fileSystem of the desired type with:
 
 > n
 

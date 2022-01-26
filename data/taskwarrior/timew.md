@@ -1,11 +1,7 @@
 ---
 title: "timew"
-tags: [ "Documentation", "data" ]
+tags: [ "Documentation", "Data" ]
 ---
-# Setup
-
-Below commands mostly deal with timew alone.  With taskwarrior installed as well, `locate on-modify-time`, then add it to ~/.task/hooks and make it executable.
-
 # Summaries
 
 Try:
@@ -152,4 +148,9 @@ with:
 > curl -O https://taskwarrior.org/download/timew-dbcorrection.py
 
 > python timew-dbcorrections.py
+
+# Setup
+
+With taskwarrior installed as well, `locate on-modify-time`, then add it to ~/.task/hooks and make it executable.
+This will track the time of any tasks used with [taskwarrior](task.md).
 

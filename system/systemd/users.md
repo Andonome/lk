@@ -1,6 +1,6 @@
 ---
 title: "users"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "systemd" ]
 ---
 # Automatic Login
 

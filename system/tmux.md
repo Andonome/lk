@@ -1,6 +1,6 @@
 ---
 title: "tmux"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 Start with:
 

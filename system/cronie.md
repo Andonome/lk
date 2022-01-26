@@ -1,6 +1,6 @@
 ---
 title: "cronie"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 
 Various services from cron exist, e.g.
@@ -9,7 +9,7 @@ Various services from cron exist, e.g.
 
 start the cronie with
 
-> sudo systemctl start cronie
+> sudo Systemctl start cronie
 
 start a cron with 
 

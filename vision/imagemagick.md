@@ -1,6 +1,6 @@
 ---
 title: "imagemagick"
-tags: [ "Documentation", "vision" ]
+tags: [ "Documentation", "Vision" ]
 ---
 [Source](http://lxlinux.com/imagemagick.html)
 
@@ -28,6 +28,7 @@ Resizing only changes jpegs.  Change a png with:
 
 
 # Trim images to border
+
 This is generally used for transparrent images.
 
 > convert -trim image.png output.png

@@ -1,6 +1,6 @@
 ---
 title: "rclone"
-tags: [ "Documentation", "networking" ]
+tags: [ "Documentation", "Networking" ]
 ---
 The manpage's 'Synopsis' provides a fast reference.
 

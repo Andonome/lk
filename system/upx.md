@@ -1,6 +1,6 @@
 ---
 title: "upx"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 upx compresses binaries, so they take up less disk space, but take longer to start.
 

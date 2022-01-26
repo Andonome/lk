@@ -1,6 +1,6 @@
 ---
 title: "xkbmap"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 # Language Layouts
 

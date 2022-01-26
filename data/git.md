@@ -10,7 +10,7 @@ tags: [ "Documentation", "data" ]
 
 > git config --global user.name "Malin Freeborn" 
 
-## New Git
+# New Git
 
 Start a git:
 

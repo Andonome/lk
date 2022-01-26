@@ -1,5 +1,5 @@
 ---
 title: "wine"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 maybe run \n> sudo dpkg --add-architecture i386
