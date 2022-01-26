@@ -1,6 +1,6 @@
 ---
 title: "cron"
-tags: [ "Documentation", "basics" ]
+tags: [ "Documentation", "Basics" ]
 ---
 # Cron
 

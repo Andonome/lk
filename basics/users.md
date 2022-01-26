@@ -1,6 +1,6 @@
 ---
 title: "users"
-tags: [ "Documentation", "basics" ]
+tags: [ "Documentation", "Basics" ]
 ---
 # Basic Information
 
@@ -13,8 +13,6 @@ Let's get some entries with 'getent', e.g. passwd or group.
 Obviously:
 
 > getent shadow
-
-will require sudo.
 
 ## Examples
 

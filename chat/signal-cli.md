@@ -1,6 +1,6 @@
 ---
 title: "signal"
-tags: [ "Documentation", "distros" ]
+tags: [ "Documentation", "Chat" ]
 ---
 
 > yay -S signal-cli

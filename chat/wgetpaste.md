@@ -1,6 +1,6 @@
 ---
 title: "wgetpaste"
-tags: [ "Documentation", "chat" ]
+tags: [ "Documentation", "Chat" ]
 ---
 
 See available pastebins:
@@ -18,5 +18,4 @@ Input clipboard to dpaste with the heading "Title"
 Paste in the file then load the result to the right-hand clipboard:
 
 > wgetpaste -s dpaste -X
-
 

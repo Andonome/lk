@@ -1,6 +1,6 @@
 ---
 title: "profanity"
-tags: [ "Documentation", "chat" ]
+tags: [ "Documentation", "Chat" ]
 ---
 
 # Pre Setup

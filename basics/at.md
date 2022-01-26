@@ -1,6 +1,6 @@
 ---
 title: "at"
-tags: [ "Documentation", "basics" ]
+tags: [ "Documentation", "Basics" ]
 ---
 Install with:
 

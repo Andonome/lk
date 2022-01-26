@@ -1,6 +1,6 @@
 ---
 title: "clock"
-tags: [ "Documentation", "basics" ]
+tags: [ "Documentation", "Basics" ]
 ---
 
 Show system time:

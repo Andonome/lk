@@ -1,16 +1,17 @@
 ---
 title: "kill"
-tags: [ "Documentation", "basics" ]
+tags: [ "Documentation", "Basics" ]
 ---
-If you want to kill a program in a graphical environment, open a terminal and typeL
 
-## Graphical Programs
+If you want to kill a program in a graphical environment, open a terminal and type:
+
+# Graphical Programs
 
 > xkill
 
 Then click on the application which you want to kill.
 
-## All Programs
+# All Programs
 
 To kill a program, find it with:
 
@@ -22,7 +23,7 @@ Kill the program with:
 
 > kill 19643
 
-## Types of Kill
+# Types of Kill
 
 To see an ordered list of termination signals:
 

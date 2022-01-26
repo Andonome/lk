@@ -1,6 +1,6 @@
 ---
 title: "time"
-tags: [ "Documentation", "basics" ]
+tags: [ "Documentation", "Basics" ]
 ---
 # systemd
 
@@ -8,7 +8,7 @@ Set time to synchronize with an ntp server:
 
 > timedatectl set-ntp true
 
-This info stays in /usr/share/zoneinfo
+This info stays in `/usr/share/zoneinfo`.
 
 # Local Time
 
@@ -46,21 +46,9 @@ Then set that language, with:
 
 # Network Time Protocol
 
-Enter the shell with:
+Glimpse an overview with:
 
-> ntpq
+> ntpq -p
 
-Or just glimpse and overview with:
-
-> ntpq -q
-
-This clock can drift, which is then listed under /var/log/ntp.drift
-
-The config is under /etc/ntp.conf.  If a line for the stats directory is listed, it'll log stats, e.g.:
-
-`statsdir /var/log/ntpstats/`
-
-This can show if clock drift occurs.
-
-The config file also lets you specify servers to obtain time from.
+Usually this is run as a service, so just start that service.
 
