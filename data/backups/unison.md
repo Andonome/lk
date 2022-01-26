@@ -1,67 +1,45 @@
 ---
 title: "unison"
-tags: [ "Documentation", "backups" ]
+tags: [ "Documentation", "Backups" ]
 ---
 
-# Local Sync
+Install unison on both machines, and on both make the `~/.unison` directory.
 
-unison Dir_A Dir_B
+Make a job called `backup`:
 
-Accept defaults with:
+> vim ~/.unison/backup.prf
 
-> unison -auto Dir_A Dir_B
+All jobs must end in `.prf`.
 
-Ask no questions with:
+Here is an example job, which synchronizes the `~/music` directory with a remote machine.
 
-> unison -batch Dir_A Dir_B
-
-# Remote Sync
-
-Sync the folders ~/LK on pi and localhost with:
-
-> unison LK ssh://pi@192.168.0.13/LK
-
-
-#Back Script Example
-Make backup script 'rat' by entering the configurations in ~/.unison/rat.prf
-
-```{r}
-# Where to synchronize from
-root=/home/roach-1/
-
-root=ssh://ubuntu@10.0.3.76/
-
-auto = true
-batch = true
-## for ssh arguments, add as so:
-#sshargs=-p 4792
-
-## Directories to synchronize
-## a path such as 'Album 1' will not work - don't use quotes.
-path=box 1
-path=box 2
-path=house
-path=.vimrc
-path=.bashrc
-
-ignore=Name temp.*
-ignore=Name *.swp
-
-## Merging
-## This line handles the merge, but it's based on Emacs, which cannot run in a tty, but requires X.
-
-diff = diff -u CURRENT2 CURRENT1 | perl -pe 's/^\+/>/; s/^\-/</'
 ```
+auto = true
+root=/home/ghost
+root=ssh://ghost@192.168.0.10//home/ghost/
 
-# Scheduled Backups
+path=music
 
-A full backup can be run with:
+ignore=Name *.flac
 
-> unison rat.prf 
+```
+The last command means it will ignore any file with a name ending in `.flac`.
 
-And a crontab can be set with:
+## Automatic Runs
 
-* */4 * * * /usr/bin/unison rat
+The first command means this will run but also confirm which files will be deleted, and which will be transferred, us `batch = true` instead.
 
+Set unison to run with crontab or a systemd unit file to have directories synchronize automatically.
 
+## Problem Solving
+
+Unison is extremely sensitive to version changes.
+Both machines must have exactly the same version of unison installed, as well as the same version of `ocaml`.
+
+Check with:
+
+> unison -version
+
+You will see data files summarizing what has happened in the `~/.unison` directory.
+If something goes wrong, you may be prompted to delete these to start again.
 
