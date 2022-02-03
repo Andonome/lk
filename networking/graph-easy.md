@@ -1,4 +1,7 @@
-
+---
+title: "graph-easy"
+tags: [ "Documentation" ]
+---
 Set up a file like this, called `troubleshooting.txt`.
 
 ```
