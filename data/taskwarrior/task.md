@@ -9,7 +9,7 @@ Set up the configuration file:
 
 Add a task:
 
-> task add update linux
+> task add *update linux*
 
 See which task is next:
 
@@ -19,23 +19,23 @@ Note the id number.
 
 Mark a task as started:
 
-> task start 1
+> task start *1*
 
 Once finished:
 
-> task 1 done
+> task *1 done*
 
 # Projects
 
 Add a project:
 
-> task add project:house buy potted plant
-> task add proj:house.repair buy screwdriver
-> task add proj:house.repair buy shelf brackets
-> task add pro:house.paint buy white paint
-> task add pro:house.paint buy red paint
-> task add pro:house.paint buy black paint
-> task add pro:house.paint buy brushes
+> task add project:*house buy potted plant*
+> task add proj:*house.repair buy screwdriver*
+> task add proj:*house.repair buy shelf brackets*
+3 task add pro:*house.paint buy white paint*
+> task add pro:*house.paint buy red paint*
+> task add pro:*house.paint buy black paint*
+> task add pro:*house.paint buy brushes*
 
 ## Summary
 
@@ -57,15 +57,15 @@ You can then see only tasks which involve buying something with:
 
 Set three contexts by their tags:
 
-> task context define work +sa or +hr
+> task context define *work +sa or +hr*
 
-> task context define study +ed or +void or +rat
+> task context define *study +ed or +void or +rat*
 
-> task context define home -sa -hr -ed -void -rat
+> task context define *home -sa -hr -ed -void -rat*
 
 Change to the first context.
 
-> task context work
+> task context *work*
 
 Then stop.
 

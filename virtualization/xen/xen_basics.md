@@ -4,9 +4,9 @@ tags: [ "Documentation", "system" ]
 ---
 # Make a local iso repository
 
-> mkdir -p /var/opt/xen/ISO_Store
+> mkdir -p */var/opt/xen/ISO_Store*
 
-> xe sr-create name-label=LocalISO type=iso device-config:location=/var/opt/xen/ISO_Store device-config:legacy_mode=true content-type=iso
+> xe sr-create name-label=*LocalISO* type=iso device-config:location=*/var/opt/xen/ISO_Store* device-config:legacy_mode=true content-type=iso
 
 This creates a UUID for the new directory:
 

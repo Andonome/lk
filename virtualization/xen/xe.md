@@ -8,13 +8,13 @@ tags: [ "Documentation", "system" ]
 
 Start, stop, et c. all done with `xe`:
 
-> xe vm-start vm=TTS
+> xe vm-start vm=*TTS*
 
-> xe vm-shutdown vm=Bob
+> xe vm-shutdown vm=*Bob*
 
 Destruction requires the uuid.
 
-> xe vm-destroy uuid=243b1165-14aa-37f6-496f-44879d05b3f2
+> xe vm-destroy uuid=*243b1165-14aa-37f6-496f-44879d05b3f2*
 
 # Shut Down VM
 
@@ -22,13 +22,13 @@ List VMs.
 
 > xe host-list
 
-> xe vm-list resident-on=<uuid_of_host>
+> xe vm-list resident-on=*<uuid_of_host>*
 
-> xe vm-shutdown uuid=<UUID from step 3> force=true
+> xe vm-shutdown uuid=*<UUID from step 3>* force=true
 
 If this doesn't work, try:
 
-> xe vm-reset-powerstate uuid=<UUID from step 3> force=true
+> xe vm-reset-powerstate uuid=*<UUID from step 3>* force=true
 
 Get the id:
 
@@ -36,7 +36,7 @@ Get the id:
 
 And destroy the domain:
 
-> /opt/xensource/debug/xenops destroy_domain -domid <DOMID from step 7>
+> /opt/xensource/debug/xenops destroy_domain -domid *<DOMID from step 7>*
 
 # Error: `Internal error:xenopsd internal error: Storage_interface.Illegal_transition` in XenServer
 
@@ -62,13 +62,13 @@ This is the UUID of the Control Domain. The Control Domain is a privileged Virtu
 
 Run the following command to obtain the UUID of the VBD (Virtual Block Device) object linking the Control Domain:
 
-> xe vbd-list vm-uuid=<uuid of the Control Domain>
+> xe vbd-list vm-uuid=*<uuid of the Control Domain>*
 
 Run the following commands to unplug and destroy the VBD:
 
-> xe vbd-unplug uuid=<uuid of the vbd>
+> xe vbd-unplug uuid=*<uuid of the vbd>*
 
-> xe vbd-destroy uuid=<uuid of the vbd>
+> xe vbd-destroy uuid=*<uuid of the vbd>*
 
 ## Make a local iso repository
 
@@ -80,7 +80,7 @@ This creates a UUID for the new directory:
 
 # Import
 
-xe vm-import filename=/mnt/blah.xva
+xe vm-import filename=*/mnt/blah.xva*
 
 # USB
 
@@ -94,11 +94,11 @@ Get the USB's uuid.
 
 Make the USB recognised as a device.
 
-> xe pusb-param-set uuid=<uuid>
+> xe pusb-param-set uuid=*<uuid>*
 
 For passthrough, use this:
 
-> xe pusb-param-set uuid=<uuid> passthrough-enabled=true
+> xe pusb-param-set uuid=*<uuid>* passthrough-enabled=true
 
 ## Attach to host
 
@@ -112,8 +112,8 @@ For passthrough, use this:
 
 # Exporting and Exporting VMs
 
-> xe vm-export vm=<Name> filename=/full/path.xva
+> xe vm-export vm=*<Name>* filename=*/full/path.xva*
 
-> xe vm-import vm=<Name> filename=/full/path.xva
+> xe vm-import vm=*<Name>* filename=*/full/path.xva*
 
 
