@@ -1,6 +1,6 @@
 ---
-title: "basics"
-tags: [ "Documentation", "system" ]
+title: "Xen Volume Management"
+tags: [ "Documentation", "xe", "virtualization", "volume" ]
 ---
 # Make a local iso repository
 

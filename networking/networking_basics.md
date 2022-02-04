@@ -1,6 +1,6 @@
 ---
-title: "basics"
-tags: [ "Documentation", "Networking" ]
+title: "Networking"
+tags: [ "Documentation", "Networking", "ip" ]
 ---
 # You
 

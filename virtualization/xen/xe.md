@@ -1,6 +1,6 @@
 ---
 title: "xe"
-tags: [ "Documentation", "system" ]
+tags: [ "documentation", "virtualization", "xen" ]
 ---
 # Basic VM Management
 
