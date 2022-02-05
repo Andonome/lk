@@ -1,12 +1,6 @@
 ---
 title: "snaps"
-tags: [ "Documentation", "System" ]
+tags: [ "Documentation", "System", "Ubuntu", "snap" ]
 ---
 > sudo apt-get purge -y snapd
-
-#Hiding from Nautilus
-
-> echo snap >> ~/.hidden
-
-Moving the directory ~/snap to ~/.snap acts as expected.
 
