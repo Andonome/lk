@@ -3,7 +3,7 @@ title: "agate"
 tags: [ "Documentation", "Networking" ]
 ---
 Make sure your dns is in order.
-My domain name is `belgradecats.tk`, so put your own in there.
+My domain name is `malinfreeborn.com`, so put your own in there.
 
 Install agate by placing the binary somewhere or (on Arch):
 
@@ -27,6 +27,9 @@ Make a service file.
 
 > sudo vim /etc/systemd/system/multi-user.target.wants/agate.service
 
+Start agate once to make the certificates.
+
+> agate --content /usr/share/gemini/gemini --hostname malinfreeborn.com --lang en-GB
 
 ```
 [Unit]
@@ -36,7 +39,7 @@ After=Network.target
 [Service]
 User=gemini
 Type=simple
-ExecStart=/usr/bin/agate -s --content /usr/share/gemini/gemini --key /usr/share/gemini/certs/key.pem --cert /usr/share/gemini/certs/cert.pem --hostname belgradecats.tk --lang en-GB
+ExecStart=/usr/bin/agate --content /usr/share/gemini/gemini --hostname malinfreeborn.com --lang en-GB
 
 [Install]
 WantedBy=default.target
