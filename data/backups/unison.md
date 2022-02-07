@@ -1,6 +1,6 @@
 ---
 title: "unison"
-tags: [ "Documentation", "Backups" ]
+tags: [ "documentation", "backups", "sync" ]
 ---
 
 Install unison on both machines, and on both make the `~/.unison` directory.
@@ -25,11 +25,18 @@ ignore=Name *.flac
 ```
 The last command means it will ignore any file with a name ending in `.flac`.
 
+Add a port with this line:
+
+```
+sshargs=-p 4444
+```
+
 ## Automatic Runs
 
 The first command means this will run but also confirm which files will be deleted, and which will be transferred, us `batch = true` instead.
 
 Set unison to run with crontab or a systemd unit file to have directories synchronize automatically.
+
 
 ## Problem Solving
 
