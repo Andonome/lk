@@ -1,5 +1,5 @@
 ---
-title: "navigate"
+title: "vim navigation"
 tags: [ "Documentation", "vim" ]
 ---
 

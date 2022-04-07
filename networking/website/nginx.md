@@ -1,6 +1,6 @@
 ---
 title: "nginx"
-tags: [ "Documentation", "networking" ]
+tags: [ "Documentation", "Networking" ]
 ---
 Install nginx:
 

@@ -1,5 +1,5 @@
 ---
 title: "urxvt"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 Perl scripts typically kept in /usr/lib/urxvt/perl

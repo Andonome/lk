@@ -1,11 +1,11 @@
 ---
 title: "troubleshooting"
-tags: [ "Documentation", "networking" ]
+tags: [ "Documentation", "Networking" ]
 ---
 
 # Do you have an IP?
 
-If not, try checking out what your local networking interfaces are, then check if they have been picked up:
+If not, try checking out what your local Networking interfaces are, then check if they have been picked up:
 
 > dmesg | grep eth0
 
@@ -13,8 +13,7 @@ If not, try checking out what your local networking interfaces are, then check i
 
 > netstat -l
 
-... or maybe narrow it down to http:
+...or maybe narrow it down to http:
 
 > netstat -l | grep http
-
 

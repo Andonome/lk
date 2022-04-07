@@ -1,19 +1,7 @@
 ---
 title: "processes"
-tags: [ "Documentation", "basics" ]
+tags: [ "Documentation", "Basics" ]
 ---
-# Free
-
-See free space with:
-
-> free
-
-and make it human readable with:
-
-> free -h
-
-Or `-m` for megabytes.
-
 # Proccesses
 
 See running items in current terminal with 

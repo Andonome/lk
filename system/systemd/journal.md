@@ -1,6 +1,6 @@
 ---
 title: "journal"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "systemd" ]
 ---
 
 Find errors since November

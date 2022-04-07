@@ -1,6 +1,6 @@
 ---
 title: "awk"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 # Basics
 

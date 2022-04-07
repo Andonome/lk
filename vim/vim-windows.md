@@ -1,5 +1,5 @@
 ---
-title: "windows"
+title: "vim windows"
 tags: [ "Documentation", "vim" ]
 ---
 

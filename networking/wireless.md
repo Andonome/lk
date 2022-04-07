@@ -1,6 +1,6 @@
 ---
 title: "wireless"
-tags: [ "Documentation", "networking" ]
+tags: [ "Documentation", "Networking" ]
 ---
 
 # Check wifi's working

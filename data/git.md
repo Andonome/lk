@@ -6,21 +6,25 @@ tags: [ "Documentation", "data" ]
 
 ## New Machines
 
-> git config --global user.email "malinfreeborn@tutamail.com" 
+> git config --global user.email *"malinfreeborn@tutamail.com"*
 
-> git config --global user.name "Malin Freeborn" 
+> git config --global user.name *"Malin Freeborn"* 
 
-## New Git
+# New Git
 
-Start a git:
+Start a git in a folder:
+
+> mkdir *project* && cd *project*
 
 > git init
 
-Add whatever's in the folder.
+Make a file explaining what the project does:
 
-> git add .
+> vim README.md
 
-Then make the initial commit:
+> git add README.md
+
+Then make the initial commit, explaining the change you just made:
 
 > git commit
 
@@ -38,9 +42,10 @@ Check your history:
 
 # Remotes
 
-Get the url of your git remote and add it, with the name "origin":
+If you want to keep a copy on a public site such as Gitlab, so others can see it, then go there and create a blank project (no readme, nothing).
+Find the address you want and add it as a remote:
 
-> git remote add origin git@gitlab.com:bindrpg/core
+> git remote add *gitlab*  *https://gitlab.com/username/projectx*
 
 Tell git you're pushing the branch "master" to the remote repo "origin": 
 
@@ -55,7 +60,7 @@ If someone makes a change on the remote, pull it down with:
 A branch is a full copy of the project to test additional ideas.
 You can make a new branch called 'featurez' like this:
 
-> git branch featurez
+> git branch *featurez*
 
 Have a look at all your branches:
 
@@ -63,23 +68,23 @@ Have a look at all your branches:
 
 Switch to your new branch:
 
-> git checkout featurez
+> git checkout *featurez*
 
 And if your changes are rubbish, checkout the "master" branch again, then delete "featurez":
 
-> git branch -D featurez
+> git branch -D *featurez*
 
 Or if it's a good branch, push it to the remote:
 
-> git push origin featurez
+> git push *origin* *featurez*
 
 ## Merging
 
 Once you like the feature, merge it into the main branch.  Switch to master then merge it:
 
-> git merge featurez
+> git merge *featurez*
 
-and delete featurez as you've already merged it:
+and delete `featurez` as you've already merged it:
 
 > git branch -d featurez
 

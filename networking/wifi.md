@@ -1,6 +1,6 @@
 ---
 title: "wifi"
-tags: [ "Documentation", "networking" ]
+tags: [ "Documentation", "Networking" ]
 ---
 # Netstat Stuff
 
@@ -50,19 +50,21 @@ This tells you that your ESSID is 'Gandalf WajFaj', and the access point name is
 
 > nmcli radio
 
-	You get an overview of your radio devices.  You're told that eth0 deals with your ethernet and wlan0 deals with wifi.  wlan0 is a file which represents your wifi device.
+You get an overview of your radio devices.
+You're told that eth0 deals with your ethernet and `wlan0` deals with wifi.
+`wlan0` is a file which represents your wifi device.
 
 > nmcli wlan0 wifi rescan
 
 > nmcli device wifi list
 
-	Now to connect.
+Now to connect.
 
 > nmcli device wifi connect [SSID] [your password] [wifi password]
 
-	Alternatively, you can use
+Alternatively, you can use
 
 > nmcli -ask device wifi connect [SSID]
 
-	And it'll ask for your password, so you're not typing it in in full view.
+And it'll ask for your password, so you're not typing it in in full view.
 

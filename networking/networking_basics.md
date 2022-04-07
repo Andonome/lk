@@ -1,6 +1,6 @@
 ---
-title: "basics"
-tags: [ "Documentation", "networking" ]
+title: "Networking"
+tags: [ "Documentation", "Networking", "ip" ]
 ---
 # You
 
@@ -53,12 +53,12 @@ The starting numbers tell you about the address. You just have to memorize the m
 |:---:|:---:|
 | 127.X | The computer's name for itself, for when you want to ssh into your own machine |
 | ::1/128 | Same thing, with ipv6 |
-| 192.168.X | A small network address, given by a DHCP server (possibly your router) |
+| 192.168.X | A small Network address, given by a DHCP server (possibly your router) |
 | 169.X | The interface to the internet wasn't given an ip address, so it's made up its own |
 
 # `arp-scan`
 
-Look around your local network with `arp-scan`.
+Look around your local Network with `arp-scan`.
 
 > sudo arp-scan -l
 
@@ -85,7 +85,7 @@ Mac addresses are easy to fake, so don't trust this output to keep you safe.
 
 # `nmap`
 
-Look around your entire network from 192.168.0.1 to 192.168.0.255:
+Look around your entire Network from 192.168.0.1 to 192.168.0.255:
 
 > sudo nmap -F 192.168.0.1/24
 

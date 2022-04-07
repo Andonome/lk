@@ -1,6 +1,6 @@
 ---
 title: "bash_tricks"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 # Automatic mp3 Tagging
 

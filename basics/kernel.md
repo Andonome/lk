@@ -1,10 +1,12 @@
 ---
 title: "kernel"
-tags: [ "Documentation", "basics" ]
+tags: [ "Documentation", "Basics" ]
 ---
-# Living Space
+## Living Space
 
 Kernel modules live in lib/modules/$(uname -r)
+
+## Change
 
 Load them with
 
@@ -16,5 +18,9 @@ Or remove one with
 
 The PC's irritating speaker beep can be really annoying. Disable it with:
 
-> sudo rmmod pcspeaker
+> sudo modprobe -r pcspeaker
+
+Permanently disable a module by blacklisting it in `/etc/modprobe.d`:
+
+> echo 'blacklist pcspkr' > /etc/modprobe.d/*nobeep*.conf
 

@@ -1,8 +1,9 @@
 ---
 title: "basics"
-tags: [ "Documentation", "sound" ]
+tags: [ "Documentation", "Sound" ]
 ---
 # Pulse
+
 If you have pulse, use pulse.
 Check with `which pulseaudio`. No output means you need to use alsa (below).
 
@@ -19,11 +20,11 @@ Find working outputs:
 Surround.5 seems best.
 
 
-# Find what sound settings exist
+# Find what Sound settings exist
 
 amixer scontrols
 
-# Change a sound setting
+# Change a Sound setting
 
 > amixer set Master 5%-
 
@@ -49,8 +50,8 @@ Start with:
 
 > alsamixer
 
-Then press `F6` to see available sound cards.
-If you find a sound card called 'PinePhone', then you can select an audio source there, and adjust with:
+Then press `F6` to see available Sound cards.
+If you find a Sound card called 'PinePhone', then you can select an audio source there, and adjust with:
 
 > amixer -c PinePhone set 'Headphone' 50%
 

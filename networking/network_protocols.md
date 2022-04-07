@@ -1,6 +1,6 @@
 ---
 title: "protocols"
-tags: [ "Documentation", "networking" ]
+tags: [ "Documentation", "Networking" ]
 ---
 # Protocols
 
@@ -16,7 +16,7 @@ tags: [ "Documentation", "networking" ]
 
 ## IPv4
 
-Three address ranges pertain only to private networks, so no computer looks beyond the local router to resolve them:
+Three address ranges pertain only to private Networks, so no computer looks beyond the local router to resolve them:
 
 10.0.0.0	to	10.255.255.255
 
@@ -24,7 +24,7 @@ Three address ranges pertain only to private networks, so no computer looks beyo
 
 192.168.0.0	to	192.168.255.255
 
-In theory, networks should fall within one of 3 ranges, depending upon their first octet:
+In theory, Networks should fall within one of 3 ranges, depending upon their first octet:
 
 Class A	1-127
 
@@ -63,13 +63,13 @@ Add an interface to a device as so:
 
 > sudo ip a add 192.168.0.15/255.255.255.0 dev eth1
 
-See network interfaces available on Fedora with:
+See Network interfaces available on Fedora with:
 
-> less /etc/sysconfig/network-scripts/ifcfg-enp2s0f0
+> less /etc/sysconfig/Network-scripts/ifcfg-enp2s0f0
 
 or on Debian with:
 
-> less /etc/network/interfaces
+> less /etc/Network/interfaces
 
 Mostly, interfaces will receive automatic addresses from a DHCP server.  If this hasn't happened for you, you can request a dhcp address with:
 

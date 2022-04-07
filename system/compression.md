@@ -1,6 +1,6 @@
 ---
 title: "compression"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 # Tar
 

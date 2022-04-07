@@ -1,6 +1,6 @@
 ---
 title: "xdg"
-tags: [ "Documentation", "system" ]
+tags: [ "Documentation", "System" ]
 ---
 
 What filetype is this file?

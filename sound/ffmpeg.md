@@ -1,6 +1,6 @@
 ---
 title: "ffmpeg"
-tags: [ "Documentation", "sound" ]
+tags: [ "Documentation", "Sound" ]
 ---
 # Basics 
 

@@ -1,5 +1,5 @@
 ---
-title: "basics"
+title: "Void Linux Basics"
 tags: [ "Documentation", "distros" ]
 ---
 

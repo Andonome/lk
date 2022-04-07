@@ -1,5 +1,5 @@
 ---
-title: "completion"
+title: "vim completion"
 tags: [ "Documentation", "vim" ]
 ---
 
