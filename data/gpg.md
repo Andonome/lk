@@ -81,3 +81,7 @@ Then send those trusted keys up to a server, so people can see you have verified
 
 > gpg --keyserver sks.hklbgd.org --refresh-keys
 
+# Export
+
+> gpg --output *me*.gpg --armor --export
+
