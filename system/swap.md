@@ -4,9 +4,7 @@ tags: [ "Documentation", "basics" ]
 ---
 # Making a Swap File
 
-> sudo mkdir -v /var/cache/swap
-
-> cd /var/cache/swap
+> cd /var/cache/
 
 > sudo dd if=/dev/zero of=swapfile bs=1K count=4M
 
@@ -25,7 +23,7 @@ Test it's working with top
 
 or:
 
-> echo "/var/cache/swap/swapfile none swap sw 0 0" | sudo tee -a /etc/fstab
+> echo "/var/cache/swapfile none swap sw 0 0" | sudo tee -a /etc/fstab
 
 Test it'll work at boot with:
 
