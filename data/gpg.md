@@ -12,7 +12,7 @@ Follow the guide.
 
 # Encrypting a file
 
-> gpg -r malinfreeborn@tutamail.com -e file
+> gpg -r malinfreeborn@posteo.net -e file
 
 `-r` specifies the recipient.
 

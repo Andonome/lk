@@ -6,7 +6,7 @@ tags: [ "Documentation", "data" ]
 
 ## New Machines
 
-> git config --global user.email *"malinfreeborn@tutamail.com"*
+> git config --global user.email *"malinfreeborn@posteo.net"*
 
 > git config --global user.name *"Malin Freeborn"* 
 
