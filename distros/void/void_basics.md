@@ -42,3 +42,9 @@ For an easy utility, install `brightnessctl`.
 
 > brightnessctl s 10%+
 
+# Other Tricks
+
+- [autologin](autologin.md)
+- [services](sv.md)
+- [wifi](wpa_cli.md)
+

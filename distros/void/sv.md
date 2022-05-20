@@ -28,7 +28,7 @@ Stop `mpd` with:
 
 > sudo sv stop mpd
 
-And stop it starting at startup with:
+And stop it automatically loading at startup with:
 
 > sudo rm /var/service/mpd
 
