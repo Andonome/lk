@@ -21,3 +21,11 @@ Set 'alt + shift', as the command which cycles through the British English, Poli
 
 > setxkbmap -layout gb,pl,rs -option grp:alt_shift_toggle
 
+## Alt_GR
+
+Remap, e.g., the right Windows key, to Alt_Gr.
+
+```
+    key <RWIN> {[  ISO_Level3_Shift    ]};
+```
+
