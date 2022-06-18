@@ -1,14 +1,17 @@
+---
+title: "ffmpeg"
+tags: [ "Documentation", "Sound", "Vision" ]
+---
 # Basics 
+
+Translate a media file to a new type.
 
 ffmpeg -i [input file] output_file.mkv
 
 The input file might be a device, such as a camera.
 
-Play video:
-
-> ffplay file.mp4
-
 #Record screen
+
 Take the format as 'grab the x11 screen'.
 
 > ffmpeg -f x11grab -s [screensize] -i :0.0 out.mkv
@@ -39,6 +42,7 @@ For problems, see pavucontrol.
 3 = 90Clockwise and vertical flip
 
 # Lower Video Quality
+
 A crf quality of 18 is high, while 24 is low quality.
 
 ffmpeg -i input.mp4 -vcodec libx264 -crf 20 output.mp4
