@@ -23,7 +23,7 @@ Next up, start wpa_supplicant:
 
 The -B flag runs this as a background process.  Remove this to see real-time output in order to solve problems.  The -i flag denotes the physical device used for the wifi.  The -c flag points to the configuration file for use.
 
-# Automatic WiFi Connection
+## Automatic WiFi Connection
 
 > wpa_cli
 
@@ -33,27 +33,39 @@ This has a number of commands to input.  In order:
 
 > scan_results
 
-> add_Network
+> add_network
 
-This outputs a Network number, e.g. '3'.  This is the new Network you'll work with.
+This outputs a network number, e.g. '3'.  This is the new network you'll work with.
 
-> set_Network 3 ssid "Kosachok Cafe"
+> set_network 3 ssid "Kosachok Cafe"
 
-> set_Network 3 psk "Kosachok2019"
+> set_network 3 psk "Kosachok2019"
 
-OR
+OR (for no password)
 
-> set_Network 3 key_mgmt NONE
+> set_network 3 key_mgmt NONE
 
-> enable_Network 3
+> enable_network 3
 
 > save_config
 
-...and possibly:
+...and for the impatient:
 
-> sudo sv restart dhcpcd 
+> sudo sv restart wpa_supplicant
 
-or maybe:
+## Scripts
 
-> dhcpd wlp3s0 
+You can script like this:
+
+> wpa_cli add_network
+
+That returns an ID, so you can say:
+
+> newNetwork="$(wpa_cli add_network)"
+
+Then `$newNetwork` would equal that number, and you can add/ remove networks with scripts.
+
+But remember to escape the quotes, so adding a network would be:
+
+> wpa_cli set_network 3 psk \""passphrase"\"
 
