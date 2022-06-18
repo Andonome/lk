@@ -1,6 +1,6 @@
 ---
 title: "youtube-dl"
-tags: [ "Documentation", "Sound" ]
+tags: [ "Documentation", "Scraping" ]
 ---
 > youtube-dl --write-auto-sub <URL>
 
@@ -16,3 +16,7 @@ It’s also possible to skip the video and only download the subtitle if you add
 
 > youtube-dl --sub-lang sv --write-auto-sub --skip-download <URL>
 
+## Alternative
+
+Try `yt-dlp` for some additional features and workarounds.
+It uses the same flags as youtube-dl.
