@@ -17,31 +17,50 @@ tags: [ "Documentation", "data" ]
 
 gb4 = to to cell b4
 
-> x = delete a cell
 > aa = see all text in cells
-
 > f = format cells so you can see it.
 > fl = format wider right
 > fh = format smaller left
 
-> fj = decrease decimal value
-> fk = increase decimal value
+> fj = format wider down
+> fk = format smaller down
 
 # Edit
 
-> e = edit a number
-> E = edit text
-> dc = delete column
-> yc = yank column
-> dr = delete row
-> p = literal paste
-> Pc = paste mutatis mutandis
+## Text
 
-#Functions
+| Action                | Key |
+|:----------------------|:---:|
+| text (left align)     | <   |
+| text (right align)    | >   |
+| Edit existing  text   | E   |
 
-> =@sum(A1:A4) = add A1 to A4
-> =@avg(B1:B4) = average B1 to B4
-> =@max(B1:B4) = maximum of those numbers
-> =@min(B1:B8) = minimumof those numbers
-> =@prod(C1:C8) = multiply C1 to C8
+## Meta Actions
 
+| Action                | Key |
+|:----------------------|:---:|
+|  edit a number        | e   |
+|  delete column        | dc  |
+|  yank column          | yc  |
+|  delete row           | dr  |
+|  literal paste        | p   |
+|  paste with format    | Pc  |
+|  delete a cell        | x   |
+
+
+## Functions
+
+| Action                          | Key |
+|:--------------------------------|:---:|
+|  add A1 to A4      | =@sum(A1:A4) |
+|  average B1 to B4      | =@avg(B1:B4) |
+|  maximum of those numbers      | =@max(B1:B4) |
+|  minimumof those numbers      | =@min(B1:B8) |
+|  multiply C1 to C8      | =@prod(C1:C8) |
+
+## Visual
+
+| Action                          | Key          |
+|:--------------------------------|:------------:|
+| Increase decimals               | f-           |
+| Decrease decimals               | f+           |
