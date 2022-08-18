@@ -67,7 +67,7 @@ The above script has crappy results.
 It's better to use potrace.
 
 ```
-$convert input.jpg output.ppm
+$convert -flatten input.jpg output.ppm
 $potrace -s output.ppm -o svgout.svg
 ```
 
