@@ -17,13 +17,21 @@ Same with pdf:
 
 > xdg-mime query default application/pdf
 
+Ask what file-type `book.pdf` uses.
+
+> xdg-mime query filetype *book.pdf*
+
 ## Set
 
 Set the mime type of mp4 videos to mpv.
 
 > xdg-mime default mpv.desktop video/mp4
 
-### Alternative: File
+You'll need to use the tab key a lot here, and remember many items start with `org`.
 
-Look in `~/.config/mimeappps.list` to check and set.
+You can use an asterisk for everything in a category.
+
+> xdg-mime default org.gnome.font-viewer.desktop font/\*
+
+This often won't work as expected, because some fonts will have the type `application` rather than `font`.
 
