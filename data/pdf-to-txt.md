@@ -18,3 +18,4 @@ Arch: tesseract-data-eng and poppler-utils
 > tesseract -l eng  "$x" - >> *out*.txt
 > done
 
+- [Example script](data/pdf-to-txt.sh)
