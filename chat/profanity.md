@@ -69,3 +69,11 @@ Get yours with
 
 > /otr myfp
 
+# Automatically sign in
+
+To automatically sign in, add your password to [pass](../data/pass.md).
+
+> /account set *malin@oosm.org* eval_password *pass xmpp*
+
+> /save
+
