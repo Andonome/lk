@@ -12,4 +12,3 @@ tags: [ "Documentation", "vim" ]
 | rotate windows | C-w r |
 | split open new file | :sf path/file |
 
-

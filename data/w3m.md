@@ -1,16 +1,19 @@
 ---
 title: "w3m"
-tags: [ "Documentation", "data" ]
+tags: [ "Documentation", "browsers" ]
 ---
-'H' for help.  
+Open a search tab:
 
-Ctrl+u to go to new url.
+> w3m ddg.gg
 
-tab between fields.
-B to go back.
+<Tab> then enter to start typing.
 
-o for the love of options.
-
-T for a new tab.
-'{' and '}' to change tabs.
+| Key      | Thing                |
+|:---------|:---------------------|
+|  H       | help                 |
+| Tab      | switch fields        |
+| o        | options              |
+| B        | back                 |
+| T        | new tab              |
+| { / }    | switch tabs          |
 

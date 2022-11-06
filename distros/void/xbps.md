@@ -10,7 +10,8 @@ Look for cowsay
 
 > xbps-query -Rs cowsay
 
-Upgrade current packages.  -R looks at repositories, -s makes things sloppy.
+Upgrade current packages.
+`-R` looks at repositories, `-s` makes a sloppy search (for rough matches).
 
 > xbps-install -Suv
 
@@ -30,15 +31,11 @@ Reconfigure all packages.  Useful for breakages.
 
 > xbps-pkgdb -a
 
-Remove all dependencies.
+Remove all orphaned dependencies.
 
 > xbps-remove -o
 
 Show information about cowsay
-
-> xbps-query -RS cowsay
-
-Search for cows
 
 > xbps-query -Rs cows
 
@@ -58,17 +55,13 @@ Clean.
 
 > xbps-remove -O
 
-apt update
+Update list of available packages ('sync')
 
 > xbps-install -S
 
 Remove package information.
 
 > xbps-query -R
-
-Display all cowsay files
-
-> xbps-query -Rf cowsay
 
 Do I have cowsay installed?
 
@@ -80,9 +73,9 @@ What packages are pointless?
 
 > xbps-install -Sn cowsay
 
-A dry-run of installing cowsay, without actually intalling.
-
 # Advanced
+
+A dry-run of installing cowsay, without actually intalling.
 
 > xbps-query -x cowsay
 
@@ -106,14 +99,7 @@ Look for broken packages.
 
 > sudo xbps-pkgdb -a
 
-And if you've found any, you might try:
+And if you've found any, you might reconfigure all packages forcefully:
 
 > sudo xbps-reconfigure -af
 
-This reconfigures all packages forcefully.
-
-If that doesn't help the issue, try to find the broken package and forcefully reinstall:
-
-> xbps-query -s gnutls
-
-> sudo xbps-install -f gnutls

@@ -29,7 +29,7 @@ Remap, e.g., the right Windows key, to Alt_Gr.
     key <RWIN> {[  ISO_Level3_Shift    ]};
 ```
 
-# Set Global Keymap
+# Set TTY Keymap
 
 Copy your keymap, e.g. if it's polish-1, then:
 

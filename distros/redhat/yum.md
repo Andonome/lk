@@ -4,12 +4,6 @@ tags: [ "Documentation", "Distros" ]
 ---
 # Overview
 
-Forks include CentOS, scientific Linux, Oracle, and Fedora.
-
-Major features: reliable, shit package selection.
-
-# Basically yum
-
 > yum search [package]
 
 > yum list openssh
@@ -20,5 +14,5 @@ Major features: reliable, shit package selection.
 
 > yum update
 
-yum remove [package1] [package2]
+> yum remove [package1] [package2]
 

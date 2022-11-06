@@ -1,5 +1,5 @@
 ---
-title: "Basic vim"
+title: "vim basics"
 tags: [ "Documentation", "vim" ]
 ---
 

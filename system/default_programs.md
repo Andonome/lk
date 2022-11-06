@@ -3,9 +3,7 @@ title: "Default Programs"
 tags: [ "Documentation", "Defaults", "Mime Type" ]
 ---
 
-Install the package `xdg-utils`.
-
-In general, type these commands with `bash-completion`, and you'll see the right option.
+Install the package `xdg-utils`, then make very liberal use of the tab button.
 
 ## Ask
 
