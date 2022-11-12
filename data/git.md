@@ -155,3 +155,6 @@ git rev-list --objects --all \
 
 ```
 
+# More
+
+For big binary files (like images), see [git large-file-storage](git-lfs.md)
