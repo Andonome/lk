@@ -32,6 +32,13 @@ Regular expressions (``regex'') looks for patterns and is used with find and gre
 
 If the shell is set to find file ``a*b.txt'' then it will pass this first to regex, and hit items like `aab.txt' and `abb.txt'.  If it finds nothing, it'll then use globbing, and interpret `a*b.txt' literally.
 
+# Alias Expansion
+
+> echo '"\C- ": shell-expand-line' >> ~/.inputrc
+
+Reload bash, and you can use Ctrl+Space to expand an alias.
+Type in `ll` (or any alias), then Ctrl+Space.
+
 # Automatic Renaming
 
 There are a bunch of files:
