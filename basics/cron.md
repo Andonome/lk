@@ -89,7 +89,7 @@ First add `HOME=/home/user`, then you can use syntax like this:
 You can also add your regular path to your crontab as a variable (see example below).
 If you're using vim as the editor, just run this at the top of your crontab:
 
-> :r!echo $PATH
+> :r!echo PATH=$PATH
 
 ### Location
 
