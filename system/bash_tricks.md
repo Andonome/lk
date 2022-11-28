@@ -2,9 +2,17 @@
 title: "bash_tricks"
 tags: [ "Documentation", "System" ]
 ---
-# Automatic mp3 Tagging
+# Track Live Changes
 
-/u/OneTurnMore on Reddit:
+See changes in a file as it changes:
+
+> tail -f *somefile*
+
+See changes in a directory, as it changes:
+
+> watch -d ls *directory*
+
+# Automatic mp3 Tagging
 
 > !/usr/bin/env bash
 > IFS=$'\n'
@@ -14,7 +22,7 @@ tags: [ "Documentation", "System" ]
 
 One can also use
 
-> sed s/\,[^\.]*$//
+> sed s/\,[^\.]\*$//
 
 ... in order to avoid multiple full stops messing up syntax.
 
@@ -32,13 +40,6 @@ Regular expressions (``regex'') looks for patterns and is used with find and gre
 
 If the shell is set to find file ``a*b.txt'' then it will pass this first to regex, and hit items like `aab.txt' and `abb.txt'.  If it finds nothing, it'll then use globbing, and interpret `a*b.txt' literally.
 
-# Alias Expansion
-
-> echo '"\C- ": shell-expand-line' >> ~/.inputrc
-
-Reload bash, and you can use Ctrl+Space to expand an alias.
-Type in `ll` (or any alias), then Ctrl+Space.
-
 # Automatic Renaming
 
 There are a bunch of files:
@@ -50,7 +51,7 @@ There are a bunch of files:
 * Column CV.tex
 * tccv.cls
 
-Goal: swap the word ``Column'' for ``Malin'' in all files.
+Goal: swap the word "Column" for "Alice" in all files.
 
 > IFS=$'\n'
 
@@ -87,7 +88,6 @@ Add number to variables with:
 ((n--)) works identically.
 
 # Finding Duplicate Files
-
 
 > find . -type f -exec md5sum '{}' ';' | sort | uniq --all-repeated=separate -w 15 > all-files.txt
 
