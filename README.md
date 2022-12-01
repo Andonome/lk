@@ -8,14 +8,45 @@ This is a list of quickstart guides for Linux programs, designed to get the user
 
 # Style
 
-1. Minimal theory, maximum practical.
-2. The statements should go in order of how likely they are to be used: if `git add` has to be used by everyone, then it should go first.
-3. Documents should be similar to well-documented scripts.
-4. No explanations for the program.  This isn't an introduction or advert, it's a guide for someone who already wants to use a program but doesn't know how.
-5. It's better explain how to set something up three times than to link or reference a setup.
-6. If general knowledge must be presumed, it should be placed into a file named 'basics'.
+## Praxis Only
 
-### Example
+We leave theory alone as much as possible.
+The documentation should be of the form 'if you want *X*, type *Y*'.
+
+We don't need to explain what a program does - anyone looking up 'how to X', already knows what they want to do.
+We don't even need to explain which program to use - if someone wants to combine an mp4 and webm video into a single video file, they only care about that result, not about learning `ffmpeg`.
+
+Any interest in these tools only comes after we can use them.
+
+## Chronological
+
+Entries should read like scripts - everything in the right order, with small notes on what this does.
+
+The chronology should never branch.
+If `gitea` can use three different types of database, the documentation should simply pick one and continue instructions from there.
+Repetition works better than a reference - if a database requires three commands to set up, it's better to repeat those three commands for every program that requires a database than to just link to another file which discusses databases.
+
+## Three Input Types
+
+There are three types of examples:
+
+Fixed input:
+
+> ls
+
+Arbitrary Input shows the non-fixed input in italics:
+
+> ls *myFile.txt*
+
+Output shows as unformatted text:
+
+```
+    LK           img
+    Mail         kn
+    Projects     music
+```
+
+# Example
 
 ```
 How to see which websites you're actively accessing:
