@@ -46,7 +46,7 @@ Get the message back out the file with:
 
 Search for a key at any key store:
 
-> gpg --keyserver sks.hklbgd.org --search-keys nestorv
+> gpg --keyserver *sks.hklbgd.org* --search-keys nestorv
 
 Once you've made a decision about someone:
 
@@ -67,7 +67,7 @@ This is a fingerprint.
 
 You can now decide the trust level (this stays on your computer).
 
-> gpg --edit-key (some fingerprint)
+> gpg --edit-key *CD30421FD825696BD95F1FF644C62C57B790D3CF*
 
 Once you're in the interface, type `trust`.
 
@@ -75,11 +75,11 @@ Once you're in the interface, type `trust`.
 
 Then send those trusted keys up to a server, so people can see you have verified them:
 
-> gpg --keyserver sks.hklbgd.org --send-keys 024C6B1C84449BD1CB4DF7A152295D2377F4D70F
+> gpg --keyserver *sks.hklbgd.org* --send-keys *024C6B1C84449BD1CB4DF7A152295D2377F4D70F*
 
 # Refresh Keys
 
-> gpg --keyserver sks.hklbgd.org --refresh-keys
+> gpg --keyserver *sks.hklbgd.org* --refresh-keys
 
 # Export
 
