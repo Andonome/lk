@@ -37,10 +37,18 @@ Copy your keymap, e.g. if it's polish-1, then:
 
 Then change that map:
 
-> sudo -e /usr/share/kbd/keymaps/custom.map.gz
+> sudo vim /usr/share/kbd/keymaps/custom.map.gz
+
+---
+
+You can switch Escape and Caps Lock with a single line:
+
+> sudo sh -c "gunzip -c /usr/share/kbd/keymaps/i386/qwerty/pl1.map.gz   | sed 's/ Escape/ PLACEHOLDER/ ; s/Caps_Lock/Escape/g ; s/PLACEHOLDER/Caps_Lock/' | gzip > /usr/share/kbd/keymaps/custom.map.gz"
+
+---
 
 Change the default keyboard mapping to the custom map:
 
-> echo 'KEYMAP="/usr/share/kbd/keymaps/custom/*custom*.map.gz"'  | sudo tee /etc/vconsole.conf
+> echo 'KEYMAP="/usr/share/kbd/keymaps/*custom*.map.gz"'  | sudo tee /etc/vconsole.conf
 
 Reboot to have changes take effect.
