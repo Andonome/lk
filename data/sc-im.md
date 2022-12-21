@@ -12,7 +12,7 @@ tags: [ "Documentation", "data" ]
 > g0 = most left.
 
 > \ = insert middle
-> > = insert left
+> \> = insert left
 > < = insert right
 
 gb4 = to to cell b4
@@ -50,13 +50,13 @@ gb4 = to to cell b4
 
 ## Functions
 
-| Action                          | Key |
-|:--------------------------------|:---:|
-|  add A1 to A4      | =@sum(A1:A4) |
-|  average B1 to B4      | =@avg(B1:B4) |
-|  maximum of those numbers      | =@max(B1:B4) |
-|  minimumof those numbers      | =@min(B1:B8) |
-|  multiply C1 to C8      | =@prod(C1:C8) |
+| Action                          | Key          |
+|:--------------------------------|:------------:|
+|  add A1 to A4                   | =@sum(A1:A4) |
+|  average B1 to B4               | =@avg(B1:B4) |
+|  maximum of those numbers       | =@max(B1:B4) |
+|  minimumof those numbers        | =@min(B1:B8) |
+|  multiply C1 to C8              | =@prod(C1:C8)|
 
 ## Visual
 

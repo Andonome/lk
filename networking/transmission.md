@@ -1,6 +1,6 @@
 ---
 title: "transmission"
-tags: [ "Documentation", "Networking" ]
+tags: [ "Documentation", "Networking", "Torrenting" ]
 ---
 # Torrench
 
@@ -15,6 +15,10 @@ Copy the magnet link.
 It looks like this:
 
 `magnet:?xt=urn:btih:05547db7c0c5fbbe50f00212ee43e9cec5b006fa&dn=Sita+Sings+the+Blues+%281080P+official+release%29&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Fopen.demonii.com%3A1337&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Fexodus.desync.com%3A6969`
+
+But you only need this bit (up until the `&` character):
+
+`magnet:?xt=urn:btih:05547db7c0c5fbbe50f00212ee43e9cec5b006fa`
 
 # Transmission
 
@@ -46,7 +50,7 @@ E.g.:
 
 > sudo usermod -aG transmission $USER
 
-Open a new terminal for the group changes to take effect.
+Log in again for the changes to take effect (or open a new TTY with `Ctrl+Alt+F2`).
 
 ## Removing Torrents
 
