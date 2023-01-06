@@ -1,6 +1,6 @@
 ---
 title: "Void Linux Basics"
-tags: [ "Documentation", "distros", "Void" ]
+tags: [ "Documentation", "Void" ]
 ---
 # Updates
 

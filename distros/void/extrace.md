@@ -1,6 +1,6 @@
 ---
 title: "extrace"
-tags: [ "Documentation", "distros" ]
+tags: [ "Documentation", "Void" ]
 ---
 Monitor all processes:
 

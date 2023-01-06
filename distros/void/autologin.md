@@ -1,6 +1,6 @@
 ---
 title: "Void Autologin"
-tags: [ "Documentation", "Distros", "Void" ]
+tags: [ "Documentation", "Void" ]
 ---
 
 Make the autologin service:

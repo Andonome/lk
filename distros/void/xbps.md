@@ -1,6 +1,6 @@
 ---
 title: "xbps"
-tags: [ "Documentation", "distros" ]
+tags: [ "Documentation", "Void" ]
 ---
 Install cowsay
 
