@@ -61,3 +61,4 @@ Start pacman keyring.
 
 > timedatectl set-timezone Europe/Belgrade
 
+> systemctl enable --now wpa_supplicant
