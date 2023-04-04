@@ -1,5 +1,5 @@
 ---
-title: "basics"
+title: "Basic Sound"
 tags: [ "Documentation", "Sound" ]
 ---
 # Pulse
