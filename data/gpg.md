@@ -83,5 +83,11 @@ Then send those trusted keys up to a server, so people can see you have verified
 
 # Export
 
+Your public key:
+
 > gpg --output *me*.gpg --armor --export
+
+or
+
+> gpg --export -a *email* > person.pub
 
