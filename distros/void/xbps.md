@@ -2,18 +2,53 @@
 title: "xbps"
 tags: [ "Documentation", "Void" ]
 ---
+## Search
+
+Look for cowsay in the repository:
+
+> xbps-query --repository --search cowsay
+
+Short version:
+
+> xbps-query -Rs cowsay
+
+Search with regex:
+
+> xbps-query --regex -Rs 'cow(s)?\w'
+
+List what's required for cowsay
+
+> xbps-query -x cowsay
+
+What packages are orphaned (i.e. installed as a dependency for another package, which has since been removed)?
+
+> xbps-query -O
+
+Show cowsay's dependencies.
+
+> xbps-query -x cowsay
+
+This shows `perl`.
+To see what else depends on perl:
+
+> xbps-query -X perl
+
+List all manually installed software.
+
+> xbps-query -m
+
+## Install
+
 Install cowsay
 
 > xbps-install cowsay
-
-Look for cowsay
-
-> xbps-query -Rs cowsay
 
 Upgrade current packages.
 `-R` looks at repositories, `-s` makes a sloppy search (for rough matches).
 
 > xbps-install -Suv
+
+## Remove/ Uninstall
 
 Remove cowsay
 
@@ -23,77 +58,17 @@ Remove cowsay
 
 > xbps-remove -R cowsay
 
-Reinstall cowsay
-
-> xbps-install -f
-
-Reconfigure all packages.  Useful for breakages.
-
-> xbps-pkgdb -a
-
 Remove all orphaned dependencies.
 
 > xbps-remove -o
 
 Show information about cowsay
 
-> xbps-query -Rs cows
+## Fixes
 
-List packages requiring updates.
+Reinstall cowsay
 
-> xbps-install -Suvn
-
-List what's required for cowsay
-
-> xbps-query -x cowsay
-
-List what's installed.
-
-> xbps-query -l
-
-Clean.
-
-> xbps-remove -O
-
-Update list of available packages ('sync')
-
-> xbps-install -S
-
-Remove package information.
-
-> xbps-query -R
-
-Do I have cowsay installed?
-
-> xbps-query -s cowsay
-
-What packages are pointless?
-
-> xbps-query -O
-
-> xbps-install -Sn cowsay
-
-# Advanced
-
-A dry-run of installing cowsay, without actually intalling.
-
-> xbps-query -x cowsay
-
-Show cowsay's dependencies.  The -R flag's required for a remote package.
-
-> xbps-query -X cowsay
-
-Show the reverse dependencies of a package.
-
-> xbps-query -XR cowsay
-
-Show all reverse dependencies of a package, including repository packages.
-
-> xbps-query -m
-
-List all manually installed software.
-
-# Problems
+> xbps-install -f cowsay
 
 Look for broken packages.
 
