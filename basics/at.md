@@ -43,3 +43,15 @@ This will print all pending IDs.  Remove a job by the ID with:
 > atrm 2
 
 Check /var/spool/atd/
+
+## Automation
+
+Automatically add a job for later, by setting the date, then using echo for the command.
+
+> t="$(date -d "2 minutes" +%R)"
+
+> echo "fortune > ~/file" | at "$t"
+
+> watch cat file
+
+The `$t` here outputs the day in minutes, but you could also do `t="$(date -d "2 days" +%m/%d/%Y)"`.

@@ -91,7 +91,11 @@ If you're using vim as the editor, just run this at the top of your crontab:
 
 > :r!echo PATH=$PATH
 
-### Location
+### `date` Commands
+
+Cron doesn't understand the `%` sign, so if you want to use `date +%R`, then it should be escaped with a backslash: `date +\%R`.
+
+### File Location
 
 The crontab files are in `/var/spool/cron/`, so you can backup or restore them.
 
@@ -101,7 +105,7 @@ The crontab files are in `/var/spool/cron/`, so you can backup or restore them.
 HOME=/home/user
 PATH=/usr/condabin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/user/.local/bin:/home/user/.scripts/:/home/user/.local/bin:/home/user/.scripts/
 
-1 0 1 * *    /usr/bin/mkdir -p $HOME/arc/$(date +%Y/%m)
+1 0 1 * *    /usr/bin/mkdir -p $HOME/arc/$(date +\%Y/\%m)
 
 18 0 1 */3 * $HOME/.scripts/mail-clean.sh
 
@@ -110,3 +114,5 @@ PATH=/usr/condabin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/u
 50 18 * * * /usr/bin/timeout 30m /usr/bin/syncthing
 
 ```
+
+
