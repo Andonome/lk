@@ -1,15 +1,12 @@
 ---
 title: "vim basics"
-tags: [ "Documentation", "vim" ]
+tags: [ "Documentation", "vim", "basic" ]
 ---
 
-Insert text by pressing `i`.
-
-Stop inserting text by pressing `Ctrl+[`.
-
-Exit with `ZZ`.
-
-Congratulations, you now know `vim`.
+1. Insert text by pressing `i`.
+1. Stop inserting text by pressing `Ctrl+[`.
+1. Exit with `ZZ`.
+1. Congratulations, you now know `vim`.
 
 ## Extras
 
