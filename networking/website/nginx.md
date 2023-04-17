@@ -71,7 +71,7 @@ You may need to install an nginx python module:
 
 > apt install python3-certbot-nginx
 
-> certbot --nginx -d mysite.tk
+> certbot --nginx -d *mysite.tk* --non-interactive --agree-tos -m *webmaster@email.tld*
 
 When you are asked about redirecting from HTTP to HTTPS, say yes (option "2").
 

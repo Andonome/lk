@@ -1,5 +1,5 @@
 ---
-title: [ "qrencode" ]
+title: "qrencode"
 tags: [ "Documentation", "vision" ]
 ---
 

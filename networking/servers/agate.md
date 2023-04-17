@@ -50,3 +50,9 @@ WantedBy=default.target
 
 > sudo systemctl enable --now agate
 
+
+# Redirection
+
+Indicate a permanent move by placing this file in the root of the capsule:
+
+> index.gmi: 31 gemini://splint.rs

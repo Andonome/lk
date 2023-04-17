@@ -89,5 +89,5 @@ Your public key:
 
 or
 
-> gpg --export -a *email* > person.pub
+> gpg --export -a *person@email.tld* > *my_key*.pub
 
