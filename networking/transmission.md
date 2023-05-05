@@ -4,14 +4,7 @@ tags: [ "Documentation", "Networking", "Torrenting" ]
 ---
 # Torrench
 
-Torrench searches for torrents.
-It breaks a lot, so if it's not working, the problem is probably in the program.
-
-Search for 'sita sings the blues' with:
-
-```bash
-torrench 'sita sings the blues'
-```
+Search for a torrent, e.g. 'sita sings the blues'.
 
 Copy the magnet link.
 It looks like this:
@@ -20,7 +13,7 @@ It looks like this:
 
 But you only need this bit (up until the `&` character):
 
-`magnet:?xt=urn:btih:05547db7c0c5fbbe50f00212ee43e9cec5b006fa`
+> magnet:?xt=urn:btih:05547db7c0c5fbbe50f00212ee43e9cec5b006fa
 
 # Transmission
 
@@ -93,3 +86,45 @@ Next, find the torrent's number.  You can use multiple numbers, separated with a
 transmission-remote -t 3,5,8 --move /home/alice/music
 ```
 
+## Change Default Location
+
+The `transmission` user has a home configuration file, like any other user, with all the transmission settings.
+
+```bash
+cd /var/lib/transmission/.config/transmission-daemon/
+
+$EDITOR settings.json
+```
+
+Change the `download-dir` value to wherever you want the torrents to go.
+
+# Creating Torrents
+
+Create a torrent of file or directory `Memes` with:
+
+> transmission-create Memes
+
+Add a tracker to the torrent, to make sure others can find you easily:
+
+> transmission-create --comment 'My Memes collection' -t 'udp://tracker.publicbt.com:80' -t 'udp://tracker.openbittorrent.com:80' --anonymize Memes
+
+Without the `--anonymize` flag, the torrent file output will have a 'created by' and 'created date'.
+
+## Open Trackers
+
+- udp://tracker.opentrackr.org:1337/announce
+- udp://opentracker.i2p.rocks:6969/announce
+- https://opentracker.i2p.rocks:443/announce
+- udp://tracker.openbittorrent.com:6969/announce
+- http://tracker.openbittorrent.com:80/announce
+- udp://9.rarbg.com:2810/announce
+- udp://open.demonii.com:1337/announce
+- udp://exodus.desync.com:6969/announce
+- udp://tracker.moeking.me:6969/announce
+- https://tracker.tamersunion.org:443/announce
+- udp://tracker1.bt.moack.co.kr:80/announce
+- udp://tracker.bitsearch.to:1337/announce
+- udp://p4p.arenabg.com:1337/announce
+- udp://explodie.org:6969/announce
+- https://tracker.gbitt.info:443/announce
+- http://tracker.gbitt.info:80/announce
