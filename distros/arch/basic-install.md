@@ -1,6 +1,6 @@
 ---
 title: "basic-install"
-tags: [ "Documentation", "distros" ]
+tags: [ "Documentation", "arch" ]
 ---
 Keyboard layout changed.
 
@@ -109,12 +109,11 @@ Ping some sites to make sure the network's working
 
 > umount -R /mnt
 
-Remove retarded beep sound:
-
-> sudo echo "blacklist pcspkr" >> /etc/modprobe.d/nobeep.conf
+Remove that awful beep sound:
 
 > rmmod pcspkr
 
-# Fonts
+...and make the change permanent:
 
-sudo pacman -S ttf-hack ttf-font-awesome ttf-fira-mono
+> sudo echo "blacklist pcspkr" >> /etc/modprobe.d/nobeep.conf
+
