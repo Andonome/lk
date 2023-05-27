@@ -36,3 +36,14 @@ If you're constantly getting 'everything corrupted, nothing upgraded', try runni
 List all orphaned packages:
 
 > sudo pacman -Qtdq
+
+## Cleaning Config Files
+
+Arch does not overwrite your changes to configuration files.
+Instead, it updates them by adding the `.pacnew` suffix.
+
+So when `/etc/pacman.conf` receives an update, this will be placed in `/etc/pacman.conf.pacnew`.
+These changes must be merge manually.
+
+Install the `pacdiff` tool to make this easier, from the `pacman-contrib` package, then simply run `sudo pacdiff` to sort through the various mergers.
+
