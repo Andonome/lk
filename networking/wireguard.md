@@ -1,6 +1,6 @@
 ---
 title: "wireguard"
-tags: [ "Documentation", "Networking" ]
+tags: [ "Documentation", "Networking", "VPN" ]
 ---
 <!--
 from 
