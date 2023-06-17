@@ -10,17 +10,25 @@ Kernel modules live in lib/modules/$(uname -r)
 
 Load them with
 
-> sudo modprobe ath9k
+```bash
+sudo modprobe ath9k
+```
 
 Or remove one with
 
-> sudo modprove uvcvideo
+```bash
+sudo modprove uvcvideo
+```
 
 The PC's irritating speaker beep can be really annoying. Disable it with:
 
-> sudo modprobe -r pcspeaker
+```bash
+sudo modprobe -r pcspeaker
+```
 
 Permanently disable a module by blacklisting it in `/etc/modprobe.d`:
 
-> echo 'blacklist pcspkr' > /etc/modprobe.d/*nobeep*.conf
+```bash
+echo 'blacklist pcspkr' > /etc/modprobe.d/*nobeep*.conf
+```
 

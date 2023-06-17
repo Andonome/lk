@@ -4,13 +4,19 @@ tags: [ "Documentation", "Void" ]
 ---
 Monitor all processes:
 
-> extrace
+```bash
+extrace
+```
 
 Monitor one process:
 
-> extrace ls
+```bash
+extrace ls
+```
 
 Monitor a script:
 
-> ./script.sh | extrace
+```bash
+./script.sh | extrace
+```
 

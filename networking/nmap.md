@@ -5,7 +5,9 @@ tags: [ "Documentation", "Networking" ]
 
 Example:
 
-> nmap 192.168.1.1/24
+```bash
+nmap 192.168.1.1/24
+```
 
 Flags:
 
@@ -15,7 +17,6 @@ Flags:
 
 Look for a web server, which has ports 80 and 443 open:
 
-> nmap 192.168.1.1/24 -p 80,443 --open
-
-
-
+```bash
+nmap 192.168.1.1/24 -p 80,443 --open
+```

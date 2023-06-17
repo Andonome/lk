@@ -4,25 +4,37 @@ tags: [ "Documentation", "Networking" ]
 ---
 Install nginx:
 
-> sudo apt-get install nginx
+```bash
+sudo apt-get install nginx
+```
 
-> sudo apt-get enable --now nginx
+```bash
+sudo apt-get enable --now nginx
+```
 
 Put a website somewhere:
 
-> mkdir /var/www/html/mysite/
+```bash
+mkdir /var/www/html/mysite/
+```
 
 Put an index file there:
 
-> vim /var/www/html/mysite/index.html
+```bash
+vim /var/www/html/mysite/index.html
+```
 
 Make the owner `www-data`
 
-> chown -R www-data:www-data /var/www/html/mysite/
+```bash
+chown -R www-data:www-data /var/www/html/mysite/
+```
 
 Make a configuration file for nginx:
 
-> vim /etc/nginx/sites-available/mysite.conf
+```bash
+vim /etc/nginx/sites-available/mysite.conf
+```
 
 
 ```
@@ -37,15 +49,20 @@ server {
        try_files $uri $uri/ =404;
    }
 
-}```
+}
+```
 
 Make the site available:
 
-> ln -s /etc/nginx/sites-available/mysite.conf /etc/nginx/sites-enabled/
+```bash
+ln -s /etc/nginx/sites-available/mysite.conf /etc/nginx/sites-enabled/
+```
 
 Test it's working:
 
-> nginx -t
+```bash
+nginx -t
+```
 
 ## Troubleshooting
 
@@ -65,13 +82,19 @@ Buy some DNS online, then check it's working.
 
 *Once it's working*, use certbot:
 
-> apt install certbot
+```bash
+apt install certbot
+```
 
 You may need to install an nginx python module:
 
-> apt install python3-certbot-nginx
+```bash
+apt install python3-certbot-nginx
+```
 
-> certbot --nginx -d *mysite.tk* --non-interactive --agree-tos -m *webmaster@email.tld*
+```bash
+certbot --nginx -d *mysite.tk* --non-interactive --agree-tos -m *webmaster@email.tld*
+```
 
 When you are asked about redirecting from HTTP to HTTPS, say yes (option "2").
 

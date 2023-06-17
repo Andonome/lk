@@ -17,7 +17,9 @@ I couldn't change volume, so in mpd.conf I uncommented the pulse audio lines and
 
 Also, make sure the user mpd is part of the group pulse:
 
-> sudo adduser mpd pulse
+```bash
+sudo adduser mpd pulse
+```
 
 In the audio_output section, try setting the mix_type to "software", not "hardware".
 

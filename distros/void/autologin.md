@@ -5,10 +5,11 @@ tags: [ "Documentation", "Void" ]
 
 Make the autologin service:
 
-> cp -R /etc/sv/agetty-tty1 /etc/sv/agetty-autologin-tty1
-
+```bash
+cp -R /etc/sv/agetty-tty1 /etc/sv/agetty-autologin-tty1
 ```
 
+```sh
 if [ -x /sbin/agetty -o -x /bin/agetty ]; then
         # util-linux specific settings
         if [ "${tty}" = "tty1" ]; then
@@ -24,7 +25,7 @@ TERM_NAME=linux
 
 Then stick this at the end of the bashrc:
 
-```
+```sh
 # autologin on tty1
  if [ -z "$DISPLAY" ] && [ "$(fgconsole)" -eq 1 ]; then
  exec startx

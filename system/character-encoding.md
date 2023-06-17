@@ -4,7 +4,9 @@ tags: [ "Documentation", "System" ]
 ---
 Convert a text file from one encoding type to another with:
 
-> iconv -f ascii -t utf8 oldfilename > newfilename
+```bash
+iconv -f ascii -t utf8 oldfilename > newfilename
+```
 
 Available options are:
 
@@ -18,5 +20,7 @@ Available options are:
 
 Generate a full list of encoding types available with:
 
-> iconv -l
+```bash
+iconv -l
+```
 

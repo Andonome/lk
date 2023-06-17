@@ -4,9 +4,13 @@ tags: [ "Documentation", "xe", "virtualization", "volume" ]
 ---
 # Make a local iso repository
 
-> mkdir -p */var/opt/xen/ISO_Store*
+```bash
+mkdir -p */var/opt/xen/ISO_Store*
+```
 
-> xe sr-create name-label=*LocalISO* type=iso device-config:location=*/var/opt/xen/ISO_Store* device-config:legacy_mode=true content-type=iso
+```bash
+xe sr-create name-label=*LocalISO* type=iso device-config:location=*/var/opt/xen/ISO_Store* device-config:legacy_mode=true content-type=iso
+```
 
 This creates a UUID for the new directory:
 
@@ -14,15 +18,21 @@ This creates a UUID for the new directory:
 
 # Main Console
 
-> xsconsole
+```bash
+xsconsole
+```
 
 # Volumes
 
 List volumes:
 
-> lvs
+```bash
+lvs
+```
 
 List groups:
 
-> vgs
+```bash
+vgs
+```
 

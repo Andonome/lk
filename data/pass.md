@@ -8,21 +8,35 @@ Setup [gpg](./gpg.md) keys.
 
 Show your gpg secret it:
 
-> gpg --list-secret-keys
+```bash
+gpg --list-secret-keys
+```
 
 Then use the id number under `sec` to make a pass repo:
 
-> pass init 187233O300300814PQ793NSSS539SQ1O6O184532
+```bash
+KEY="$(gpg --list-secret-keys  | grep -m 1 -A1 '^sec' | tail -n 1)"
+```
 
-To add a basic password, e.g. for an encrypted tarball, use:
+```bash
+pass init $KEY
+```
 
-> pass add my-tar-gar.gz
+To add a basic password, e.g. for `$WEBSITE`:
+
+```bash
+pass $WEBSITE
+```
 
 To insert a multiline password, e.g. with a login name:
 
-> pass add -m linuxrocks.online
+```bash
+pass add -m $WEBSITE
+```
 
 Remove a password:
 
-> pass rm linuxrocks.online
+```bash
+pass rm $WEBSITE
+```
 

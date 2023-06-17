@@ -7,7 +7,9 @@ tags: [ "Documentation", "Distros", "Arch" ]
 
 Edit `/etc/systemd/system/getty@tty1.service.d/override.conf` by typing:
 
-> sudo systemctl edit getty@tty1
+```bash
+sudo systemctl edit getty@tty1
+```
 
 The put in the following, changing `[ USER ]` to your username.
 

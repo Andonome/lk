@@ -6,7 +6,9 @@ tags: [ "Documentation", "Void" ]
 
 Update all packages with
 
-> sudo xbps-install -Su
+```bash
+sudo xbps-install -Su
+```
 
 See [xbps](xbps.md) for more.
 
@@ -15,21 +17,29 @@ See [xbps](xbps.md) for more.
 Void keeps *every* version of everything you install, so you can roll back to them.
 Remove old packages with:
 
-> sudo xbps-remove -O
+```bash
+sudo xbps-remove -O
+```
 
 # vkpurge
 
 Old Void kernels are left on the boot partition.  List them with:
 
-> vkpurge list
+```bash
+vkpurge list
+```
 
 Remove one with:
 
-> vkpurge 2.8.2_4
+```bash
+vkpurge 2.8.2_4
+```
 
 Remove all but the latest with:
 
-> vkpurge rm all
+```bash
+vkpurge rm all
+```
 
 # Brightness
 
@@ -38,9 +48,10 @@ You can change this number to change the screen brightness.
 
 For an easy utility, install `brightnessctl`.
 
-> brightnessctl s 10%-
-
-> brightnessctl s 10%+
+```bash
+brightnessctl s 10%-
+brightnessctl s 10%+
+```
 
 # Other Tricks
 

@@ -3,29 +3,40 @@ title: "locale"
 tags: [ "Documentation", "Basics" ]
 ---
 
+Your locale tells the computer your location, preferred time-and-date format, standard language, papersize, et c.
 A list of supported locales is available at /usr/share/i18n/SUPPORTED
 
 See a full list with:
 
-> cat /usr/share/i18n/SUPPORTED
+```bash
+cat /usr/share/i18n/SUPPORTED
+```
 
 Take the first portion to generate full locale information for a region:
 
-> locale-gen ru_RU.UTF-8
+```bash
+locale-gen ru_RU.UTF-8
+```
 
 Then use this for the current shell session with
 
-> LANG=ru_RU.utf8
+```bash
+LANG=ru_RU.utf8
+```
 
 Expand this to the entire system with: 
 
-> export LANG=ru_RU.utf8
+```bash
+export LANG=ru_RU.utf8
+```
 
 You can make this permanent for one user by adding this line to the ~/.profile or ~/.bashrc.
 
 Make it permanent for the entire system by editing:
 
-> sudo vim /etc/defaults/locale
+```bash
+sudo vim /etc/defaults/locale
+```
 
 # Variables
 

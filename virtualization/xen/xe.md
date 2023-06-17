@@ -4,39 +4,59 @@ tags: [ "documentation", "virtualization", "xen" ]
 ---
 # Basic VM Management
 
-> xe vm-list
+```bash
+xe vm-list
+```
 
 Start, stop, et c. all done with `xe`:
 
-> xe vm-start vm=*TTS*
+```bash
+xe vm-start vm=*TTS*
+```
 
-> xe vm-shutdown vm=*Bob*
+```bash
+xe vm-shutdown vm=*Bob*
+```
 
 Destruction requires the uuid.
 
-> xe vm-destroy uuid=*243b1165-14aa-37f6-496f-44879d05b3f2*
+```bash
+xe vm-destroy uuid=*243b1165-14aa-37f6-496f-44879d05b3f2*
+```
 
 # Shut Down VM
 
 List VMs.
 
-> xe host-list
+```bash
+xe host-list
+```
 
-> xe vm-list resident-on=*<uuid_of_host>*
+```bash
+xe vm-list resident-on=*<uuid_of_host>*
+```
 
-> xe vm-shutdown uuid=*<UUID from step 3>* force=true
+```bash
+xe vm-shutdown uuid=*<UUID from step 3>* force=true
+```
 
 If this doesn't work, try:
 
-> xe vm-reset-powerstate uuid=*<UUID from step 3>* force=true
+```bash
+xe vm-reset-powerstate uuid=*<UUID from step 3>* force=true
+```
 
 Get the id:
 
-> list_domains
+```bash
+list_domains
+```
 
 And destroy the domain:
 
-> /opt/xensource/debug/xenops destroy_domain -domid *<DOMID from step 7>*
+```bash
+/opt/xensource/debug/xenops destroy_domain -domid *<DOMID from step 7>*
+```
 
 # Error: `Internal error:xenopsd internal error: Storage_interface.Illegal_transition` in XenServer
 
@@ -52,7 +72,9 @@ To resolve this error, complete the following procedure:
 
 Open the Console to the XenServer that is hosting the VM and run the following command:
 
-> list_domains
+```bash
+list_domains
+```
 
 All the VMs running on that server are displayed.
 
@@ -62,17 +84,25 @@ This is the UUID of the Control Domain. The Control Domain is a privileged Virtu
 
 Run the following command to obtain the UUID of the VBD (Virtual Block Device) object linking the Control Domain:
 
-> xe vbd-list vm-uuid=*<uuid of the Control Domain>*
+```bash
+xe vbd-list vm-uuid=*<uuid of the Control Domain>*
+```
 
 Run the following commands to unplug and destroy the VBD:
 
-> xe vbd-unplug uuid=*<uuid of the vbd>*
+```bash
+xe vbd-unplug uuid=*<uuid of the vbd>*
+```
 
-> xe vbd-destroy uuid=*<uuid of the vbd>*
+```bash
+xe vbd-destroy uuid=*<uuid of the vbd>*
+```
 
 ## Make a local iso repository
 
-> xe sr-create name-label=LocalISO type=iso device-config:location=/var/opt/xen/ISO_Store device-config:legacy_mode=true content-type=iso
+```bash
+xe sr-create name-label=LocalISO type=iso device-config:location=/var/opt/xen/ISO_Store device-config:legacy_mode=true content-type=iso
+```
 
 This creates a UUID for the new directory:
 
@@ -90,15 +120,21 @@ Put in the USB.
 
 Get the USB's uuid.
 
-> xe pusb-list
+```bash
+xe pusb-list
+```
 
 Make the USB recognised as a device.
 
-> xe pusb-param-set uuid=*<uuid>*
+```bash
+xe pusb-param-set uuid=*<uuid>*
+```
 
 For passthrough, use this:
 
-> xe pusb-param-set uuid=*<uuid>* passthrough-enabled=true
+```bash
+xe pusb-param-set uuid=*<uuid>* passthrough-enabled=true
+```
 
 ## Attach to host
 
@@ -108,12 +144,18 @@ For passthrough, use this:
 
 # Storage Spaces - "SR"
 
-> xe sr-list
+```bash
+xe sr-list
+```
 
 # Exporting and Exporting VMs
 
-> xe vm-export vm=*<Name>* filename=*/full/path.xva*
+```bash
+xe vm-export vm=*<Name>* filename=*/full/path.xva*
+```
 
-> xe vm-import vm=*<Name>* filename=*/full/path.xva*
+```bash
+xe vm-import vm=*<Name>* filename=*/full/path.xva*
+```
 
 

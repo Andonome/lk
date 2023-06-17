@@ -6,35 +6,49 @@ tags: [ "Documentation", "Void" ]
 
 All possible services are in:
 
-> ls /etc/sv
+```bash
+ls /etc/sv
+```
 
 The computer only uses those in /var/service, so symbolic links are made to start and stop services.
 
-> ls /var/service
+```bash
+ls /var/service
+```
 
 # Start Services
 
 Enable the sshd service, so that ssh will work every time you boot up:
 
-> sudo ln -s /etc/sv/sshd /var/service
+```bash
+sudo ln -s /etc/sv/sshd /var/service
+```
 
 Then start the service:
 
-> sudo sv start sshd
+```bash
+sudo sv start sshd
+```
 
 # Stop Services
 
 Stop `mpd` with:
 
-> sudo sv stop mpd
+```bash
+sudo sv stop mpd
+```
 
 And stop it automatically loading at startup with:
 
-> sudo rm /var/service/mpd
+```bash
+sudo rm /var/service/mpd
+```
 
 You can also just make a file called 'down':
 
-> sudo touch /var/service/mpd/down
+```bash
+sudo touch /var/service/mpd/down
+```
 
 This means you can start and stop the service without making symbolic links, but mpd will be 'down' when the computer starts.
 
@@ -49,5 +63,7 @@ If unsure, use `#!/bin/bash` as the first line.  When Void Linux says `sh`, it m
 
 Confirm the shell you'll use:
 
-> ls -l $(which sh)
+```bash
+ls -l $(which sh)
+```
 

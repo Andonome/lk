@@ -8,17 +8,27 @@ tags: [ "Documentation", "distros" ]
 
 Messed up a package's configuration files?
 
-> sudo apt-get purge [thing]
+```bash
+sudo apt-get purge [thing]
+```
 
-> sudo apt autoremove 
+```bash
+sudo apt autoremove 
+```
 
 Check if you still have related things:
 
-> apt search [thing]
+```bash
+apt search [thing]
+```
 
-> sudo apt-get install [ thing ]
+```bash
+sudo apt-get install [ thing ]
+```
 
 Still have problems?
 
-> sudo dpgk --force-confmiss -i /var/cache/apt/archives/[thing]
+```bash
+sudo dpgk --force-confmiss -i /var/cache/apt/archives/[thing]
+```
 

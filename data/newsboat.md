@@ -4,9 +4,13 @@ tags: [ "Documentation", "RSS" ]
 ---
 Create the configuration directory before you start, and add at least 1 URL.
 
-> mkdir ~/.config/newsboat
+```bash
+mkdir ~/.config/newsboat
+```
 
-> echo 'https://voidlinux.org/atom.xml foss tech' >> ~/.config/newsboat/urls
+```bash
+echo 'https://voidlinux.org/atom.xml foss tech' >> ~/.config/newsboat/urls
+```
 
 Start `newsobat` and press `r` to load your feed.
 
@@ -24,7 +28,9 @@ You can input a Youtube channel by adding this, with the channel's ID at the end
 
 To get the channel ID without hunting:
 
-> curl *'https://www.youtube.com/@1minfilms'* | grep -oE 'browseId":"U\w+"' | tail | cut -d'"' -f3 
+```bash
+curl *'https://www.youtube.com/@1minfilms'* | grep -oE 'browseId":"U\w+"' | tail | cut -d'"' -f3 
+```
 
 You can add arbitrary commands to get an RSS feed.
 For example, to get a Gemini feed, install `gemget`, then put this in the configuration file:
@@ -58,9 +64,11 @@ Or or `,o` to open an article in w3m:
 
 Add vim-like keys:
 
-```
-bind-key j next
-bind-key k prev
-bind-key j down article
-bind-key k up article
-```
+> bind-key j next
+
+> bind-key k prev
+
+> bind-key j down article
+
+> bind-key k up article
+

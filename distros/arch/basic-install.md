@@ -4,94 +4,150 @@ tags: [ "Documentation", "arch" ]
 ---
 Keyboard layout changed.
 
-> ls /usr/share/kbd/keymaps/**/*.map.gz
+```bash
+ls /usr/share/kbd/keymaps/**/*.map.gz
+```
 
-> loadkeys uk.map.gz
+```bash
+loadkeys uk.map.gz
+```
 
 Check if boot mode is UEFI
 
-> ls /sys/firmware/efi/efivars
+```bash
+ls /sys/firmware/efi/efivars
+```
 
 Without efivars, the system must boot with BIOS.
 
 # Check network's up
 
-> ping archlinux.org
+```bash
+ping archlinux.org
+```
 
 Set system clock properly
 
-> timedatectl set-ntp true
+```bash
+timedatectl set-ntp true
+```
 
 Check disks
 
-> lsblk
+```bash
+lsblk
+```
 
 Make partition
 
-> parted -s /dev/sda mklabel gpt
+```bash
+parted -s /dev/sda mklabel gpt
+```
 
-> parted -s /dev/sda mklabel msdos
+```bash
+parted -s /dev/sda mklabel msdos
+```
 
-> parted  -s /dev/sda mkpart primary ext4 512 100%
+```bash
+parted  -s /dev/sda mkpart primary ext4 512 100%
+```
 
-> parted -s /dev/sda set 1 boot on
+```bash
+parted -s /dev/sda set 1 boot on
+```
 
-> mkfs.ext4 /dev/sda1
+```bash
+mkfs.ext4 /dev/sda1
+```
 
 Use pacstrap to get the base install.
 
-> mount /dev/sda1 /mnt/
+```bash
+mount /dev/sda1 /mnt/
+```
 
-> pacstrap /mnt base base-devel vim linux linux-firmware
+```bash
+pacstrap /mnt base base-devel vim linux linux-firmware
+```
 
 Make fstab notes for new system.
 
-> genfstab -U /mnt >> /mnt/etc/fstab
+```bash
+genfstab -U /mnt >> /mnt/etc/fstab
+```
 
-> arch-chroot /mnt
+```bash
+arch-chroot /mnt
+```
 
-> echo 'en_GB.UTF-8' > /etc/default/locale
+```bash
+echo 'en_GB.UTF-8' > /etc/default/locale
+```
 
-> pacman -Sy networkmanager grub
+```bash
+pacman -Sy networkmanager grub
+```
 
 For legacy:
 
-> grub-install --target=i386-pc /dev/sda
+```bash
+grub-install --target=i386-pc /dev/sda
+```
 
 For EFI:
 
-> sudo pacman -S efibootmgr
+```bash
+sudo pacman -S efibootmgr
+```
 
-> mkdir /boot/efi
+```bash
+mkdir /boot/efi
+```
 
-> grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --remmovable
+```bash
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --remmovable
+```
 
-> grub-mkconfig -o /boot/grub/grub.cfg
+```bash
+grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 set local time
 
-> ln -sf /usr/share/zoneinfo/Europe/Belgrade /etc/localtime
+```bash
+ln -sf /usr/share/zoneinfo/Europe/Belgrade /etc/localtime
+```
 
 Find the desired locale's and uncomment them.
 
-> vi /etc/locale.gen
+```bash
+vi /etc/locale.gen
+```
 
-> locale-gen
+```bash
+locale-gen
+```
 
 Make your keyboard changes permenent with:
 
-> vi /etc/vconsole.conf
+```bash
+vi /etc/vconsole.conf
+```
 
 Then set: `KEYMAP=uk.map.gz`
 unsure about this bit - is this name just for the loadkeys function?
 
 Make a hostname
 
-> echo pc > /etc/hostname
+```bash
+echo pc > /etc/hostname
+```
 
 Set hostnames for network, or at least your own.
 
-> vi /etc/hosts
+```bash
+vi /etc/hosts
+```
 
 # This should have the following, at least:
 
@@ -103,17 +159,27 @@ If the system has a permanent IP address, it should be used instead of localhost
 
 Ping some sites to make sure the network's working
 
-> passwd
+```bash
+passwd
+```
 
-> exit
+```bash
+exit
+```
 
-> umount -R /mnt
+```bash
+umount -R /mnt
+```
 
 Remove that awful beep sound:
 
-> rmmod pcspkr
+```bash
+rmmod pcspkr
+```
 
 ...and make the change permanent:
 
-> sudo echo "blacklist pcspkr" >> /etc/modprobe.d/nobeep.conf
+```bash
+sudo echo "blacklist pcspkr" >> /etc/modprobe.d/nobeep.conf
+```
 

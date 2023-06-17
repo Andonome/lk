@@ -1,5 +1,5 @@
 ---
-title: "editors"
+title: "$EDITOR"
 tags: [ "Documentation", "System" ]
 ---
 The System's default text editor can be defined within /etc/profile.  It's given the variable `EDITOR`.
@@ -16,9 +16,12 @@ export VISUAL=$EDITOR
 
 Then reload that profile with:
 
-> source /etc/profile
+```bash
+source /etc/profile
+```
 
-If nano still pops up:
+If you want to ensure `nano` never appears again:
 
-> sudo ln -sf $(which vim) $(which nano)
-
+```bash
+sudo ln -sf $(which vim) $(which nano)
+```

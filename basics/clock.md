@@ -5,27 +5,39 @@ tags: [ "Documentation", "Basics" ]
 
 Show system time:
 
-> date
+```bash
+date
+```
 
 Show hardware time:
 
-> sudo hwclock -r
+```bash
+sudo hwclock -r
+```
 
 Change system time to match hardware time:
 
-> sudo hwclock --hctosys
+```bash
+sudo hwclock --hctosys
+```
 
 Change hardware time to match system time:
 
-> sudo hwclock --systohc
+```bash
+sudo hwclock --systohc
+```
 
 Manually set the hardware time to a specified date:
 
-> sudo hwclock --set --date="8/25/19 13:30:00"
+```bash
+sudo hwclock --set --date="8/25/19 13:30:00"
+```
 
 ## Normal Date
 
-> date +%d/%m/%y
+```bash
+date +%d/%m/%y
+```
 
 # Unix Time
 
@@ -33,7 +45,9 @@ Computers started counting time on January 1st, 1970, and added one second-per-s
 
 Track the time in Unix-time:
 
-> date +%s
+```bash
+date +%s
+```
 
 # Network Time Providers
 
@@ -41,9 +55,13 @@ Servers which take their time from an observatory we call Stratum 1 servers.  Se
 
 Install ntp with:
 
-> sudo apt-get install -y ntp
+```bash
+sudo apt-get install -y ntp
+```
 
 The shell command for this is `ntpq`.  Monitor the service providers using:
 
-> ntpq -p
+```bash
+ntpq -p
+```
 

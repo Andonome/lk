@@ -8,24 +8,33 @@ tags: [ "Documentation", "System" ]
 
 Install:
 
-> yay -S simple-mtpfs
+```bash
+yay -S simple-mtpfs
+```
 
 List available phones:
 
-> simple-mtpfs -l
+```bash
+simple-mtpfs -l
+```
 
 Make a mount point:
 
-> mkdir phone
+```bash
+mkdir phone
+```
 
 Check your phone, and tell it to allow access to the USB.
 
-> simple-mtpfs --device 1 phone
+```bash
+simple-mtpfs --device 1 phone
+```
 
 ## Stop
 
-> fusermount -u phone
-
+```bash
+fusermount -u phone
 rmdir phone
+```
 
 

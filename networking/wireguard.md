@@ -11,16 +11,25 @@ https://engineerworkshop.com/blog/how-to-set-up-wireguard-on-a-raspberry-pi/
 
 Install `wireguard-tools` on the server.
 
-> sudo -i
+```bash
+sudo -i
+```
 
-> cd /etc/wireguard
+```bash
+cd /etc/wireguard
+```
 
 umask 077
 
-> wg genkey | tee server_private_key | wg pubkey > server_public_key
+```bash
+wg genkey | tee server_private_key | wg pubkey > server_public_key
+```
 
-> wg genkey | tee client_private_key | wg pubkey > client_public_key
+```bash
+wg genkey | tee client_private_key | wg pubkey > client_public_key
+```
 
+```bash
     echo "
     [Interface]
     Address = 10.0.0.1/24
@@ -35,14 +44,23 @@ umask 077
     PublicKey = $(cat client_public_key)
     AllowedIPs = 10.0.0.2/32
     " > /etc/wireguard/wg0.conf
+```
 
-> echo 'net.ipv4.ip_forward=1' > /etc/sysctl.d/wg.conf
+```bash
+echo 'net.ipv4.ip_forward=1' > /etc/sysctl.d/wg.conf
+```
 
-> systemctl enable --now wg-quiqck@wg0
+```bash
+systemctl enable --now wg-quiqck@wg0
+```
 
-> chown -R root:root /etc/wireguard/
+```bash
+chown -R root:root /etc/wireguard/
+```
 
-> chmod -R og-rwx /etc/wireguard/\*
+```bash
+chmod -R og-rwx /etc/wireguard/\*
+```
 
 Forward traffic from port 51900 to the server.
 
@@ -80,4 +98,6 @@ Add multiple peers by copying the `[peer]` section (they each get called `peer`)
 
 Make a standard client configuration, then:
 
-> qrencode -t ansiutf8 < /etc/wireguard/mobile_user.conf
+```bash
+qrencode -t ansiutf8 < /etc/wireguard/mobile_user.conf
+```

@@ -6,13 +6,17 @@ tags: [ "Documentation", "data" ]
 
 Generate keys:
 
-> gpg --gen-key
+```bash
+gpg --gen-key
+```
 
 Follow the guide.
 
 # Encrypting a file
 
-> gpg -r malinfreeborn@posteo.net -e file
+```bash
+gpg -r malinfreeborn@posteo.net -e file
+```
 
 `-r` specifies the recipient.
 
@@ -28,11 +32,15 @@ gpg --list-keys
 
 Make a password with a password (cypher encryption).
 
-> gpg -c --output passwords.txt
+```bash
+gpg -c --output passwords.txt
+```
 
 or 
 
-> gpg -c > passwords.txt
+```bash
+gpg -c > passwords.txt
+```
 
 Put in a password.
 
@@ -40,17 +48,23 @@ Write message then stop with Ctrl+d.
 
 Get the message back out the file with:
 
-> gpg -d passwords.txt
+```bash
+gpg -d passwords.txt
+```
 
 # Circles of Trust
 
 Search for a key at any key store:
 
-> gpg --search-keys nestorv
+```bash
+gpg --search-keys nestorv
+```
 
 Once you've made a decision about someone:
 
-> gpg --list-keys
+```bash
+gpg --list-keys
+```
 
 You get something like this:
 
@@ -67,27 +81,39 @@ This is a fingerprint.
 
 You can now decide the trust level (this stays on your computer).
 
-> gpg --edit-key *CD30421FD825696BD95F1FF644C62C57B790D3CF*
+```bash
+gpg --edit-key *CD30421FD825696BD95F1FF644C62C57B790D3CF*
+```
 
 Once you're in the interface, type `trust`.
 
-> gpg --sign-key alice@posteo.net
+```bash
+gpg --sign-key alice@posteo.net
+```
 
 Then send those trusted keys up to a server, so people can see you have verified them:
 
-> gpg --send-keys *024C6B1C84449BD1CB4DF7A152295D2377F4D70F*
+```bash
+gpg --send-keys *024C6B1C84449BD1CB4DF7A152295D2377F4D70F*
+```
 
 # Refresh Keys
 
-> gpg --refresh-keys
+```bash
+gpg --refresh-keys
+```
 
 # Export
 
 Your public key:
 
-> gpg --output *me*.gpg --armor --export
+```bash
+gpg --output *me*.gpg --armor --export
+```
 
 or
 
-> gpg --export -a *person@email.tld* > *my_key*.pub
+```bash
+gpg --export -a *person@email.tld* > *my_key*.pub
+```
 

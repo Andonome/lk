@@ -4,7 +4,9 @@ tags: [ "Documentation", "browsers" ]
 ---
 Open a search tab:
 
-> w3m ddg.gg
+```bash
+w3m ddg.gg
+```
 
 <Tab> then enter to start typing.
 

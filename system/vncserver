@@ -6,11 +6,15 @@ https://linuxconfig.org/vnc-server-on-ubuntu-18-04-bionic-beaver-linux
 
 Enable remote desktop access.
 
-> sudo apt install vnc4server xfce4 xfce4-goodies
+```bash
+sudo apt install vnc4server xfce4 xfce4-goodies
+```
 
 Disable the vncserver desktop:
 
-> vncserver -kill :1
+```bash
+vncserver -kill :1
+```
 
 Replace the config in ~/.vnc/xstartup with:
 
@@ -22,43 +26,49 @@ Replace the config in ~/.vnc/xstartup with:
 
 Install tigervnc, then run it to set a password:
 
-> vncserver
+```bash
+vncserver
+```
 
 You'll get a session number.
 
 Shut it down with the 'kill' command and the session's number:
 
-> vncserver -kill :1
+```bash
+vncserver -kill :1
+```
 
 This will forward over port 5900+x where x is the session number.  For the first server, that's port 5901.
 
 # Create a systemd service
 
-> sudo vim /etc/systemd/system/vncserver@:1.service
+```bash
+sudo vim /etc/systemd/system/vncserver@:1.service
+```
 
 Then enter:
 
-```
-[Unit]
-Description=Remote desktop service (VNC)
-After=syslog.target network.target
-
-[Service]
-Type=simple
-User=foo
-PAMName=login
-PIDFile=/home/%u/.vnc/%H%i.pid
-ExecStartPre=/bin/sh -c '/usr/bin/vncserver -kill %i > /dev/null 2>&1 || :'
-ExecStart=/usr/bin/vncserver %i -geometry 1440x900 -alwaysshared -fg
-ExecStop=/usr/bin/vncserver -kill %i
-
-[Install]
-WantedBy=multi-user.target
-```
+> [Unit]
+> Description=Remote desktop service (VNC)
+> After=syslog.target network.target
+> 
+> [Service]
+> Type=simple
+> User=foo
+> PAMName=login
+> PIDFile=/home/%u/.vnc/%H%i.pid
+> ExecStartPre=/bin/sh -c '/usr/bin/vncserver -kill %i > /dev/null 2>&1 || :'
+> ExecStart=/usr/bin/vncserver %i -geometry 1440x900 -alwaysshared -fg
+> ExecStop=/usr/bin/vncserver -kill %i
+> 
+> [Install]
+> WantedBy=multi-user.target
 
 Then enable that service:
 
-> sudo systemctl start vncserver@:1.service
+```bash
+sudo systemctl start vncserver@:1.service
+```
 
 
 

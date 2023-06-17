@@ -2,49 +2,71 @@
 title: "Docker"
 tags: [ "documentation", "Virtualization" ]
 ---
-> sudo pacman -S docker
+```bash
+sudo pacman -S docker
+```
 
-> sudo usermod -aG docker $USER
+```bash
+sudo usermod -aG docker $USER
+```
 
-> sudo systemctl start docker
+```bash
+sudo systemctl start docker
+```
 
 You need to either log out and back in again to be in the docker group, or run everything as root.
 
-> # docker info
+```bash
+# docker info
+```
 
 This should show you things are working.
 
 Search for a distro you want
 
-> docker search debian
+```bash
+docker search debian
+```
 
 If you get a hit, pull it.
 
-> docker pull debian
+```bash
+docker pull debian
+```
 
 Then run a live image:
 
-> docker run -it debian
+```bash
+docker run -it debian
+```
 
 # Delete
 
 Check currently running containers with
 
-> docker ps
+```bash
+docker ps
+```
 
 Check all containers with
 
-> docker ps -a
+```bash
+docker ps -a
+```
 
 Now we can get a list of all containers.
 
 To delete one, take the id, e.g. '97796727e883', and run:
 
-> docker rm 97796727e883
+```bash
+docker rm 97796727e883
+```
 
 # Networking
 
 Get a list of docker container ips
 
-> docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' *container_name_or_id*
+```bash
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' *container_name_or_id*
+```
 

@@ -6,7 +6,9 @@ tags: [ "Documentation", "Basics" ]
 
 Set time to synchronize with an ntp server:
 
-> timedatectl set-ntp true
+```bash
+timedatectl set-ntp true
+```
 
 This info stays in `/usr/share/zoneinfo`.
 
@@ -16,7 +18,9 @@ Local time is kept in /etc/localtime.
 
 According to Dave's LPIC guide, you can set the local time by making asymboling link from your timezone to /etc/localtime, as so:
 
-> sudo ln -sf /usr/share/zoneinfo/Europe/Belgrade /etc/localtime
+```bash
+sudo ln -sf /usr/share/zoneinfo/Europe/Belgrade /etc/localtime
+```
 
 ...however this produced the wrong time for me.  Further, /etc/localtime produces an output with cat, while the zoneinfo files do not.
 
@@ -24,23 +28,33 @@ According to Dave's LPIC guide, you can set the local time by making asymboling 
 
 See local time, language and character settings with:
 
-> locale
+```bash
+locale
+```
 
 List available locales with:
 
-> locale -a
+```bash
+locale -a
+```
 
 To see additional locales which are available (but not necessarily installed):
 
-> cat /usr/share/i18n/SUPPORTED
+```bash
+cat /usr/share/i18n/SUPPORTED
+```
 
 Set a supported locale with:
 
-> locale-gen pl_PL.UTF-8
+```bash
+locale-gen pl_PL.UTF-8
+```
 
 Then set that language, with:
 
-> LANG=pl_PL.UTF-8
+```bash
+LANG=pl_PL.UTF-8
+```
 
 ... then reboot.
 
@@ -48,7 +62,9 @@ Then set that language, with:
 
 Glimpse an overview with:
 
-> ntpq -p
+```bash
+ntpq -p
+```
 
 Usually this is run as a service, so just start that service.
 

@@ -6,76 +6,88 @@ tags: [ "Documentation", "Data" ]
 
 Try:
 
-> timew summary :yesterday
+```bash
+timew summary :yesterday
+```
 
 You can also use :week, :lastweek, :month, :quarter, :year, or a range such as:
 
-> timew summary today to tomorrow
-
-> timew today - tomorrow
-
-> 2018-10-15T06:00 - 2018-10-17T06:00
+```bash
+timew summary today to tomorrow
+timew today - tomorrow
+2018-10-15T06:00 - 2018-10-17T06:00
+```
 
 Each of these can gain with the :ids tag.
 
 # Basics
 
-> timew start
-
-> timew stop
-
-> timew continue
-
-> timew summary
-
-> timew tags
+```bash
+timew start
+timew stop
+timew continue
+timew summary
+timew tags
+```
 
 And add ids with:
 
-> timew summary :ids
-
-
-> timew track 10am - 1pm timewarrior
-
-> timew track 1pm for 2h walk
+```bash
+timew summary :ids
+timew track 10am - 1pm timewarrior
+timew track 1pm for 2h walk
+```
 
 # Adjusting Timewarrior
 
 First get ids.
 
-> timew summary :ids
+```bash
+timew summary :ids
+```
 
 Then if we're looking at task @2:
 
-> timew move @2 12:00
+```bash
+timew move @2 12:00
+timew lengthen @2 3mins
+```
 
-> timew lengthen @2 3mins
-
-> time shorten @2 40mins
+```bash
+time shorten @2 40mins
+```
 
 # Forgetting
 
-> timew start 1h ago @4
+```bash
+timew start 1h ago @4
+```
 
 Or if your action actually had a break:
 
-> timew split @8
+```bash
+timew split @8
+```
 
 Or maybe not?
 
-> timew join @4 @8
-
-> timew @8 delete
+```bash
+timew join @4 @8
+timew @8 delete
+```
 
 Start at previous time
 
-> timew start 3pm 'Read chapter 12'
-
-> timew start 90mins ago 'Read chapter 12'
+```bash
+timew start 3pm 'Read chapter 12'
+timew start 90mins ago 'Read chapter 12'
+```
 
 Cancel currently tracked time.
 
-> timew cancel
+```bash
+timew cancel
+```
 
 # Backdated tracking
 
@@ -129,25 +141,29 @@ task end.after:today-1wk completed
 
 Replace 
 
-`os.system('timew start ' + combined + ' :yes')`
+> os.system('timew start ' + combined + ' :yes')
 
 with:
 
-`os.system('timew start ' + combined.decode() + ' :yes')`
+> os.system('timew start ' + combined.decode() + ' :yes')
 
 and 
 
-`os.system('timew stop ' + combined + ' :yes')`
+> os.system('timew stop ' + combined + ' :yes')
 
 with:
 
-`os.system('timew stop ' + combined.decode() + ' :yes')`
+> os.system('timew stop ' + combined.decode() + ' :yes')
 
 # Fixing Errors
 
-> curl -O https://taskwarrior.org/download/timew-dbcorrection.py
+```bash
+curl -O https://taskwarrior.org/download/timew-dbcorrection.py
+```
 
-> python timew-dbcorrections.py
+```bash
+python timew-dbcorrections.py
+```
 
 # Setup
 

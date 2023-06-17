@@ -26,13 +26,12 @@ WantedBy=multi-user.target
 
 After making the new service, systemd requires reloading:
 
-> sudo systemctl daemon-reload
+```bash
+sudo systemctl daemon-reload
+```
 
 # Types
 
 * simple - the service cannot be called on by others.  It runs on repeat.
-
 * oneshot - the service executes once, then stops.
-
-
 

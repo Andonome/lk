@@ -6,37 +6,54 @@ tags: [ "Documentation", "Distros" ]
 
 ## Arch
 
-> yay -S pi-hole-server
+```bash
+yay -S pi-hole-server
+```
 
-> sudo systemctl enable --now pihole-FTL
+```bash
+sudo systemctl enable --now pihole-FTL
+```
 
-> sudo systemctl disable --now systemd-resolved
+```bash
+sudo systemctl disable --now systemd-resolved
+```
 
-> sudo rm -f /dev/shm/FTL-\*
+```bash
+sudo rm -f /dev/shm/FTL-\*
+```
 
 ## Debian
 
 Debian has a long, boring setup.
 
-> sudo apt-get install wget curl net-tools gamin lighttpd lighttpd-mod-deflate
-
-> curl -sSL https://install.pi-hole.net | PIHOLE_SKIP_OS_CHECK=true sudo -E bash
+```bash
+sudo apt-get install wget curl net-tools gamin lighttpd lighttpd-mod-deflate
+curl -sSL https://install.pi-hole.net | PIHOLE_SKIP_OS_CHECK=true sudo -E bash
+```
 
 # Setup
 
-> sudo usermod -aG pihole $USER
+```bash
+sudo usermod -aG pihole $USER
+```
 
 Remove that google dns server.
 
-> pihole -a setdns 9.9.9.9 1.0.0.1
+```bash
+pihole -a setdns 9.9.9.9 1.0.0.1
+```
 
 Disable pihole password by setting a blank password.
 
-> pihole -a -p
+```bash
+pihole -a -p
+```
 
 Get a new list of blocked domains, then reload:
 
-> pihole -g -r
+```bash
+pihole -g -r
+```
 
 Every so often, run `pihole -g` again (perhaps put it in crontab).
 
@@ -44,11 +61,15 @@ Every so often, run `pihole -g` again (perhaps put it in crontab).
 
 Observe the pihole's output while you ask it a question:
 
-> pihole -t
+```bash
+pihole -t
+```
 
 Then ask the question from another computer:
 
-> dig @[ pihole ip ] archlinux.org
+```bash
+dig @[ pihole ip ] archlinux.org
+```
 
 ## System-Wide Setup
 

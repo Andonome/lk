@@ -4,7 +4,9 @@ tags: [ "Documentation", "Networking" ]
 ---
 # Mount 
 
-> sshfs alfred@192.168.0.14:Sync/Alfred
+```bash
+sshfs $USER@$IP_ADDRESS:$DIR
+```
 
 Various flags:
 
@@ -13,5 +15,7 @@ Various flags:
 
 # Unmount
 
-> fusermount3 -u Sync/Alfred
+```bash
+fusermount3 -u $DIR
+```
 

@@ -12,10 +12,13 @@ Arch: tesseract-data-eng and poppler-utils
 
 ## Script
 
-> pdftoppm -png *file*.pdf test
+```bash
+pdftoppm -png *file*.pdf test
+```
 
-> for x in \*png; do
-> tesseract -l eng  "$x" - >> *out*.txt
-> done
+```bash
+for x in \*png; do
+    tesseract -l eng  "$x" - >> *out*.txt
+done
+```
 
-- [Example script](data/pdf-to-txt.sh)

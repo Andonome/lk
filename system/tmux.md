@@ -4,7 +4,9 @@ tags: [ "Documentation", "System" ]
 ---
 Start with:
 
-> tmux
+```bash
+tmux
+```
 
 Input a command with C-b
 
@@ -32,15 +34,23 @@ In addition to Windows, there are panes.
 
 Crate a new session with the name 'backup'.
 
-> tmux new -s backup
+```bash
+tmux new -s backup
+```
 
 List sessions:
 
-> tmux list-sessions
+```bash
+tmux list-sessions
+```
 
-> tmux kill-session -t 2
+```bash
+tmux kill-session -t 2
+```
 
-> tmux attach -t backup
+```bash
+tmux attach -t backup
+```
 
 
 # Control

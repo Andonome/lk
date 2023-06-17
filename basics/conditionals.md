@@ -41,29 +41,28 @@ case $CRE in
         owlbears | monsters ) echo "Really you're a wizard fan"
 ;;
 esac
+```
 
 # While and Until
 This prints from 1 until 9.
 
-> COUNTER=1
-
-> while [ $COUNTER -lt 2 ]; do
-
+```bash
+COUNTER=1
+while [ $COUNTER -lt 2 ]; do
         > ((COUNTER++))
-
         > echo $COUNTER
-
 > done
-
 ```
 
 There's also 'until', which stops when something is true, rather than keeping going when something is true.
 
 # For
 
-> for i in $( ls ); do
+```bash
+for i in $( ls ); do
 > 	du -sh $i
 > done
+```
 
 # Sequences
 
@@ -71,13 +70,19 @@ The sequences tool counts up from X in jumps of Y to number Z.
 
 Count from 1 to 10.
 
-> seq 10
+```bash
+seq 10
+```
 
 Count from 4 to 11.
 
-> seq 4 11
+```bash
+seq 4 11
+```
 
 Count from 1 to 100 in steps of 5.
 
-> seq 1 5 100
+```bash
+seq 1 5 100
+```
 

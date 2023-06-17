@@ -3,6 +3,8 @@ title: "brightness"
 tags: [ "Documentation", "hardware" ]
 ---
 # Brightness
-/sys/class/backlight/*/brightness
 
+Edit this file:
+
+> /sys/class/backlight/*/brightness
 
