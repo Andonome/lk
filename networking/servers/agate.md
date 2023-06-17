@@ -1,58 +1,86 @@
 ---
-title: "agate"
-tags: [ "Documentation", "Networking" ]
----
-Make sure your dns is in order.
-My domain name is `malinfreeborn.com`, so put your own in there.
-
-Install agate by placing the binary somewhere or (on Arch):
-
-> yay -S agate
-
+title: "Agate on Arch Linux"
+tags: [ "Documentation", "Networking", "Arch", "Gemini" ]
 ---
 
-> sudo mkdir -p /usr/share/gemini/{certs,gemini}
+Docs are [here](https://github.com/mbrubeck/agate).
 
-> sudo useradd gemini -d /usr/share/gemini
+You will need DNS set up before proceeding.
 
-> sudo chown -R gemini:gemini /usr/share/gemini
+Install agate.
 
-> sudo su gemini
+`yay -S agate`
 
-> cd
+Be root!
 
-> echo 'Hello Gemworld!' > gemini/index.gmi
+In my case the domain is 'splint.rs'.
 
-Make a service file.
+`DOMAIN1=splint.rs`
 
-> sudo vim /etc/systemd/system/multi-user.target.wants/agate.service
+You can set up any number of domain names.
 
-Start agate once to make the certificates.
+`DOMAIN2=ttrpgs.com`
 
-> agate --content /usr/share/gemini/gemini --hostname malinfreeborn.com --lang en-GB
+Make a directory to serve the gemini files from:
 
-```
-[Unit]
-Description=agate
-After=Network.target
+`GEMDIR=/srv/gemini`
 
-[Service]
-User=gemini
-Type=simple
-ExecStart=/usr/bin/agate --content /usr/share/gemini/gemini --hostname malinfreeborn.com --lang en-GB
+`mkdir -p $GEMDIR/$DOMAIN1`
 
-[Install]
-WantedBy=default.target
+`mkdir -p $GEMDIR/$DOMAIN2`
+
+Put at least one gemini file into the directory:
 
 ```
+echo Welcome to $DOMAIN1 > $GEMDIR/$DOMAIN1/index.gmi
+echo Welcome to $DOMAIN2 > $GEMDIR/$DOMAIN2/index.gmi
+```
 
-> sudo systemctl daemon-reload
+Set a language variable:
 
-> sudo systemctl enable --now agate
+`LANG=en_GB`
 
+You need to run the agate command once interactively, in order to create certs:
 
-# Redirection
+```
+agate --content $GEMDIR --certs $GEMDIR/.certs \
+    --addr [::]:1965 --addr 0.0.0.0:1965
+    --hostname $DOMAIN1 --hostname $DOMAIN2
+    --lang $LANG
+```
 
-Indicate a permanent move by placing this file in the root of the capsule:
+Once that works, it's time to make a service file; select any name for it:
 
-> index.gmi: 31 gemini://splint.rs
+`SVFILE=st`
+
+```
+echo "
+CONTENT=--content $GEMDIR
+CERT=--certs $GEMDIR/.certs
+ADDR=--addr [::]:1965 --addr 0.0.0.0:1965
+HOSTNAME=--hostname $DOMAIN1 --hostname $DOMAIN2
+LANG=--lang $LANG
+" > $SVFILE.conf
+```
+
+Check the service file has all those variables and looks right:
+
+`cat $SVFILE.conf`
+
+Now move it into the agate config directory:
+
+`mv $SVFILE.conf /etc/agate/`
+
+And finally, start the service:
+
+```
+systemctl daemon-reload
+systemctl enable --now agate@$SVFILE.conf
+```
+
+Your Gemini capsule should be available, and you should be able to see any access in the logs:
+
+```
+journalctl -xeu agate@$SVFILE.conf
+```
+
