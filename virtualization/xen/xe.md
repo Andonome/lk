@@ -8,21 +8,23 @@ tags: [ "documentation", "virtualization", "xen" ]
 xe vm-list
 ```
 
-Start, stop, et c. all done with `xe`:
+Start, stop, et c. with `xe`:
 
 ```bash
-xe vm-start vm=*TTS*
+xe vm-start vm=$TARGET_VM
 ```
 
 ```bash
-xe vm-shutdown vm=*Bob*
+xe vm-shutdown vm=$TARGET_VM
 ```
 
 Destruction requires the uuid.
 
 ```bash
-xe vm-destroy uuid=*243b1165-14aa-37f6-496f-44879d05b3f2*
+xe vm-destroy uuid=$TARGET_UUID
 ```
+
+Autocompletion works well with all of these commands.
 
 # Shut Down VM
 
@@ -33,17 +35,17 @@ xe host-list
 ```
 
 ```bash
-xe vm-list resident-on=*<uuid_of_host>*
+xe vm-list resident-on=$HOST_UUID
 ```
 
 ```bash
-xe vm-shutdown uuid=*<UUID from step 3>* force=true
+xe vm-shutdown uuid=TARGET_VM force=true
 ```
 
 If this doesn't work, try:
 
 ```bash
-xe vm-reset-powerstate uuid=*<UUID from step 3>* force=true
+xe vm-reset-powerstate uuid=TARGET_VM force=true
 ```
 
 Get the id:
@@ -55,16 +57,14 @@ list_domains
 And destroy the domain:
 
 ```bash
-/opt/xensource/debug/xenops destroy_domain -domid *<DOMID from step 7>*
+/opt/xensource/debug/xenops destroy_domain -domid $DOM_ID
 ```
 
-# Error: `Internal error:xenopsd internal error: Storage_interface.Illegal_transition` in XenServer
+# Problem Solving
 
-## Symptoms or Error
+> Error: `Internal error:xenopsd internal error: Storage_interface.Illegal_transition` in XenServer
 
-After a failed “Move VM”, “Copy VM”, or “Export VM” operation, the Virtual Machine (VM) being operated cannot start. Following is the error message displayed:
-
-`User-added image`
+After a failed “Move VM”, “Copy VM”, or “Export VM” operation, the Virtual Machine (VM) being operated cannot start.
 
 ## Solution
 
@@ -85,32 +85,34 @@ This is the UUID of the Control Domain. The Control Domain is a privileged Virtu
 Run the following command to obtain the UUID of the VBD (Virtual Block Device) object linking the Control Domain:
 
 ```bash
-xe vbd-list vm-uuid=*<uuid of the Control Domain>*
+xe vbd-list vm-uuid=$CONTROL_DOMAIN_UUID
 ```
 
 Run the following commands to unplug and destroy the VBD:
 
 ```bash
-xe vbd-unplug uuid=*<uuid of the vbd>*
+xe vbd-unplug uuid=$VBD_UUID
 ```
 
 ```bash
-xe vbd-destroy uuid=*<uuid of the vbd>*
+xe vbd-destroy uuid=$VBD_UUID
 ```
 
-## Make a local iso repository
+# Make a local iso repository
 
 ```bash
 xe sr-create name-label=LocalISO type=iso device-config:location=/var/opt/xen/ISO_Store device-config:legacy_mode=true content-type=iso
 ```
 
-This creates a UUID for the new directory:
+This creates a UUID for the new directory, e.g.:
 
-`e94e25bb-bcdc-801b-b62a-b51b686a3bdc`
+> e94e25bb-bcdc-801b-b62a-b51b686a3bdc
 
 # Import
 
-xe vm-import filename=*/mnt/blah.xva*
+```bash
+xe vm-import filename="$FILENAME".xva
+```
 
 # USB
 
@@ -151,11 +153,10 @@ xe sr-list
 # Exporting and Exporting VMs
 
 ```bash
-xe vm-export vm=*<Name>* filename=*/full/path.xva*
+xe vm-export vm=$VM_NAME filename="$FULL_PATH".xva
 ```
 
 ```bash
-xe vm-import vm=*<Name>* filename=*/full/path.xva*
+xe vm-import vm=*<Name>* filename="$FULL_PATH".xva
 ```
-
 
