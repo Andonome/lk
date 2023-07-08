@@ -10,7 +10,7 @@ echo Select a name
 
 read name
 
-filePath="$category/$name.md"
+filePath="$category/$(echo $name | sed 's/ /_/g').md"
 
 tagsList="$(echo \"$category | sed 's#\/#", "#g')\""
 
