@@ -100,13 +100,21 @@ Change the `download-dir` value to wherever you want the torrents to go.
 
 # Creating Torrents
 
+Transmission always needs the full path to every file, and the daemon will need permission to view the file.
+When it doubt, just place the files in `transmission`'s home directory.
+
 Create a torrent of file or directory `Memes` with:
 
-> transmission-create Memes
+```bash
+sudo chown -R :transmission Memes
+transmission-create $(pwd)/Memes
+```
 
 Add a tracker to the torrent, to make sure others can find you easily:
 
-> transmission-create --comment 'My Memes collection' -t 'udp://tracker.publicbt.com:80' -t 'udp://tracker.openbittorrent.com:80' --anonymize Memes
+```bash
+transmission-create --comment 'My Memes collection' -t 'udp://tracker.publicbt.com:80' -t 'udp://tracker.openbittorrent.com:80' --anonymize Memes
+```
 
 Without the `--anonymize` flag, the torrent file output will have a 'created by' and 'created date'.
 
