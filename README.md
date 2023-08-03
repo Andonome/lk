@@ -26,32 +26,44 @@ The chronology should never branch.
 If `gitea` can use three different types of database, the documentation should simply pick one and continue instructions from there.
 Repetition works better than a reference - if a database requires three commands to set up, it's better to repeat those three commands for every program that requires a database than to just link to another file which discusses databases.
 
+### Closing
+
+Introductory documents should show anything required to cleanly uninstall a program, without leaving bulky configuration files behind.
+
 ## Three Input Types
 
 There are three types of examples:
 
 Fixed input:
 
-> ls
-
-Arbitrary Input shows the non-fixed input in italics:
-
-> ls *myFile.txt*
-
-Output shows as unformatted text:
-
+```bash
+ls
 ```
-    LK           img
-    Mail         kn
-    Projects     music
+
+Anything with arbitrary input should be shown as a variable.
+
+```bash
+ls $FILE
 ```
+
+Non-commands (e.g. output) should be shown as quoted text:
+
+> LK           img
+> Mail         kn
+> Projects     music
 
 # Example
 
 ```
 How to see which websites you're actively accessing:
 
-> ss -tr dst :443
+` ` `bash
+ss -tr dst :$PORT
+` ` `   
+
+> State  Recv-Q  Send-Q   Local Address:Port                                    Peer Address:Port   Process  
+> ESTAB  0       0         192.168.0.14:42476                                 149.154.167.91:https           
+> ESTAB  0       0         192.168.0.14:43644                                  104.17.90.199:https           
 
 ```
 
@@ -76,5 +88,5 @@ This started as a few personal notes, and will probably continue to look like th
 It's a bit of a mess.
 
 Systemd is taken as a default.
-Non-systemd commands we relegate to their respective distros, e.g. runit for Void Linux.
+Non-systemd commands are mentioned when required for a distro, e.g. runit for Void Linux.
 
