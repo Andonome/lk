@@ -1,6 +1,6 @@
 ---
-title: "Terminal Tips"
-tags: [ "Documentation", "System" ]
+title: "bash tips"
+tags: [ "Documentation", "Shell", "POSIX" ]
 ---
 ## Track Live Changes
 
@@ -67,6 +67,18 @@ Add number to variables with:
 
 `((n--))` works identically.
 
+### POSIX WARNING
+
+The number commands above work in `bash`, but not in bare-ass POSIX shells, such as `dash`.
+
+Instead, you might do:
+
+```sh
+x=2
+x=$(( x +1 ))
+x=$(( x*x ))
+```
+
 ## Finding Duplicate Files
 
 ```bash
@@ -96,4 +108,9 @@ That gives you a random directory to mess about in.
    done
    cd $dir
 ```
+
+### POSIX WARNING
+
+These smart-brackets are a bash feature.
+If you try to use `{A..Z}` in dash, it will think of this as a single item.
 
