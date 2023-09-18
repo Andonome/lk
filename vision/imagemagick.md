@@ -2,7 +2,6 @@
 title: "imagemagick"
 tags: [ "Documentation", "Vision" ]
 ---
-[Source](https://lxlinux.com/imagemagick.html)
 
 Convert jpg to png.
 
@@ -41,13 +40,13 @@ convert image.jpg -resize 25% output.jpg
 
 # Trim images to border
 
-This is generally used for transparrent images.
+This is generally used for transparent images.
 
 ```bash
 convert -trim image.png output.png
 ```
 
-Make the white of an image transparrent.
+Make the white of an image transparent.
 
 ```bash
 convert -transparent white -fuzz 10% input.png output.png
@@ -101,7 +100,7 @@ See your installed fonts:
 convert -list font
 ```
 
-Make na image showing day of the week:
+Make an image showing day of the week:
 
 ```bash
 convert -fill blue -font Sauce-Code-Pro-Semibold-Nerd-Font-Complete-Mono -gravity center -pointsize 79 label:$(date +%A) day.png
