@@ -2,7 +2,7 @@
 title: "imagemagick"
 tags: [ "Documentation", "Vision" ]
 ---
-[Source](http://lxlinux.com/imagemagick.html)
+[Source](https://lxlinux.com/imagemagick.html)
 
 Convert jpg to png.
 
