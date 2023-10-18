@@ -91,17 +91,40 @@ Once you're in the interface, type `trust`.
 gpg --sign-key alice@posteo.net
 ```
 
-Then send those trusted keys up to a server, so people can see you have verified them:
+# Swapping Keys
+
+This system relies on a ring of people swapping key information.
+
+## Sending
+
+Send those trusted keys up to a server, so people can see you have verified them:
 
 ```bash
 gpg --send-keys 024C6B1C84449BD1CB4DF7A152295D2377F4D70F
 ```
 
+## Upload Your Keys
+
+## Add More Key Servers
+
+Key servers often swap keys, but it's best to just send to multiple places immediately.
+You can add key servers by adding this to `~/.gnupg/gpg.conf`.
+
+```
+keyserver hkps://keys.openpgp.org
+keyserver hkps://mail-api.proton.me
+keyserver hkps://keys.mailvelope.com
+```
+
 # Refresh Keys
+
+Refreshing keys will tell you if some key you have contains a signature from someone you already trust, or if someone has published a revocation certificate (meaning their key should not be trusted any more).
 
 ```bash
 gpg --refresh-keys
 ```
+
+You can use the [crontab](../basics/cron.md) to refresh keys.
 
 # Export
 
