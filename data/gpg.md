@@ -82,7 +82,7 @@ This is a fingerprint.
 You can now decide the trust level (this stays on your computer).
 
 ```bash
-gpg --edit-key *CD30421FD825696BD95F1FF644C62C57B790D3CF*
+gpg --edit-key CD30421FD825696BD95F1FF644C62C57B790D3CF
 ```
 
 Once you're in the interface, type `trust`.
@@ -94,7 +94,7 @@ gpg --sign-key alice@posteo.net
 Then send those trusted keys up to a server, so people can see you have verified them:
 
 ```bash
-gpg --send-keys *024C6B1C84449BD1CB4DF7A152295D2377F4D70F*
+gpg --send-keys 024C6B1C84449BD1CB4DF7A152295D2377F4D70F
 ```
 
 # Refresh Keys
@@ -108,12 +108,12 @@ gpg --refresh-keys
 Your public key:
 
 ```bash
-gpg --output *me*.gpg --armor --export
+gpg --output me.gpg --armor --export
 ```
 
 or
 
 ```bash
-gpg --export -a *person@email.tld* > *my_key*.pub
+gpg --export -a person@email.tld > my_key.pub
 ```
 
