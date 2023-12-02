@@ -26,7 +26,7 @@ However, instead of generating what you need, you're going to generate everythin
 
 
 ```bash
-sudo xbps-reconfigure --all --force
+sudo xbps-reconfigure glibc-locales
 ```
 
 Finally, select your chosen locale by placing it in `/etc/locale.conf`.
