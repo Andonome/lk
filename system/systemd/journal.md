@@ -2,8 +2,6 @@
 title: "journal"
 tags: [ "Documentation", "systemd" ]
 ---
-```
-
 Find errors since November
 
 ```bash
@@ -14,3 +12,5 @@ Limit size to 2G.
 
 ```bash
 journalctl --vacuum-size=2G
+```
+
