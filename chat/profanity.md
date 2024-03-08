@@ -1,6 +1,6 @@
 ---
 title: "profanity"
-tags: [ "Documentation", "Chat" ]
+tags: [ "Documentation", "Chat", "omemo" ]
 ---
 # Setup (Commands)
 
@@ -140,54 +140,6 @@ You can ensure omemo automatcally turns on:
 ```
 /omemo policy automatic
 ```
+---
 
-## otr
-
-Install libotr-dev or libotr5-dev or whatever..
-
-```
-sudo apt -y install lib5otr-dev
-```
-
-Make your otr keys.
-
-```
-/otr gen
-```
-
-Then you can start an otr converstation.
-
-```
-/otr start bob@jobbies.org
-```
-
-Or if you already have a conversation windows open, switch to our using:
-
-```
-/otr
-```
-
-Finally, verify!
-
-```
-/otr question "Who are you?" bob
-```
-
-Bob is verified upon the answer, 'bob'.
-
-### OTR Finger Prints
-
-Get yours with 
-
-```
-/otr myfp
-```
-
-```
-/otr theirfp
-```
-
-```
-/otr myfp
-```
-
+'OTR' encryption is mostly dead, but you can find the old instructions [here](profanity-otr).
