@@ -14,20 +14,31 @@ Once installed, search for the service name, and start it.
 
 ```bash
 sudo systemctl list-unit-files | grep cron
+sudo systemctl enable --now $NAME
 ```
+
+Make a file for your crontab, like this:
 
 ```bash
-sudo systemctl enable --now cron
+echo '39 */3 * * * /usr/bin/updatedb' > "$USER".cron
 ```
 
-You can *e*dit your crontab with:
+Then apply that crontab:
 
 ```bash
-crontab -e
+crontab "$USER".cron
+rm "$USER".cron
 ```
+The `cron` program will check your syntax before adding the tab.
 
+Your crontab file sits somewhere in `/var/spool/`.
+Probably in `/var/spool/cron`.
 
-> 39 */3 * * * /usr/bin/updatedb
+Check how your tab currently looks:
+
+```bash
+crontab -l
+```
 
 ## Syntax
 
@@ -91,7 +102,7 @@ run-parts /etc/cron.hourly
 ### Variables
 
 Add your `$HOME` to crontab to use scripts.
-First add `HOME=/home/user`, then you can use syntax like this:
+First add `HOME=/home/$USER`, then you can use syntax like this:
 
 0 * * * * $HOME/.scripts/myScript.sh
 
@@ -100,7 +111,6 @@ First add `HOME=/home/user`, then you can use syntax like this:
 ```bash
 $HOME/.scripts/myScript.sh
 ```
-
 You can also add your regular path to your crontab as a variable (see example below).
 If you're using vim as the editor, just run this at the top of your crontab:
 
@@ -131,5 +141,3 @@ PATH=/usr/condabin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/u
 50 18 * * * /usr/bin/timeout 30m /usr/bin/syncthing
 
 ```
-
-
