@@ -14,7 +14,7 @@ filePath="$category/$(echo $name | sed 's/ /_/g').md"
 
 tagsList="$(echo \"$category | sed 's#\/#", "#g')\""
 
-[ -e "$filePath" ] && $EDITOR $filePath && exit 0
+[ -e "$filePath" ] && $EDITOR "$filePath" && exit 0
 
 echo "---
 title: \"$name\"
