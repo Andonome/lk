@@ -29,11 +29,10 @@ Edit `/etc/radicale/config`, changing the `[auth]` section from this:
 
 ...to this:
 ```
-#type = htpasswd
+type = htpasswd
 ```
 
-If the service is started, restart it to make sure nobody can sign in without a password.
-
+Make sure the service is off, as people may be able to sign in without a password at this point.
 
 Next, find the `htpasswd` program.
 You might get it in the `apache` package or similar.
@@ -41,7 +40,7 @@ You might get it in the `apache` package or similar.
 `htpasswd` allows you to generate passwords for users, and place them in `/etc/radicale/users`.
 
 ```bash
-PASS="$(xkcdpass)
+PASS="$(xkcdpass)"
 htpasswd -nb $USER "$PASS" | sudo tee -a /etc/radicale/users
 echo "Your username is $USER"
 echo "Your password is $PASS"
@@ -96,13 +95,11 @@ Finally, replace the example `DOMAIN` with your actual domain name.
 ```bash
 DOMAIN=whatever.com
 sudo sed -i "s/DOMAIN/$DOMAIN/g" /etc/nginx/sites-available/radicale 
-
 ```
 
 (optional: replace that `cal.` prefix with anything else)
 
 Check nginx is happy:
-
 
 ```bash
 sudo nginx -t
@@ -115,7 +112,6 @@ sudo certbod -d cal.$DOMAIN
 
 Start or restart both services:
 
-
 ```bash
 sudo systemctl start radicale
 sudo systemctl restart nginx
@@ -123,4 +119,4 @@ sudo systemctl restart nginx
 
 You should now be able to log into your calendar, and add it to a phone.
 
-NB: you don't need the port number.
+**NB:** you don't need the port number.
