@@ -61,9 +61,9 @@ How to see which websites you're actively accessing:
 ss -tr dst :$PORT
 ` ` `   
 
-> State  Recv-Q  Send-Q   Local Address:Port                                    Peer Address:Port   Process  
-> ESTAB  0       0         192.168.0.14:42476                                 149.154.167.91:https           
-> ESTAB  0       0         192.168.0.14:43644                                  104.17.90.199:https           
+> State  Recv-Q  Send-Q   Local Address:Port     Peer Address:Port   Process  
+> ESTAB  0       0         192.168.0.14:42476  149.154.167.91:https           
+> ESTAB  0       0         192.168.0.14:43644   104.17.90.199:https           
 
 ```
 
