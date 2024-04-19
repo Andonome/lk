@@ -26,6 +26,8 @@ The chronology should never branch.
 If `gitea` can use three different types of database, the documentation should simply pick one and continue instructions from there.
 Repetition works better than a reference - if a database requires three commands to set up, it's better to repeat those three commands for every program that requires a database than to just link to another file which discusses databases.
 
+---
+
 ### Closing
 
 Introductory documents should show anything required to cleanly uninstall a program, without leaving bulky configuration files behind.
@@ -51,6 +53,8 @@ Non-commands (e.g. output) should be shown as quoted text:
 > LK           img
 > Mail         kn
 > Projects     music
+
+---
 
 # Example
 
