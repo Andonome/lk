@@ -136,3 +136,32 @@ Without the `--anonymize` flag, the torrent file output will have a 'created by'
 - udp://explodie.org:6969/announce
 - https://tracker.gbitt.info:443/announce
 - http://tracker.gbitt.info:80/announce
+
+## Verify
+
+Add your torrent and notes its number:
+
+```bash
+transmission-remote -a "$file".torrent
+transmission-remote -l
+transmission-remote -t "$number" -i
+```
+
+The information in the last command shows that it's not verified, so you can verify with `-v`.
+
+```bash
+transmission-remote -t "$number" -v
+```
+
+If transmission cannot find it, then tell it where to find the torrent:
+
+```bash
+transmission-remote -t "$number" --find "$(pwd)"
+```
+...and of course, make sure the permissions allow transmission to see the target.
+
+
+```bash
+ls -ld "$file"
+```
+
