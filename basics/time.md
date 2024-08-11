@@ -68,3 +68,11 @@ ntpq -p
 
 Usually this is run as a service, so just start that service.
 
+# Force Reset
+
+If your clock drifts too far from the right time, it will not reset happily.
+For it to reset like this:
+
+```bash
+sudo ntpd -q -g -x -n
+```
