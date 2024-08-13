@@ -22,6 +22,7 @@ And overwrite all metadata:
 ```bash
 exiftool -all= -overwrite_original -ext jpg .
 ```
+(NB: This does not work on pdf data. See [here](pdf_erasure.md) for erasing all pdf data)
 
 Or just GPS data:
 
@@ -34,5 +35,6 @@ You can also use the imagemagick tool:
 ```bash
 identify -verbose
 ```
+
 
 
