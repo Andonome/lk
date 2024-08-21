@@ -92,7 +92,7 @@ A branch is a full copy of the project to test additional ideas.
 You can make a new branch called 'featurez' like this:
 
 ```bash
-git branch *featurez*
+git branch $FEATURE_BRANCH
 ```
 
 Have a look at all your branches:
@@ -104,19 +104,20 @@ git branch
 Switch to your new branch:
 
 ```bash
-git checkout *featurez*
+git checkout $FEATURE_BRANCH
 ```
 
 And if your changes are rubbish, checkout the "master" branch again, then delete "featurez":
 
 ```bash
-git branch -D *featurez*
+git branch -D $FEATURE_BRANCH
 ```
 
 Or if it's a good branch, push it to the remote:
 
 ```bash
-git push *origin* *featurez*
+remote=origin
+git push $remote $FEATURE_BRANCH
 ```
 
 ## Merging
@@ -124,13 +125,13 @@ git push *origin* *featurez*
 Once you like the feature, merge it into the main branch.  Switch to master then merge it:
 
 ```bash
-git merge *featurez*
+git merge $FEATURE_BRANCH
 ```
 
-and delete `featurez` as you've already merged it:
+And delete the branch, as you've already merged it:
 
 ```bash
-git branch -d featurez
+git branch -d $FEATURE_BRANCH
 ```
 
 # Subtree
@@ -139,34 +140,6 @@ git branch -d featurez
 
 ```bash
 git subtree add -P config git@gitlab.com:bindrpg/config.git master
-```
-
-## Pulling a Subtree from an existing git
-
-The project has subdirectories sub-1,sub-2,sub-3.  The first should be its own repository, but should also retain its own history.
-
-First, we extract its history as an independent item, and make that into a seprate branch.
-
-```bash
-git subtree split --prefix=sub-1 -b sub
-```
-
-If you want something a few directories deep, you can use `--prefix=sub-1/dir-2/dir-3
-
-Then go and create a new git somewhere else:
-
-```bash
-cd ..;mkdir sub-1;cd sub-1;git init --bare
-```
-
-Then go back to your initial git repo, and do the following:
-
-git push ../subtest sub:master
-
-Finally, you can clone this repo from your original.
-
-```bash
-git clone ../subtest
 ```
 
 # Tricks
