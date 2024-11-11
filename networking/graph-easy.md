@@ -54,3 +54,15 @@ Try placing this in a file:
 > [ Eight ] .. [ None ] { shape: none; fill: red; color: brown; }
 > 
 > [ no Network ] --> [ Is there an IP address? ]
+
+> [ Little Group: o]
+
+
+```
+echo "( EU [ Madrid ] <---> [ K ] {label: Karlsruhe;}
+    <== ...O\n ..o\n .O\no \nchoo choo  ==> [ Cern ] [ Cern ] <== ...O\n ..o\n .O\no \nchoo choo  ==> [ Paris ] <...> [ B ] {label: Budapest} )
+    [ B ] <---> [ Belgrade ] [ G ] {label: Glasgow; }
+    <==> [ M ] {label: Manchester },
+    [ Madrid ] <---> [ Belgrade ] [ M ] <--> [ London ] <--> [ B ],
+        [ Belgrade ]" | graph-easy  --boxart
+```
