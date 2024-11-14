@@ -2,32 +2,46 @@
 title: "sc-im"
 tags: [ "Documentation", "data" ]
 ---
+
+- [Sample file](sc-im/sample.sc)
+
 # Basic Commands
 
-> H = highest part
-> L = lowest part
-> gg = top
+## See Cells
 
-> g$ = most right.
-> g0 = most left.
+Cells are hard to see.
+Change this with `:set autowrap`.
 
-> \ = insert middle
-> \> = insert left
-> < = insert right
+Make `sc-im` always autowrap:
 
-gb4 = to to cell b4
+```bash
+mkdir .config/sc-im/bash
+echo 'set autowrap' >> .config/sc-im/scimrc
+```
 
-> aa = see all text in cells
-> f = format cells so you can see it.
-> fl = format wider right
-> fh = format smaller left
+## Movement
 
-> fj = format wider down
-> fk = format smaller down
+| Command                             | Key |
+|:------------------------------------|:---:|
+| highest part                        | H   |
+| lowest part                         | L   |
+| top                                 | gg  |
+| most right.                         | g$  |
+| most left.                          | g0  |
+| insert middle                       | \   |
+| insert left                         | \>  |
+| insert right                        | <   |
+| to to cell b4                       | gb4 |
+| see all text in cells               | aa  |
+| format cells so you can see it.     | f   |
+| format wider right                  | fl  |
+| format smaller left                 | fh  |
+| format wider down                   | fj  |
+| format smaller down                 | fk  |
 
-# Edit
+## Edit
 
-## Text
+### Text
 
 | Action                | Key |
 |:----------------------|:---:|
@@ -35,7 +49,7 @@ gb4 = to to cell b4
 | text (right align)    | >   |
 | Edit existing  text   | E   |
 
-## Meta Actions
+### Meta Actions
 
 | Action                | Key |
 |:----------------------|:---:|
@@ -48,7 +62,7 @@ gb4 = to to cell b4
 |  delete a cell        | x   |
 
 
-## Functions
+### Functions
 
 | Action                          | Key          |
 |:--------------------------------|:------------:|
@@ -58,7 +72,7 @@ gb4 = to to cell b4
 |  minimumof those numbers        | =@min(B1:B8) |
 |  multiply C1 to C8              | =@prod(C1:C8)|
 
-## Visual
+### Visual
 
 | Action                          | Key          |
 |:--------------------------------|:------------:|
