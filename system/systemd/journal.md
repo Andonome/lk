@@ -10,6 +10,12 @@ See a running log of all system messages:
 journalctl -f
 ```
 
+Or just one user:
+
+```bash
+journalctl --user -f
+```
+
 Or just one unit (`sshd`):
 
 ```bash

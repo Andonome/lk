@@ -22,3 +22,8 @@ REP=5
 free --lohi -g -s $REP | lolcat
 ```
 
+Check the next thing cron will do:
+
+```bash
+cronnext /var/spool/cron/$USER -l
+```
