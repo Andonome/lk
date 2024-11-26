@@ -39,7 +39,7 @@ Try placing this in a file:
 
 > [ One ] { fill: seagreen; color: white; } -- label --> [ Two ] { shape: triangle; }
 > 
-> [ One ] => { arrow-style: closed; } [ Three ]
+> [ One ] => { arrow-style: closed; } [ Three ] { border-style: none; }
 > 
 > [ Five ] { fill: maroon; color: yellow; } <=> [ Three ]
 > 
