@@ -13,11 +13,14 @@ The ordering of `/etc/fstab` is
 5. dump
 6. pass
 
-E.g.:
 
-> UUID=877f14e8-4738-46b0-884f-ba330dad1a7d       /mnt/biggie                     ext4        nofail,rw,relatime      0 2
-> 
-> UUID=B21648C416488AF5 /mnt/share ntfs       nofail,rw,nosuid,nodev,user_id=0,group_id=0,allow_other,blksize=4096 0 0
+*Example:*
+
+```
+UUID=877f14e8-4738-46b0-884f-ba330dad1a7d       /mnt/biggie                     ext4        nofail,rw,relatime      0 2
+
+UUID=B21648C416488AF5 /mnt/share ntfs       nofail,rw,nosuid,nodev,user_id=0,group_id=0,allow_other,blksize=4096 0 0
+```
 
 ## 5: Dump
 

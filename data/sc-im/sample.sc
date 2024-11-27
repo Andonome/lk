@@ -35,4 +35,4 @@ leftstring A7 = "Average"
 let A7 = @avg(A1:A4)
 leftstring A10 = "Weight of Meal"
 let A10 = 0.3
-goto B7
+goto A0
