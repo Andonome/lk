@@ -93,7 +93,9 @@ apt install python3-certbot-nginx
 ```
 
 ```bash
-certbot --nginx -d *mysite.tk* --non-interactive --agree-tos -m *webmaster@email.tld*
+domain=example.com
+my_email=me@posteo.uk
+certbot --nginx -d "$domain" --non-interactive --agree-tos -m "$my_email"
 ```
 
 When you are asked about redirecting from HTTP to HTTPS, say yes (option "2").
