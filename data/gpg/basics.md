@@ -24,7 +24,12 @@ Check you have an encrypted version of your file.
 
 # Changing Expiration Dates
 
+
+```bash
 gpg --list-keys
+# or...
+gpg -k
+```
 
 ... and then use the second part of 'pub', which is the ID.  But that's not appearing here so... on with gpg2?
 
@@ -72,11 +77,11 @@ You get something like this:
 pub   rsa3072 2021-08-15 [SC] [expires: 2023-08-15]
       CD30421FD825696BD95F1FF644C62C57B790D3CF
 uid           [ultimate] Malin Freeborn <malinfreeborn@posteo.net>
-sub   rsa3072 2021-08-15 [E] [expires: 2023-08-15]
+sub   rsa3072 2021-08-15 [E] [expires: after-forever]
 
 ```
 
-Notice the long, ugly, string - CD30421FD825696BD95F1FF644C62C57B790D3CF - and how horribly ugly it is.
+Notice the long, ugly, string - `CD30421FD825696BD95F1FF644C62C57B790D3CF` - and how horribly ugly it is.
 This is a fingerprint.
 
 You can now decide the trust level (this stays on your computer).
@@ -124,7 +129,7 @@ Refreshing keys will tell you if some key you have contains a signature from som
 gpg --refresh-keys
 ```
 
-You can use the [crontab](../../basics/cron.md) to refresh keys.
+You can use the [crontab](../../basics/cron.md) to refresh keys, but this will mostly fail, since keyservers often don't hold the right data.
 
 # Export
 
