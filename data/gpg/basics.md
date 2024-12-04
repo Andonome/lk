@@ -7,7 +7,7 @@ tags: [ "Documentation", "data", "GPG" ]
 Generate keys:
 
 ```bash
-gpg --gen-key
+gpg --full-generate-key
 ```
 
 Follow the guide.
