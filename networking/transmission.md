@@ -83,7 +83,7 @@ If the file is in your home - `~` - but `transmission` is not allowed in your ho
 Next, find the torrent's number.  You can use multiple numbers, separated with a comma:
 
 ```bash
-transmission-remote -t 3,5,8 --move /home/alice/music
+transmission-remote -t 3,5,8 --move $HOME/music
 ```
 
 ## Change Default Location
