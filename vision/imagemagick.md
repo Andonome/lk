@@ -6,35 +6,35 @@ tags: [ "Documentation", "Vision" ]
 Convert jpg to png.
 
 ```bash
-convert image.jpg image.png
+magick image.jpg image.png
 ```
 
 ```bash
-convert image.jpg -quality 50 image.jpg
+magick image.jpg -quality 50 image.jpg
 ```
 
 'Quality' must be from 1 to 100.
 
 ```bash
-convert -resize 50% image.jpg image2.jpg
+magick -resize 50% image.jpg image2.jpg
 ```
 
 Resizing only changes jpegs.  Change a png with:
 
 ```bash
-convert input.png png8:out.png
+magick input.png png8:out.png
 ```
 
 # Invert Colours
 
 ```bash
-convert input.jpg output.jpg -negate
+magick input.jpg output.jpg -negate
 ```
 
 # Make Images Smaller
 
 ```bash
-convert image.jpg -resize 25% output.jpg
+magick image.jpg -resize 25% output.jpg
 ```
 
 
@@ -43,13 +43,13 @@ convert image.jpg -resize 25% output.jpg
 This is generally used for transparent images.
 
 ```bash
-convert -trim image.png output.png
+magick -trim image.png output.png
 ```
 
 Make the white of an image transparent.
 
 ```bash
-convert -transparent white -fuzz 10% input.png output.png
+magick -transparent white -fuzz 10% input.png output.png
 ```
 
 The 'fuzz' option tells the computer that 'close to white' is fine.  You might want to use 20% or higher fuzz.
@@ -58,7 +58,7 @@ The 'fuzz' option tells the computer that 'close to white' is fine.  You might w
 ## Dropshadow
 
 ```bash
-`convert <input file> \( +clone -background black -shadow 50x8+0+5 \) +swap -background none -layers merge +repage <output file>`
+`magick <input file> \( +clone -background black -shadow 50x8+0+5 \) +swap -background none -layers merge +repage <output file>`
 ```
 
 
@@ -70,13 +70,13 @@ mogrify -format png *.jpg
 
 # Printing Words
 
-# Mass convert
+# Mass magick
 
-This script converts all jpg files in a directory to svg.
+This script magicks all jpg files in a directory to svg.
 
 ```
 for i in  *jpg
-do convert "$i" $(ls "$i" | sed s#jpg\$#svg#)
+do magick "$i" $(ls "$i" | sed s#jpg\$#svg#)
 done
 ```
 
@@ -86,7 +86,7 @@ The above script has crappy results.
 It's better to use potrace.
 
 ```
-$convert -flatten input.jpg output.ppm
+$magick -flatten input.jpg output.ppm
 $potrace -s output.ppm -o svgout.svg
 ```
 
@@ -97,19 +97,19 @@ $potrace -s output.ppm -o svgout.svg
 See your installed fonts:
 
 ```bash
-convert -list font
+magick -list font
 ```
 
 Make an image showing day of the week:
 
 ```bash
-convert -fill blue -font Sauce-Code-Pro-Semibold-Nerd-Font-Complete-Mono -gravity center -pointsize 79 label:$(date +%A) day.png
+magick -fill blue -font Sauce-Code-Pro-Semibold-Nerd-Font-Complete-Mono -gravity center -pointsize 79 label:$(date +%A) day.png
 ```
 
 
 Make a meme:
 
 ```bash
-convert inputmemeimage.png -font impact -fill white -pointsize 84 -stroke black -strokewidth 3 -gravity north -annotate +0+20 'TOP MEME TEXT' -gravity south -annotate +0+20 'BOTTOM MEME TEXT' outputmemeimage.png
+magick inputmemeimage.png -font impact -fill white -pointsize 84 -stroke black -strokewidth 3 -gravity north -annotate +0+20 'TOP MEME TEXT' -gravity south -annotate +0+20 'BOTTOM MEME TEXT' outputmemeimage.png
 ```
 
