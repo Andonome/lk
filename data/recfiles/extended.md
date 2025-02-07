@@ -1,6 +1,6 @@
 ---
-title: "Recfiles"
-tags: [ "data", "database" ]
+title: "Recfiles Extended Example"
+tags: [ "data", "database", "recfiles" ]
 ---
 
 ## Create
@@ -10,11 +10,10 @@ Make a database for your boardgames, specifying only one field and value:
 ```bash
 database=games.rec
 n=Name
-v=Vojvodina
+g=Vojvodina
 touch $database
-recins -f $n -v v $database
+recins -f $n --value $g $database
 recsel $database
-
 ```
 
 Insert a few more, with the estimated playtime:
@@ -116,3 +115,4 @@ Delete an entire record:
 num=2
 recdel --number=$num $database
 ```
+
