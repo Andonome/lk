@@ -21,7 +21,7 @@ for g in Saboter Carcassonne Chess; do
 done
 
 query=Carc
-recsel --quick=Carc $database
+recsel --quick=$query $database
 recsel -q $query $database
 
 query=sabat
