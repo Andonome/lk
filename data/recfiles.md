@@ -3,44 +3,43 @@ title: "Recfiles"
 tags: [ "data", "database" ]
 ---
 
-Create a database of board games:
+Create:
 
-```bash
+```sh
 database=games.rec
 touch $database
-
-entry="Name: Vojvodina"
-recins --record "$record" $database
-```
-
-Create, read, update, and delete:
-
-```bash
-for g in Saboter Carcassonne Chess; do
+for g in Vojvodina Saboter Carcassonne Chess; do
     recins -r "Name: $g" -r "Played: yes" $database
 done
+```
 
+Read:
+
+```sh
+recsel $database
 query=Carc
 recsel --quick=$query $database
-recsel -q $query $database
 
-query=sabat
-recsel --case-insensitive -q "$query" --print=Name $database
+game=Vojvodina
+recsel --expression="Name = '${game}'" $database
+```
 
-query=chess
-recsel -i -q "$query" -p Name $database
+Update:
 
+```sh
+recset --expression="Name = '${game}'" -f Played --set="no" $database
 new_field=Played
 value=no
-
+recset -f "$new_field" --delete $database
 recset -f "$new_field" --set-add="$value" $database
 recsel $database
+```
 
-value=yes
-recset -iq $query -f "$new_field" --set=$value $database
+Delete:
 
+```sh
+recdel --expression="Name = '${game}'" $database
 recset -f "$new_field" --delete $database
-recsel $database
 ```
 
 - [Extended example](recfiles/extended.md)
