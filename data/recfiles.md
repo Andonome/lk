@@ -44,6 +44,7 @@ recsel $database
 ```
 
 - [Extended example](recfiles/extended.md)
+- [Playing with board games data](recfiles/Board_Games.md)
 
 # Resources
 
