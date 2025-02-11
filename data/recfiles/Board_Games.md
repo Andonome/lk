@@ -1,6 +1,6 @@
 ---
 title: "Board Games"
-tags: [ "data", "recfiles" ]
+tags: [ "data", "recfiles", "games" ]
 ---
 
 You can play with a board games database from boardgamegeek.com.

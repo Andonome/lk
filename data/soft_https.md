@@ -1,6 +1,6 @@
 ---
 title: "Soft Serve through https"
-tags: [ "data", "git" ]
+tags: [ "data", "git", "lfs" ]
 ---
 
 ## `http` Setup
