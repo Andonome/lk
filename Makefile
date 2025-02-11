@@ -1,3 +1,6 @@
+FZF != command -v sk || command -v fzy || command -v fzf || \
+	{ echo install a fuzzy finder && exit 1 ;}
+
 help: ## Print the help message
 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | \
 		sort | \
@@ -31,7 +34,7 @@ database: $(default) ## Make a database for recfiles
 
 .PHONY: article
 article: ## Write an article
-	@path=$$(find . -type d -printf '%P\n' | fzy); \
+	@path=$$(find . -type d -printf '%P\n' | $(FZF)); \
 	read -p "Title: " title; \
 	printf '%s\n' '---' >> $$path/$$title.md ; \
 	printf 'title: "%s"\n' "$$title" >> $$path/$$title.md ; \
