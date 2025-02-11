@@ -22,6 +22,16 @@ default += .git/info/exclude
 .PHONY: database
 database: $(default) ## Make a database for recfiles
 
+.PHONY: article
+article: ## Write an article
+	@path=$$(find . -type d -printf '%P\n' | fzy); \
+	read -p "Title: " title; \
+	printf '%s\n' '---' >> $$path/$$title.md ; \
+	printf 'title: "%s"\n' "$$title" >> $$path/$$title.md ; \
+	printf 'tags: [ "%s" ]\n' "$$path" | sed 's#\/#", "#g' >> $$path/$$title.md ; \
+	printf '%s\n\n' '---' >> $$path/$$title.md ;\
+	$(EDITOR) +5 $$path/$$title.md
+
 .PHONY: clean
 clean:
 	$(RM) $(default)
