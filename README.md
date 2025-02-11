@@ -8,7 +8,19 @@ The Linux Knowledge-Base provides quick-start guides for working with terminal p
 
 Install `make`, `recutils`, and any fuzzy-finder (i.e. `sk`, `fzy`, or `fzf`).
 
-Usage: `make`
+## Usage
+
+
+```sh
+make
+make database
+
+recsel db.rec -q database
+recsel db.rec -q gpg
+recsel db.rec -e "title = 'ssh'"
+recsel db.rec -e "title ~ 'ssh'"
+recsel db.rec -e "title ~ 'bash'" -R title,wordcount
+```
 
 # Style
 
