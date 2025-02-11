@@ -37,7 +37,7 @@ default += db.rec
 default += .git/info/exclude
 
 .PHONY: database
-database: $(default) ## Make a database for recfiles
+database: $(default) ## Make a recfiles database
 
 .PHONY: article
 article: ## Write an article

@@ -4,72 +4,64 @@ title: "Linux Knowledge Base"
 
 The Linux Knowledge-Base provides quick-start guides for working with terminal programs.
 
+# Setup
+
+Install `make`, `recutils`, and any fuzzy-finder (i.e. `sk`, `fzy`, or `fzf`).
+
+Usage: `make`
+
 # Style
 
-## Praxis Only
+## No History, No Context
 
-We leave theory alone as much as possible.
-The documentation should be of the form 'if you want *X*, type *Y*'.
+- Nobody cares about how the project started.
+- Nobody wants to read what `ffmpeg` is, because anyone who wants to use it already knows what it is.
 
-We don't need to explain what a program does - anyone looking up 'how to X', already knows what they want to do.
-We don't even need to explain which program to use - if someone wants to combine an mp4 and webm video into a single video file, they only care about that result, not about learning `ffmpeg`.
+## Be Opinionated
 
-Any interest in these tools only comes after we can use them.
+- Guides should not ask the reader to select options half-way through.
+- Options for different filesystems, databases, et c., should be written as separate guides.
 
-## Chronological
+## Repetition Beats Reference
 
-Entries should read like scripts - everything in the right order, with small notes on what this does.
+If a database requires three commands to set up, it's better to repeat those three commands for every program that requires a database than to just link to another file which discusses databases.
 
-The chronology should never branch.
-If `gitea` can use three different types of database, the documentation should simply pick one and continue instructions from there.
-Repetition works better than a reference - if a database requires three commands to set up, it's better to repeat those three commands for every program that requires a database than to just link to another file which discusses databases.
+## Show Arguments as Variables
 
----
+Look at this line:
 
-### Closing
-
-Introductory documents should show anything required to cleanly uninstall a program, without leaving bulky configuration files behind.
-
-## Three Input Types
-
-There are three types of examples:
-
-Fixed input:
-
-```bash
-ls
+```sh
+grep ls --color=always  $HISTFILE | less -R
 ```
 
-Anything with arbitrary input should be shown as a variable.
+What else can go in place of `always`?
+Can you say `--color=red`?
+Can you put anything?
+The answer is not obvious.
 
-```bash
-ls $FILE
+What about this line:
+
+```sh
+git branch new
+git checkout new
 ```
 
-Non-commands (e.g. output) should be shown as quoted text:
+Do you always use `new`?
+Can you use another word here?
+The answer is not obvious.
 
-> LK           img
-> Mail         kn
-> Projects     music
+It's better to make all arbitrary values variables.
 
----
-
-# Example
-
-```
-How to see which websites you're actively accessing:
-
-` ` `bash
-ss -tr dst :$PORT
-` ` `   
-
-> State  Recv-Q  Send-Q   Local Address:Port     Peer Address:Port   Process  
-> ESTAB  0       0         192.168.0.14:42476  149.154.167.91:https           
-> ESTAB  0       0         192.168.0.14:43644   104.17.90.199:https           
-
+```sh
+git branch $branch_name
+git checkout $branch_name
+PAGER='less -R'
+grep ls --color=always $HISTFILE | $PAGER
 ```
 
-# What's wrong with everything else?
+Now we can see what can be changed.
+
+# What's Wrong with Everything Else?
 
 ## Man pages
 
@@ -79,7 +71,7 @@ ss -tr dst :$PORT
 - Zero respect for your time.
 - Often references `info` pages (yuck).
 
-## curl cheat.sh/
+## `curl cheat.sh`
 
 - Doesn't have the programs I like.
 - Too short to get you started on many programs.
