@@ -342,11 +342,12 @@ apt install $PROGRAM
 
 Remove `lolcat`, because it's useless:
 
-```bash
+```sh
 sudo apt remove lolcat
 ```
 
-... and that's pretty much it.  You can move, create, destroy, install things, and look things up.
+...and that's pretty much it.
+You can move, create, destroy, install things, and look things up.
 
 # Review
 

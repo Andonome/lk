@@ -1,6 +1,7 @@
 ---
 title: "gpg"
 tags: [ "vim", "data", "GPG" ]
+requires: [ "GPG Basics", "vim basics" ]
 ---
 
 The `vim-gnupg` plugin lets vim edit gpg-encrypted files as if they were unencrypted.
