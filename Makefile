@@ -10,6 +10,7 @@ articles != find * -type f -name "*.md"
 
 db.rec: $(articles)
 	printf '%s\n' '%rec: guide' > $@
+	printf '%s\n' '%type: wordcount int' >> $@
 	printf '%s\n\n' '%sort: title' >> $@
 	for x in $^ ; do \
 		sed -n '2,/^---$$/ {/^---$$/d; p}' "$$x" |\
@@ -17,6 +18,9 @@ db.rec: $(articles)
 		tr -d '"' ;\
 		printf "file: %s\n\n" "$$x" ;\
 	done >> $@
+	for entry in $^; do \
+		recset $@ -e "file = '$${entry}'" -f wordcount --set-add="$$(wc -w < $${entry})" ;\
+	done
 	recsel $@ -e "requires != ''" -CR title,requires |\
 	while read title requires; do \
 		IFS=', ' && for provider in $$requires; do \

@@ -1,10 +1,8 @@
 ---
-title: "Knowledge Base"
+title: "Linux Knowledge Base"
 ---
 
-# Linux Knowledgebase
-
-This is a list of quickstart guides for Linux programs, designed to get the user up and running as fast as possible.
+The Linux Knowledge-Base provides quick-start guides for working with terminal programs.
 
 # Style
 
@@ -79,12 +77,14 @@ ss -tr dst :$PORT
 - Often presumes you know everything except that one program.
 - Often written in the 80's, and it shows.
 - Zero respect for your time.
+- Often references `info` pages (yuck).
 
 ## curl cheat.sh/
 
 - Doesn't have the programs I like.
 - Too short to get you started on many programs.
 - Poor understanding of priority (`git stash` is covered before `git commit`).
+- Repetitive
 
 # Current State
 
