@@ -1,6 +1,7 @@
 ---
 title: "basic-install"
 tags: [ "Documentation", "arch" ]
+requires: [ "partitions", "time" ]
 ---
 Keyboard layout changed.
 

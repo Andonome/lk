@@ -1,6 +1,7 @@
 ---
-title: "ssh tricks"
+title: "ssh-tricks"
 tags: [ "Documentation", "Networking", "ssh", "tricks" ]
+requires: [ "ssh" ]
 ---
 
 Mount a remote filesystem locally with fuse-sshfs:

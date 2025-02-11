@@ -7,10 +7,17 @@ articles != find * -type f -name "*.md"
 
 db.rec: $(articles)
 	for x in $^ ; do \
-	sed -n '2,/^---$$/ {/^---$$/d; p}' "$$x" |\
-	tr -d '"[]' ;\
-	printf "file: %s\n\n" "$$x" ;\
+		sed -n '2,/^---$$/ {/^---$$/d; p}' "$$x" |\
+		sed -e 's/\[ //'  -e 's/ \]//' |\
+		tr -d '"' ;\
+		printf "file: %s\n\n" "$$x" ;\
 	done > $@
+	recsel $@ -e "requires != ''" -CR title,requires |\
+	while read title requires; do \
+		IFS=', ' && for provider in $$requires; do \
+			recset $@ -e "title = '$${provider}'" -f provides -a "$${title}" ;\
+		done ;\
+	done
 
 default += db.rec
 
@@ -32,6 +39,6 @@ article: ## Write an article
 	printf '%s\n\n' '---' >> $$path/$$title.md ;\
 	$(EDITOR) +5 $$path/$$title.md
 
-.PHONY: clean ## Remove all generated files
-clean:
+.PHONY: clean
+clean: ## Remove all generated files
 	$(RM) $(default)
