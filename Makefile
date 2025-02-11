@@ -32,6 +32,6 @@ article: ## Write an article
 	printf '%s\n\n' '---' >> $$path/$$title.md ;\
 	$(EDITOR) +5 $$path/$$title.md
 
-.PHONY: clean
+.PHONY: clean ## Remove all generated files
 clean:
 	$(RM) $(default)
