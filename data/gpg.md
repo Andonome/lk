@@ -1,6 +1,6 @@
 ---
 title: "gpg"
-tags: [ "Documentation", "data", "GPG" ]
+tags: [ "data", "GPG" ]
 ---
 
 - [Setup](gpg/basics.md)

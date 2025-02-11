@@ -1,6 +1,6 @@
 ---
 title: "locale"
-tags: [ "Documentation", "Basics" ]
+tags: [ "Basics" ]
 ---
 
 Your locale tells the computer your location, preferred time-and-date format, standard language, papersize, et c.

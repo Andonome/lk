@@ -1,6 +1,6 @@
 ---
 title: "pass"
-tags: [ "Documentation", "data" ]
+tags: [ "data" ]
 ---
 [Video instructions](https://www.hooktube.com/watch?v=hlRQTj1D9LA)
 

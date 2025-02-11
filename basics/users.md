@@ -1,6 +1,6 @@
 ---
 title: "users"
-tags: [ "Documentation", "Basics" ]
+tags: [ "Basics" ]
 ---
 # Basic Information
 

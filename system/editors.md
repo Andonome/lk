@@ -1,6 +1,6 @@
 ---
 title: "$EDITOR"
-tags: [ "Documentation", "System" ]
+tags: [ "System" ]
 ---
 The System's default text editor can be defined within /etc/profile.  It's given the variable `EDITOR`.
 

@@ -1,6 +1,6 @@
 ---
 title: "tor"
-tags: [ "Documentation", "Networking" ]
+tags: [ "Networking" ]
 ---
 
 # Get a hostname

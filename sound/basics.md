@@ -1,6 +1,6 @@
 ---
 title: "Basic Sound"
-tags: [ "Documentation", "Sound" ]
+tags: [ "Sound" ]
 ---
 # Pulse
 

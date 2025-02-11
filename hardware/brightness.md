@@ -1,6 +1,6 @@
 ---
 title: "brightness"
-tags: [ "Documentation", "hardware" ]
+tags: [ "hardware" ]
 ---
 # Brightness
 

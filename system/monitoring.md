@@ -1,6 +1,6 @@
 ---
 title: "Monitoring"
-tags: [ "Documentation", "System", "CPU", "Memory" ]
+tags: [ "System", "CPU", "Memory" ]
 ---
 
 Print the average CPU load over 1 minute, 5 minutes, and 15 minutes:

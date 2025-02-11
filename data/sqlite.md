@@ -1,6 +1,6 @@
 ---
 title: "sqlite"
-tags: [ "Documentation", "data" ]
+tags: [ "data" ]
 ---
 
 Work with a database:

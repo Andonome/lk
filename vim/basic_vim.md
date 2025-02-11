@@ -1,6 +1,6 @@
 ---
 title: "vim basics"
-tags: [ "Documentation", "vim", "basic" ]
+tags: [ "vim", "basic" ]
 ---
 
 1. Insert text by pressing `i`.

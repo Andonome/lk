@@ -1,6 +1,6 @@
 ---
 title: "git hooks"
-tags: [ "Documentation", "data", "git" ]
+tags: [ "data", "git" ]
 ---
 
 Check out the sample hooks:

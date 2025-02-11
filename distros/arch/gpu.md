@@ -1,6 +1,6 @@
 ---
 title: "fonts"
-tags: [ "Documentation", "distros" ]
+tags: [ "distros" ]
 ---
 # Step 1: Multilib
 

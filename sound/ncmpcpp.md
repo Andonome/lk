@@ -1,6 +1,6 @@
 ---
 title: "ncmpcpp"
-tags: [ "Documentation", "Sound" ]
+tags: [ "Sound" ]
 ---
 
 # Music Player Daemon

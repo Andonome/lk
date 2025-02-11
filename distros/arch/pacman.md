@@ -1,6 +1,6 @@
 ---
 title: "pacman"
-tags: [ "Documentation", "distros" ]
+tags: [ "distros" ]
 ---
 
 Packages are kept in /var/cache/pacman/pkg.

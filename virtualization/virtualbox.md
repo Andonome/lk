@@ -1,6 +1,6 @@
 ---
 title: "virtualbox"
-tags: [ "Documentation", "System" ]
+tags: [ "System" ]
 ---
 # Setup
 

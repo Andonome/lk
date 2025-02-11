@@ -1,6 +1,6 @@
 ---
 title: "vim completion"
-tags: [ "Documentation", "vim" ]
+tags: [ "vim" ]
 ---
 
 Complete the word by searching for the *n*ext similar word:

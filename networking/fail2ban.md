@@ -1,6 +1,6 @@
 ---
 title: "fail2ban"
-tags: [ "Documentation", "Networking" ]
+tags: [ "Networking" ]
 requires: [ "ssh" ]
 ---
 # SSH Daemon Jail

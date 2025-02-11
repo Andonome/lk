@@ -1,6 +1,6 @@
 ---
 title: "PDF Metadata Erasure"
-tags: [ "Documentation", "Metadata", "Ghost Script" ]
+tags: [ "Metadata", "Ghost Script" ]
 ---
 
 Make a text file called 'pdfmark.txt'.

@@ -1,6 +1,6 @@
 ---
 title: "Markdown to PDF"
-tags: [ "Documentation", "Markdown", "PDF", "Vision" ]
+tags: [ "Markdown", "PDF", "Vision" ]
 ---
 
 Turn a markdown file into a pdf:

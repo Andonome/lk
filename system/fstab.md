@@ -1,6 +1,6 @@
 ---
 title: "fstab"
-tags: [ "Documentation", "System" ]
+tags: [ "System" ]
 ---
 # Basics
 

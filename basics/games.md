@@ -1,6 +1,6 @@
 ---
 title: "bash games"
-tags: [ "Documentation", "Games" ]
+tags: [ "Games" ]
 ---
 
 Games are a great way to learn bash.

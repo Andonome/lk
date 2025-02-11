@@ -1,6 +1,6 @@
 ---
 title: "profanity"
-tags: [ "Documentation", "Chat", "OTR" ]
+tags: [ "Chat", "OTR" ]
 ---
 # otr
 

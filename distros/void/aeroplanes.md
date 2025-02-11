@@ -1,6 +1,6 @@
 ---
 title: "Aeroplane Mode in Void"
-tags: [ "Documentation", "Void" ]
+tags: [ "Void" ]
 ---
 Put your device in 'aeroplane' mode (e.g. where no trace of signal leaves it) by turning off Wi-Fi and blue-tooth.
 

@@ -1,6 +1,6 @@
 ---
 title: "systemd"
-tags: [ "Documentation", "systemd" ]
+tags: [ "systemd" ]
 ---
 ```bash
 systemctl list-units

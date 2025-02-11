@@ -1,6 +1,6 @@
 ---
 title: "w3m"
-tags: [ "Documentation", "browsers" ]
+tags: [ "browsers" ]
 ---
 Open a search tab:
 

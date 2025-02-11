@@ -1,6 +1,6 @@
 ---
 title: "kill"
-tags: [ "Documentation", "Basics" ]
+tags: [ "Basics" ]
 ---
 
 If you want to kill a program in a graphical environment, open a terminal and type:

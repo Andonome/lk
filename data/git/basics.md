@@ -1,6 +1,6 @@
 ---
 title: "git"
-tags: [ "Documentation", "data" ]
+tags: [ "data" ]
 ---
 # Starting
 

@@ -1,6 +1,6 @@
 ---
 title: "lf - The Light File Manager"
-tags: [ "Documentation", "File Browser" ]
+tags: [ "File Browser" ]
 ---
 
 ## Config File

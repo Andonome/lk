@@ -1,6 +1,6 @@
 ---
 title: "QR Codes"
-tags: [ "Documentation", "qrencode", "zbar" ]
+tags: [ "qrencode", "zbar" ]
 ---
 
 Make a QR Code image:

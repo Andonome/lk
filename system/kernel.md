@@ -1,6 +1,6 @@
 ---
 title: "kernel"
-tags: [ "Documentation", "System" ]
+tags: [ "System" ]
 ---
 Check which kernet modules are loaded into memory
 

@@ -1,6 +1,6 @@
 ---
 title: "pi-hole-server"
-tags: [ "Documentation", "Distros" ]
+tags: [ "Distros" ]
 ---
 # Installation
 

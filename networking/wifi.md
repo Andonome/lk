@@ -1,6 +1,6 @@
 ---
 title: "wifi"
-tags: [ "Documentation", "Networking" ]
+tags: [ "Networking" ]
 ---
 # Netstat Stuff
 

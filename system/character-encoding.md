@@ -1,6 +1,6 @@
 ---
 title: "character-encoding"
-tags: [ "Documentation", "System" ]
+tags: [ "System" ]
 ---
 Convert a text file from one encoding type to another with:
 

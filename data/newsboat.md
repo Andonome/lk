@@ -1,6 +1,6 @@
 ---
 title: "newsboat"
-tags: [ "Documentation", "RSS" ]
+tags: [ "RSS" ]
 ---
 Create the configuration directory before you start, and add at least 1 URL.
 

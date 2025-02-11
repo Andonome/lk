@@ -1,6 +1,6 @@
 ---
 title: "Vim Tricks"
-tags: [ "Documentation", "vim" ]
+tags: [ "vim" ]
 ---
 
 ## Remote Editing

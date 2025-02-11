@@ -1,6 +1,6 @@
 ---
 title: "monitor"
-tags: [ "Documentation", "hardware" ]
+tags: [ "hardware" ]
 ---
 See screen size
 

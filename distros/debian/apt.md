@@ -1,6 +1,6 @@
 ---
 title: "apt"
-tags: [ "Documentation", "distros" ]
+tags: [ "distros" ]
 ---
 ## apt
 

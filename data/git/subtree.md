@@ -1,6 +1,6 @@
 ---
 title: "git"
-tags: [ "Documentation", "data", "git", "subtree" ]
+tags: [ "data", "git", "subtree" ]
 ---
 
 ## Pulling a Subtree from an existing git

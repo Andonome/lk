@@ -1,6 +1,6 @@
 ---
 title: "keyboard"
-tags: [ "Documentation", "keyboard", "vim" ]
+tags: [ "keyboard", "vim" ]
 ---
 
 # System-Wide Capslock and Escape Swap

@@ -1,6 +1,6 @@
 ---
 title: "git-lfs"
-tags: [ "Documentation", "data" ]
+tags: [ "data" ]
 ---
 
 Install, and add with

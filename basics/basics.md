@@ -1,6 +1,6 @@
 ---
 title: "Basics"
-tags: [ "Documentation", "Basics" ]
+tags: [ "Basics" ]
 ---
 
 You need about a dozen commands to move around Linux.

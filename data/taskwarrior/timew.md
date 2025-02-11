@@ -1,6 +1,6 @@
 ---
 title: "timew"
-tags: [ "Documentation", "Data" ]
+tags: [ "Data" ]
 ---
 # Summaries
 

@@ -1,6 +1,6 @@
 ---
 title: "partitions"
-tags: [ "Documentation", "System" ]
+tags: [ "System" ]
 ---
 # FDisk Basics
 

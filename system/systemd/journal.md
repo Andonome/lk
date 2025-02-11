@@ -1,6 +1,6 @@
 ---
 title: "journal"
-tags: [ "Documentation", "systemd" ]
+tags: [ "systemd" ]
 ---
 
 See a running log of all system messages:

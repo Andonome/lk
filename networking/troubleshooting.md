@@ -1,6 +1,6 @@
 ---
 title: "troubleshooting"
-tags: [ "Documentation", "Networking" ]
+tags: [ "Networking" ]
 ---
 
 # Do you have an IP?

@@ -1,6 +1,6 @@
 ---
 title: "locating"
-tags: [ "Documentation", "Basics" ]
+tags: [ "Basics" ]
 ---
 # Type
 

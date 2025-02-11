@@ -1,6 +1,6 @@
 ---
 title: "swap"
-tags: [ "Documentation", "basics" ]
+tags: [ "basics" ]
 ---
 # Making a Swap File
 

@@ -1,6 +1,6 @@
 ---
 title: "pdf to txt"
-tags: [ "Documentation", "data", "pdf", "ocr" ]
+tags: [ "data", "pdf", "ocr" ]
 ---
 How to translate pdf book images to text (results are very poor, and will need lots of corrections).
 

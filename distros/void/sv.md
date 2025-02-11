@@ -1,6 +1,6 @@
 ---
 title: "sv"
-tags: [ "Documentation", "Void" ]
+tags: [ "Void" ]
 ---
 # List Services
 

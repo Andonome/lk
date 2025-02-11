@@ -1,6 +1,6 @@
 ---
 title: "festival"
-tags: [ "Documentation", "Sound" ]
+tags: [ "Sound" ]
 ---
 # Basics
 

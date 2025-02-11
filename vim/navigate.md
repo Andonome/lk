@@ -1,6 +1,6 @@
 ---
 title: "vim navigation"
-tags: [ "Documentation", "vim" ]
+tags: [ "vim" ]
 ---
 
 | Move | Command      |

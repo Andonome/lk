@@ -1,6 +1,6 @@
 ---
 title: "autologin"
-tags: [ "Documentation", "Distros", "Arch" ]
+tags: [ "Distros", "Arch" ]
 ---
 
 # Automatic Login

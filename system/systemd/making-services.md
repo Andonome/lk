@@ -1,6 +1,6 @@
 ---
 title: "Making Services"
-tags: [ "Documentation", "systemd" ]
+tags: [ "systemd" ]
 ---
 # Basics
 

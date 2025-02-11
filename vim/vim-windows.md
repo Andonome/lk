@@ -1,6 +1,6 @@
 ---
 title: "vim windows"
-tags: [ "Documentation", "vim" ]
+tags: [ "vim" ]
 ---
 
 | Command | Keys |

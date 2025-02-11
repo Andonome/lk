@@ -1,6 +1,6 @@
 ---
 title: "khard"
-tags: [ "Documentation", "Data" ]
+tags: [ "Data" ]
 ---
 Get the basic config:
 

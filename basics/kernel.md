@@ -1,6 +1,6 @@
 ---
 title: "kernel"
-tags: [ "Documentation", "Basics" ]
+tags: [ "Basics" ]
 ---
 ## Living Space
 

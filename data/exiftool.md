@@ -1,6 +1,6 @@
 ---
 title: "exiftool"
-tags: [ "Documentation", "Metadata" ]
+tags: [ "Metadata" ]
 ---
 
 Find metadata.
