@@ -9,18 +9,21 @@ help: ## Print the help message
 articles != find * -type f -name "*.md"
 
 db.rec: $(articles)
+	printf '%s\n' '%rec: guide' > $@
+	printf '%s\n\n' '%sort: title' >> $@
 	for x in $^ ; do \
 		sed -n '2,/^---$$/ {/^---$$/d; p}' "$$x" |\
 		sed -e 's/\[ //'  -e 's/ \]//' |\
 		tr -d '"' ;\
 		printf "file: %s\n\n" "$$x" ;\
-	done > $@
+	done >> $@
 	recsel $@ -e "requires != ''" -CR title,requires |\
 	while read title requires; do \
 		IFS=', ' && for provider in $$requires; do \
 			recset $@ -e "title = '$${provider}'" -f provides -a "$${title}" ;\
 		done ;\
 	done
+	recfix --sort $@
 
 default += db.rec
 
