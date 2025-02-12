@@ -1,3 +1,5 @@
+MAKEFLAGS += -j
+
 FZF != command -v sk || command -v fzy || command -v fzf || \
 	{ echo install a fuzzy finder && exit 1 ;}
 
