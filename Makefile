@@ -41,13 +41,14 @@ database: $(default) ## Make a recfiles database
 
 .PHONY: article
 article: ## Write an article
-	@path=$$(find . -type d -printf '%P\n' | $(FZF)); \
-	read -p "Title: " title; \
-	printf '%s\n' '---' >> $$path/$$title.md ; \
-	printf 'title: "%s"\n' "$$title" >> $$path/$$title.md ; \
-	printf 'tags: [ "%s" ]\n' "$$path" | sed 's#\/#", "#g' >> $$path/$$title.md ; \
-	printf '%s\n\n' '---' >> $$path/$$title.md ;\
-	$(EDITOR) +5 $$path/$$title.md
+	@path=$$(find . -type d -printf '%P\n' | $(FZF)) ;\
+	read -p "Title: " title ;\
+	filename="$$(echo "$$title" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')" ;\
+	printf '%s\n' '---' >> $$path/$$filename.md ;\
+	printf 'title: "%s"\n' "$$title" >> $$path/$$filename.md ;\
+	printf 'tags: [ "%s" ]\n' "$$path" | sed 's#\/#", "#g' >> $$path/$$filename.md ;\
+	printf '%s\n\n' '---' >> $$path/$$filename.md ;\
+	$(EDITOR) +5 "$$path/$$filename.md"
 
 .PHONY: clean
 clean: ## Remove all generated files
