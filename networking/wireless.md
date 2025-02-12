@@ -1,60 +1,63 @@
 ---
 title: "wireless"
-tags: [ "Networking" ]
+tags: [ "networking" ]
 ---
 
-# Check wifi's working
-```bash
+Check wifi's working
+
+```sh
 lspci -k
 ```
 
 Or for usb wifi: 
 
-```bash
+```sh
 dmesg | grep usbcore
 ```
 
-... and hopefully it'll say the new interface is registered.
+...and hopefully it'll say the new interface is registered.
 
-# Check if a wifi interface has been created
+Check if a wifi interface has been created
 
-```bash
+```sh
 ip link
 ```
 
-or
+...or
 
-```bash
+```sh
 iw dev
 ```
 
 Assuming it's wlan0, bring it up with 
 
-```bash
+```sh
 ip link set wlan0 up
 ```
 
 Error messages probably means your wireless chipset requires a firmware to function.  In this case, check the kernel messages for firmware being loaded
 
-```bash
+```sh
 dmesg | grep firmware
 ```
 
 # Utilities
 
-iw doesn't do wpa/wpa2.  wpa_supplicant does everything.  iwd does everything except WEXT encryption.
+- `iw` doesn't do wpa/wpa2.
+- `iwd` does everything except WEXT encryption.
+- `wpa_supplicant` does everything.
 
 # Connecting
 
 Get the link status:
 
-```bash
+```sh
 iw dev wlan0 link
 ```
 
 Scan for available points:
 
-```bash
+```sh
 iw dev wlan0 scan
 ```
 

@@ -9,7 +9,7 @@ This works everywhere, including in a bare-ass tty.
 
 Select a keymap, and create a new custom map.
 
-```bash
+```sh
 su root
 
 basemap=/usr/share/kbd/keymaps/i386/qwerty/pl1.map.gz
@@ -22,7 +22,7 @@ gunzip -c $basemap | \
 
 Tell the system to use this keymap at startup by naming it in the `rc.conf` file:
 
-```bash
+```sh
 echo "KEYMAP=$newmap" >> /etc/rc.conf
 
 cat /etc/rc.conf
@@ -33,24 +33,24 @@ reboot
 
 Set layout to British English.
 
-```bash
+```sh
 setxkbmap -layout gb
 ```
 
 Or Polish with:
 
-```bash
+```sh
 setxkbmap -layout pl
 ```
 
 | Language | short |
-|:--------|:------|
-| Polish  | pl |
-| Serbian | rs |
+|:---------|:------|
+| Polish   | `pl`  |
+| Serbian  | `rs`  |
 
 Set 'alt + shift', as the command which cycles through the British English, Polish and Serbian keyboard layout.
 
-```bash
+```sh
 setxkbmap -layout gb,pl,rs -option grp:alt_shift_toggle
 ```
 

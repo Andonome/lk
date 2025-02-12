@@ -9,10 +9,10 @@ Install `opensmtpd` (or similar), then `ncat` or `nc` or `netcat` (this mysterio
 
 Start the `opensmtpd` service, then use netcat to speak with the mail-daemon:
 
-
-```
+```sh
 nc localhost 25
 ```
+
 The computer should respond with code `220`, which means 'I am listening'.
 
 > 220 hex ESMTP OpenSMTPD
@@ -40,7 +40,7 @@ Tell the mail daemon who you are in this format.
 
 Then tell it who you're sending to.
 
-```
+```sh
 RCPT TO: <www@dmz.rs>
 ```
 
@@ -67,7 +67,7 @@ You will find the email under `/var/spool` or `/var/mail` or similar.
 
 If unsure, just take a part of your email, like `FRAGMENT="turn off server please"`, then `grep` for it:
 
- ```bash
+ ```sh
 sudo grep -r $FRAGMENT /var/spool/*
  ```
 

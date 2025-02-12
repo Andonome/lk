@@ -3,55 +3,55 @@ title: "wpa_supplicant"
 tags: [ "Networking" ]
 ---
 
-wpa_supplicant configurations are stored in /etc/wpa_supplicant/wpa_supplicant-wlan0 (or equivalent).
+`wpa_supplicant` configurations are stored in `/etc/wpa_supplicant/wpa_supplicant-wlan0` (or equivalent).
 
 ## WiFi Connection
 
-```bash
+```sh
 wpa_cli
 ```
 
 Once in, scan the network, add an empty place to store credentials, then input them.
 
-```bash
+```sh
 scan
 ```
 
-```bash
+```sh
 scan_results
 ```
 
-```bash
+```sh
 add_network
 ```
 
 This outputs a network number, e.g. '3'.  This is the new network you'll work with.
 
-```bash
+```sh
 set_network *3* ssid *"Kosachok Cafe"*
 ```
 
-```bash
+```sh
 set_network 3 psk *"Kosachok2019"*
 ```
 
 OR (for no password)
 
-```bash
+```sh
 set_network *3* key_mgmt NONE
 ```
 
-```bash
+```sh
 enable_network 3
 ```
 
-```bash
+```sh
 save_config
 ```
 
 This takes a while to connect, so to speed things up, restart the service:
 
-```bash
+```sh
 sudo sv restart wpa_supplicant
 ```
 
@@ -59,13 +59,13 @@ sudo sv restart wpa_supplicant
 
 You can script like this:
 
-```bash
+```sh
 wpa_cli add_network
 ```
 
 That returns an ID, so you can say:
 
-```bash
+```sh
 newNetwork="$(wpa_cli add_network)"
 ```
 
@@ -73,19 +73,19 @@ Then `$newNetwork` would equal that number, and you can add/ remove networks wit
 
 But remember to escape the quotes, so adding a network would be:
 
-```bash
+```sh
 wpa_cli set_network *3* psk *\""passphrase"\"*
 ```
 
 ## Generating Keys Manually
 
-```bash
+```sh
 wpa_passphrase [ssid] [password]
 ```
 
 For example:
 
-```bash
+```sh
 wpa_passphrase 'Cafe Kosachok' 'Kosachok2019'
 ```
 

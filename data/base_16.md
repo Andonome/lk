@@ -1,6 +1,6 @@
 ---
 title: "Base 16"
-tags: [ "Data" ]
+tags: [ "data" ]
 ---
 
 ```bash

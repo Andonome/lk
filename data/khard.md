@@ -4,57 +4,49 @@ tags: [ "Data" ]
 ---
 Get the basic config:
 
-```bash
+```sh
 mkdir ~/.config/khard
 ```
 
-```bash
+```sh
 cp /usr/share/doc/khard/examples/khard/khard.conf.example ~/.config/khard.conf
 ```
 
 Short list
 
-```bash
+```sh
 khard list
 ```
 
 Longer list
 
-```bash
+```sh
 khard show
 ```
 
 Show from addressbook 'work'
 
-```bash
+```sh
 khard list -a work
 ```
 
 Make a new contact in address book 'family'
 
-```bash
+```sh
 khard new -a family
 ```
 
-```bash
+```sh
 khard edit grampa
 ```
 
-```bash
+```sh
 khard remove bob
 ```
 
 Move contact 'nina' from 'work' to 'home' address book.
 
-```bash
+```sh
 khard move -a home nina -A work
-```
-
-## Advanced
-
-Merge:
-
-```bash
-khard merge [-a source_abook] [-u uid|search terms [search terms ...]] [-A target_abook] [-U target_uid|-t target_search_terms]
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: "groff"
-tags: [ "Data" ]
+tags: [ "data", "logic" ]
 ---
 # Basic Documents
 

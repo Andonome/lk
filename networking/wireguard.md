@@ -1,6 +1,6 @@
 ---
 title: "wireguard"
-tags: [ "Networking", "VPN" ]
+tags: [ "networking", "VPN" ]
 ---
 <!--
 from 
@@ -11,25 +11,22 @@ https://engineerworkshop.com/blog/how-to-set-up-wireguard-on-a-raspberry-pi/
 
 Install `wireguard-tools` on the server.
 
-```bash
-sudo -i
-```
-
-```bash
+```sh
+su root
 cd /etc/wireguard
 ```
 
 umask 077
 
-```bash
+```sh
 wg genkey | tee server_private_key | wg pubkey > server_public_key
 ```
 
-```bash
+```sh
 wg genkey | tee client_private_key | wg pubkey > client_public_key
 ```
 
-```bash
+```sh
     echo "
     [Interface]
     Address = 10.0.0.1/24
@@ -98,6 +95,6 @@ Add multiple peers by copying the `[peer]` section (they each get called `peer`)
 
 Make a standard client configuration, then:
 
-```bash
+```sh
 qrencode -t ansiutf8 < /etc/wireguard/mobile_user.conf
 ```

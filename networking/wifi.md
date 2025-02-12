@@ -1,7 +1,8 @@
 ---
-title: "wifi"
+title: "network"
 tags: [ "Networking" ]
 ---
+
 # Netstat Stuff
 
 Stats on local net usage within domain.

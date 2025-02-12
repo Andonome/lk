@@ -1,17 +1,17 @@
 ---
 title: "exiftool"
-tags: [ "Metadata" ]
+tags: [ "metadata", "exifdata" ]
 ---
 
-Find metadata.
+Find metadata:
 
-```bash
-exiftool image.jpg
+```sh
+exiftool "$file".jpg
 ```
 
-Find info on all images in current directory.
+Find info on all `.png` images in current directory.
 
-```bash
+```sh
 exiftool -ext .png .
 ```
 
@@ -19,22 +19,14 @@ You can make this recurring with the -r switch.
 
 And overwrite all metadata:
 
-```bash
+```sh
 exiftool -all= -overwrite_original -ext jpg .
 ```
 (NB: This does not work on pdf data. See [here](pdf_erasure.md) for erasing all pdf data)
 
 Or just GPS data:
 
-```bash
+```sh
 exiftool -gps:all= *.jpg
 ```
-
-You can also use the imagemagick tool:
-
-```bash
-identify -verbose
-```
-
-
 

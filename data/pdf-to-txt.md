@@ -2,7 +2,8 @@
 title: "pdf to txt"
 tags: [ "data", "pdf", "ocr" ]
 ---
-How to translate pdf book images to text (results are very poor, and will need lots of corrections).
+
+How to translate pdfs to text (results are very poor, and will need lots of corrections).
 
 ## Dependencies
 
