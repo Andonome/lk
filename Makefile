@@ -4,6 +4,8 @@ EDITOR ?= vi
 FZF != command -v sk || command -v fzy || command -v fzf || \
 	{ echo install a fuzzy finder && exit 1 ;}
 
+spill_contents = sed -e '1,/---/d'
+
 help: ## Print the help message
 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | \
 		sort | \
@@ -29,6 +31,7 @@ $(databases): .dbs/%.rec: %/ | .dbs/
 	done > $@
 	for entry in $(shell find $< -type f -name "*.md"); do \
 		recset $@ -e "file = '$${entry}'" -f wordcount --set-add="$$(wc -w < $${entry})" ;\
+		recset $@ -e "file = '$${entry}'" -f contents --set-add="$$($(spill_contents) $${entry})" ;\
 	done
 
 db.rec: $(databases)
