@@ -1,4 +1,5 @@
 MAKEFLAGS += -j
+MAKEFLAGS += -s
 EDITOR ?= vi
 FZF != command -v sk || command -v fzy || command -v fzf || \
 	{ echo install a fuzzy finder && exit 1 ;}
@@ -17,8 +18,9 @@ databases = $(patsubst %/, .dbs/%.rec, $(categories))
 default += $(databases)
 
 $(databases): .dbs/%.rec: %/ | .dbs/
-	@mkdir -p $(@D)
-	@for entry in $(shell find $< -type f -name "*.md") ; do \
+	$(info making $(@F))
+	mkdir -p $(@D)
+	for entry in $(shell find $< -type f -name "*.md") ; do \
 		sed -n '2,/^---$$/ {/^---$$/d; p}' "$$entry" |\
 		sed -e 's/\[ //'  -e 's/ \]//' |\
 		tr -d '"' ;\
@@ -40,6 +42,7 @@ db.rec: $(databases)
 			recset $@ -e "title = '$${provider}'" -f provides -a "$${title}" ;\
 		done ;\
 	done
+	$(info Created main database: $@)
 	recfix --sort $@
 
 default += db.rec
