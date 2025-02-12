@@ -8,6 +8,8 @@ help: ## Print the help message
 
 articles != find * -type f -name "*.md"
 
+categories != ls -d */
+
 db.rec: $(articles)
 	printf '%s\n' '%rec: guide' > $@
 	printf '%s\n' '%type: wordcount int' >> $@
@@ -41,7 +43,7 @@ database: $(default) ## Make a recfiles database
 
 .PHONY: article
 article: ## Write an article
-	@path=$$(find . -type d -printf '%P\n' | $(FZF)) ;\
+	@path=$$(find $(categories) -type d | sort | uniq | $(FZF)) ;\
 	read -p "Title: " title ;\
 	filename="$$(echo "$$title" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')" ;\
 	printf '%s\n' '---' >> $$path/$$filename.md ;\
