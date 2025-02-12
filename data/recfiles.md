@@ -44,6 +44,7 @@ recset -f "$new_field" --delete $database
 
 - [Extended example](recfiles/extended.md)
 - [Playing with board games data](recfiles/Board_Games.md)
+- [Fixes](recfiles/recfixes.md)
 
 # Resources
 
