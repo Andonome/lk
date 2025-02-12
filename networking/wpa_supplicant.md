@@ -95,8 +95,11 @@ If you encounter problems, you will probably need to delete the old device pid i
 
 Next up, start wpa_supplicant:
 
-```bash
+```sh
 wpa_supplicant -B -iwlan0 -c /etc/wpa_supplicant/wpa_supplicant-wlan0
 ```
 
-The -B flag runs this as a background process.  Remove this to see real-time output in order to solve problems.  The -i flag denotes the physical device used for the wifi.  The -c flag points to the configuration file for use.
+The `-B` flag runs this as a background process.
+Remove this to see real-time output in order to solve problems.
+The `-i` flag denotes the physical device used for the wifi.
+The `-c` flag points to the configuration file for use.

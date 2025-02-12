@@ -18,8 +18,8 @@ pdftoppm -png *file*.pdf test
 ```
 
 ```bash
-for x in \*png; do
-    tesseract -l eng  "$x" - >> *out*.txt
+for x in *png; do
+    tesseract -l eng  "$x" - >> out.txt
 done
 ```
 

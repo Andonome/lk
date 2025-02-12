@@ -43,20 +43,20 @@ wg genkey | tee client_private_key | wg pubkey > client_public_key
     " > /etc/wireguard/wg0.conf
 ```
 
-```bash
+```sh
 echo 'net.ipv4.ip_forward=1' > /etc/sysctl.d/wg.conf
 ```
 
-```bash
+```sh
 systemctl enable --now wg-quiqck@wg0
 ```
 
-```bash
+```sh
 chown -R root:root /etc/wireguard/
 ```
 
-```bash
-chmod -R og-rwx /etc/wireguard/\*
+```sh
+chmod -R og-rwx /etc/wireguard/*
 ```
 
 Forward traffic from port 51900 to the server.
@@ -69,21 +69,25 @@ Install `wireguard-tools` on the client.
 
 Copy the client private key and server public key to the server (or just fill in the variables).
 
-> server_ip=*your server's public ip*
 
-    echo "
-    [Interface]
-    Address = 10.0.0.2/32
-    PrivateKey = $(cat client_private_key)
-    DNS = 9.9.9.9
-    
-    [Peer]
-    PublicKey = $(cat server_public_key)
-    Endpoint = $(echo $server_ip:51900)
-    AllowedIPs = 0.0.0.0/0, ::/0
-    " > /etc/wireguard/wg0-client.conf
+```sh
+server_ip=$PUBLIC_IP
 
-> wg-quick up wg0-client
+echo "
+[Interface]
+Address = 10.0.0.2/32
+PrivateKey = $(cat client_private_key)
+DNS = 9.9.9.9
+
+[Peer]
+PublicKey = $(cat server_public_key)
+Endpoint = $(echo $server_ip:51900)
+AllowedIPs = 0.0.0.0/0, ::/0
+" > /etc/wireguard/wg0-client.conf
+
+wg-quick up wg0-client
+
+```
 
 ## Extras
 
