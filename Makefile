@@ -19,14 +19,14 @@ default += $(databases)
 
 $(databases): .dbs/%.rec: %/ | .dbs/
 	$(info making $(@F))
-	mkdir -p $(@D)
+	@mkdir -p $(@D)
 	for entry in $(shell find $< -type f -name "*.md") ; do \
 		sed -n '2,/^---$$/ {/^---$$/d; p}' "$$entry" |\
 		sed -e 's/\[ //'  -e 's/ \]//' |\
 		tr -d '"' ;\
 		printf "wordcount: %s\n" "$$(wc -w < $$entry)" ;\
 		printf "file: %s\n\n" "$$entry" ;\
-	done >> $@
+	done > $@
 	for entry in $(shell find $< -type f -name "*.md"); do \
 		recset $@ -e "file = '$${entry}'" -f wordcount --set-add="$$(wc -w < $${entry})" ;\
 	done
