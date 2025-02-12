@@ -1,7 +1,10 @@
 ---
 title: "PDF Metadata Erasure"
-tags: [ "Metadata", "Ghost Script" ]
+tags: [ "Metadata", "Ghost Script", "gs", ".pdf" ]
 ---
+
+You cannot erase pdf metadata with `exiftool` (it only *appends* your changes).
+To delete pdf metadata, you'll need `gs`.
 
 Make a text file called 'pdfmark.txt'.
 

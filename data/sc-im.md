@@ -1,6 +1,6 @@
 ---
 title: "sc-im"
-tags: [ "TUI", "data" ]
+tags: [ "TUI", "data", "spreadsheet", ".csv" ]
 ---
 
 - [Sample file](sc-im/sample.sc)

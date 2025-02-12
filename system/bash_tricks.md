@@ -30,7 +30,7 @@ There are a bunch of files:
 
 Goal: swap the word "Column" for "Alice" in all files.
 
-```
+```sh
 IFS=$'\n'
 for f in $(find . -name "Col*"); do
 mv "$f" $(echo "$f" | sed s/Column/Alice/)

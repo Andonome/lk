@@ -1,10 +1,10 @@
 ---
 title: "tmux"
-tags: [ "System" ]
+tags: [ "system" ]
 ---
 Start with:
 
-```bash
+```sh
 tmux
 ```
 
@@ -34,21 +34,21 @@ In addition to Windows, there are panes.
 
 Crate a new session with the name 'backup'.
 
-```bash
+```sh
 tmux new -s backup
 ```
 
 List sessions:
 
-```bash
+```sh
 tmux list-sessions
 ```
 
-```bash
+```sh
 tmux kill-session -t 2
 ```
 
-```bash
+```sh
 tmux attach -t backup
 ```
 

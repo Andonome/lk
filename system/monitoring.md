@@ -15,6 +15,7 @@ Show memory usage in Gibitytes.
 ```bash
 free -g
 ```
+
 Show low and high gigibtye usage on a *l*ine, and repeat the measurement every 5 seconds:
 
 ```bash

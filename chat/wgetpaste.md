@@ -5,25 +5,25 @@ tags: [ "Chat" ]
 
 See available pastebins:
 
-```bash
+```sh
 wgetpaste -S
 ```
 
 Upload script.sh to bpaste:
 
-```bash
+```sh
 wgetpaste -s bpaste script.sh
 ```
 
 Input clipboard to dpaste with the heading "Title"
 
-```bash
+```sh
 wgetpaste -s dpaste -d Title -x
 ```
 
 Paste in the file then load the result to the right-hand clipboard:
 
-```bash
+```sh
 wgetpaste -s dpaste -X
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: "Makefiles"
-tags: [ "system", "makefiles", "help" ]
+tags: [ "system", "make", "help" ]
 ---
 
 Make your first target 'help' to give an overview of the main targets.

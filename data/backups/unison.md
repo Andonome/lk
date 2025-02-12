@@ -1,6 +1,6 @@
 ---
 title: "unison"
-tags: [ "Backups" ]
+tags: [ "Backups", "synch" ]
 ---
 
 Install unison on both machines, and make sure both have the same version of unison, with the same version of the ocaml compiler (the smallest difference will cause problems).

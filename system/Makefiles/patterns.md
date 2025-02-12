@@ -1,7 +1,7 @@
 
 ---
 title: "Makefile Patterns"
-tags: [ "system", "makefiles" ]
+tags: [ "system", "make" ]
 ---
 
 Using the [basic example](../Makefile.md), you can make a complete backup of all backup files.
@@ -26,7 +26,6 @@ Then the `wildcard` variable equals whichever backup files are in the `backups/`
 backups/backup.tgz: backups/backup_29.md backups/backup_30.md
     tar czf backups/backup.tgz backups/backup_29.md backups/backup_30.md
 ```
-
 
 The phony `backup` target should now point to this tar backup.
 

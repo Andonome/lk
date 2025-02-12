@@ -1,6 +1,6 @@
 ---
 title: "Makefiles"
-tags: [ "system", "makefiles" ]
+tags: [ "system", "make" ]
 ---
 
 The `make` system wants to know:
@@ -11,7 +11,7 @@ The `make` system wants to know:
 
 Start with a basic test-area.
 
-```bash
+```sh
 mkdir make_test ; cd $_
 printf "%s:\n" README.md > Makefile
 printf "\t%s\n" 'echo "Basic makefile example." > $@' >> Makefile
@@ -32,8 +32,6 @@ README.md: Makefile
 	echo '```' >> $@
 	cat $< >> $@
 	echo '```' >> $@
-
-
 ```
 
 Note the order:
@@ -92,7 +90,7 @@ $(storage_directory)/README.md: README.md
 
 Now you can tell `make` to create the backup:
 
-```bash
+```sh
 make backups/README.md
 ```
 

@@ -9,16 +9,17 @@ Jenkins is janky.
 ## Start
 Start the service file.
 
-```bash
-sudo ln -s /etc/sv/jenkins /var/service
-sudo sv start jenkins
+```sh
+su root
+ln -s /etc/sv/jenkins /var/service
+sv start jenkins
 ```
 
 Then visit the web interface with `$BROWSER localhost:8080`.
 
 If it's not working, try running the command from the run file the first time:
 
-```bash
+```sh
 chpst -u jenkins java -jar /opt/jenkins/jenkins.war
 ```
 

@@ -1,6 +1,6 @@
 ---
 title: "awk"
-tags: [ "System" ]
+tags: [ "System", ".csv" ]
 ---
 # Basics
 

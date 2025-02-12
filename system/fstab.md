@@ -1,6 +1,6 @@
 ---
 title: "fstab"
-tags: [ "System" ]
+tags: [ "system", "disk" ]
 ---
 # Basics
 
@@ -29,7 +29,7 @@ Ignore this obsolete option.
 ## 6: Pass
 
 | Number | Meaning               |
-|        |                       |
+|:------:|:---------------------:|
 |   0    | Swap (or not mounted) |
 |   1    | Mount at /            |
 |   2    | Mount somewhere else  |
@@ -37,5 +37,5 @@ Ignore this obsolete option.
 ## Options
 
 - `nofail` means the computer will not fail to boot, even if the drive fails, or is unplugged. It's a good option for everything except `/`.
-- noauto means 'don't mount on boot' (but you can still mount with `mount -a`).
+- `noauto` means 'don't mount on boot' (but you can still mount with `mount -a`).
 

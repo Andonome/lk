@@ -6,19 +6,20 @@ tags: [ "distros" ]
 
 Update font-cache:
 
-```bash
+```sh
+su root
 fc-cache
 ```
 
 List fonts:
 
-```bash
+```sh
 fc-list
 ```
 
 Grab the part of the font name you need for Xresources:
 
-```bash
+```sh
 fc-list | cut -d: -f2
 ```
 

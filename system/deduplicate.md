@@ -1,6 +1,6 @@
 ---
 title: "deduplicate"
-tags: [ "system", "deduplicate", "duplicates", "maintenance" ]
+tags: [ "system", "deduplicate", "maintenance", "storage" ]
 ---
 
 `rdfind`: find duplicate files, then delete them, or turn them into links.

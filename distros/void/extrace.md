@@ -4,19 +4,19 @@ tags: [ "Void" ]
 ---
 Monitor all processes:
 
-```bash
+```sh
 extrace
 ```
 
 Monitor one process:
 
-```bash
+```sh
 extrace ls
 ```
 
 Monitor a script:
 
-```bash
+```sh
 ./script.sh | extrace
 ```
 

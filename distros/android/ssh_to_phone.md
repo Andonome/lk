@@ -8,7 +8,7 @@ tags: [ "networking", "ssh", "android" ]
 3. Open fdroid, and run:
 
 
-```bash
+```sh
 pkg upgrade
 pkg install busybox termux-services openssh openssh-sftp-server
 source $PREFIX/etc/profile.d/start-services.sh

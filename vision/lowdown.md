@@ -5,21 +5,21 @@ tags: [ "Markdown", "PDF", "Vision" ]
 
 Turn a markdown file into a pdf:
 
-```bash
+```sh
 lowdown -stms "$FILE".md | pdfroff -itk -mspdf > "$FILE".pdf
 ```
 
 *Example:* put [this Makefile](lowdown/example.txt) in a directory, rename it `Makefile`, then do:
 
 
-```bash
+```sh
 make example
 make
 ```
 
 To give the document a title, put that title in the metadata:
 
-```bash
+```sh
 sed -i "1 i---" "$FILE".md
 sed -i "1 ititle: $TITLE" "$FILE".md
 sed -i "1 i---" "$FILE".md

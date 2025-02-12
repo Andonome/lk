@@ -1,6 +1,6 @@
 ---
 title: "time"
-tags: [ "Basics" ]
+tags: [ "Basics", "time" ]
 ---
 # systemd
 

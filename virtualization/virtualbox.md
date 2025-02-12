@@ -6,27 +6,27 @@ tags: [ "System" ]
 
 ## Arch Linux
 
-```bash
+```sh
 sudo pacman -S virtualbox-host-modules-arch virtualbox-guest-iso
 ```
 
-```bash
+```sh
 sudo modprobe vboxdrv
 ```
 
-```bash
+```sh
 # vboxreload
 ```
 
 Make dd image into vdi
 
-```bash
+```sh
 VBoxManage convertdd base.dd output.vdi --format VDI
 ```
 
 If this doesn't work, try to make a new bite size with just
 
-```bash
+```sh
 sudo dd if=image.dd of=image2.dd bs=512 conv=sync
 ```
 
@@ -34,19 +34,19 @@ sudo dd if=image.dd of=image2.dd bs=512 conv=sync
 
 List boxes:
 
-```bash
+```sh
 VBoxManage list vms
 ```
 
 Start a headless instance
 
-```bash
+```sh
 VBoxManage startvm "rata" --type headless
 ```
 
 To pause the machine:
 
-```bash
+```sh
 VBoxManage controlvm "rata" pause --type headless
 ```
 
@@ -64,15 +64,15 @@ You can do a number of things to virtualboxes this way:
 
 Creating a VM requires registering it:
 
-```bash
+```sh
 VBoxManage createvm --name Ubuntu19.04 --register  --ostype Ubuntu
 ```
 
-```bash
+```sh
 VBoxManage modifyvm Ubuntu19.04 --memory 1042
 ```
 
-```bash
+```sh
 VBoxManage storagectl Ubuntu19.04 -name IDE --add ide --controller PIIX4  --bootable on
 ```
 

@@ -5,15 +5,15 @@ tags: [ "xe", "virtualization", "volume" ]
 # Make a local iso repository
 
 
-```bash
+```sh
 STORE_PATH=/var/opt/xen/ISO_Store
 ```
 
-```bash
+```sh
 mkdir -p $STORE_PATH
 ```
 
-```bash
+```sh
 xe sr-create name-label="$STORAGE_NAME" type=iso device-config:location=$STORE_PATH device-config:legacy_mode=true content-type=iso
 ```
 
@@ -23,7 +23,7 @@ This creates a UUID for the new directory:
 
 # Main Console
 
-```bash
+```sh
 xsconsole
 ```
 
@@ -31,13 +31,13 @@ xsconsole
 
 List volumes:
 
-```bash
+```sh
 lvs
 ```
 
 List groups:
 
-```bash
+```sh
 vgs
 ```
 

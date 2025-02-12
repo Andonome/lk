@@ -1,6 +1,6 @@
 ---
-title: "timew"
-tags: [ "Data" ]
+title: "timewarrior"
+tags: [ "Data", "tracking", "time", "timew" ]
 ---
 # Summaries
 

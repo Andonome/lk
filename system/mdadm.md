@@ -1,6 +1,6 @@
 ---
 title: "mdadm"
-tags: [ "RAID" ]
+tags: [ "RAID", "disk" ]
 ---
 # RAID5
 

@@ -1,6 +1,6 @@
 ---
 title: "Archives"
-tags: [ "tar", "backups" ]
+tags: [ "tar", "backups", ".tgz", "tar.gz" ]
 ---
 # `tar`
 

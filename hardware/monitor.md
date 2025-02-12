@@ -4,9 +4,13 @@ tags: [ "hardware" ]
 ---
 See screen size
 
-> xrandr -q
+```sh
+xrandr -q
+```
 
 Automatically configure:
 
-> xrandr --auto
+```sh
+xrandr --auto
+```
 
