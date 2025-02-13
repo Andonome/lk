@@ -13,13 +13,18 @@ help: ## Print the help message
 
 articles != find * -type f -name "*.md"
 
-categories != ls -d */
+dirs != ls -d */
+categories = $(patsubst %/, %, $(dirs))
 
-databases = $(patsubst %/, .dbs/%.rec, $(categories))
+databases = $(patsubst %, .dbs/%.rec, $(categories))
 
 default += $(databases)
 
-$(databases): .dbs/%.rec: %/ | .dbs/
+$(foreach dir, $(categories), \
+	$(eval .dbs/$(dir).rec: $(wildcard $(dir)/*)) \
+	)
+
+$(databases): .dbs/%.rec: %/
 	$(info making $(@F))
 	@mkdir -p $(@D)
 	for entry in $(shell find $< -type f -name "*.md") ; do \
