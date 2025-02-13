@@ -1,6 +1,6 @@
 ---
-title: "fonts"
-tags: [ "distros" ]
+title: "Ach Linux GPU Setup"
+tags: [ "arch", "GPU" ]
 ---
 # Step 1: Multilib
 
@@ -60,4 +60,3 @@ You should see 'true' here.
 ```bash
 sudo pacman -S --needed lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xf86-video-amdgpu
 ```
-
