@@ -1,5 +1,5 @@
 ---
-title: "gpg"
+title: "gpg with vim"
 tags: [ "vim", "data", "GPG" ]
 requires: [ "GPG Basics", "vim basics" ]
 ---

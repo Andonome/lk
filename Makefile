@@ -36,14 +36,15 @@ $(databases): .dbs/%.rec: %/
 	done > $@
 	for entry in $(shell find $< -type f -name "*.md"); do \
 		recset $@ -e "file = '$${entry}'" -f wordcount --set-add="$$(wc -w < $${entry})" ;\
-		recset $@ -e "file = '$${entry}'" -f contents --set-add="$$($(spill_contents) $${entry})" ;\
+		recset $@ -e "file = '$${entry}'" -f content --set-add="$$($(spill_contents) $${entry})" ;\
 	done
 
 db.rec: $(databases)
 	printf '%s\n' '%rec: guide' > $@
+	printf '%s\n' '%key: title' >> $@
 	printf '%s\n' '%type: wordcount int' >> $@
 	printf '%s\n\n' '%sort: title' >> $@
-	cat $^ >> $@
+	recsel $^ >> $@
 	recsel $@ -e "requires != ''" -CR title,requires |\
 	while read title requires; do \
 		IFS=', ' && for provider in $$requires; do \

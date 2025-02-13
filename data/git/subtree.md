@@ -1,5 +1,5 @@
 ---
-title: "git"
+title: "git subtree"
 tags: [ "data", "git", "subtree" ]
 ---
 
