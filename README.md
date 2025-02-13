@@ -20,6 +20,7 @@ recsel db.rec -q gpg
 recsel db.rec -e "title = 'ssh'"
 recsel db.rec -e "title ~ 'ssh'"
 recsel db.rec -e "title ~ 'bash'" -R title,wordcount
+recsel db.rec -m 1 -P content | less -R
 ```
 
 # Style
