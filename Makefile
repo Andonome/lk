@@ -71,7 +71,7 @@ article: ## Write an article
 	filename="$$(echo "$$title" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')" ;\
 	printf '%s\n' '---' >> $$path/$$filename.md ;\
 	printf 'title: "%s"\n' "$$title" >> $$path/$$filename.md ;\
-	printf 'tags: [ "%s" ]\n' "$$path" | sed 's#\/#", "#g' >> $$path/$$filename.md ;\
+	printf 'tags: [ "%s" ]\n' "$$path" | tr '[:upper:]' '[:lower:]' | sed 's#\/#", "#g' >> $$path/$$filename.md ;\
 	printf '%s\n\n' '---' >> $$path/$$filename.md ;\
 	$(EDITOR) +5 "$$path/$$filename.md"
 
