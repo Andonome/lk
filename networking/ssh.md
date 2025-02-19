@@ -7,7 +7,7 @@ tags: [ "networking" ]
 Try out basic ssh by accessing `git.charm.sh`, without needing authentication:
 
 
-```bash
+```sh
 ssh git.charm.sh
 ```
 
@@ -16,32 +16,32 @@ The ssh server is sometimes in a package called `openssh`, and sometimes only in
 
 Once it's installed, check it's working:
 
-```bash
+```sh
 sudo systemctl status ssh
 ```
 
 If that doesn't work, the service may be called `sshd`.
 
-```bash
+```sh
 sudo systemctl status sshd
 ```
 
 Then start that service:
 
-```bash
+```sh
 sudo systemctl start sshd
 ```
 Test it works by using ssh into your own system, from inside:
 
 
-```bash
+```sh
 ssh $USER@localhost
 ```
 
 Access the computer from another computer on the same local network by finding your computer's IP address.
 
 
-```bash
+```sh
 ip address | grep inet
 ```
 
@@ -56,24 +56,24 @@ Here is mine:
 
 
 The first one starts `127`, which means it returns back to that computer (like `localhost`).
-The second is an ipv6 address, which is too angelic for this world, and has yet to ascend.
+The second is an ipv6 address, which is too angelic for this world, and has yet to descend.
 The third will work from a remote computer.
 
 
-```bash
+```sh
 ssh $USERNAME@IP_ADDRESS
 ```
 
 Once you have that, generate some ssh keys:
 
-```bash
+```sh
 ssh-keygen
 ```
 
 Look at your keys:
 
 
-```bash
+```sh
 ls ~/.ssh
 ```
 
@@ -82,7 +82,7 @@ The other is secret.
 
 Now send those keys to a remote computer:
 
-```bash
+```sh
 ssh-copy-id $USERNAME@IP_ADDRESS
 ```
 

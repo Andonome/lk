@@ -9,7 +9,7 @@ su root
 sv stop wpa_supplicant bluetoothd
 ```
 
-Find your device's name with `ip a`.
+Find your device's name with `ip -color addr`.
 If unsure, try this:
 
 ```sh
