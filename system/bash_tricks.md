@@ -1,6 +1,6 @@
 ---
 title: "bash tips"
-tags: [ "Shell", "POSIX" ]
+tags: [ "shell", "POSIX" ]
 ---
 ## Track Live Changes
 

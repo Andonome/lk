@@ -1,6 +1,6 @@
 ---
 title: "extrace"
-tags: [ "Void" ]
+tags: [ "void" ]
 ---
 Monitor all processes:
 

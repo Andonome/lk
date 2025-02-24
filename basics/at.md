@@ -1,6 +1,6 @@
 ---
 title: "at"
-tags: [ "Basics", "time" ]
+tags: [ "basics", "time" ]
 ---
 Install with:
 

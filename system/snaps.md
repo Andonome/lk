@@ -1,6 +1,6 @@
 ---
 title: "snaps"
-tags: [ "System", "Ubuntu", "snap" ]
+tags: [ "system", "Ubuntu", "snap" ]
 ---
 > sudo apt-get purge -y snapd
 

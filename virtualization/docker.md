@@ -1,6 +1,6 @@
 ---
 title: "Docker"
-tags: [ "documentation", "Virtualization" ]
+tags: [ "documentation", "virtualization" ]
 ---
 ```sh
 sudo pacman -S docker

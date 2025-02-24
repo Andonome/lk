@@ -1,6 +1,6 @@
 ---
 title: "imagemagick"
-tags: [ "Vision" ]
+tags: [ "vision" ]
 ---
 
 Convert jpg to png.

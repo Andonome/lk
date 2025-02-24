@@ -1,6 +1,6 @@
 ---
 title: "lf - The Light File Manager"
-tags: [ "File Browser", "TUI" ]
+tags: [ "file browser", "TUI" ]
 ---
 
 ## Config File

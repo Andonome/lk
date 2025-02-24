@@ -1,6 +1,6 @@
 ---
 title: "Default Programs"
-tags: [ "Defaults", "Mime Type" ]
+tags: [ "defaults", "mime type" ]
 ---
 
 Install the package `xdg-utils`, then make very liberal use of the tab button.

@@ -1,6 +1,6 @@
 ---
 title: "iptables"
-tags: [ "Networking" ]
+tags: [ "networking" ]
 ---
 # Intro
 

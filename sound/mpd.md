@@ -1,6 +1,6 @@
 ---
 title: "mpd"
-tags: [ "Sound" ]
+tags: [ "sound" ]
 ---
 # Setup
 

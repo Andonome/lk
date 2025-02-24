@@ -1,6 +1,6 @@
 ---
 title: "ssh-tricks"
-tags: [ "Networking", "ssh", "tricks" ]
+tags: [ "networking", "ssh", "tricks" ]
 requires: [ "ssh" ]
 ---
 

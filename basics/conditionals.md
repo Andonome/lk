@@ -1,6 +1,6 @@
 ---
 title: "conditionals"
-tags: [ "Basics" ]
+tags: [ "basics" ]
 ---
 # If statements
 

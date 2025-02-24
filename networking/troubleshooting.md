@@ -1,11 +1,11 @@
 ---
 title: "troubleshooting"
-tags: [ "Networking" ]
+tags: [ "networking" ]
 ---
 
 # Do you have an IP?
 
-If not, try checking out what your local Networking interfaces are, then check if they have been picked up:
+If not, try checking out what your local networking interfaces are, then check if they have been picked up:
 
 ```bash
 dmesg | grep eth0

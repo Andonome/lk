@@ -1,6 +1,6 @@
 ---
 title: "task"
-tags: [ "Organization" ]
+tags: [ "organization" ]
 ---
 
 Set up the configuration file:

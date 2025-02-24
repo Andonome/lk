@@ -1,6 +1,6 @@
 ---
 title: "logs"
-tags: [ "System" ]
+tags: [ "system" ]
 ---
 
 # Basic

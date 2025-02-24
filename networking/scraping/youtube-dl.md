@@ -1,6 +1,6 @@
 ---
 title: "Download videos"
-tags: [ "Scraping" ]
+tags: [ "scraping" ]
 ---
 Install `yt-dlp`.
 

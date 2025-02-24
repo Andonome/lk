@@ -1,6 +1,6 @@
 ---
 title: "wgetpaste"
-tags: [ "Chat" ]
+tags: [ "chat" ]
 ---
 
 See available pastebins:

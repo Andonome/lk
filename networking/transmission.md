@@ -1,6 +1,6 @@
 ---
 title: "transmission"
-tags: [ "Networking", "Torrenting" ]
+tags: [ "networking", "torrenting" ]
 ---
 # Torrench
 

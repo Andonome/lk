@@ -1,6 +1,6 @@
 ---
 title: "android"
-tags: [ "System", "phone" ]
+tags: [ "system", "phone" ]
 ---
 # mtpfs
 

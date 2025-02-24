@@ -1,6 +1,6 @@
 ---
 title: "clock"
-tags: [ "Basics", "time" ]
+tags: [ "basics", "time" ]
 ---
 
 Show system time:

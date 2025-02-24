@@ -1,6 +1,6 @@
 ---
 title: "Void Linux Basics"
-tags: [ "Void" ]
+tags: [ "void" ]
 ---
 # Updates
 

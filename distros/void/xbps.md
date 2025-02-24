@@ -1,6 +1,6 @@
 ---
 title: "xbps"
-tags: [ "Void" ]
+tags: [ "void" ]
 ---
 ## Search
 

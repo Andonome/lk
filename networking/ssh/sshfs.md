@@ -1,6 +1,6 @@
 ---
 title: "sshfs"
-tags: [ "Networking" ]
+tags: [ "networking" ]
 requires: [ "ssh" ]
 ---
 # Mount 

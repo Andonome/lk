@@ -1,6 +1,6 @@
 ---
 title: "processes"
-tags: [ "Basics" ]
+tags: [ "basics" ]
 ---
 # Proccesses
 

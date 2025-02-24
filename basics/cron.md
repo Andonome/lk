@@ -1,6 +1,6 @@
 ---
 title: "cron"
-tags: [ "Basics", "time" ]
+tags: [ "basics", "time" ]
 ---
 # Cronie
 

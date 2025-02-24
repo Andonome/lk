@@ -1,6 +1,6 @@
 ---
 title: "network"
-tags: [ "Networking" ]
+tags: [ "networking" ]
 ---
 
 # Netstat Stuff
