@@ -3,7 +3,7 @@ title: "tor"
 tags: [ "networking" ]
 ---
 
-# Get a hostname
+# Get a Hostname
 
 ```bash
 sudo vim /etc/tor/torrc
