@@ -34,7 +34,7 @@ Restart the `soft-serve` service, then check it's working by cloning from localh
 git clone http://localhost:23232/${some_repo}.git
 ```
 
-## `https` Setup
+### `https` Setup
 
 Put this file at `/etc/nginx/sites-enabled/$DOMAIN.tld`, then set up standard certificates with [nginx](../networking/website/nginx.md).
 
@@ -68,3 +68,4 @@ Put this file at `/etc/nginx/sites-enabled/$DOMAIN.tld`, then set up standard ce
 }
 
 ```
+
