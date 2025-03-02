@@ -8,13 +8,13 @@ Running `make help` will search for text which starts with `## ` and show what t
 
 ```make
 .PHONY: help
-help: ## Print the help message
+help: ## Print the help message.
 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | \
 		sort | \
 		column -s ':' -t
 
 .PHONY: clean
-clean: ## Remove generated files
+clean: ## Remove generated files.
 	$(RM) $(defaults)
 ```
 
