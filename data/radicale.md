@@ -1,6 +1,7 @@
 ---
 title: "radicale and nginx"
 tags: [ "data", "calendar" ]
+required: [ "nginx", "certbot" ]
 ---
 
 Check before you start:

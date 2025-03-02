@@ -1,6 +1,7 @@
 ---
 title: "Soft Serve through https"
 tags: [ "data", "git server", "lfs" ]
+required: [ "git", "nginx" ]
 ---
 
 ## `http` Setup
