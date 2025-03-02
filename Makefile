@@ -24,35 +24,34 @@ $(foreach dir, $(categories), \
 	$(eval .dbs/$(dir).rec: $(wildcard $(dir)/*)) \
 	)
 
-$(databases): .dbs/%.rec: %/
+.dbs/:
+	mkdir $@
+$(databases): .dbs/%.rec: %/ | .dbs/
 	$(info making $(@F))
-	@mkdir -p $(@D)
 	for entry in $(shell find $< -type f -name "*.md") ; do \
-		sed -n '2,/^---$$/ {/^---$$/d; p}' "$$entry" |\
-		sed -e 's/\[ //'  -e 's/ \]//' |\
-		tr -d '"' ;\
-		printf "wordcount: %s\n" "$$(wc -w < $$entry)" ;\
-		printf "file: %s\n\n" "$$entry" ;\
+		printf "file: %s\n" "$$entry" ;\
+		sed -n '2,/^---$$/ {/^---$$/d; p}' "$$entry"  |\
+		tr -d '[]' | tr -s ' ' |\
+		sed '/tags: /s/, /\ntag: /g ; s/tags:/tag:/ ; /requires/s/, /\nrequires: /g' ;\
+		printf "wordcount: %s\n\n" "$$(wc -w < $$entry)" ;\
 	done > $@
-	for entry in $(shell find $< -type f -name "*.md"); do \
-		recset $@ -e "file = '$${entry}'" -f wordcount --set-add="$$(wc -w < $${entry})" ;\
-		recset $@ -e "file = '$${entry}'" -f content --set-add="$$($(spill_contents) $${entry})" ;\
-	done
 
+# This two-variable read can only happen because of the quotes in the titles.
 db.rec: $(databases)
 	printf '%s\n' '%rec: guide' > $@
 	printf '%s\n' '%key: title' >> $@
 	printf '%s\n' '%type: wordcount int' >> $@
-	printf '%s\n\n' '%sort: title' >> $@
-	recsel $^ >> $@
+	printf '%s\n\n' '%sort: wordcount' >> $@
+	cat $^ >> $@
 	recsel $@ -e "requires != ''" -CR title,requires |\
 	while read title requires; do \
-		IFS=', ' && for provider in $$requires; do \
+		for provider in "$$requires" ; do \
 			recset $@ -e "title = '$${provider}'" -f provides -a "$${title}" ;\
 		done ;\
 	done
-	$(info Created main database: $@)
+	sed -i 's/"//g' $@
 	recfix --sort $@
+	$(info Created main database: $@)
 
 default += db.rec
 
