@@ -1,21 +1,16 @@
 ---
 title: "virtualbox"
 tags: [ "system" ]
+requires: [ "Managing Groups" ]
 ---
 # Setup
 
-## Arch Linux
+Load the modules (or just reboot):
 
 ```sh
-sudo pacman -S virtualbox-host-modules-arch virtualbox-guest-iso
-```
-
-```sh
-sudo modprobe vboxdrv
-```
-
-```sh
-# vboxreload
+su root
+modprobe vboxdrv
+vboxreload
 ```
 
 Make dd image into vdi
@@ -30,7 +25,13 @@ If this doesn't work, try to make a new bite size with just
 sudo dd if=image.dd of=image2.dd bs=512 conv=sync
 ```
 
-## CLI Management
+## Arch Linux
+
+```sh
+pacman -S virtualbox-host-modules-arch virtualbox-guest-iso
+```
+
+# CLI Management
 
 List boxes:
 
@@ -50,22 +51,19 @@ To pause the machine:
 VBoxManage controlvm "rata" pause --type headless
 ```
 
-You can do a number of things to virtualboxes this way:
+You can do a number of things to the 'virtual boxes' this way:
 
-- startvm
-
-- pause
-
-- resume
-
-- poweroff
+- `startvm`
+- `pause`
+- `resume`
+- `poweroff`
 
 ## Creating Disks
 
 Creating a VM requires registering it:
 
 ```sh
-VBoxManage createvm --name Ubuntu19.04 --register  --ostype Ubuntu
+VBoxManage createvm --name Ubuntu19.04 --register --ostype Ubuntu
 ```
 
 ```sh
@@ -78,6 +76,7 @@ VBoxManage storagectl Ubuntu19.04 -name IDE --add ide --controller PIIX4  --boot
 
 Create just a disk with:
 
-VBoxManageg createhd --filename Ubuntu16.04 --size 5120
-
+```sh
+VBoxManage createhd --filename "$diskname" --size 5120
+```
 
