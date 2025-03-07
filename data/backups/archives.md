@@ -8,22 +8,21 @@ tags: [ "tar", "backups", ".tgz", "tar.gz" ]
 
 Combine many files and directories into a single t-archive file.
 
-```bash
+```sh
 tar cf "$ARCHIVE".tar $DIR
 ```
 You can remember this with the mnemonic '*C*reate *F*ile'.
 
-Unfortunately, this stores the full file path, so making a tar archive of `/etc/nginx/` will store `etc/nginx` (without the leading `/`.
-
+Unfortunately, this stores the full file path, so making a tar archive of `/etc/nginx/` will store `etc/nginx` (without the leading `/`).
 It's often better to tell tar which path to start from using the `-C` flag.
 
-```bash
+```sh
 tar cf "$ARCHIVE".tar -C /etc/ nginx
 ```
 
 Check the contents of your archive with:
 
-```bash
+```sh
 tar tf "$ARCHIVE".tar
 ```
 
@@ -31,7 +30,7 @@ If you want to store 'everything in a directory', then using `*` will not work, 
 
 Instead, you can store the target in a variable:
 
-```bash
+```sh
 files=$(ls /etc/nginx)
 tar cf "$ARCHIVE".tar -C /etc/nginx/ $file
 ```
@@ -40,7 +39,9 @@ tar cf "$ARCHIVE".tar -C /etc/nginx/ $file
 
 Extract the tar archive with
 
-> tar xf "$ARCHIVE".tar
+```sh
+tar xf "$ARCHIVE".tar
+```
 
 You can remember this with the mnemonic 'e*X*tract *F*ile'.
 
@@ -48,7 +49,7 @@ You can remember this with the mnemonic 'e*X*tract *F*ile'.
 
 Create a zip-compressed archive with the `z` flag.
 
-```bash
+```sh
 tar czf "$ARCHIVE".tgz -C /etc/nginx/ $file
 ```
 
@@ -60,18 +61,16 @@ You can use any file ending you want, but sane people like to use '.tgz' or '.ta
 
 Make archive:
 
-```bash
-PASSWORD=my_password
+```sh
+7za a -tzip -p "$PASSWORD" -mem=AES256 $ARCHIVE.zip $FILE_1 $FILE_2
 ```
-```bash
-7za a -tzip -p$PASSWORD -mem=AES256 $ARCHIVE.zip $FILE_1 $FILE_2
-```
+
 Note that people can still see every filename in your archive, and can change those files.
 They just can't read the contents.
 
 Unzip:
 
-```bash
+```sh
 7za x archive.zip
 ```
 

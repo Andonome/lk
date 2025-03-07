@@ -5,7 +5,7 @@ tags: [ "backups", "synch" ]
 
 Install unison on both machines, and make sure both have the same version of unison, with the same version of the ocaml compiler (the smallest difference will cause problems).
 
-```bash
+```sh
 unison -version
 ```
 
@@ -13,14 +13,14 @@ Create the `~/.unison` directory on both machines.
 
 Make a job called `backup`:
 
-```bash
+```sh
 JOB=backup
 ```
 
 Here is an example job, which synchronizes the `~/music` directory with a remote machine which has the same username.
 
 
-```bash
+```sh
 echo "
 auto = true
 root=$HOME
@@ -42,7 +42,7 @@ The last command means it will ignore any file with a name ending in `.flac`.
 The first command means this will run but also confirm which files will be deleted, and which will be transferred, us `batch = true` instead.
 Or you can deleted that line in the `.prf` file and run it with a flag:
 
-```bash
+```sh
 unison -batch *backup*.prf
 ```
 
