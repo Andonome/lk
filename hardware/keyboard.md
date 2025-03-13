@@ -11,6 +11,7 @@ Select a keymap, and create a new custom map.
 
 ```sh
 su root
+ls /usr/share/kbd/keymaps/i386/qwerty/
 
 basemap=/usr/share/kbd/keymaps/i386/qwerty/pl1.map.gz
 newmap=/usr/share/kbd/keymaps/custom.map.gz
