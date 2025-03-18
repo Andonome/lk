@@ -23,7 +23,8 @@ Using four spaces will not work!
 
 ## Dependency Files
 
-Now we've made a `README.md` file, we can show how a makefile looks in the README:
+Now we've made a `README.md` file, we can show how a makefile looks in the README file.
+Add these lines to the `Makefile`:
 
 ```make
 README.md: Makefile
@@ -44,7 +45,7 @@ Note the order:
 
 Notice that the file above can print into the README by using `echo "" >> $@`.
 The `$@` stands for 'the file which we want', and `$<` stands for 'the first dependency file'.
-The `make` program starts by replacing those variables, and the result it:
+The `make` program starts by replacing those variables, so when you run `make`, the program looks like this:
 
 ```make
 README.md: Makefile
@@ -53,7 +54,6 @@ README.md: Makefile
 	echo '```' >> README.md
 	cat Makefile >> README.md
 	echo '```' >> README.md
-
 
 ```
 
@@ -70,7 +70,6 @@ README.md: Makefile
 ## Basic Variables
 
 You can assign a variable normally, but must refer to it in brackets.
-
 
 ```make
 storage_directory = backups
@@ -182,4 +181,3 @@ In this case, the makefile can see that `backup` depends on the current backup f
 - [File patterns](Makefiles/patterns.md)
 - [Makefile graphs](Makefiles/graph-easy.md)
 - [In-build help](Makefiles/help.md)
-- [Makefile graphs](Makefiles/graph-easy.md)
