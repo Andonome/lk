@@ -40,6 +40,8 @@ $(databases): .dbs/%.rec: %/ | .dbs/
 db.rec: $(databases)
 	printf '%s\n' '%rec: guide' > $@
 	printf '%s\n' '%key: title' >> $@
+	printf '%s\n' '%type: requires rec guide' >> $@
+	printf '%s\n' '%type: provides rec guide' >> $@
 	printf '%s\n' '%type: wordcount int' >> $@
 	printf '%s\n\n' '%sort: wordcount' >> $@
 	cat $^ >> $@
