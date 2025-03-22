@@ -4,23 +4,29 @@ title: "Linux Knowledge Base"
 
 The Linux Knowledge-Base provides quick-start guides for working with terminal programs.
 
+If you like this style of short articles with a miniature database, then join me in my quest to remove the nausea of poorly-written documentation.
+
 # Setup
 
 Install `make`, `recutils`, and any fuzzy-finder (i.e. `sk`, `fzy`, or `fzf`).
 
 ## Usage
 
+Set up the database and try a few queries:
 
 ```sh
 make
 make database
 
+recsel db.rec -m 3
 recsel db.rec -q database
-recsel db.rec -q gpg
 recsel db.rec -e "title = 'ssh'"
 recsel db.rec -e "title ~ 'ssh'"
 recsel db.rec -e "title ~ 'bash'" -R title,wordcount
-recsel db.rec -m 1 -P content | less -R
+
+recsel db.rec -t guide -j provides -G title \
+    -e "title = 'ssh'" \
+    -p 'sum(provides_wordcount)'
 ```
 
 # Style
