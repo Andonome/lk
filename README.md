@@ -36,6 +36,14 @@ recsel db.rec -t guide -j provides -G title \
 - Nobody cares about how the project started.
 - Nobody wants to read what `ffmpeg` is, because anyone who wants to use it already knows what it is.
 
+## State Knowledge Dependencies
+
+Articles should state what you need to understand in order to read them *at the start*.
+They should not assume the reader knows much beyond common terminal commands, and should not provide a link to some other resource half-way through an article.
+
+People should be able to read an article from the beginning, then keep going until the end, and then stop.
+Articles should not take a detour through a chain of other articles of unknown size.
+
 ## Be Opinionated
 
 - Guides should not ask the reader to select options half-way through.
@@ -79,6 +87,11 @@ grep ls --color=always $HISTFILE | $PAGER
 ```
 
 Now we can see what can be changed.
+
+## Assume People Follow the Instructions
+
+Articles should say what to type, not the output.
+If the command is `ls`, users will see files once they try the command, but the article does not need to provide an example list of files unless an important point has to be made about output.
 
 # What's Wrong with Everything Else?
 
