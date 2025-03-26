@@ -7,7 +7,7 @@ Put bash in vim mode!
 
 Place the following in your `~/.inputrc`:
 
-```bash
+```
 set editing-mode vi
 set show-mode-in-prompt on
 set vi-ins-mode-string \1\e[33;32m\2[>]=\1\e[0m\2
