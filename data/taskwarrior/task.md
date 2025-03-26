@@ -5,19 +5,19 @@ tags: [ "organization" ]
 
 Set up the configuration file:
 
-```bash
+```sh
 task
 ```
 
 Add a task:
 
-```bash
+```sh
 task add update linux
 ```
 
 See which task is next:
 
-```bash
+```sh
 task next
 ```
 
@@ -25,13 +25,13 @@ Note the id number.
 
 Mark a task as started:
 
-```bash
+```sh
 task start 1
 ```
 
 Once finished:
 
-```bash
+```sh
 task 1 done
 ```
 
@@ -39,7 +39,7 @@ task 1 done
 
 Add a project:
 
-```bash
+```sh
 task add project:house buy potted plant
 task add proj:house.repair buy screwdriver
 task add proj:house.repair buy shelf brackets
@@ -51,11 +51,11 @@ task add pro:house.paint buy brushes
 
 ## Summary
 
-```bash
+```sh
 task pro:house sum
 ```
 
-```bash
+```sh
 task burndown.daily pro:house
 ```
 
@@ -63,13 +63,13 @@ The summaries will show how fast a project is being completed, and when you can 
 
 # Tags
 
-```bash
+```sh
 task add +buy toothbrush
 ```
 
 You can then see only tasks which involve buying something with:
 
-```bash
+```sh
 task +buy
 ```
 
@@ -77,27 +77,27 @@ task +buy
 
 Set three contexts by their tags:
 
-```bash
+```sh
 task context define work +sa or +hr
 ```
 
-```bash
+```sh
 task context define study +ed or +void or +rat
 ```
 
-```bash
+```sh
 task context define home -sa -hr -ed -void -rat
 ```
 
 Change to the first context.
 
-```bash
+```sh
 task context work
 ```
 
 Then stop.
 
-```bash
+```sh
 task context none
 ```
 
@@ -105,7 +105,7 @@ task context none
 
 View list of tasks completed in the last week:
 
-```bash
+```sh
 task end.after:today-1wk completed
 ```
 
@@ -113,19 +113,19 @@ task end.after:today-1wk completed
 
 Make a UDA 'size'.
 
-```bash
+```sh
 task config uda.size.type string
 ```
 
-```bash
+```sh
 task config uda.size.label Size
 ```
 
-```bash
+```sh
 task config uda.size.values large,medium,small
 ```
 
-```bash
+```sh
 uda.size.default=medium
 ```
 
@@ -133,7 +133,7 @@ uda.size.default=medium
 
 This command shows tasks I'm most interested in:
 
-```bash
+```sh
 task next +ACTIVE or +OVERDUE or due:today or scheduled:today or pri:H
 ```
 

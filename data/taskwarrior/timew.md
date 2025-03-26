@@ -6,13 +6,13 @@ tags: [ "data", "tracking", "time", "timew" ]
 
 Try:
 
-```bash
+```sh
 timew summary :yesterday
 ```
 
 You can also use :week, :lastweek, :month, :quarter, :year, or a range such as:
 
-```bash
+```sh
 timew summary today to tomorrow
 timew today - tomorrow
 2018-10-15T06:00 - 2018-10-17T06:00
@@ -22,7 +22,7 @@ Each of these can gain with the :ids tag.
 
 # Basics
 
-```bash
+```sh
 timew start
 timew stop
 timew continue
@@ -32,7 +32,7 @@ timew tags
 
 And add ids with:
 
-```bash
+```sh
 timew summary :ids
 timew track 10am - 1pm timewarrior
 timew track 1pm for 2h walk
@@ -42,50 +42,50 @@ timew track 1pm for 2h walk
 
 First get ids.
 
-```bash
+```sh
 timew summary :ids
 ```
 
 Then if we're looking at task @2:
 
-```bash
+```sh
 timew move @2 12:00
 timew lengthen @2 3mins
 ```
 
-```bash
+```sh
 time shorten @2 40mins
 ```
 
 # Forgetting
 
-```bash
+```sh
 timew start 1h ago @4
 ```
 
 Or if your action actually had a break:
 
-```bash
+```sh
 timew split @8
 ```
 
 Or maybe not?
 
-```bash
+```sh
 timew join @4 @8
 timew @8 delete
 ```
 
 Start at previous time
 
-```bash
+```sh
 timew start 3pm 'Read chapter 12'
 timew start 90mins ago 'Read chapter 12'
 ```
 
 Cancel currently tracked time.
 
-```bash
+```sh
 timew cancel
 ```
 
@@ -157,11 +157,11 @@ with:
 
 # Fixing Errors
 
-```bash
+```sh
 curl -O https://taskwarrior.org/download/timew-dbcorrection.py
 ```
 
-```bash
+```sh
 python timew-dbcorrections.py
 ```
 
