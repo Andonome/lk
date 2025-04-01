@@ -26,15 +26,10 @@ mkdir $DIR && cd $DIR
 git init
 ```
 
-Make a file explaining what the project does:
+Make a file explaining what the project does, and tell `git` to track it:
 
 ```bash
-vim README.md
-```
-
-Add this to the git:
-
-```bash
+echo "I hereby solemnly swear never to commit a binary." > README.md
 git add README.md
 ```
 
