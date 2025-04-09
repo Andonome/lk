@@ -56,7 +56,7 @@ Then set that language, with:
 LANG=pl_PL.UTF-8
 ```
 
-... then reboot.
+...then reboot.
 
 # Network Time Protocol
 
