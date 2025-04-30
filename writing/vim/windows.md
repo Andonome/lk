@@ -1,6 +1,7 @@
 ---
 title: "vim windows"
 tags: [ "vim" ]
+requires: [ "vim basics" ]
 ---
 
 | Command                   | Keys                |

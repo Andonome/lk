@@ -1,6 +1,7 @@
 ---
 title: "vim navigation"
 tags: [ "vim", "navigation" ]
+requires: [ "vim basics" ]
 ---
 
 | Move                    | Command      |

@@ -1,6 +1,7 @@
 ---
 title: "vim search"
 tags: [ "vim", "search" ]
+requires: [ "vim basics" ]
 ---
 Search for the next and or previous occurrence of the word under your cursor with `*` and `#`.
 
