@@ -10,7 +10,8 @@ tags: [ "vim", "basic" ]
 
 ## Extras
 
-- [Navigation](navigate.md)
-- [Completion](vim-completion.md)
-- [Search](vim-search.md)
-- [Window Splits](vim-windows.md)
+- [Navigation](vim/navigate.md)
+- [Completion](vim/completion.md)
+- [Search](vim/search.md)
+- [Window Splits](vim/windows.md)
+- [Use vim bindings in bash](vim/vim_in_bash.md)

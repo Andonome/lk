@@ -142,4 +142,3 @@ You can ensure omemo automatcally turns on:
 ```
 ---
 
-'OTR' encryption is mostly dead, but you can find the old instructions [here](profanity-otr).
