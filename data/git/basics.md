@@ -16,14 +16,18 @@ git config --global user.name "$YOUR_NAME"
 
 # New Git
 
-Start a git in directory `$DIR`:
+Decide on algorithm:
+
+- If you're scared of insecure hash-sums, go with `hash=sha256`.
+- If you don't know what a hash sum is, go with `hash=sha1`.
+
+## Init the Git
+
+Start a git in directory `${DIR}`:
 
 ```bash
-mkdir $DIR && cd $DIR
-```
-
-```bash
-git init
+git init --object-format=${hash} ${DIR}
+cd ${DIR}
 ```
 
 Make a file explaining what the project does, and tell `git` to track it:
