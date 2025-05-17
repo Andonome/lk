@@ -6,11 +6,11 @@ tags: [ "data" ]
 
 ## New Machines
 
-```bash
+```sh
 git config --global user.email "$YOUR_EMAIL"
 ```
 
-```bash
+```sh
 git config --global user.name "$YOUR_NAME"
 ```
 
@@ -25,21 +25,21 @@ Decide on algorithm:
 
 Start a git in directory `${DIR}`:
 
-```bash
+```sh
 git init --object-format=${hash} ${DIR}
 cd ${DIR}
 ```
 
 Make a file explaining what the project does, and tell `git` to track it:
 
-```bash
-echo "I hereby solemnly swear never to commit a binary." > README.md
+```sh
+echo "I hereby solemnly swear never to commit a binary file." > README.md
 git add README.md
 ```
 
 Then make the initial commit, explaining the change you just made:
 
-```bash
+```sh
 git commit
 ```
 
@@ -47,17 +47,17 @@ git commit
 
 Once you make a change to some file, add it and make a commit explaining it.
 
-```bash
+```sh
 git add $FILE
 ```
 
-```bash
+```sh
 git commit -m"change $FILE"
 ```
 
 Check your history:
 
-```bash
+```sh
 git log
 ```
 
@@ -68,20 +68,20 @@ Give it the same name as the `$DIR` directory, above.
 
 Add this as a remote:
 
-```bash
+```sh
 REMOTE=gitlab
 git remote add $REMOTE  https://gitlab.com/$USERNAME/$DIR
 ```
 
 Tell git you're pushing the branch "master" to the remote repo "origin": 
 
-```bash
+```sh
 git push -u master origin
 ```
 
 If someone makes a change on the remote, pull it down with:
 
-```bash
+```sh
 git pull
 ```
 
@@ -90,31 +90,31 @@ git pull
 A branch is a full copy of the project to test additional ideas.
 You can make a new branch called 'featurez' like this:
 
-```bash
+```sh
 git branch $FEATURE_BRANCH
 ```
 
 Have a look at all your branches:
 
-```bash
+```sh
 git branch
 ```
 
 Switch to your new branch:
 
-```bash
+```sh
 git checkout $FEATURE_BRANCH
 ```
 
 And if your changes are rubbish, checkout the "master" branch again, then delete "featurez":
 
-```bash
+```sh
 git branch -D $FEATURE_BRANCH
 ```
 
 Or if it's a good branch, push it to the remote:
 
-```bash
+```sh
 remote=origin
 git push $remote $FEATURE_BRANCH
 ```
@@ -123,13 +123,13 @@ git push $remote $FEATURE_BRANCH
 
 Once you like the feature, merge it into the main branch.  Switch to master then merge it:
 
-```bash
+```sh
 git merge $FEATURE_BRANCH
 ```
 
 And delete the branch, as you've already merged it:
 
-```bash
+```sh
 git branch -d $FEATURE_BRANCH
 ```
 
@@ -137,7 +137,7 @@ git branch -d $FEATURE_BRANCH
 
 ## Pulling another git repo into a subtree
 
-```bash
+```sh
 git subtree add -P config git@gitlab.com:bindrpg/config.git master
 ```
 
@@ -145,27 +145,27 @@ git subtree add -P config git@gitlab.com:bindrpg/config.git master
 
 ## Delete All History
 
-```bash
+```sh
 git checkout --orphan temp
 ```
 
-```bash
+```sh
 git add -A
 ```
 
-```bash
+```sh
 git commit -am "release the commits!"
 ```
 
-```bash
+```sh
 git branch -D master
 ```
 
-```bash
+```sh
 git branch -m master
 ```
 
-```bash
+```sh
 git push -f origin master
 ```
 
@@ -173,21 +173,21 @@ Gitlab requires more changes, such as going to `settings > repository` and switc
 
 ## Clean up Bloated Repo
 
-```bash
+```sh
 git fsck --full
 ```
 
-```bash
+```sh
 git gc --prune=now --aggressive
 ```
 
-```bash
+```sh
 git repack
 ```
 
 ## Find Binary Blobs
 
-```bash
+```sh
 git rev-list --objects --all \
 | git cat-file --batch-check='%(objecttype) %(objectname) %(objectsize) %(rest)' \
 | sed -n 's/^blob //p' \
