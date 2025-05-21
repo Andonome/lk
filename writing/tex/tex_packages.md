@@ -1,5 +1,5 @@
 ---
-title: "LaTeX Setup the Hard Way"
+title: "LaTeX Packages"
 tags: [ "writing" ]
 ---
 
@@ -21,7 +21,7 @@ ls /opt/texlive/${YEAR}/texmf-dist/scripts/texlive/tlmgr.pl
 ```
 
 Double-check the year.
-It should *not* match the real year, it should match the `texlive`.
+It should *not* match the current year, it should match the `texlive`.
 
 ## Problems along the Path
 
