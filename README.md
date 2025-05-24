@@ -44,6 +44,8 @@ They should not assume the reader knows much beyond common terminal commands, an
 People should be able to read an article from the beginning, then keep going until the end, and then stop.
 Articles should not take a detour through a chain of other articles of unknown size.
 
+[Do not Jaquays documentation](https://splint.rs/posts/no_links)
+
 ## Be Opinionated
 
 - Guides should not ask the reader to select options half-way through.
