@@ -1,12 +1,24 @@
 ---
-title: "task"
-tags: [ "organization" ]
+title: "Taskwarrior"
+tags: [ "data", "organization" ]
 ---
 
 Set up the configuration file:
 
 ```sh
 task
+```
+
+Taskwarrior published a new feature to synchronize tasks others, but the feature was not ready.
+The server's default installation instructions assume that users pay for hosting services.
+All listed providers run proprietary software and actively support genocide.
+
+
+To ignore the synchronization, tell the configuration file to use a local synchronization file.
+
+```
+task config sync.local.server_dir
+task config data.location ~/.local/state/
 ```
 
 Add a task:
@@ -44,18 +56,16 @@ task add project:house buy potted plant
 task add proj:house.repair buy screwdriver
 task add proj:house.repair buy shelf brackets
 task add pro:house.paint buy white paint
-task add pro:house.paint buy red paint
-task add pro:house.paint buy black paint
-task add pro:house.paint buy brushes
+
+for t in "buy red paint" "buy black paint" "buy brushes" ; do
+  task add pro:house.paint $t
+done
 ```
 
 ## Summary
 
 ```sh
 task pro:house sum
-```
-
-```sh
 task burndown.daily pro:house
 ```
 
@@ -63,42 +73,10 @@ The summaries will show how fast a project is being completed, and when you can 
 
 # Tags
 
+
 ```sh
 task add +buy toothbrush
-```
-
-You can then see only tasks which involve buying something with:
-
-```sh
 task +buy
-```
-
-# Contexts
-
-Set three contexts by their tags:
-
-```sh
-task context define work +sa or +hr
-```
-
-```sh
-task context define study +ed or +void or +rat
-```
-
-```sh
-task context define home -sa -hr -ed -void -rat
-```
-
-Change to the first context.
-
-```sh
-task context work
-```
-
-Then stop.
-
-```sh
-task context none
 ```
 
 # Review
@@ -111,21 +89,17 @@ task end.after:today-1wk completed
 
 # User Defined Attributes
 
-Make a UDA 'size'.
+Define a new attribute for tasks called 'size'.
+The 'user defined attribute' (UDA) needs a `type` and `label`.
 
 ```sh
 task config uda.size.type string
-```
-
-```sh
 task config uda.size.label Size
 ```
+You can also ensure task tasks can only be `large`, `medium`, or `small`, then set a default.
 
 ```sh
 task config uda.size.values large,medium,small
-```
-
-```sh
 uda.size.default=medium
 ```
 
