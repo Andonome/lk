@@ -10,7 +10,7 @@ ffmpeg -i [input file] output_file.mkv
 
 The input file might be a device, such as a camera.
 
-#Record screen
+# Record screen
 
 Take the format as 'grab the x11 screen'.
 
@@ -30,7 +30,8 @@ or maybe just...
 ffmpeg -f x11grab -s "$(xdpyinfo | grep dimensions | awk '{print $2}')" -i :1.0 out.mkv
 ```
 
-#Add default pulse audio
+# Add default pulse audio
+
 ```bash
 ffmpeg -f x11grab -s [screensize] -i :0.0 -f alsa -i default out.mkv
 ```
