@@ -38,6 +38,7 @@ $(databases): .dbs/%.rec: %/ | .dbs/
 
 # This two-variable read can only happen because of the quotes in the titles.
 db.rec: $(databases)
+	$(warning rebuilding from $? )
 	printf '%s\n' '%rec: guide' > $@
 	printf '%s\n' '%key: title' >> $@
 	printf '%s\n' '%type: requires rec guide' >> $@
