@@ -17,10 +17,10 @@ Remove yourself from all groups, and add yourself back to only `wheel`, `audio`,
 sudo usermod --groups wheel,audio,$USER
 ```
 
-Add yourself to the `wheel` group:
+Add yourself to the `docker` group:
 
 ```sh
-su root -c "usermod --append --groups wheel $USER"
+su root -c "usermod --append --groups docker $USER"
 ```
 Add yourself to the `network` group:
 
@@ -28,5 +28,11 @@ Add yourself to the `network` group:
 sudo usermod -aG network $USER
 ```
 
-The changes will not take effect until you log in again, so reboot or log into `localhost` with [ssh](../networking/ssh.md).
+The changes have not taken effect, so log into your own account again with `su`:
 
+
+```sh
+groups
+sudo su $USER
+groups
+```
