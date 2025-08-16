@@ -1,6 +1,7 @@
 ---
 title: "Docker"
 tags: [ "documentation", "virtualization" ]
+requires: [ "Managing Groups" ]
 ---
 ```sh
 sudo pacman -S docker
