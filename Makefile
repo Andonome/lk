@@ -6,7 +6,7 @@ FZF != command -v sk || command -v fzy || command -v fzf || \
 
 spill_contents = sed -e '1,/---/d'
 
-help: ## Print the help message
+help: .git/info/exclude ## Print the help message
 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | \
 		sort | \
 		column -s ':' -t
@@ -19,6 +19,8 @@ categories = $(patsubst %/, %, $(dirs))
 databases = $(patsubst %, .dbs/%.rec, $(categories))
 
 default += $(databases)
+default += db.rec
+default += .dbs/map.fmt
 
 $(foreach dir, $(categories), \
 	$(eval .dbs/$(dir).rec: $(wildcard $(dir)/*)) \
@@ -26,6 +28,7 @@ $(foreach dir, $(categories), \
 
 .dbs/:
 	mkdir $@
+
 $(databases): .dbs/%.rec: %/ | .dbs/
 	$(info making $(@F))
 	for entry in $(shell find $< -type f -name "*.md") ; do \
@@ -56,10 +59,8 @@ db.rec: $(databases)
 	recfix --sort $@
 	$(info Created main database: $@)
 
-default += db.rec
-
 .git/info/exclude: $(default)
-	echo $^ | tr ' ' '\n' > $@
+	@echo $^ | tr ' ' '\n' > $@
 
 default += .git/info/exclude
 
@@ -76,6 +77,18 @@ article: ## Write an article
 	printf 'tags: [ "%s" ]\n' "$$path" | tr '[:upper:]' '[:lower:]' | sed 's#\/#", "#g' >> $$path/$$filename.md ;\
 	printf '%s\n\n' '---' >> $$path/$$filename.md ;\
 	$(EDITOR) +5 "$$path/$$filename.md"
+
+.dbs/map.fmt:| .dbs/
+	printf '%s\n' '[ {{requires[0]}} ] --> [ {{title}} ] {border-style: dashed;}' > $@
+	printf '%s\n' '[ {{requires[1]}} ] --> [ {{title}} ] {border-style: dashed;}' >> $@
+	printf '%s\n' '[ {{requires[2]}} ] --> [ {{title}} ] {border-style: dashed;}' >> $@
+	printf '%s\n' '[ {{requires[3]}} ] --> [ {{title}} ] {border-style: dashed;}' >> $@
+	printf '%s\n' '[ {{requires[4]}} ] --> [ {{title}} ] {border-style: dashed;}' >> $@
+
+.PHONY: map
+map: db.rec .dbs/map.fmt ## Show knowledge dependency map
+	recsel -t guide $< -e 'requires != ""' -p title,requires | recfmt -f .dbs/map.fmt |\
+	grep -vF '[  ]' | graph-easy --boxart | $${PAGER}
 
 .PHONY: clean
 clean: ## Remove all generated files
