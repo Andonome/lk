@@ -4,6 +4,10 @@ tags: [ "system", "ansible", "docker" ]
 requires: [ "Docker" ]
 ---
 
+'Docker module', you say?
+No need for that fancy stuff.
+We're just going to set up a couple of docker containers and connect to them like any other machine.
+
 Set up two containers: `deb` and `arch`, add them to an `ansible` hosts file, then do a 'ping' to see if they respond.
 
 ## Required Packages
