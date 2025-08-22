@@ -40,13 +40,13 @@ You can use alsa instead of pulse, but don't unless you're on a Pi.
 
 Since this is run as the mpd user, you'll need to grant that user pulse acceess, often with the user-group `pulse` or `pulse-access`, but your distro may vary.
 
-```bash
+```sh
 sudo usermod -aG pulse-access mpd
 ```
 
 Working with mpd will be easier if you have access to its files, so maybe:
 
-```bash
+```sh
 sudo usermod -aG mpd $USER
 ```
 
@@ -56,7 +56,7 @@ sudo usermod -aG mpd $USER
 
 Install `mpd-notification` and then start the service:
 
-```bash
+```sh
 systemctl --user enable mpd-notification
 ```
 

@@ -5,7 +5,7 @@ tags: [ "data" ]
 
 Work with a database:
 
-```bash
+```sh
 sqlite3 "$FILE".sqlite3
 ```
 Compress the database:

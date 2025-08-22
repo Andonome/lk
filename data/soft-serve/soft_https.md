@@ -30,7 +30,7 @@ http:
 
 Restart the `soft-serve` service, then check it's working by cloning from localhost:
 
-```bash
+```sh
 git clone http://localhost:23232/${some_repo}.git
 ```
 

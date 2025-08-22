@@ -4,43 +4,43 @@ tags: [ "basics", "time" ]
 ---
 Install with:
 
-```bash
+```sh
 sudo apt install at
 ```
 
 Enable the daemon service with:
 
-```bash
+```sh
 sudo systemctl enable --now atd
 ```
 
 Then jobs can be specified with absolute time, such as:
 
-```bash
+```sh
 at 16:20
 ```
 
-```bash
+```sh
 at noon
 ```
 
-```bash
+```sh
 at midnight
 ```
 
-```bash
+```sh
 at teatime
 ```
 
 Type in your command, e.g.:
 
-```bash
+```sh
 touch /tmp/$FILE.txt
 ```
 
 The jobs can also be specified relative to the current time:
 
-```bash
+```sh
 at now +15 minutes
 ```
 
@@ -50,7 +50,7 @@ Finally, accept the jobs with ^D.
 
 Display a list of commands to run with:
 
-```bash
+```sh
 atq
 ```
 
@@ -58,7 +58,7 @@ atq
 
 This will print all pending IDs.  Remove a job by the ID with:
 
-```bash
+```sh
 atrm 2
 ```
 
@@ -68,7 +68,7 @@ Check `/var/spool/atd/` to see the jobs.
 
 Automatically add a job for later, by setting the date, then using echo for the command.
 
-```bash
+```sh
 t="$(date -d "2 minutes" +%R)"
 echo "fortune > ~/$FILE" | at "$t"
 watch cat $FILE

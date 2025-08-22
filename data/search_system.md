@@ -33,7 +33,7 @@ By default, the `/mnt` directory is 'pruned' from the database.
 So if you want to search `/mnt` for videos, remove the word `/mnt` from the configuration file.
 
 
-```bash
+```sh
 su root
 cat /etc/updatedb.conf
 sed -i 's#/mnt/##' /etc/updatedb.conf

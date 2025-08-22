@@ -7,7 +7,7 @@ tags: [ "distros", "arch" ]
 
 Edit `/etc/systemd/system/getty@tty1.service.d/override.conf` by typing:
 
-```bash
+```sh
 sudo systemctl edit getty@tty1
 ```
 

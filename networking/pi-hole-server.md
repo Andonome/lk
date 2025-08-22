@@ -6,19 +6,19 @@ tags: [ "distros" ]
 
 ## Arch
 
-```bash
+```sh
 yay -S pi-hole-server
 ```
 
-```bash
+```sh
 sudo systemctl enable --now pihole-FTL
 ```
 
-```bash
+```sh
 sudo systemctl disable --now systemd-resolved
 ```
 
-```bash
+```sh
 sudo rm -f /dev/shm/FTL-\*
 ```
 
@@ -26,32 +26,32 @@ sudo rm -f /dev/shm/FTL-\*
 
 Debian has a long, boring setup.
 
-```bash
+```sh
 sudo apt-get install wget curl net-tools gamin lighttpd lighttpd-mod-deflate
 curl -sSL https://install.pi-hole.net | PIHOLE_SKIP_OS_CHECK=true sudo -E bash
 ```
 
 # Setup
 
-```bash
+```sh
 sudo usermod -aG pihole $USER
 ```
 
 Remove that google dns server.
 
-```bash
+```sh
 pihole -a setdns 9.9.9.9 1.0.0.1
 ```
 
 Disable pihole password by setting a blank password.
 
-```bash
+```sh
 pihole -a -p
 ```
 
 Get a new list of blocked domains, then reload:
 
-```bash
+```sh
 pihole -g -r
 ```
 
@@ -61,13 +61,13 @@ Every so often, run `pihole -g` again (perhaps put it in crontab).
 
 Observe the pihole's output while you ask it a question:
 
-```bash
+```sh
 pihole -t
 ```
 
 Then ask the question from another computer:
 
-```bash
+```sh
 dig @[ pihole ip ] archlinux.org
 ```
 

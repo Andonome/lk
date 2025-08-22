@@ -6,23 +6,23 @@ tags: [ "basics" ]
 
 Let's get some entries with 'getent', e.g. passwd or group.
 
-```bash
+```sh
 getent passwd
 ```
 
-```bash
+```sh
 getent group
 ```
 
 Obviously:
 
-```bash
+```sh
 getent shadow
 ```
 
 ## Examples
 
-```bash
+```sh
 sudo adduser maestro 
 ```
 
@@ -30,71 +30,71 @@ add user 'maestro'
 
 This depends upon the settings in the /etc/default/useradd file and /etc/login.defs
 
-```bash
+```sh
 sudo useradd -m pinkie 
 ```
 
 add user 'pinkie' with a home directory
 
-```bash
+```sh
 sudo adduser -m -e 2017-04-25 temp 
 ```
 
 add expiry date to user
 
-```bash
+```sh
 userdel maestro 
 ```
 
 delete maestro
 
-```bash
+```sh
 userdel -r maestro 
 ```
 
 delete maestro and hir homefolder
 
-```bash
+```sh
 groups 
 ```
 
 find which group you are in
 
 
-```bash
+```sh
 id 
 ```
 
 same
 
-```bash
+```sh
 id -Gn maestro 
 ```
 
 Find which groups maestro is in
 
 
-```bash
+```sh
 deluser --remove-home maestro 
 ```
 
 delete user maestro
 
 
-```bash
+```sh
 usermod -aG sudo maestro 
 ```
 
 Add user maestro to group sudo:
 
 
-```bash
+```sh
 cat /etc/passwd 
 ```
 
 list users' passwords (and therefore users)
 
-```bash
+```sh
 groupadd awesome 
 ```
 
@@ -104,33 +104,33 @@ Passwords are stored in /etc/shadow.
 
 There are user accounts for processes such as 'bin' and 'nobody' which are locked, so they're unusable.
 
-```bash
+```sh
 passwd -l bin 
 ```
 
 Lock the user 'bin'.
 
-```bash
+```sh
 more /etc/passwd | grep games 
 ```
 
 we find the name, password and user id of the user 'games'. I.e. the password is 'x', and the user id is '5'.  The password is an impossible hash, so no input password could match.
 
-```bash
+```sh
 groupdel learners | delete the group 'learners'
 ```
 
-```bash
+```sh
 gpasswd -d pi games | remove user 'pi' from the group 'games'
 ```
 
-```bash
+```sh
 id games 
 ```
 
 find the id number of group 'games' (60)
 
-```bash
+```sh
 usermod -aG sudo maestro 
 ```
 
@@ -156,7 +156,7 @@ Alternatively, change the shell in /etc/passwd.
 
 Usermod also lets you change a user's username:
 
-```bash
+```sh
 usermod -l henry mark
 ```
 
@@ -170,7 +170,7 @@ usermod -L henry
 
 -G or -groups adds the user to other groups:
 
-```bash
+```sh
 usermod -G sudo henry
 ```
 
@@ -186,13 +186,13 @@ In /etc/group, a group file may look like this:
 
 We can use groupmod, like like usermod, e.g. to change a name:
 
-```bash
+```sh
 groupmod -n frontoffice backoffice
 ```
 
 Delte a group:
 
-```bash
+```sh
 groupdel frontoffice
 ```
 
@@ -200,37 +200,37 @@ groupdel frontoffice
 
 See list of logged on users.
 
-```bash
+```sh
 w
 ```
 
 See last logons:
 
-```bash
+```sh
 last
 ```
 
 or all logon attempts, including bad attempts:
 
-```bash
+```sh
 lastb
 ```
 
 List recently accessed files:
 
-```bash
+```sh
 last -d
 ```
 
 See files opened by steve
 
-```bash
+```sh
 lsof -t -u steve
 ```
 
 See files opened by anyone but steve
 
-```bash
+```sh
 lsof -u ^steve
 ```
 
@@ -240,19 +240,19 @@ Some files can be executed by people as if they had super user permissions, and 
 
 Let's start with files executable by user:
 
-```bash
+```sh
 sudo find / -type f -perm -g=s -ls
 ```
 
 And then those executable by the group:
 
-```bash
+```sh
 find / -type f -perm -g=s -ls
 ```
 
 And finally, worrying files, executable by anyone as if sie were the owner:
 
-```bash
+```sh
 find / -xdev \( -o -nogroup \) -print
 ```
 
@@ -260,7 +260,7 @@ Then have a look at resource usage per user.
 
 # SGID
 
-```bash
+```sh
 sudo chmod u+s process.sh
 ```
 

@@ -8,13 +8,13 @@ The `cronie` program is also known as `crond`.
 
 ## Install
 
-```bash
+```sh
 sudo apt search -n ^cron
 ```
 
 Once installed, search for the service name, and start it.
 
-```bash
+```sh
 sudo systemctl list-unit-files | grep cron
 sudo systemctl enable --now $NAME
 ```
@@ -23,20 +23,20 @@ sudo systemctl enable --now $NAME
 
 Show your current crontab:
 
-```bash
+```sh
 crontab -l
 ```
 
 You can put this in a file and edit it:
 
-```bash
+```sh
 crontab -l > $filename
 echo '39 3 */3 * * /bin/tar czf /tmp/etc_backup.tgz /etc/' >> $filename
 ```
 
 Then apply that crontab:
 
-```bash
+```sh
 crontab $filename
 rm $filename
 ```
@@ -70,7 +70,7 @@ Doing the same thing, but only in February, would be:
 `cronie` doesn't know where you live, so to put something in your `$HOME` directory, you have to tell it:
 
 
-```bash
+```sh
 echo "HOME=$HOME" > $filename
 crontab -l >> $filename
 crontab $filename
@@ -80,7 +80,7 @@ crontab $filename
 You can give it your usual `$PATH` variable like this:
 
 
-```bash
+```sh
 echo $PATH > $filename
 crontab -l >> $filename
 crontab $filename
@@ -99,13 +99,13 @@ You can simply do this:
 You can execute a script as root by putting it into a directory, instead of in the tab.
 Look at the available cron directories:
 
-```bash
+```sh
 ls -d /etc/cron.*
 ```
 
 Make a script which runs daily:
 
-```bash
+```sh
 f=apt_update.sh
 echo '#!/bin/bash' > $f
 echo 'apt update --yes' >> $f
@@ -117,7 +117,7 @@ sudo mv $f /etc/cron.daily/
 
 Run-parts runs all executable scripts in a directory.
 
-```bash
+```sh
 run-parts /etc/cron.hourly
 ```
 

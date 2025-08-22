@@ -8,25 +8,25 @@ A list of supported locales is available at /usr/share/i18n/SUPPORTED
 
 See a full list with:
 
-```bash
+```sh
 cat /usr/share/i18n/SUPPORTED
 ```
 
 Take the first portion to generate full locale information for a region:
 
-```bash
+```sh
 locale-gen ru_RU.UTF-8
 ```
 
 Then use this for the current shell session with
 
-```bash
+```sh
 LANG=ru_RU.utf8
 ```
 
 Expand this to the entire system with: 
 
-```bash
+```sh
 export LANG=ru_RU.utf8
 ```
 
@@ -34,7 +34,7 @@ You can make this permanent for one user by adding this line to the ~/.profile o
 
 Make it permanent for the entire system by editing:
 
-```bash
+```sh
 sudo vim /etc/defaults/locale
 ```
 

@@ -4,23 +4,23 @@ tags: [ "documentation", "virtualization", "xen" ]
 ---
 # Basic VM Management
 
-```bash
+```sh
 xe vm-list
 ```
 
 Start, stop, et c. with `xe`:
 
-```bash
+```sh
 xe vm-start vm=$TARGET_VM
 ```
 
-```bash
+```sh
 xe vm-shutdown vm=$TARGET_VM
 ```
 
 Destruction requires the uuid.
 
-```bash
+```sh
 xe vm-destroy uuid=$TARGET_UUID
 ```
 
@@ -30,33 +30,33 @@ Autocompletion works well with all of these commands.
 
 List VMs.
 
-```bash
+```sh
 xe host-list
 ```
 
-```bash
+```sh
 xe vm-list resident-on=$HOST_UUID
 ```
 
-```bash
+```sh
 xe vm-shutdown uuid=TARGET_VM force=true
 ```
 
 If this doesn't work, try:
 
-```bash
+```sh
 xe vm-reset-powerstate uuid=TARGET_VM force=true
 ```
 
 Get the id:
 
-```bash
+```sh
 list_domains
 ```
 
 And destroy the domain:
 
-```bash
+```sh
 /opt/xensource/debug/xenops destroy_domain -domid $DOM_ID
 ```
 
@@ -72,7 +72,7 @@ To resolve this error, complete the following procedure:
 
 Open the Console to the XenServer that is hosting the VM and run the following command:
 
-```bash
+```sh
 list_domains
 ```
 
@@ -84,23 +84,23 @@ This is the UUID of the Control Domain. The Control Domain is a privileged Virtu
 
 Run the following command to obtain the UUID of the VBD (Virtual Block Device) object linking the Control Domain:
 
-```bash
+```sh
 xe vbd-list vm-uuid=$CONTROL_DOMAIN_UUID
 ```
 
 Run the following commands to unplug and destroy the VBD:
 
-```bash
+```sh
 xe vbd-unplug uuid=$VBD_UUID
 ```
 
-```bash
+```sh
 xe vbd-destroy uuid=$VBD_UUID
 ```
 
 # Make a local iso repository
 
-```bash
+```sh
 xe sr-create name-label=LocalISO type=iso device-config:location=/var/opt/xen/ISO_Store device-config:legacy_mode=true content-type=iso
 ```
 
@@ -110,7 +110,7 @@ This creates a UUID for the new directory, e.g.:
 
 # Import
 
-```bash
+```sh
 xe vm-import filename="$FILENAME".xva
 ```
 
@@ -122,19 +122,19 @@ Put in the USB.
 
 Get the USB's uuid.
 
-```bash
+```sh
 xe pusb-list
 ```
 
 Make the USB recognised as a device.
 
-```bash
+```sh
 xe pusb-param-set uuid=*<uuid>*
 ```
 
 For passthrough, use this:
 
-```bash
+```sh
 xe pusb-param-set uuid=*<uuid>* passthrough-enabled=true
 ```
 
@@ -146,17 +146,17 @@ xe pusb-param-set uuid=*<uuid>* passthrough-enabled=true
 
 # Storage Spaces - "SR"
 
-```bash
+```sh
 xe sr-list
 ```
 
 # Exporting and Exporting VMs
 
-```bash
+```sh
 xe vm-export vm=$VM_NAME filename="$FULL_PATH".xva
 ```
 
-```bash
+```sh
 xe vm-import vm=*<Name>* filename="$FULL_PATH".xva
 ```
 

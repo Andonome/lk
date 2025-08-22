@@ -23,6 +23,6 @@ Make a text file called 'pdfmark.txt'.
 
 Then run:
 
-```bash
+```sh
 gs -o output.pdf -sDEVICE=pdfwrite "$FILE".pdf pdfmark.txt
 ```

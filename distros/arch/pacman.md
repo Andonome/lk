@@ -7,13 +7,13 @@ Packages are kept in /var/cache/pacman/pkg.
 
 Delete unused old packages with:
 
-```bash
+```sh
 sudo pacman -Sc
 ```
 
 Signatures are handled by the pacman-key, initially set up with:
 
-```bash
+```sh
 sudo pacman-key --populate archlinux
 ```
 
@@ -23,31 +23,31 @@ sudo pacman-key --refresh-keys
 
 If you have usigned keys, you can refresh with:
 
-```bash
+```sh
 sudo pacman -Sc
 ```
 
 or 
 
-```bash
+```sh
 sudo pacman -Scc
 ```
 
 Reset all keys with:
 
-```bash
+```sh
 sudo rm -r /etc/pacmand.d/gnupg/ && sudo pacman-key --init
 ```
 
 If you're constantly getting 'everything corrupted, nothing upgraded', try running:
 
-```bash
+```sh
 sudo pacman -S archlinux-keyring
 ```
 
 List all orphaned packages:
 
-```bash
+```sh
 sudo pacman -Qtdq
 ```
 

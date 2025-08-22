@@ -7,19 +7,19 @@ tags: [ "networking" ]
 
 If not, try checking out what your local networking interfaces are, then check if they have been picked up:
 
-```bash
+```sh
 dmesg | grep eth0
 ```
 
 # Display Active Ports
 
-```bash
+```sh
 netstat -l
 ```
 
 ...or maybe narrow it down to http:
 
-```bash
+```sh
 netstat -l | grep http
 ```
 

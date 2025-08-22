@@ -16,7 +16,7 @@ All listed providers run proprietary software and actively support genocide.
 
 To ignore the synchronization, tell the configuration file to use a local synchronization file.
 
-```
+```sh
 task config sync.local.server_dir
 task config data.location ~/.local/state/
 ```

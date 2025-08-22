@@ -6,7 +6,7 @@ tags: [ "data", "GPG" ]
 
 Generate keys:
 
-```bash
+```sh
 gpg --full-generate-key
 ```
 
@@ -14,7 +14,7 @@ Follow the guide.
 
 # Encrypting a file
 
-```bash
+```sh
 gpg -r malinfreeborn@posteo.net -e file
 ```
 
@@ -25,7 +25,7 @@ Check you have an encrypted version of your file.
 # Changing Expiration Dates
 
 
-```bash
+```sh
 gpg --list-keys
 # or...
 gpg -k
@@ -37,13 +37,13 @@ gpg -k
 
 Make a password with a password (cypher encryption).
 
-```bash
+```sh
 gpg -c --output passwords.txt
 ```
 
 or 
 
-```bash
+```sh
 gpg -c > passwords.txt
 ```
 
@@ -53,7 +53,7 @@ Write message then stop with Ctrl+d.
 
 Get the message back out the file with:
 
-```bash
+```sh
 gpg -d passwords.txt
 ```
 
@@ -61,13 +61,13 @@ gpg -d passwords.txt
 
 Search for a key at any key store:
 
-```bash
+```sh
 gpg --search-keys nestorv
 ```
 
 Once you've made a decision about someone:
 
-```bash
+```sh
 gpg --list-keys
 ```
 
@@ -86,13 +86,13 @@ This is a fingerprint.
 
 You can now decide the trust level (this stays on your computer).
 
-```bash
+```sh
 gpg --edit-key CD30421FD825696BD95F1FF644C62C57B790D3CF
 ```
 
 Once you're in the interface, type `trust`.
 
-```bash
+```sh
 gpg --sign-key alice@posteo.net
 ```
 
@@ -104,7 +104,7 @@ This system relies on a ring of people swapping key information.
 
 Send those trusted keys up to a server, so people can see you have verified them:
 
-```bash
+```sh
 gpg --send-keys 024C6B1C84449BD1CB4DF7A152295D2377F4D70F
 ```
 
@@ -125,7 +125,7 @@ keyserver hkps://keys.mailvelope.com
 
 Refreshing keys will tell you if some key you have contains a signature from someone you already trust, or if someone has published a revocation certificate (meaning their key should not be trusted any more).
 
-```bash
+```sh
 gpg --refresh-keys
 ```
 
@@ -135,12 +135,12 @@ You can use the [crontab](../../basics/cron.md) to refresh keys, but this will m
 
 Your public key:
 
-```bash
+```sh
 gpg --output me.gpg --armor --export
 ```
 Alternatively:
 
-```bash
+```sh
 gpg --export -a person@email.tld > my_key.pub
 ```
 

@@ -26,7 +26,7 @@ WantedBy=multi-user.target
 
 After making the new service, systemd requires reloading:
 
-```bash
+```sh
 sudo systemctl daemon-reload
 ```
 

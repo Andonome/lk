@@ -9,7 +9,7 @@ This & That
 
 Refer to 'that last thing', and 'the first thing':
 
-```bash
+```sh
 fortune -l > file1
 cat !$  | tr -d u
 diff !^ !$
@@ -17,7 +17,7 @@ diff !^ !$
 
 **NB:** this can go wrong:
 
-```bash
+```sh
 ls -l file1 file2
 cat !^
 ```
@@ -36,7 +36,7 @@ Input Run-Commands (`~/.inputrc`)
 Alias Expansion
 ---------------
 
-```bash
+```sh
 echo '"\C- ": shell-expand-line' >> ~/.inputrc
 exec bash
 ```
@@ -47,7 +47,7 @@ Try just `ls`, then 'Control + Space'.
 Glob Expansion (`*`)
 --------------------
 
-```bash
+```sh
 echo '"\C-x": glob-expand-word' >> ~/.inputrc
 exec bash
 ls *<C-x>
@@ -63,13 +63,13 @@ Arbitrary Commands
 
 Use `\n` as a 'newline' character to automatically press `<Return>`.
 
-```bash
+```sh
 echo 'Control-y: "| lolcat\n"' >> ~/.inputrc
 exec bash
 ls<C-y>
 ```
 
-```bash
+```sh
 Control-l: "\C-u clear -x && ls\n"
 exec bash
 cd /etc/<C-l>
@@ -78,7 +78,7 @@ cd /etc/<C-l>
 Readline as Vi
 --------------
 
-```bash
+```sh
 echo 'set editing-mode vi' >> ~/.inputrc
 echo 'set keymap vi-insert' >> ~/.inputrc
 exec bash
@@ -115,7 +115,7 @@ Fix Globs!
 If you tried the previous commands then they will not work any more, because the `vi`-commands overwrite the other commands.
 Remove them.
 
-```bash
+```sh
 sed '/ vi/d' ~/.inputrc
 sed -i '/ vi/d' ~/.inputrc
 
@@ -130,14 +130,14 @@ Vi-sibility
 The `readline` prompt becomes confusing if you don't remember if you're in insert or normal mode.
 But you can show the  current mode in the prompt:
 
-```bash
+```sh
 echo 'set show-mode-in-prompt on' >> ~/.inputrc
 exec bash
 ```
 
 Set new symbols for normal and insert mode:
 
-```bash
+```sh
 echo 'set vi-ins-mode-string "  "' >> ~/.inputrc
 echo 'set vi-cmd-mode-string " "' >> ~/.inputrc
 ```
@@ -148,33 +148,33 @@ Fuzzy Sort
 Check your repos for `sk-im`, and install.
 The program is called `sk`.
 
-```bash
+```sh
 FUZZY=sk
 ```
 
 If you don't have it, `fzy` or `fzf` should work the same way.
 
-```bash
+```sh
 FUZZY=fzy
 ```
 
 Find some 'read-config' files to check out:
 
-```bash
+```sh
 find . -maxdepth 2 -name "*rc"
 find . -maxdepth 2 -name "*rc" | $FUZZY
 ```
 
 And read some:
 
-```bash
+```sh
 PAGER='less -R'
 $PAGER "$(find . -maxdepth 2 -name "*rc" | $FUZZY)"
 ```
 
 Make the change long-term:
 
-```bash
+```sh
 alias rrc='$PAGER "$(find . -maxdepth 2 -name "*rc" | sk)"'
 alias | grep rrc= >> ~/.bash_aliases
 ```

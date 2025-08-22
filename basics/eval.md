@@ -5,7 +5,7 @@ tags: [ "basics" ]
 
 Compose a statement for execution.
 
-```bash
+```sh
 x='echo $y'
 echo $x
 y=dragon
@@ -14,7 +14,7 @@ eval "$x"
 
 The results remain in the current shell, unlike sub-shells.
 
-```bash
+```sh
 b=basilisk
 sh -c 'echo $b'
 eval "g=goblin"

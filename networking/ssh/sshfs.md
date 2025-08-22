@@ -5,7 +5,7 @@ requires: [ "ssh" ]
 ---
 # Mount 
 
-```bash
+```sh
 sshfs $USER@$IP_ADDRESS:$DIR
 ```
 
@@ -16,7 +16,7 @@ Various flags:
 
 # Unmount
 
-```bash
+```sh
 fusermount3 -u $DIR
 ```
 

@@ -16,7 +16,7 @@ The standard `radicale` package should come with a nice `systemd` service file.
 
 If the service comes already-started, stop it immediately:
 
-```bash
+```sh
 sudo systemctl stop radicale
 ```
 
@@ -40,7 +40,7 @@ You might get it in the `apache` package or similar.
 
 `htpasswd` allows you to generate passwords for users, and place them in `/etc/radicale/users`.
 
-```bash
+```sh
 PASS="$(xkcdpass)"
 htpasswd -nb $USER "$PASS" | sudo tee -a /etc/radicale/users
 echo "Your username is $USER"
@@ -93,7 +93,7 @@ sudo ln -s /etc/nginx/sites-available/radicale /etc/nginx/sites-enables/
 
 Finally, replace the example `DOMAIN` with your actual domain name.
 
-```bash
+```sh
 DOMAIN=whatever.com
 sudo sed -i "s/DOMAIN/$DOMAIN/g" /etc/nginx/sites-available/radicale 
 ```
@@ -102,18 +102,18 @@ sudo sed -i "s/DOMAIN/$DOMAIN/g" /etc/nginx/sites-available/radicale
 
 Check nginx is happy:
 
-```bash
+```sh
 sudo nginx -t
 ```
 You will almost certainly need a new SSL certificate for the site:
 
-```bash
+```sh
 sudo certbod -d cal.$DOMAIN
 ```
 
 Start or restart both services:
 
-```bash
+```sh
 sudo systemctl start radicale
 sudo systemctl restart nginx
 ```

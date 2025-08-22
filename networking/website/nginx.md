@@ -4,35 +4,35 @@ tags: [ "networking", "web" ]
 ---
 Install nginx:
 
-```bash
+```sh
 sudo apt-get install nginx
 ```
 
-```bash
+```sh
 sudo apt-get enable --now nginx
 ```
 
 Put a website somewhere:
 
-```bash
+```sh
 mkdir /var/www/html/mysite/
 ```
 
 Put an index file there:
 
-```bash
+```sh
 vim /var/www/html/mysite/index.html
 ```
 
 Make the owner `www-data`
 
-```bash
+```sh
 chown -R www-data:www-data /var/www/html/mysite/
 ```
 
 Make a configuration file for nginx:
 
-```bash
+```sh
 vim /etc/nginx/sites-available/mysite.conf
 ```
 
@@ -54,13 +54,13 @@ server {
 
 Make the site available:
 
-```bash
+```sh
 ln -s /etc/nginx/sites-available/mysite.conf /etc/nginx/sites-enabled/
 ```
 
 Test it's working:
 
-```bash
+```sh
 nginx -t
 ```
 
@@ -82,17 +82,17 @@ Buy some DNS online, then check it's working.
 
 *Once it's working*, use certbot:
 
-```bash
+```sh
 apt install certbot
 ```
 
 You may need to install an nginx python module:
 
-```bash
+```sh
 apt install python3-certbot-nginx
 ```
 
-```bash
+```sh
 domain=example.com
 my_email=me@posteo.uk
 certbot --nginx -d "$domain" --non-interactive --agree-tos -m "$my_email"

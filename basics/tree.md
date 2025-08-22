@@ -28,7 +28,7 @@ Each description-line starts with a tab.
 
 To represent a file structure as a nested series of markdown lists, you can try this horrifying `sed` one-liner:
 
-```bash
+```sh
 tree -tf --dirsfirst --gitignore --noreport --charset ascii  | \
     sed -e 's/| \+/  /g' \
     -e 's/[|`]-\+/ */g' \

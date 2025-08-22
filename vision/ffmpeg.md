@@ -14,25 +14,25 @@ The input file might be a device, such as a camera.
 
 Take the format as 'grab the x11 screen'.
 
-```bash
+```sh
 ffmpeg -f x11grab -s [screensize] -i :0.0 out.mkv
 ```
 
 Get screensize with
 
-```bash
+```sh
 xrandr -q
 ```
 
 or maybe just...
 
-```bash
+```sh
 ffmpeg -f x11grab -s "$(xdpyinfo | grep dimensions | awk '{print $2}')" -i :1.0 out.mkv
 ```
 
 # Add default pulse audio
 
-```bash
+```sh
 ffmpeg -f x11grab -s [screensize] -i :0.0 -f alsa -i default out.mkv
 ```
 
@@ -43,7 +43,7 @@ For problems, see pavucontrol.
 
 # Rotate
 
-```bash
+```sh
 ffmpeg -i in.mov -vf "transpose=1" out.mov
 ```
 
@@ -62,71 +62,71 @@ ffmpeg -i input.mp4 -vcodec libx264 -crf 20 output.mp4
 
 Check for supported formats:
 
-```bash
+```sh
 ffmpeg -formats
 ```
 
 To convert from mkv to mp4 we can use a codec rather than proper conversion.  Both are wrappers around other formats, so this conversion loses less quality than other conversion types.
 
-```bash
+```sh
 ffmpeg -i LostInTranslation.mkv -codec copy LostInTranslation.mp4
 ```
 
 Opus to mp3
 
-```bash
+```sh
 ffmpeg -i song.opus song.mp3
 ```
 
-```bash
+```sh
 ffmpeg -i video.flv video.mpeg
 ```
 
-```bash
+```sh
 ffmpeg -i input.webm -qscale 0 output.mp4
 ```
 
 # Video to Audio
 
-```bash
+```sh
 ffmpeg -i input.mp4 -vn output.mp3
 ```
 
 
 # Convert all mkv files to mp4
 
-```bash
+```sh
 for i in *.mkv; do
 ```
 
     > ffmpeg -i "$i" -codec copy "${i%.*}.mp4"
 
-```bash
+```sh
 done
 ```
 
 
 # Change resolution
 
-```bash
+```sh
 ffmpeg -i input.mp4 -filter:v scale=1280:720 -c:a copy output.mp4
 ```
 
 Or just crop:
 
-```bash
+```sh
 ffmpeg -i input.mp4 -filter:v "crop=w:h:x:y" output.mp4
 ```
 
 Or aspect ratio:
 
-```bash
+```sh
 ffmpeg -i input.mp4 -aspect 16:9 output.mp4
 ```
 
 Or trim to start and stop times:
 
-```bash
+```sh
 ffmpeg -i input.mp4 -ss 00:00:50 -codec copy -t 50 output.mp4
 ```
 
@@ -134,14 +134,14 @@ Indicate start times with -ss and time with -t in seconds.
 
 Or split a video into parts:
 
-```bash
+```sh
 ffmpeg -i input.mp4 -t 00:00:30 -c copy part1.mp4 -ss 00:00:30 -codec copy part2.mp4
 ```
 
 
 # Compress Video
 
-```bash
+```sh
 ffmpeg -i input.mp4 -vf scale=1280:-1 -c:v libx264 -preset veryslow -crf 24 output.mp4
 ```
 
@@ -149,19 +149,19 @@ ffmpeg -i input.mp4 -vf scale=1280:-1 -c:v libx264 -preset veryslow -crf 24 outp
 
 -r sets the frame rate, and -f selects the format.
 
-```bash
+```sh
 ffmpeg -i input.mp4 -r 1 -f image2 image-%2d.png
 ```
 
 # Add Images to Audio
 
-```bash
+```sh
 $ ffmpeg -loop 1 -i inputimage.jpg -i inputaudio.mp3 -c:v libx264 -c:a aac -strict experimental -b:a 192k -shortest output.mp4
 ```
 
 # Add Subtitles
 
-```bash
+```sh
 fmpeg -i input.mp4 -i subtitle.srt -map 0 -map 1 -c copy -c:v libx264 -crf 23 -preset veryfast output.mp4
 ```
 

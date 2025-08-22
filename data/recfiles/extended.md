@@ -7,7 +7,7 @@ tags: [ "data", "database", "recfiles" ]
 
 Make a database for your boardgames, specifying only one field and value:
 
-```bash
+```sh
 database=games.rec
 n=Name
 g=Vojvodina
@@ -18,21 +18,21 @@ recsel $database
 
 Insert a few more, with the estimated playtime:
 
-```bash
+```sh
 recins -f Name -v Saboter -f Playtime -v 30 $database
 recins -f Name -v Chess -f Playtime -v 30 $database
 ```
 
 View all games, or select one by number:
 
-```bash
+```sh
 recsel $database
 recsel -n 0 $database
 ```
 
 Each game should note whether or not you have played it yet, so you can add that field and set the default to `yes`.
 
-```bash
+```sh
 f=played
 v=yes
 recset -f $f -a $v $database
@@ -40,7 +40,7 @@ recset -f $f -a $v $database
 
 ...but the field is wrong, it should have a capital letter:
 
-```bash
+```sh
 new_field=Played
 recset -f $f --rename $new_field
 ```
@@ -49,19 +49,19 @@ recset -f $f --rename $new_field
 
 Check how many records the database has:
 
-```bash
+```sh
 recinf $database
 ```
 
 Look at just the games you've never played:
 
-```bash
+```sh
 recsel --expression="Played = 'no'" $database
 ```
 
 Print how many, then just print the names:
 
-```bash
+```sh
 recsel -e "Played = 'no'" --count $database
 recsel -e "Played = 'no'" --print=Name $database
 ```
@@ -70,7 +70,7 @@ recsel -e "Played = 'no'" --print=Name $database
 
 To change a game's `Played` field from `no` to `yes`, use `recset` to specify the number, and change that field.
 
-```bash
+```sh
 num=0
 f=Played
 value=yes
@@ -80,14 +80,14 @@ recset --number=$num -f $f --set=$value $database
 
 Find all games with a playtime of `30`, and set the field `Max_Players` to `4`.
 
-```bash
+```sh
 recset -e "Playtime = 40" -f Max_Players --set 50 games.rec
 ```
 
 This doesn't work, because that field does not exist.
 You can `--set-add` the field, to add it wherever it does not exist.
 
-```bash
+```sh
 recset -e "Playtime = 40" -f Max_Players --set-add 50 games.rec
 ```
 
@@ -95,14 +95,14 @@ recset -e "Playtime = 40" -f Max_Players --set-add 50 games.rec
 
 Remove `Played` record from first game:
 
-```bash
+```sh
 num=0
 recset --number=$num -f Played --delete $database
 ```
 
 You can comment the line instead of deleting it:
 
-```bash
+```sh
 num=1
 recset --number=$num -f Played --delete $database
 recsel $database
@@ -111,7 +111,7 @@ cat $database
 
 Delete an entire record:
 
-```bash
+```sh
 num=2
 recdel --number=$num $database
 ```

@@ -7,7 +7,7 @@ If you have `graph-easy` (often in the package `perl-graph-easy` or similar), yo
 
 Start with the command to 'make all targets' (`-B`), and 'do a dummy run' (`-n`) with debug into (`-d`):
 
-```bash
+```sh
 make -Bnd
 make -Bnd | make2graph
 make -Bnd | make2graph | graph-easy --boxart

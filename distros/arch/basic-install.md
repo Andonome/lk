@@ -5,17 +5,17 @@ requires: [ "partitions", "time" ]
 ---
 Keyboard layout changed.
 
-```bash
+```sh
 ls /usr/share/kbd/keymaps/**/*.map.gz
 ```
 
-```bash
+```sh
 loadkeys uk.map.gz
 ```
 
 Check if boot mode is UEFI
 
-```bash
+```sh
 ls /sys/firmware/efi/efivars
 ```
 
@@ -23,115 +23,115 @@ Without efivars, the system must boot with BIOS.
 
 # Check network's up
 
-```bash
+```sh
 ping archlinux.org
 ```
 
 Set system clock properly
 
-```bash
+```sh
 timedatectl set-ntp true
 ```
 
 Check disks
 
-```bash
+```sh
 lsblk
 ```
 
 Make partition
 
-```bash
+```sh
 parted -s /dev/sda mklabel gpt
 ```
 
-```bash
+```sh
 parted -s /dev/sda mklabel msdos
 ```
 
-```bash
+```sh
 parted  -s /dev/sda mkpart primary ext4 512 100%
 ```
 
-```bash
+```sh
 parted -s /dev/sda set 1 boot on
 ```
 
-```bash
+```sh
 mkfs.ext4 /dev/sda1
 ```
 
 Use pacstrap to get the base install.
 
-```bash
+```sh
 mount /dev/sda1 /mnt/
 ```
 
-```bash
+```sh
 pacstrap /mnt base base-devel vim linux linux-firmware
 ```
 
 Make fstab notes for new system.
 
-```bash
+```sh
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
-```bash
+```sh
 arch-chroot /mnt
 ```
 
-```bash
+```sh
 echo 'en_GB.UTF-8' > /etc/default/locale
 ```
 
-```bash
+```sh
 pacman -Sy networkmanager grub
 ```
 
 For legacy:
 
-```bash
+```sh
 grub-install --target=i386-pc /dev/sda
 ```
 
 For EFI:
 
-```bash
+```sh
 sudo pacman -S efibootmgr
 ```
 
-```bash
+```sh
 mkdir /boot/efi
 ```
 
-```bash
+```sh
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --remmovable
 ```
 
-```bash
+```sh
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 set local time
 
-```bash
+```sh
 ln -sf /usr/share/zoneinfo/Europe/Belgrade /etc/localtime
 ```
 
 Find the desired locale's and uncomment them.
 
-```bash
+```sh
 vi /etc/locale.gen
 ```
 
-```bash
+```sh
 locale-gen
 ```
 
 Make your keyboard changes permenent with:
 
-```bash
+```sh
 vi /etc/vconsole.conf
 ```
 
@@ -140,13 +140,13 @@ unsure about this bit - is this name just for the loadkeys function?
 
 Make a hostname
 
-```bash
+```sh
 echo pc > /etc/hostname
 ```
 
 Set hostnames for network, or at least your own.
 
-```bash
+```sh
 vi /etc/hosts
 ```
 
@@ -160,27 +160,27 @@ If the system has a permanent IP address, it should be used instead of localhost
 
 Ping some sites to make sure the network's working
 
-```bash
+```sh
 passwd
 ```
 
-```bash
+```sh
 exit
 ```
 
-```bash
+```sh
 umount -R /mnt
 ```
 
 Remove that awful beep sound:
 
-```bash
+```sh
 rmmod pcspkr
 ```
 
 ...and make the change permanent:
 
-```bash
+```sh
 sudo echo "blacklist pcspkr" >> /etc/modprobe.d/nobeep.conf
 ```
 

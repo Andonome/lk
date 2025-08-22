@@ -5,7 +5,7 @@ tags: [ "networking" ]
 
 Example:
 
-```bash
+```sh
 nmap 192.168.1.1/24
 ```
 
@@ -17,6 +17,6 @@ Flags:
 
 Look for a web server, which has ports 80 and 443 open:
 
-```bash
+```sh
 nmap 192.168.1.1/24 -p 80,443 --open
 ```

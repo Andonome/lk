@@ -5,7 +5,7 @@ tags: [ "data", "git" ]
 
 Check out the sample hooks:
 
-```bash
+```sh
 cd $GIT_REPO
 ls .git/hooks
 head .git/hooks/pre-commit.sample
@@ -13,7 +13,7 @@ head .git/hooks/pre-commit.sample
 
 Add a hook to check the shell scripts in `$GIT_REPO` before making a commit:
 
-```bash
+```sh
 echo '#!/bin/sh
 shellcheck *.sh' > .git/hooks/commit-msg
 chmod u+x .git/hooks/commit-msg

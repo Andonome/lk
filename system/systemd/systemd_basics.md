@@ -2,33 +2,33 @@
 title: "systemd"
 tags: [ "systemd" ]
 ---
-```bash
+```sh
 systemctl list-units
 ```
 
-```bash
+```sh
 sudo systemctl status mpd
 ```
 
-```bash
+```sh
 sudo systemctl daemon-reload
 ```
 
-```bash
+```sh
 sudo systemctl taskd.service start
 ```
 
-```bash
+```sh
 sudo systemctl status taskd.service
 ```
 
 # Startup
 
-```bash
+```sh
 sudo systemd-analyze
 ```
 
-```bash
+```sh
 sudo systemd-analyze blame
 ```
 

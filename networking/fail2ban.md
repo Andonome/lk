@@ -5,7 +5,7 @@ requires: [ "ssh" ]
 ---
 # SSH Daemon Jail
 
-```bash
+```sh
 sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.d/ssh.local
 ```
 
@@ -17,15 +17,15 @@ ignoreip = 127.0.0.1/8 ::1,192.168.0.0/16 ::1
 
 ```
 
-```bash
+```sh
 sudo systemctl restart fail2ban
 ```
 
-```bash
+```sh
 sudo fail2ban-client status
 ```
 
-```bash
+```sh
 sudo fail2ban-client status sshd
 ```
 

@@ -17,7 +17,7 @@ I couldn't change volume, so in mpd.conf I uncommented the pulse audio lines and
 
 Also, make sure the user mpd is part of the group pulse:
 
-```bash
+```sh
 sudo adduser mpd pulse
 ```
 

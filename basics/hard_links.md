@@ -11,20 +11,20 @@ This ID is called the 'inode'.
 
 Create a file, and a hard link:
 
-```bash
+```sh
 fortune > $file_1
 mkdir -p x/y/z/
 ln $file_1 x/y/z/$file_2
 ```
 Have a long look at the file with the `-l` flag, and check the inode with `-i`:
 
-```bash
+```sh
 ls -li $file_1 x/y/z/$file_2
 ```
 
 Since they are the same file, you can make a change to one, and it changes both:
 
-```bash
+```sh
 fortune | tee x/y/z/$file_2
 cat $file_1
 cat x/y/z/$file_2

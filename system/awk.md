@@ -8,25 +8,25 @@ See a file's contents:
 
 Return full contents of a string:
 
-```bash
+```sh
 awk '{ print }' file
 ```
 
 Print the first and second column:
 
-```bash
+```sh
 awk '{print$1$2}'
 ```
 
 Return every line with the word 'the' (like grep):
 
-```bash
+```sh
 awk '/the/{print}' file
 ```
 
 Print everything containing a lowercase letter:
 
-```bash
+```sh
 awk '/[a-z]/{print}' file
 ```
 
@@ -34,7 +34,7 @@ Same with numbers [0-9], or using a caret we can show lines starting with a numb
 
 # Conditionals
 
-```bash
+```sh
 awk '{ if($1 ~ /123/) print }' file
 ```
 
@@ -42,19 +42,19 @@ Check if the first column is equal to 1 or 2 or 3, and if so then print that lin
 
 Grep for 'hawk' in a story:
 
-```bash
+```sh
 awk '/hawk/' story.txt
 ```
 
 Return any line with one or more "&" sequences:
 
-```bash
+```sh
 awk '/&+/' script.sh
 ```
 
 The pipe is used for 'or', so 'Orcs or drums' would be:
 
-```bash
+```sh
 awk '/Orcs|Drums/' story.txt
 ```
 

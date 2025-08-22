@@ -15,12 +15,12 @@ tags: [ "networking", "host" ]
 
 Query a host with the `host` command.
 
-```bash
+```sh
 host $domain.$tld
 ```
 
 
-```bash
+```sh
 host $domain.$tld 9.9.9.9
 ```
 
@@ -34,7 +34,7 @@ You can also add a specific nameserver:
 
 Request a specific record type (`CNAME`, `TXT`, et c.):
 
-```bash
+```sh
 torsocks host -T -t $RECORD_TYPE $domain
 ```
 

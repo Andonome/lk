@@ -6,38 +6,38 @@ tags: [ "systemd" ]
 See a running log of all system messages:
 
 
-```bash
+```sh
 journalctl -f
 ```
 
 Or just one user:
 
-```bash
+```sh
 journalctl --user -f
 ```
 
 Or just one unit (`sshd`):
 
-```bash
+```sh
 journalctl -f -u sshd
 ```
 
 Find errors since November
 
-```bash
+```sh
 journalctl --since=2018-11-01 --grep="EXT4-fs error"
 ```
 
 Limit size to 2G.
 
-```bash
+```sh
 journalctl --vacuum-size=2G
 ```
 
 Log the fact that you've installed your own `dnsmasq` on your system to `journalctl`, so that you can notice why your system's broken:
 
 
-```bash
+```sh
 logger "Installed new dnsmasq"
 sudo journalctl -f
 ```

@@ -9,13 +9,13 @@ Don't worry about understanding any of it, just type it in and the habit forms p
 
 You start in a dark room. You want to know where you are by **p**rinting out your **w**orking '**d**irectory' (i.e. 'location'):
 
-```bash
+```sh
 pwd
 ```
 
 Have a look at what is here:
 
-```bash
+```sh
 ls
 ```
 
@@ -23,11 +23,11 @@ If you get no response, the list of items is "", meaning "nothing here".
 
 Have a look at **a**ll the files:
 
-```bash
+```sh
 ls -a
 ```
 
-```bash
+```sh
 . ..
 ```
 
@@ -35,38 +35,38 @@ So `.` means 'here' and `..` means 'you see stairs leading downwards' (e.g. 'the
 
 Change directory (`cd`) down one level:
 
-```bash
+```sh
 cd ..
 ```
 
 Look where you are again with `pwd`, then go back up.  Use `ls`, and if you see `bob`, then:
 
-```bash
+```sh
 cd bob
 ```
 
 Move around the directories.  The place at the bottom is the 'root', and is known as `/`.  Go to the root:
 
-```bash
+```sh
 cd /
 ```
 
 Do `ls` again and `cd` into `etc`.  Look at how much space those folders are taking up:
 
-```bash
+```sh
 du iptables
 ```
 That's the number of kilobytes the file is taking up.
 Do the same again, but in a human-readable format:
 
-```bash
+```sh
 du -h iptables
 ```
 
 The `du` program has `-h` for 'human', '-s' for 'short', and a bunch of other commands.
 Have a look at the manual and try another command:
 
-```bash
+```sh
 man du
 ```
 
@@ -74,7 +74,7 @@ Once you're done, press 'q' to quit the manual page and try the extra `du` flag 
 
 Now you can try to gain super-powers and take over the system:
 
-```bash
+```sh
 sudo -i
 ```
 
@@ -82,61 +82,61 @@ At this point, you are 'root'.
 All your commands will be executed, even if they're unsafe, or even if you ask to delete the entire machine.
 Best to exit out of the root account:
 
-```bash
+```sh
 exit
 ```
 
 Go find a file that isn't a directory.  You can tell which is which with:
 
-```bash
+```sh
 ls -l
 ```
 
 A directory starts with a 'd', like this:
 
-```bash
+```sh
 drwxr-xr-x 79 root root 4096 Jan  3 05:15 /etc/
 ```
 
 A standard file starts with '-', like this:
 
-```bash
+```sh
 `-rw-r--r-- 1 root root 8 Dec 11 17:26 hostname`
 ```
 
 Look inside the file /etc/hostname to find out your computer's name:
 
-```bash
+```sh
 cat /etc/hostname
 ```
 
 Print out the words "hello world":
 
-```bash
+```sh
 echo "hello world"
 ```
 
 Move back to your home directory:
 
-```bash
+```sh
 cd
 ```
 
 Take the words 'hello world', and put them in 'my_file':
 
-```bash
+```sh
 echo 'hello world' > my_file
 ```
 
 Measure the disk usage of that file, then put the results at the bottom of the file:
 
-```bash
+```sh
 du $FILE >> $FILE
 ```
 
 And check the results:
 
-```bash
+```sh
 cat $FILE
 ```
 
@@ -148,7 +148,7 @@ Press tab after typing a few keys and bash will guess what you're trying to  typ
 
 Look at your file's owner:
 
-```bash
+```sh
 ls -l $FILE
 ```
 
@@ -156,19 +156,19 @@ If it says `-rw-r--r-- 1 root root 8 Dec 11 17:26 hostname` then the file is own
 
 Take your file and change the owner to root:
 
-```bash
+```sh
 sudo chown root $FILE
 ```
 
 Change the same file so it's owned by the group 'audio':
 
-```bash
+```sh
 sudo chown :audio $FILE
 ```
 
 Check you did that correctly:
 
-```bash
+```sh
 ls -l my_file
 ```
 
@@ -176,7 +176,7 @@ ls -l my_file
 
 Read the start of that line.  Root can 'read' and 'write' to or delete the file.  Try to remove (delete) it:
 
-```bash
+```sh
 rm $FILE
 ```
 
@@ -184,32 +184,32 @@ You'll see you're not allowed, because you don't own it.
 
 Look at which groups you're in:
 
-```bash
+```sh
 groups
 ```
 
 Change the file so that members of the audio group can write to the file:
 
-```bash
+```sh
 sudo chmod g+w $FILE
 ```
 
 Check you got it right with `ls -l`:
 
-```bash
+```sh
 -rw-rw-r-- 1 root audio 0 Jan  3 19:20 my_file
 ```
 
 Try to delete the file again:
 
-```bash
+```sh
 rm my_file
 ```
 
 If you can't, you're not in the audio group.  Add yourself.  You'll need to *modify* your *user account*, by **a**ppending 'audio' to your list of groups.
 Use `-a` to **a**ppend, and `-G`, to say you're modifying groups:
 
-```bash
+```sh
 sudo usermod -a -G audio [ your username here ]
 ```
 
@@ -219,19 +219,19 @@ Now you should be able to remove (delete) the file.  Remember, that using 'rm fi
 
 Make a directory called 'new test':
 
-```bash
+```sh
 mkdir 'new test'
 ```
 
 Make two directories, called 'A', and 'Z':
 
-```bash
+```sh
 mkdir A Z
 ```
 
 Make a single directory called 'A Z'
 
-```bash
+```sh
 mkdir 'A Z'
 ```
 
@@ -239,19 +239,19 @@ mkdir 'A Z'
 
 Measure the disk usage of everything ('\*' means 'everything'), and put it in a file called 'disk usage.txt':
 
-```bash
+```sh
 du -sch * > A/'disk usage'.txt
 ```
 
 Look at your file:
 
-```bash
+```sh
 cat A/'disk usage.txt'
 ```
 
 If you think you have too much information, use `grep` to just get the one line of text you want:
 
-```bash
+```sh
 grep total A/disk\ usage.txt
 ```
 
@@ -259,7 +259,7 @@ The `grep` program also has a manual ('man page').  You should find out what tha
 
 Start the manual:
 
-```bash
+```sh
 man du
 ```
 
@@ -267,7 +267,7 @@ Then search for `-c` by pressing `/`.  Your final keys should be `man du`, then 
 
 Find out if the `ls` program also has a 'human readable' format by using `grep` to search for the word 'human':
 
-```bash
+```sh
 man ls | grep human
 ```
 
@@ -275,25 +275,25 @@ Now use that flag that you've found in combinatin with the `-l` flag to look at 
 
 Remove the directory 'Z':
 
-```bash
+```sh
 rmdir Z
 ```
 
 Remove the directory 'Z':
 
-```bash
+```sh
 rmdir Z
 ```
 
 And then remove all the rest:
 
-```bash
+```sh
 rmdir *
 ```
 
 The 'A' directory will not budge because it's not empty.  Remove it recursively, so the computer will remove the things inside the directory as well as the directory itself:
 
-```bash
+```sh
 rm -r A
 ```
 
@@ -303,11 +303,11 @@ You get a package manager which installs programs, fonts, et c.
 If you're on something like Debian, you'll have `apt`, or if you're on something like Red Hat, you'll have `yum`.
 If unsure, ask where a program is:
 
-```bash
+```sh
 whereis yum
 ```
 
-```bash
+```sh
 whereis apt
 ```
 
@@ -315,14 +315,14 @@ If you get a hit, you can use whatever program that is to install things.
 
 Set a reminder of your package manager:
 
-```bash
+```sh
 echo my package manager is yum | lolcat
 ```
 
 If that failed it's because you don't have `lolcat` installed.
 Install lolcat:
 
-```bash
+```sh
 sudo apt install lolcat
 ```
 
@@ -330,13 +330,13 @@ Try the same command again.
 
 Search for things you want, like `libreoffice`, or `gimp`:
 
-```bash
+```sh
 apt search libreoffice
 ```
 
 ... then install one of them with:
 
-```bash
+```sh
 apt install $PROGRAM
 ```
 

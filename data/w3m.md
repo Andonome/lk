@@ -4,7 +4,7 @@ tags: [ "browsers" ]
 ---
 Open a search tab:
 
-```bash
+```sh
 w3m ddg.gg
 ```
 

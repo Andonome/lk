@@ -7,7 +7,7 @@ If you want to kill a program in a graphical environment, open a terminal and ty
 
 # Graphical Programs
 
-```bash
+```sh
 xkill
 ```
 
@@ -17,7 +17,7 @@ Then click on the application which you want to kill.
 
 To kill a program, find it with:
 
-```bash
+```sh
 pgrep discord
 ```
 
@@ -25,7 +25,7 @@ This will give you the UUID, e.g. `19643`.
 
 Kill the program with:
 
-```bash
+```sh
 kill 19643
 ```
 
@@ -33,7 +33,7 @@ kill 19643
 
 To see an ordered list of termination signals:
 
-```bash
+```sh
 kill -l
 ```
 
@@ -49,7 +49,7 @@ Higher numbers are roughly equivalent to insistence.
 
 For example:
 
-```bash
+```sh
 kill -1 3498
 ```
 
@@ -57,7 +57,7 @@ This roughly means 'maybe stop the program, if you can, maybe reload'.
 
 Or the famous:
 
-```bash
+```sh
 kill -9 3298
 ```
 

@@ -5,24 +5,24 @@ tags: [ "qrencode", "zbar" ]
 
 Make a QR Code image:
 
-```bash
+```sh
 qrencode 'https://play.google.com/store/apps/details?id=org.briarproject.briar.android' -o "$FILE".png
 ```
 
 Make a QR Coded message in the terminal:
 
-```bash
+```sh
 qrencode -t ansi "Hello World"
 ```
 
 Read a QR Code image:
 
-```bash
+```sh
 zbarimg $FILE
 ```
 
 Show wifi QR code (only with Network Manager):
 
-```bash
+```sh
 nmcli device wifi show-password
 ```

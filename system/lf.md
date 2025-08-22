@@ -7,25 +7,25 @@ tags: [ "file browser", "TUI" ]
 
 If you don't have a `~/.config/lf/lfrc` file, you can probably find an example in `/usr/share/examples/lf`.
 
-```bash
+```sh
 cp -r /usr/share/examples/lf ~/.config/
 ```
 
 Go straight to root with two keys.
 
-```bash
+```sh
 map g/ cd /
 ```
 
 Have lf open a file with the default program when you press 'o', using the program `mimeo`.
 
-```bash
+```sh
 map o &mimeo $f
 ```
 
 Change that default text editor to look at the extension first.
 
-```bash
+```sh
 cmd open ${{
     case $(file --mime-type $f -b) in
         application/x-sc) sc-im $fx;;
@@ -52,7 +52,7 @@ That leaves it as a small initial pane, a medium pane, and a large pane for file
 The standard renaming is bad, because you have to re-type the file extension.
 Use this instead:
 
-```bash
+```sh
 # rename current file without overwrite
 cmd rename %echo 'name: ' ; read name ; extension="${f##*.}" && newname="$name.$extension"; [ "$f" = "$extension" ] && newname="$name"; [ ! -e "$newname" ] && mv "$f" "$newname" || echo file exists
 map r push :rename<enter>
@@ -65,7 +65,7 @@ If you try to rename `image_1.png` with this command, you can type in `cats`, an
 First, install `ueberzug` (to show images).
 Then clone the lfrun repo.
 
-```bash
+```sh
 git clone https://github.com/cirala/lfimg.git
 
 cd lfimg

@@ -6,7 +6,7 @@ tags: [ "basics", "time" ]
 
 Set time to synchronize with an ntp server:
 
-```bash
+```sh
 timedatectl set-ntp true
 ```
 
@@ -18,7 +18,7 @@ Local time is kept in /etc/localtime.
 
 According to Dave's LPIC guide, you can set the local time by making asymboling link from your timezone to /etc/localtime, as so:
 
-```bash
+```sh
 sudo ln -sf /usr/share/zoneinfo/Europe/Belgrade /etc/localtime
 ```
 
@@ -28,31 +28,31 @@ sudo ln -sf /usr/share/zoneinfo/Europe/Belgrade /etc/localtime
 
 See local time, language and character settings with:
 
-```bash
+```sh
 locale
 ```
 
 List available locales with:
 
-```bash
+```sh
 locale -a
 ```
 
 To see additional locales which are available (but not necessarily installed):
 
-```bash
+```sh
 cat /usr/share/i18n/SUPPORTED
 ```
 
 Set a supported locale with:
 
-```bash
+```sh
 locale-gen pl_PL.UTF-8
 ```
 
 Then set that language, with:
 
-```bash
+```sh
 LANG=pl_PL.UTF-8
 ```
 
@@ -62,7 +62,7 @@ LANG=pl_PL.UTF-8
 
 Glimpse an overview with:
 
-```bash
+```sh
 ntpq -p
 ```
 
@@ -73,6 +73,6 @@ Usually this is run as a service, so just start that service.
 If your clock drifts too far from the right time, it will not reset happily.
 For it to reset like this:
 
-```bash
+```sh
 sudo ntpd -q -g -x -n
 ```

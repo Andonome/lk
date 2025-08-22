@@ -7,13 +7,13 @@ tags: [ "system", "deduplicate", "maintenance", "storage" ]
 
 Ask if a directory has duplicates (`rdfind` will not delete anything):
 
-```bash
+```sh
 rdfind $dir
 $EDITOR results.txt
 ```
 
 Replace the duplicated files with [hard links](../basics/hard_links.md).
 
-```bash
+```sh
 rdfind -makehardlinks true $dir
 ```

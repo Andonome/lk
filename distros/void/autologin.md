@@ -5,7 +5,7 @@ tags: [ "void" ]
 
 Make the autologin service:
 
-```bash
+```sh
 cp -R /etc/sv/agetty-tty1 /etc/sv/agetty-autologin-tty1
 ```
 

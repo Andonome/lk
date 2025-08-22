@@ -7,14 +7,14 @@ tags: [ "arch" ]
 
 Clean the cache of old packages in `/var/cachepacman/pkg/`:
 
-```bash
+```sh
 ls /var/cache/pacman/pkg/ | wc -l
 sudo pacman -Sc
 ls /var/cache/pacman/pkg/ | wc -l
 ```
 And the same for `yay` (with `-Yc` to remove old dependencies):
 
-```bash
+```sh
 ls ~/.cache/yay/ | wc -l
 yay -Sc
 yay -Yc
@@ -27,7 +27,7 @@ If you chance a configuration file, such as `/etc/environment`, and `pacman` wan
 
 Check the new files, then look at the difference between the `pacman` version, and your version.
 
-```bash
+```sh
 sudo find /etc/ /var/ /usr/ -name "*.pacnew" 
 diff /etc/pacman.d/mirrorlist*
 ```
@@ -36,7 +36,7 @@ Either,
 
 - Update the files manually,
 
-```bash
+```sh
 sudo -e /etc/pacman.d/mirrorlist
 sudo rm /etc/pacman.d/mirrorlist.pacnew
 ```
@@ -46,7 +46,7 @@ Or,
 - use a tool like `pacdiff` to view the changes next to each other, and select them with `vim`.
 
 
-```bash
+```sh
 sudo pacman -S pacman-contrib
 sudo pacdiff
 ```

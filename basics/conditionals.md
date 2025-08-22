@@ -46,7 +46,7 @@ esac
 # While and Until
 This prints from 1 until 9.
 
-```bash
+```sh
 COUNTER=1
 while [ $COUNTER -lt 2 ]; do
         > ((COUNTER++))
@@ -58,7 +58,7 @@ There's also 'until', which stops when something is true, rather than keeping go
 
 # For
 
-```bash
+```sh
 for i in $( ls ); do
 > 	du -sh $i
 > done
@@ -70,19 +70,19 @@ The sequences tool counts up from X in jumps of Y to number Z.
 
 Count from 1 to 10.
 
-```bash
+```sh
 seq 10
 ```
 
 Count from 4 to 11.
 
-```bash
+```sh
 seq 4 11
 ```
 
 Count from 1 to 100 in steps of 5.
 
-```bash
+```sh
 seq 1 5 100
 ```
 

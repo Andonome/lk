@@ -8,7 +8,7 @@ This is a basic Linux firewall program.
 
 Look at your firewalls:
 
-```bash
+```sh
 iptables -L
 ```
 
@@ -18,7 +18,7 @@ We see the output of input, output and forwarding rules.
 
 I don't need any forwarding, so I'm going to drop all forwarding:
 
-```bash
+```sh
 iptables -P FORWARD DROP
 ```
 
@@ -26,17 +26,17 @@ iptables -P FORWARD DROP
 
 Let's 'A'dd, or 'A'ppend a rule with -A.  Let's drop all input from a nearby IP 
 
-```bash
+```sh
 iptables -A INPUT -s 192.168.0.23 -j DROP
 ```
 
 Or we can block all input from a particular port on the full Network.
 
-```bash
+```sh
 iptables -A INPUT -s 192.168.0.0/24 -p tcp --destination-port 25 -j DROP
 ```
 
-```bash
+```sh
 iptables -A INPUT --dport 80 -j ACCEPT
 ```
 
@@ -47,13 +47,13 @@ However, rules are accepted in order - so a packet cannot be rejected and then a
 
 To delete rule 2 from the INPUT chain:
 
-```bash
+```sh
 iptables -D INPUT 3
 ```
 
 Alternatively, you can 'I'nsert a rule at the start, rather than 'A'ppending it.
 
-```bash
+```sh
 iptables -I INPUT -s 192.168.0.13 DROP
 ```
 
@@ -67,7 +67,7 @@ The -j flag accepts ACCEPT/REJECT/DROP.  The last two are identical except that 
 
 Flush all existing rules with:
 
-```bash
+```sh
 iptables -F
 ```
 

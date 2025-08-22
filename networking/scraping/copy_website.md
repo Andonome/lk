@@ -3,7 +3,7 @@ title: "Download Website"
 tags: [ "networking", "scraping" ]
 ---
 
-```bash
+```sh
 domain=splint.rs
 mkdir $domain
 cd $domain

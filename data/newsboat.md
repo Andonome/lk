@@ -4,11 +4,11 @@ tags: [ "RSS" ]
 ---
 Create the configuration directory before you start, and add at least 1 URL.
 
-```bash
+```sh
 mkdir ~/.config/newsboat
 ```
 
-```bash
+```sh
 echo 'https://voidlinux.org/atom.xml foss tech' >> ~/.config/newsboat/urls
 ```
 
@@ -28,7 +28,7 @@ You can input a Youtube channel by adding this, with the channel's ID at the end
 
 To get the channel ID without hunting:
 
-```bash
+```sh
 curl *'https://www.youtube.com/@1minfilms'* | grep -oE 'browseId":"U\w+"' | tail | cut -d'"' -f3 
 ```
 

@@ -13,7 +13,7 @@ Include = /etc/pacman.d/mirrorlist
 
 And update:
 
-```bash
+```sh
 sudo pacman -Syu
 ```
 
@@ -21,7 +21,7 @@ sudo pacman -Syu
 
 Check your graphics card type:
 
-```bash
+```sh
 lspci  | grep VGA
 ```
 
@@ -31,7 +31,7 @@ lspci  | grep VGA
 
 If you see `Nvidia`, then install the intel drivers:
 
-```bash
+```sh
 sudo pacman -S --needed lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader
 ```
 
@@ -39,7 +39,7 @@ sudo pacman -S --needed lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-lo
 
 If you see `Intel`, then install the intel drivers:
 
-```bash
+```sh
 sudo pacman -S --needed lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-loader lib32-vulkan-icd-loader xf86-video-intel
 ```
 
@@ -47,16 +47,16 @@ sudo pacman -S --needed lib32-mesa vulkan-intel lib32-vulkan-intel vulkan-icd-lo
 
 If you see `AMD`, then check your card support `vulkan`:
 
-```bash
+```sh
 yay -S gpu-viewer
 ```
 
-```bash
+```sh
 vulkaninfo | grep 'VkPhysicalDeviceVulkanMemoryModelFeatures' -A 3
 ```
 
 You should see 'true' here.
 
-```bash
+```sh
 sudo pacman -S --needed lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader xf86-video-amdgpu
 ```

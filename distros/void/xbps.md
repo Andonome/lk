@@ -6,50 +6,50 @@ tags: [ "void" ]
 
 Look for cowsay in the repository:
 
-```bash
+```sh
 xbps-query --repository --search cowsay
 ```
 
 Short version:
 
-```bash
+```sh
 xbps-query -Rs cowsay
 ```
 
 Search with regex:
 
-```bash
+```sh
 xbps-query --regex -Rs 'cow(s)?\w'
 ```
 
 List what's required for cowsay
 
-```bash
+```sh
 xbps-query -x cowsay
 ```
 
 What packages are orphaned (i.e. installed as a dependency for another package, which has since been removed)?
 
-```bash
+```sh
 xbps-query -O
 ```
 
 Show cowsay's dependencies.
 
-```bash
+```sh
 xbps-query -x cowsay
 ```
 
 This shows `perl`.
 To see what else depends on perl:
 
-```bash
+```sh
 xbps-query -X perl
 ```
 
 List all manually installed software.
 
-```bash
+```sh
 xbps-query -m
 ```
 
@@ -57,14 +57,14 @@ xbps-query -m
 
 Install cowsay
 
-```bash
+```sh
 xbps-install cowsay
 ```
 
 Upgrade current packages.
 `-R` looks at repositories, `-s` makes a sloppy search (for rough matches).
 
-```bash
+```sh
 xbps-install -Suv
 ```
 
@@ -72,19 +72,19 @@ xbps-install -Suv
 
 Remove cowsay
 
-```bash
+```sh
 xbps-remove cowsay
 ```
 
 ...and all dependencies
 
-```bash
+```sh
 xbps-remove -R cowsay
 ```
 
 Remove all orphaned dependencies.
 
-```bash
+```sh
 xbps-remove -o
 ```
 
@@ -94,19 +94,19 @@ Show information about cowsay
 
 Reinstall cowsay
 
-```bash
+```sh
 xbps-install -f cowsay
 ```
 
 Look for broken packages.
 
-```bash
+```sh
 sudo xbps-pkgdb -a
 ```
 
 And if you've found any, you might reconfigure all packages forcefully:
 
-```bash
+```sh
 sudo xbps-reconfigure -af
 ```
 

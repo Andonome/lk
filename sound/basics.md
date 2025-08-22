@@ -9,13 +9,13 @@ Check with `which pulseaudio`. No output means you need to use alsa (below).
 
 # Volume Control
 
-```bash
+```sh
 pactl set sink @DEFAULT_SINK@ +5%
 ```
 
 Find working outputs:
 
-```bash
+```sh
 aplay -l
 ```
 
@@ -30,7 +30,7 @@ amixer scontrols
 
 # Change a Sound setting
 
-```bash
+```sh
 amixer set Master 5%-
 ```
 
@@ -42,19 +42,19 @@ pulseaudio -k && sudo alsa force-reload
 
 Toggle, mute, increase or decrase audio:
 
-```bash
+```sh
 amixer sset Master toggle
 ```
 
-```bash
+```sh
 amixer sset Master mute
 ```
 
-```bash
+```sh
 amixer sset Master 5%+
 ```
 
-```bash
+```sh
 amixer sset Master 5%-
 ```
 
@@ -62,14 +62,14 @@ amixer sset Master 5%-
 
 Start with:
 
-```bash
+```sh
 alsamixer
 ```
 
 Then press `F6` to see available Sound cards.
 If you find a Sound card called 'PinePhone', then you can select an audio source there, and adjust with:
 
-```bash
+```sh
 amixer -c PinePhone set 'Headphone' 50%
 ```
 

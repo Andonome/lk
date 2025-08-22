@@ -18,7 +18,7 @@ Set up a file like this, called `troubleshooting.txt`.
 
 Then translate it with:
 
-```bash
+```sh
 graph-easy troubleshooting.txt --as boxart
 ```
 

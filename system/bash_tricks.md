@@ -47,7 +47,7 @@ The `rm' program takes arguments, but not `stdin' from a keyboard, and therefore
 To fix this, use `xargs` to turn the stdin into an argument.
 For example, if we have a list of files called `list.txt' then we could use cat as so:
 
-```bash
+```sh
 cat list.txt | xargs rm
 ```
 
@@ -81,13 +81,13 @@ x=$(( x*x ))
 
 ## Finding Duplicate Files
 
-```bash
+```sh
 find . -type f -exec md5sum '{}' ';' | sort | uniq --all-repeated=separate -w 15 > all-files.txt
 ```
 
 ## Output random characters
 
-```bash
+```sh
 cat /dev/urandom | tr -cd [:alnum:] | dd bs=1 count=200 status=none && echo
 ```
 
@@ -95,13 +95,13 @@ cat /dev/urandom | tr -cd [:alnum:] | dd bs=1 count=200 status=none && echo
 
 Try something out in a random directory in `/tmp` so the files will be deleted when you next shut down.
 
-```bash
+```sh
 mktemp -d
 ```
 
 That gives you a random directory to mess about in.
 
-```bash
+```sh
    dir=$(mktemp -d)
    for x in {A..Z}; do
       fortune > "$dir"/chimpan-$x

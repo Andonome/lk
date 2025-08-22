@@ -10,7 +10,7 @@ The first should be its own repository, but should also retain its own history.
 
 First, we extract its history as an independent item, and make that into a seprate branch.
 
-```bash
+```sh
 git subtree split --prefix=sub-1 -b sub
 ```
 
@@ -18,7 +18,7 @@ If you want something a few directories deep, you can use `--prefix=sub-1/dir-2/
 
 Then go and create a new git somewhere else:
 
-```bash
+```sh
 cd ..;mkdir sub-1;cd sub-1;git init --bare
 ```
 
@@ -28,7 +28,7 @@ git push ../subtest sub:master
 
 Finally, you can clone this repo from your original.
 
-```bash
+```sh
 git clone ../subtest
 ```
 

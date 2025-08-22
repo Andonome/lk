@@ -5,7 +5,7 @@ tags: [ "networking" ]
 
 # Get a Hostname
 
-```bash
+```sh
 sudo vim /etc/tor/torrc
 ```
 

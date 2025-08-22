@@ -15,7 +15,7 @@ Change this with `:set autowrap`.
 
 Make `sc-im` always autowrap:
 
-```bash
+```sh
 mkdir .config/sc-im/bash
 echo 'set autowrap' >> .config/sc-im/scimrc
 ```

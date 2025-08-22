@@ -9,19 +9,19 @@ Install the package `xdg-utils`, then make very liberal use of the tab button.
 
 Ask what type of application opens an mkv file:
 
-```bash
+```sh
 xdg-mime query default video/mkv
 ```
 
 Same with pdf:
 
-```bash
+```sh
 xdg-mime query default application/pdf
 ```
 
 Ask what file-type `book.pdf` uses.
 
-```bash
+```sh
 xdg-mime query filetype *book.pdf*
 ```
 
@@ -29,7 +29,7 @@ xdg-mime query filetype *book.pdf*
 
 Set the mime type of mp4 videos to mpv.
 
-```bash
+```sh
 xdg-mime default mpv.desktop video/mp4
 ```
 
@@ -37,7 +37,7 @@ You'll need to use the tab key a lot here, and remember many items start with `o
 
 You can use an asterisk for everything in a category.
 
-```bash
+```sh
 xdg-mime default org.gnome.font-viewer.desktop font/\*
 ```
 

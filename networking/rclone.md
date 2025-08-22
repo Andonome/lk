@@ -9,71 +9,71 @@ We'll assume a folder in Google Drive called 'test', and local folder called 'fo
 
 Generate a config file with:
 
-```bash
+```sh
 rclone config
 ```
 
 Look at the contents of Google Drive:
 
-```bash
+```sh
 rclone ls gd:/
 ```
 
 If rclone loses authorization:
 
-```bash
+```sh
 rclone authorization
 ```
 
 List only directories:
 
-```bash
+```sh
 rclone lsf -dirs-only google:/
 ```
 
 Mount the remote location on /tmp/google with:
 
-```bash
+```sh
 rclone mount google /tmp/google
 ```
 
 Copy the contents of 'foo' to 'test'.
 
-```bash
+```sh
 rclone copy foo/ google:test
 ```
 
 Sync contents of foo and test with a progress bar (will delete Google items):
 
-```bash
+```sh
 rclone sync foo google:test -P
 ```
 
 Remove all duplicates
 
-```bash
+```sh
 rclone dedupe google:test
 ```
 
 Delete contets of a remote file:
 
-```bash
+```sh
 rclone delete n:test
 ```
 
 Or delete the folder and contents as well:
 
-```bash
+```sh
 rclone purge n:test
 ```
 
 Copy to and from with:
 
-```bash
+```sh
 rclone copyto google:test foo
 ```
 
 or
 
-```bash
+```sh
 rclone copyto foo google:test

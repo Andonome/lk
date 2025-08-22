@@ -5,35 +5,35 @@ tags: [ "vision" ]
 
 Convert jpg to png.
 
-```bash
+```sh
 magick image.jpg image.png
 ```
 
-```bash
+```sh
 magick image.jpg -quality 50 image.jpg
 ```
 
 'Quality' must be from 1 to 100.
 
-```bash
+```sh
 magick -resize 50% image.jpg image2.jpg
 ```
 
 Resizing only changes jpegs.  Change a png with:
 
-```bash
+```sh
 magick input.png png8:out.png
 ```
 
 # Invert Colours
 
-```bash
+```sh
 magick input.jpg output.jpg -negate
 ```
 
 # Make Images Smaller
 
-```bash
+```sh
 magick image.jpg -resize 25% output.jpg
 ```
 
@@ -42,13 +42,13 @@ magick image.jpg -resize 25% output.jpg
 
 This is generally used for transparent images.
 
-```bash
+```sh
 magick -trim image.png output.png
 ```
 
 Make the white of an image transparent.
 
-```bash
+```sh
 magick -transparent white -fuzz 10% input.png output.png
 ```
 
@@ -57,14 +57,14 @@ The 'fuzz' option tells the computer that 'close to white' is fine.  You might w
 
 ## Dropshadow
 
-```bash
+```sh
 `magick <input file> \( +clone -background black -shadow 50x8+0+5 \) +swap -background none -layers merge +repage <output file>`
 ```
 
 
 # Convert every jpg in directory to png
 
-```bash
+```sh
 mogrify -format png *.jpg
 ```
 
@@ -96,20 +96,20 @@ $potrace -s output.ppm -o svgout.svg
 
 See your installed fonts:
 
-```bash
+```sh
 magick -list font
 ```
 
 Make an image showing day of the week:
 
-```bash
+```sh
 magick -fill blue -font Sauce-Code-Pro-Semibold-Nerd-Font-Complete-Mono -gravity center -pointsize 79 label:$(date +%A) day.png
 ```
 
 
 Make a meme:
 
-```bash
+```sh
 magick inputmemeimage.png -font impact -fill white -pointsize 84 -stroke black -strokewidth 3 -gravity north -annotate +0+20 'TOP MEME TEXT' -gravity south -annotate +0+20 'BOTTOM MEME TEXT' outputmemeimage.png
 ```
 
