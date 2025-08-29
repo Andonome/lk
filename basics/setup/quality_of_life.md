@@ -100,7 +100,13 @@ Try:
 - `<Esc>kcw`
 - ls -a<Esc>xxxx
 
-Works with `python` too:
+Readline can work with python one you set `PYTHON_BASIC_REPL` to `true`.
+
+
+```sh
+echo 'export PYTHON_BASIC_REPL=true' >> ~/.bashrc
+exec bash
+```
 
 ```python
 im<C-n>os<Return>
