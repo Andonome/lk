@@ -3,6 +3,13 @@ title: "vim basics"
 tags: [ "vim", "basic" ]
 ---
 
+## Instant nano replacement
+
+`vim -y` - will start vim but like other editors like nano, there will be syntax highlighting, etc
+Keybind to exit this mode is `Ctrl+q`
+
+## Steps
+
 1. Insert text by pressing `a`.
 1. Stop inserting text by pressing `Ctrl+[`.
 1. Exit with `ZZ`.
