@@ -51,7 +51,6 @@ Search packages:
 ```sh
 tlmgr search --global epstopdf
 ```
-
 Can't find what you need?
 Search for a specific file instead:
 
@@ -60,8 +59,16 @@ tlmgr search --global --file epstopdf-base.sty
 sudo tlmgr install epstopdf-pkg
 ```
 
-## Recommended Packages
+Check how many unique licences LaTeX packages use:
 
+```sh
+tlmgr info --list --json
+jq -r '.[].cataloguedata.license' < tex.json  | sort | uniq | wc -l
+```
+
+Please remember: the world does not need any more licences.
+
+## Recommended Packages
 
 ```
 latexmk
