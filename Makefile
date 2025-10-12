@@ -4,6 +4,12 @@ EDITOR ?= vi
 FZF != command -v sk || command -v fzy || command -v fzf || \
 	{ echo install a fuzzy finder && exit 1 ;}
 
+ifeq "$(FZF)" "/usr/bin/fzy"
+  FZF += -i
+else
+  FZF += --print-query | cat
+endif
+
 spill_contents = sed -e '1,/---/d'
 
 help: .git/info/exclude ## Print the help message
@@ -72,6 +78,7 @@ article: ## Write an article
 	@path=$$(find $(categories) -type d | sort | uniq | $(FZF)) ;\
 	read -p "Title: " title ;\
 	filename="$$(echo "$$title" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')" ;\
+	mkdir -p $$path ;\
 	printf '%s\n' '---' >> $$path/$$filename.md ;\
 	printf 'title: "%s"\n' "$$title" >> $$path/$$filename.md ;\
 	printf 'tags: [ "%s" ]\n' "$$path" | tr '[:upper:]' '[:lower:]' | sed 's#\/#", "#g' >> $$path/$$filename.md ;\
