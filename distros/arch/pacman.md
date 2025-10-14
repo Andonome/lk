@@ -51,7 +51,7 @@ sudo pacman -S archlinux-keyring
 List all orphaned packages:
 
 ```sh
-sudo pacman -Qtdq
+pacman -Qtdq
 ```
 
 Removing a package:
