@@ -1,6 +1,7 @@
 ---
-title: "Maintenance"
+title: "Arch Maintenance"
 tags: [ "arch" ]
+requirements: [ "pacman" ]
 ---
 
 # Package Cache
@@ -12,15 +13,6 @@ ls /var/cache/pacman/pkg/ | wc -l
 sudo pacman -Sc
 ls /var/cache/pacman/pkg/ | wc -l
 ```
-And the same for `yay` (with `-Yc` to remove old dependencies):
-
-```sh
-ls ~/.cache/yay/ | wc -l
-yay -Sc
-yay -Yc
-ls ~/.cache/yay/ | wc -l
-```
-
 # New Configs
 
 If you chance a configuration file, such as `/etc/environment`, and `pacman` wants to update the file, it will place `/etc/environment.pacnew`.
@@ -41,10 +33,7 @@ sudo -e /etc/pacman.d/mirrorlist
 sudo rm /etc/pacman.d/mirrorlist.pacnew
 ```
 
-Or,
-
-- use a tool like `pacdiff` to view the changes next to each other, and select them with `vim`.
-
+Or use a tool like `pacdiff` to view the changes next to each other, and select them with `vim`.
 
 ```sh
 sudo pacman -S pacman-contrib

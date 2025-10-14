@@ -1,6 +1,7 @@
 ---
 title: "pacman"
 tags: [ "distros" ]
+requirements: [ "Install Arch" ]
 ---
 
 Packages are kept in /var/cache/pacman/pkg.

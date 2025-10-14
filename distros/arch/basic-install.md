@@ -1,5 +1,5 @@
 ---
-title: "basic-install"
+title: "Install Arch"
 tags: [ "arch" ]
 requires: [ "partitions", "time" ]
 ---
