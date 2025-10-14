@@ -20,7 +20,9 @@ sudo pacman-key --populate archlinux
 
 And refreshed with:
 
+```sh 
 sudo pacman-key --refresh-keys
+ ```
 
 If you have usigned keys, you can refresh with:
 
@@ -52,6 +54,12 @@ List all orphaned packages:
 sudo pacman -Qtdq
 ```
 
+Removing a package:
+
+```sh
+sudo pacman -Rn <package_name>
+```
+
 ## Cleaning Config Files
 
 Arch does not overwrite your changes to configuration files.
@@ -61,4 +69,5 @@ So when `/etc/pacman.conf` receives an update, this will be placed in `/etc/pacm
 These changes must be merge manually.
 
 Install the `pacdiff` tool to make this easier, from the `pacman-contrib` package, then simply run `sudo pacdiff` to sort through the various mergers.
+
 
