@@ -14,12 +14,27 @@ Say 'hello' to yourself:
 ansible --module-name=ping localhost
 ```
 
+Ansible takes a lot of information about each machine during setup:
+
+```sh
+TMP=$(mktemp)
+ansible --module-name=setup localhost  | tee $TMP
+less !$
+```
+
+If you have `jq`, you can pull out info:
+
+```sh
+sed -i 's/.*SUCC.*/{/' $TMP
+jq '.ansible_facts.ansible_distribution' < $TMP
+```
+
 Upgrade through the package manager.
 
 `packager=apt` (or `pacman` or `xbps`,...)
 
 ```sh
-packager=apt
+packager="$( jq -r '.ansible_facts.ansible_pkg_mgr' < $TMP )"
 ansible --module-name=${packager} --args "upgrade=yes" localhost
 ```
 
@@ -87,4 +102,8 @@ ansible-inventory --list -y -i
 ansible-vault view sec.yml --vault-pass-file pass.sh
 ```
 
-community.general.say voice=en_GB msg="Testing 123"
+Install `espeak', then make the computer say something:
+
+```sh
+ansible --module-name=say --args "msg='testing'" localhost
+```
