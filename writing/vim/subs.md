@@ -1,6 +1,6 @@
 ---
-title: "vim search"
-tags: [ "vim", "search" ]
+title: "find and replace"
+tags: [ "vim", "search", "replace", "find" ]
 requires: [ "vim basics" ]
 ---
 Search for the next and or previous occurrence of the word under your cursor with `*` and `#`.
@@ -9,7 +9,11 @@ Search and replace the first 'one' found with 'two':
 
 `:%s/one/two/`
 
-Same, but replace 'one' globally:
+Run the last substitution globally:
+
+`g&`
+
+Same, but just replace 'one' globally:
 
 `:%s/one/two/g`
 
