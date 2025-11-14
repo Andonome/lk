@@ -30,6 +30,11 @@ Done
 - If you have a command, Control + d will execute the command.
 - If you have nothing, `exit`.
 
+Clear Search Highlights
+=======================
+
+`<Esc>+u`
+
 Input Run-Commands (`~/.inputrc`)
 =================================
 
