@@ -22,6 +22,12 @@ Search with regex:
 xbps-query --regex -Rs 'cow(s)?\w'
 ```
 
+Search for `genfstab`:
+
+```sh
+xlocate genfstab
+```
+
 List what's required for cowsay
 
 ```sh
