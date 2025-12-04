@@ -1,6 +1,6 @@
 ---
 title: "pass"
-tags: [ "data" ]
+tags: [ "data", "credentials", "secrets" ]
 requires: "GPG Basics"
 ---
 
