@@ -5,6 +5,7 @@ tags: [ "fun" ]
 
 - `asciiquarium`
 - `cbonsai -lim "$(fortune)"`
+- `printf 'w\na\n' | ssh -tt nethack@alt.org`
 
 ```sh
 cow=$(cowsay -l | sort -R | head  -1)
