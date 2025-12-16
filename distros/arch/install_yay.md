@@ -6,8 +6,9 @@ requirements: [ "pacman" ]
 
 ```sh
 pacman --sync --noconfirm --needed base-devel gcc git
-git clone https://aur.archlinux.org/yay.git /tmp/yay
-makepkg -C !$ -si
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 ```
 
 The flags are mostly the same as in `pacman`.
