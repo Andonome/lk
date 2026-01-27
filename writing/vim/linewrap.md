@@ -1,5 +1,5 @@
 ---
-title: "vim windows"
+title: "vim linewrap"
 tags: [ "vim", "format", "linewrap" ]
 requires: [ "vim basics" ]
 ---
