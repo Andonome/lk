@@ -48,7 +48,7 @@ echo 'net.ipv4.ip_forward=1' > /etc/sysctl.d/wg.conf
 ```
 
 ```sh
-systemctl enable --now wg-quiqck@wg0
+systemctl enable --now wg-quick@wg0
 ```
 
 ```sh

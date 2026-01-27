@@ -28,7 +28,7 @@ To add a basic password, e.g. for `$WEBSITE`:
 pass $WEBSITE
 ```
 
-To insert a multiline password, e.g. with a login name:
+To insert a multi-line password, e.g. with a login name:
 
 ```sh
 pass add -m $WEBSITE
