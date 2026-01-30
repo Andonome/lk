@@ -129,7 +129,7 @@ vi /etc/locale.gen
 locale-gen
 ```
 
-Make your keyboard changes permenent with:
+Make your keyboard changes permanent with:
 
 ```sh
 vi /etc/vconsole.conf
