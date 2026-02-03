@@ -67,7 +67,7 @@ Be root.
 
 Install `wireguard-tools` on the client.
 
-Copy the client private key and server public key to the server (or just fill in the variables).
+Copy the client server public key to the server (or just fill in the variables).
 
 
 ```sh
