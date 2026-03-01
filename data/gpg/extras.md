@@ -20,7 +20,7 @@ gpgconf --list-options gpg-agent
 
 Create file, if it doesnt exit `~/.gnupg/gpg-agent.conf`:
 
-```sh
+```
 # Force terminal prompts for passwords
 pinentry-mode loopback
 
