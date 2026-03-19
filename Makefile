@@ -7,7 +7,7 @@ FZF != command -v sk || command -v fzy || command -v fzf || \
 ifeq "$(FZF)" "/usr/bin/fzy"
   FZF += -i
 else
-  FZF += --print-query | cat
+  FZF += --print-query | tail -1
 endif
 
 spill_contents = sed -e '1,/---/d'
@@ -73,17 +73,28 @@ default += .git/info/exclude
 .PHONY: database
 database: $(default) ## Make a recfiles database
 
+%.md:
+	printf '---\n'
+	printf 'title: "%s"\n' "$(title)"
+	printf 'tags: [ "%s" ]\n' "$(shell echo $(basename $(dir $@)) | sed 's/\/$$//' )" | tr '[:upper:]' '[:lower:]' | sed 's#\/#", "#g'
+	printf 'requires: [  ]\n'
+	printf '---\n'
+
+ifdef title
+col = blue
+path = $(shell find $(categories) -type d | sort | uniq | $(FZF))
+filename = $(shell echo "$(title)" | tr ' ' '_' | tr -cd '[:alnum:]_')
+endif
+
+title = $(shell read -r -p "Title: " line && echo "$${line}" | tr -d '"' | sed 's/\b\(.\)/\U\1/g')
+
+.PHONY: .entry
+.entry: $(path)/$(filename).md
+
 .PHONY: article
 article: ## Write an article
-	@path=$$(find $(categories) -type d | sort | uniq | $(FZF)) ;\
-	read -p "Title: " title ;\
-	filename="$$(echo "$$title" | tr '[:upper:]' '[:lower:]' | tr ' ' '_')" ;\
-	mkdir -p $$path ;\
-	printf '%s\n' '---' >> $$path/$$filename.md ;\
-	printf 'title: "%s"\n' "$$title" >> $$path/$$filename.md ;\
-	printf 'tags: [ "%s" ]\n' "$$path" | tr '[:upper:]' '[:lower:]' | sed 's#\/#", "#g' >> $$path/$$filename.md ;\
-	printf '%s\n\n' '---' >> $$path/$$filename.md ;\
-	$(EDITOR) +5 "$$path/$$filename.md"
+	make -e title="$(title)" .entry
+
 
 .dbs/map.fmt:| .dbs/
 	printf '%s\n' '[ {{requires[0]}} ] --> [ {{title}} ] {border-style: dashed;}' > $@
