@@ -12,7 +12,7 @@ endif
 
 spill_contents = sed -e '1,/---/d'
 
-help: .git/info/exclude ## Print the help message
+help: ## Print the help message
 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | \
 		sort | \
 		column -s ':' -t
