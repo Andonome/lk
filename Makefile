@@ -32,8 +32,10 @@ $(foreach dir, $(categories), \
 	$(eval .dbs/$(dir).rec: $(wildcard $(dir)/*)) \
 	)
 
-.dbs/:
+%/:
 	mkdir $@
+
+include cmd.mk
 
 $(databases): .dbs/%.rec: %/ | .dbs/
 	$(info making $(@F))
