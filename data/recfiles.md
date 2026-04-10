@@ -43,8 +43,8 @@ recset -f "$new_field" --delete $database
 ```
 
 - [Extended example](recfiles/extended.md)
-- [Playing with board games data](recfiles/Board_Games.md)
-- [Playing with IP addresses](recfiles/IP_ASN.md)
+- [Playing with board games data](recfiles/board_games.md)
+- [Playing with IP addresses](recfiles/ip_asn.md)
 - [Manage LaTeX Bibliographies](recfiles/bibliography.md)
 - [Fixes](recfiles/recfixes.md)
 

@@ -3,7 +3,7 @@ title: "Makefile Patterns"
 tags: [ "system", "make" ]
 ---
 
-Using the [basic example](../Makefile.md), you can make a complete backup of all backup files.
+Using the [basic example](../makefiles.md), you can make a complete backup of all backup files.
 This file will depend upon everything inside the `$(storage_directory)`.
 Unlike `bash`, you can't just say `storage_directory/*`: the pattern must be stated as a 'wildcard'.
 

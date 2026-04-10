@@ -129,7 +129,7 @@ Refreshing keys will tell you if some key you have contains a signature from som
 gpg --refresh-keys
 ```
 
-You can use the [crontab](../../basics/cron.md) to refresh keys, but this will mostly fail, since keyservers often don't hold the right data.
+You can use the [crontab](../../system/cron.md) to refresh keys, but this will mostly fail, since keyservers often don't hold the right data.
 
 # Export
 
