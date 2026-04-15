@@ -76,29 +76,6 @@ default += .git/info/exclude
 .PHONY: database
 database: $(default) ## Make a recfiles database
 
-%.md:
-	printf '---\n'
-	printf 'title: "%s"\n' "$(title)"
-	printf 'tags: [ "%s" ]\n' "$(shell echo $(basename $(dir $@)) | sed 's/\/$$//' )" | tr '[:upper:]' '[:lower:]' | sed 's#\/#", "#g'
-	printf 'requires: [  ]\n'
-	printf '---\n'
-
-ifdef title
-col = blue
-path = $(shell find $(categories) -type d | sort | uniq | $(FZF))
-filename = $(shell echo "$(title)" | tr ' ' '_' | tr -cd '[:alnum:]_')
-endif
-
-title = $(shell read -r -p "Title: " line && echo "$${line}" | tr -d '"' | sed 's/\b\(.\)/\U\1/g')
-
-.PHONY: .entry
-.entry: $(path)/$(filename).md
-
-.PHONY: article
-article: ## Write an article
-	make -e title="$(title)" .entry
-
-
 .dbs/map.fmt:| .dbs/
 	printf '%s\n' '[ {{requires[0]}} ] --> [ {{title}} ] {border-style: dashed;}' > $@
 	printf '%s\n' '[ {{requires[1]}} ] --> [ {{title}} ] {border-style: dashed;}' >> $@
@@ -114,3 +91,24 @@ map: db.rec .dbs/map.fmt ## Show knowledge dependency map
 .PHONY: clean
 clean: ## Remove all generated files
 	$(RM) $(default)
+
+.PHONY: article
+article: **/ **/**/ ## Write a new article
+	category=$(shell echo $^ | tr ' ' '\n' | $(FZF) ) \
+	&& read -p "Article title? " name \
+	&& filename="$$(echo "$$name" \
+		| cut -d: -f1 \
+		| tr -cd '[:alpha:]' | tr '[A-Z ]' '[a-z_]' )" \
+	&& $(MAKE) -e TITLE="$$name" "$$category"/"$$filename.md"
+
+%.md: 
+	[ -d "$(@D)" ] || mkdir $(@D)
+	printf '%s\n' '---' >> $@
+	printf 'title: %s\n' '$(TITLE)' >> $@
+	tags="$$(echo $(@D) | sed 's#/$$#"# ; s#/#", "#g ; s#^#"#' )" \
+	&& printf 'tags [ %s ]\n' "$$tags" >> $@
+	printf '%s\n\n' '---' >> $@
+	$(EDITOR) +5 $@
+	git add $@
+	git commit -m"article: $(TITLE)"
+
