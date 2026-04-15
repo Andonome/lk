@@ -22,4 +22,4 @@ lists/%.md: command.rec | lists/
 	@$(call list_commands,$(basename $(notdir $@))) >> $@
 
 .PHONY: cmd
-cmd: $(lists) ## Bit lists of commands
+cmd: $(lists) ## Big lists of commands
