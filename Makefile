@@ -34,6 +34,7 @@ $(foreach dir, $(categories), \
 
 %/:
 	mkdir $@
+	echo '*' > $@.gitignore
 
 include cmd.mk
 
