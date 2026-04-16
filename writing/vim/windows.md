@@ -1,6 +1,6 @@
 ---
 title: "vim windows"
-tags: [ "vim" ]
+tags: [ "vim", "TUI" ]
 requires: [ "vim basics" ]
 ---
 

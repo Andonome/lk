@@ -1,6 +1,6 @@
 ---
 title: "Interactive String Substitution"
-tags: [ "data", "vim", "substitution" ]
+tags: [ "data", "vim", "substitution", "replace", "TUI" ]
 ---
 
 Want to find and replace, but also confirm each instance?

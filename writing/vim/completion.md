@@ -1,6 +1,6 @@
 ---
 title: "vim completion"
-tags: [ "vim", "completion" ]
+tags: [ "vim", "completion", "TUI" ]
 requires: [ "vim basics" ]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "vim navigation"
-tags: [ "vim", "navigation" ]
+tags: [ "vim", "navigation", "TUI" ]
 requires: [ "vim basics" ]
 ---
 

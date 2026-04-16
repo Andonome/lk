@@ -1,6 +1,6 @@
 ---
 title: "vim in bash"
-tags: [ "vim", "bash", "inputrc" ]
+tags: [ "vim", "bash", "inputrc", "TUI" ]
 requires: [ "vim basics" ]
 ---
 

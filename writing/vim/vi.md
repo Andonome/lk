@@ -1,6 +1,6 @@
 ---
 title: "How to Learn `vim`"
-tags: [ "vim", "learning" ]
+tags: [ "vim", "learning", "TUI" ]
 requires: [ "vim basics" ]
 ---
 

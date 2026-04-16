@@ -1,6 +1,6 @@
 ---
 title: "vim basics"
-tags: [ "vim", "basic" ]
+tags: [ "vim", "basic", "TUI" ]
 ---
 
 ## Instant nano replacement

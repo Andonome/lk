@@ -1,6 +1,6 @@
 ---
 title: "Vim Tricks"
-tags: [ "vim" ]
+tags: [ "vim", "TUI" ]
 requiered: [ "ssh" ]
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "vim linewrap"
-tags: [ "vim", "format", "linewrap" ]
+tags: [ "vim", "format", "linewrap", "TUI" ]
 requires: [ "vim basics" ]
 ---
 
