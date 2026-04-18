@@ -1,51 +1,81 @@
 %rec: command
 %doc: shell command examples
 %type: aim line
-%allowed: aim cmd bin tag
+%allowed: aim
++ cmd bin
++ tag
++ shell
+%unique: shell
 
 aim: Put output into column
 cmd: du -h /etc/* | column
+shell: sh
 bin: column
 tag: format
 
 aim: Reformat file with an explicit separator (`-s`)
 cmd: column -ts: /etc/passwd
+shell: sh
 bin: column
 tag: format
 
 aim: Give columns names (`-N`), so you can hide some (`-H`)
 cmd: column -ts: -N User,PW,UID,GID,Description,Home,shell -H PW,GID /etc/passwd
+shell: sh
 bin: column
 tag: format
 
 aim: Reorder with `-O` (unspecified items remain)
 cmd: column -ts: -N User,PW,UID,GID,Description,Home,shell -H PW,GID -O User,Description,shell /etc/passwd 
+shell: sh
 bin: column
 tag: format
 
 aim: Output to json format with `-J`
 cmd: column -J -ts: -H PW,GID,shell -N User,PW,UID,GID,Description,Home,shell /etc/passwd
+shell: sh
 bin: column
 tag: format
 tag: json
 
 aim: Make a QR Code image:
 cmd: qrencode 'https://play.google.com/store/apps/details?id=org.briarproject.briar.android' -o "$FILE".png
+shell: sh
 bin: qrencode
 tag: qr
 
 aim: Make a QR Coded message in the terminal:
 cmd: qrencode -t ansi "Hello World"
+shell: sh
 bin: qrencode
 tag: qr
 
 aim: Read a QR Code image:
 cmd: zbarimg $FILE
+shell: sh
 bin: qrencode
 tag: qr
 
 aim: Show wifi QR code (only with Network Manager):
 cmd: nmcli device wifi show-password
+shell: sh
 bin: qrencode
 tag: qr
 tag: wifi
+
+aim: Combine many recfiles of different types into one:
+cmd: sed '1i\ ' *.rec > all.rec
+shell: sh
+bin: sed
+tag: recfiles
+tag: database
+
+aim: Combine many recfiles of the same type into one:
+cmd: recinf -d -t ${type} ${one}.rec > ${all}.rec
++ sed '/^%/d' ${one}.rec ${two}.rec > all.rec
+shell: sh
+bin: sed
+bin: recinf
+tag: recfiles
+tag: database
+
