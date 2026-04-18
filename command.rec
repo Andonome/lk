@@ -79,3 +79,10 @@ bin: recinf
 tag: recfiles
 tag: database
 
+aim: Remotely edit a file with vim:
+cmd: vim scp://${server}/~/${file}
+cmd: vim scp://${user}@${server}:${port}//${path}/${file}
+shell: sh
+bin: vim
+bin: scp
+
