@@ -1,6 +1,7 @@
 ---
-title: "fonts"
-tags: [ "distros" ]
+title: fonts
+tags: 
+- distros
 ---
 # Basics
 

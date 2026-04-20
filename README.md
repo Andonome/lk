@@ -1,5 +1,5 @@
 ---
-title: "Linux Knowledge Base"
+title: Linux Knowledge Base
 ---
 
 The Linux Knowledge-Base provides quick-start guides for working with terminal programs.

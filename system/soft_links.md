@@ -1,6 +1,8 @@
 ---
-title: "soft links"
-tags: [ "basics", "links" ]
+title: soft links
+tags: 
+- basics
+- links
 ---
 A soft link is a file which says how to go to another file.
 When a program encounters a soft link, it will make a  guess at whether it should ignore it, or try to get to that file.

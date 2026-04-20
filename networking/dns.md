@@ -1,6 +1,8 @@
 ---
-title: "dns"
-tags: [ "networking", "host" ]
+title: dns
+tags: 
+- networking
+- host
 ---
 
 | Record      |  Type               | Example                                |

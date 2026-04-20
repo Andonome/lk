@@ -1,6 +1,8 @@
 ---
-title: "Download Website"
-tags: [ "networking", "scraping" ]
+title: Download Website
+tags: 
+- networking
+- scraping
 ---
 
 ```sh

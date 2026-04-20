@@ -1,7 +1,10 @@
 ---
-title: "IP Addresses with Recfiles"
-tags: [ "data", "recfiles", "games" ]
-requires: "recfiles"
+title: IP Addresses with Recfiles
+tags: 
+- data
+- recfiles
+- games
+requires: recfiles
 ---
 
 ## Download the Database

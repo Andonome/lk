@@ -1,6 +1,7 @@
 ---
-title: "pacman - Extras"
-tags: [ "distros" ]
+title: pacman - Extras
+tags: 
+- distros
 requirements: [ "pacman" ]
 ---
 

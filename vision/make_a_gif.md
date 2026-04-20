@@ -1,6 +1,7 @@
 ---
-title: "Make a gif"
-tags: [ "vision" ]
+title: Make a gif
+tags: 
+- vision
 ---
 
 Split your video into frames.

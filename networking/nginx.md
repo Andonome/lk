@@ -1,6 +1,8 @@
 ---
-title: "nginx"
-tags: [ "networking", "web" ]
+title: nginx
+tags: 
+- networking
+- web
 ---
 Install nginx:
 

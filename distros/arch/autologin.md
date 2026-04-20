@@ -1,6 +1,8 @@
 ---
-title: "autologin"
-tags: [ "distros", "arch" ]
+title: autologin
+tags: 
+- distros
+- arch
 ---
 
 # Automatic Login

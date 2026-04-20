@@ -7,9 +7,7 @@ default += $(lists)
 get_title = printf 'title: "%s"\n' '${1}'
 get_tags = recsel -t $(basename $<) $< -G bin \
 	-e 'bin = "$(1)"' -U -CP tag | \
-	sed 's/.*/"&",/g' | \
-	tr '\n' ' ' | \
-	sed 's/.*/tags: [ &]/'
+	sed 's/.*/- &/'
 
 list_commands = recsel -t $(basename $<) $< -e 'bin = "$(1)"' | \
 	recfmt -f lists.fmt
@@ -17,8 +15,9 @@ list_commands = recsel -t $(basename $<) $< -e 'bin = "$(1)"' | \
 lists/%.md: command.rec | lists/
 	@printf '%s\n' '---' > $@
 	@$(call get_title,$(basename $(notdir $@))) >> $@
+	@printf '%s\n' 'tags: ' >> $@
 	@$(call get_tags,$(basename $(notdir $@))) >> $@
-	@printf '\n%s\n' '---' >> $@
+	@printf '%s\n' '---' >> $@
 	@$(call list_commands,$(basename $(notdir $@))) >> $@
 
 .PHONY: cmd

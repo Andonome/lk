@@ -1,6 +1,8 @@
 ---
-title: "Clean Your Downloads"
-tags: [ "system", "tmpfs" ]
+title: Clean Your Downloads
+tags: 
+- system
+- tmpfs
 ---
 
 'Downloads` directory always too full of crap?

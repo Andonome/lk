@@ -1,6 +1,7 @@
 ---
-title: "logs"
-tags: [ "system" ]
+title: logs
+tags: 
+- system
 ---
 
 # Basic

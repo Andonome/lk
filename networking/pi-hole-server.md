@@ -1,6 +1,7 @@
 ---
-title: "pi-hole-server"
-tags: [ "distros" ]
+title: pi-hole-server
+tags: 
+- distros
 ---
 # Installation
 

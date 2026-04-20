@@ -1,6 +1,8 @@
 ---
-title: "git hooks"
-tags: [ "data", "git" ]
+title: git hooks
+tags: 
+- data
+- git
 ---
 
 Check out the sample hooks:

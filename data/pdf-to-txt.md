@@ -1,6 +1,9 @@
 ---
-title: "pdf to txt"
-tags: [ "data", "pdf", "ocr" ]
+title: pdf to txt
+tags: 
+- data
+- pdf
+- ocr
 ---
 
 How to translate pdfs to text (results are very poor, and will need lots of corrections).

@@ -1,6 +1,7 @@
 ---
-title: "Arch Maintenance with yay"
-tags: [ "arch" ]
+title: Arch Maintenance with yay
+tags: 
+- arch
 requirements: [ "Arch Maintenance" ]
 ---
 

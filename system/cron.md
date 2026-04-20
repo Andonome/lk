@@ -1,6 +1,8 @@
 ---
-title: "cron"
-tags: [ "basics", "time" ]
+title: cron
+tags: 
+- basics
+- time
 ---
 # Cronie
 

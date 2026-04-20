@@ -1,6 +1,8 @@
 ---
-title: "GPG Basics"
-tags: [ "data", "GPG" ]
+title: GPG Basics
+tags: 
+- data
+- GPG
 ---
 
 # Making keys

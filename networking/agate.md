@@ -1,6 +1,9 @@
 ---
-title: "Agate on Arch Linux"
-tags: [ "networking", "arch", "gemini" ]
+title: Agate on Arch Linux
+tags: 
+- networking
+- arch
+- gemini
 ---
 
 Docs are [here](https://github.com/mbrubeck/agate).

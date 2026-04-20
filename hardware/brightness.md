@@ -1,6 +1,8 @@
 ---
-title: "brightness"
-tags: [ "hardware", "laptop" ]
+title: brightness
+tags: 
+- hardware
+- laptop
 ---
 # Brightness
 

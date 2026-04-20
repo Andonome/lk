@@ -1,6 +1,8 @@
 ---
-title: "fstab"
-tags: [ "system", "disk" ]
+title: fstab
+tags: 
+- system
+- disk
 ---
 # Basics
 

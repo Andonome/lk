@@ -1,7 +1,10 @@
 ---
-title: "vim windows"
-tags: [ "vim", "TUI" ]
-requires: [ "vim" ]
+title: vim windows
+tags: 
+- vim
+- TUI
+requires: 
+- vim
 ---
 
 | Command                   | Keys                |

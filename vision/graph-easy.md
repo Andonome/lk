@@ -1,6 +1,7 @@
 ---
-title: "Easy Network Graph"
-tags: [ "flowchart" ]
+title: Easy Network Graph
+tags: 
+- flowchart
 ---
 Set up a file like this, called `troubleshooting.txt`.
 

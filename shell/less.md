@@ -1,6 +1,8 @@
 ---
 title: Read and scroll
-tags: [ "shell", "pager" ]
+tags: 
+- shell
+- pager
 ---
 
 The output from `tree` is too long.

@@ -1,6 +1,8 @@
 ---
-title: "transmission"
-tags: [ "networking", "torrenting" ]
+title: transmission
+tags: 
+- networking
+- torrenting
 ---
 
 Search for a torrent, e.g. 'sita sings the blues'.

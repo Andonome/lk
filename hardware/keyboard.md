@@ -1,6 +1,8 @@
 ---
-title: "keyboard"
-tags: [ "keyboard", "vim" ]
+title: keyboard
+tags: 
+- keyboard
+- vim
 ---
 
 # System-Wide Capslock and Escape Swap

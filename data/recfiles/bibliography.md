@@ -1,7 +1,14 @@
 ---
-title: "Recfile Bibliography for TeX"
-tags: [ "data", "database", "recfiles", "tex" ]
-requires: [ "recfiles", "tex", "makefiles" ]
+title: Recfile Bibliography for TeX
+tags: 
+- data
+- database
+- recfiles
+- tex
+requires: 
+- recfiles
+- tex
+- makefiles
 ---
 
 Store your bibliography in a `recfile` database, then extract any part with `make`.

@@ -1,6 +1,9 @@
 ---
-title: "XCP-ng Automation"
-tags: [ "documentation", "virtualization", "xen" ]
+title: XCP-ng Automation
+tags: 
+- documentation
+- virtualization
+- xen
 ---
 # Basic VM Management
 

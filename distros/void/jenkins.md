@@ -1,6 +1,8 @@
 ---
-title: "jenkins"
-tags: [ "void", "build" ]
+title: jenkins
+tags: 
+- void
+- build
 ---
 # Jenkins on Void
 

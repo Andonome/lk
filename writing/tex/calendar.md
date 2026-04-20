@@ -1,7 +1,11 @@
 ---
-title: "Calendar"
-tags: [ "writing", "tex", "fun" ]
-requires: [ "tex_packages" ]
+title: Calendar
+tags: 
+- writing
+- tex
+- fun
+requires: 
+- tex_packages
 ---
 
 ```sh

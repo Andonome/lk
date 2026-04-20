@@ -1,6 +1,8 @@
 ---
-title: "links"
-tags: [ "basics", "links" ]
+title: links
+tags: 
+- basics
+- links
 ---
 
 There are two types:

@@ -1,6 +1,8 @@
 ---
-title: "Ed: The Standard Editor"
-tags: [ "writing", "guide" ]
+title: Ed: The Standard Editor
+tags: 
+- writing
+- guide
 ---
 
 `ed` was designed for real terminals, i.e. a typewriter.

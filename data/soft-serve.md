@@ -1,7 +1,13 @@
 ---
-title: "Soft-Serve"
-tags: [ "data", "git server", "lfs", "TUI" ]
-requires: [ "git", "nginx" ]
+title: Soft-Serve
+tags: 
+- data
+- git server
+- lfs
+- TUI
+requires: 
+- git
+- nginx
 ---
 
 - [Soft-Serve with https](soft-serve/soft_https.md)

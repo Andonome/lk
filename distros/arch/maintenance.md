@@ -1,6 +1,7 @@
 ---
-title: "Arch Maintenance"
-tags: [ "arch" ]
+title: Arch Maintenance
+tags: 
+- arch
 requirements: [ "pacman" ]
 ---
 

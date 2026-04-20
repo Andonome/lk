@@ -1,6 +1,7 @@
 ---
-title: "nmap"
-tags: [ "networking" ]
+title: nmap
+tags: 
+- networking
 ---
 
 Example:

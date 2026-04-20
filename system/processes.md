@@ -1,6 +1,7 @@
 ---
-title: "processes"
-tags: [ "basics" ]
+title: processes
+tags: 
+- basics
 ---
 # Processes
 

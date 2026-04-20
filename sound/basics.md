@@ -1,6 +1,7 @@
 ---
-title: "Basic Sound"
-tags: [ "sound" ]
+title: Basic Sound
+tags: 
+- sound
 ---
 
 # Pulse

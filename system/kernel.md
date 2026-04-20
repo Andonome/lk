@@ -1,6 +1,7 @@
 ---
-title: "kernel modules"
-tags: [ "system" ]
+title: kernel modules
+tags: 
+- system
 ---
 
 Kernel modules live in lib/modules/$(uname -r)

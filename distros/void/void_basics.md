@@ -1,6 +1,7 @@
 ---
-title: "Void Linux Basics"
-tags: [ "void" ]
+title: Void Linux Basics
+tags: 
+- void
 ---
 # Updates
 

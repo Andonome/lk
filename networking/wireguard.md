@@ -1,6 +1,8 @@
 ---
-title: "wireguard"
-tags: [ "networking", "VPN" ]
+title: wireguard
+tags: 
+- networking
+- VPN
 ---
 <!--
 from 

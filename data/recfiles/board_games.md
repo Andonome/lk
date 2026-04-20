@@ -1,7 +1,11 @@
 ---
-title: "Board Games with Recfiles"
-tags: [ "data", "recfiles", "games" ]
-requires: [ "recfiles" ]
+title: Board Games with Recfiles
+tags: 
+- data
+- recfiles
+- games
+requires: 
+- recfiles
 ---
 
 You can play with a board games database from boardgamegeek.com.

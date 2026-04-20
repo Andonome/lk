@@ -1,7 +1,10 @@
 ---
-title: "Commit for Another"
-tags: [ "data", "git" ]
-requires: [ "git" ]
+title: Commit for Another
+tags: 
+- data
+- git
+requires: 
+- git
 ---
 
 You can make Alice the author, while you are still the commiter:

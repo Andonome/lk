@@ -1,7 +1,10 @@
 ---
-title: "unison"
-tags: [ "backups", "synch" ]
-requires: [ "ssh" ]
+title: unison
+tags: 
+- backups
+- synch
+requires: 
+- ssh
 ---
 
 Install unison on both machines, and make sure both have the same version of unison, with the same version of the ocaml compiler (the smallest difference will cause problems).

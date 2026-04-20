@@ -1,6 +1,9 @@
 ---
-title: "tree"
-tags: [ "basics", "tree", "markdown" ]
+title: tree
+tags: 
+- basics
+- tree
+- markdown
 ---
 
 The `tree` utility outputs a full listing of everything in your current directory, and those below.

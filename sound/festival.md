@@ -1,6 +1,7 @@
 ---
-title: "festival"
-tags: [ "sound" ]
+title: festival
+tags: 
+- sound
 ---
 
 # Basics

@@ -1,6 +1,7 @@
 ---
-title: "partitions"
-tags: [ "system" ]
+title: partitions
+tags: 
+- system
 ---
 
 # FDisk Basics

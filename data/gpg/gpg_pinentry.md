@@ -1,7 +1,12 @@
 ---
-title: "GPG Password Entry"
-tags: [ "vim", "secrets", "TUI" ]
-requires: [ "gpg", "vim" ]
+title: GPG Password Entry
+tags: 
+- vim
+- secrets
+- TUI
+requires: 
+- gpg
+- vim
 ---
 
 

@@ -1,6 +1,7 @@
 ---
-title: "Joyous ASCII"
-tags: [ "fun" ]
+title: Joyous ASCII
+tags: 
+- fun
 ---
 
 - `asciiquarium`

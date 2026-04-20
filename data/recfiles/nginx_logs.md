@@ -1,7 +1,12 @@
 ---
-title: "nginx logs with recfiles"
-tags: [ "data", "recfiles", "logs" ]
-requires: [ "recfiles", "nginx" ]
+title: nginx logs with recfiles
+tags: 
+- data
+- recfiles
+- logs
+requires: 
+- recfiles
+- nginx
 ---
 
 The standard `nginx` log format has such a lack of consistency or meaning that you might squint your face into a whirlpool making sense of them:

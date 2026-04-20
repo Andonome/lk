@@ -1,7 +1,12 @@
 ---
-title: "vim in bash"
-tags: [ "vim", "bash", "inputrc", "TUI" ]
-requires: [ "vim" ]
+title: vim in bash
+tags: 
+- vim
+- bash
+- inputrc
+- TUI
+requires: 
+- vim
 ---
 
 Put bash in vim mode!

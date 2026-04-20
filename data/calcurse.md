@@ -1,6 +1,9 @@
 ---
-title: "calcurse"
-tags: [ "data", "calendar", "daylight savings" ]
+title: calcurse
+tags: 
+- data
+- calendar
+- daylight savings
 ---
 
 ## Setup

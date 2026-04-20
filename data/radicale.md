@@ -1,7 +1,11 @@
 ---
-title: "radicale and nginx"
-tags: [ "data", "calendar" ]
-requires: [ "nginx", "certbot" ]
+title: radicale and nginx
+tags: 
+- data
+- calendar
+requires: 
+- nginx
+- certbot
 ---
 
 Check before you start:

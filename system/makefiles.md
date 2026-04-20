@@ -1,6 +1,8 @@
 ---
-title: "Makefiles"
-tags: [ "system", "make" ]
+title: Makefiles
+tags: 
+- system
+- make
 ---
 
 The `make` system wants to know:

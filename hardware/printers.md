@@ -1,6 +1,7 @@
 ---
-title: "printers"
-tags: [ "hardware" ]
+title: printers
+tags: 
+- hardware
 ---
 # Cups: The Common Unix Printing System
 

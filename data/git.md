@@ -1,6 +1,8 @@
 ---
-title: "git"
-tags: [ "data", "setup" ]
+title: git
+tags: 
+- data
+- setup
 ---
 
 

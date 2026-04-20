@@ -1,7 +1,11 @@
 ---
-title: "vim completion"
-tags: [ "vim", "completion", "TUI" ]
-requires: [ "vim" ]
+title: vim completion
+tags: 
+- vim
+- completion
+- TUI
+requires: 
+- vim
 ---
 
 Complete the word by searching for the *n*ext similar word:

@@ -43,8 +43,7 @@ $(databases): .dbs/%.rec: %/ | .dbs/
 	for entry in $(shell find $< -type f -name "*.md") ; do \
 		printf "path: %s\n" "$$entry" ;\
 		sed -n '2,/^---$$/ {/^---$$/d; p}' "$$entry"  |\
-		tr -d '[]' | tr -s ' ' |\
-		sed '/tags: /s/, /\ntag: /g ; s/tags:/tag:/ ; /requires/s/, /\nrequires: /g' ;\
+		while read -r line; do  if [ -z "$${line#*:}" ] ; then type="$$line"; else echo "$$line" | sed -r "s/- (.*)/$$type \1/" | sed s'/tags: /tag: /' ; fi ; done ;\
 		printf "wordcount: %s\n\n" "$$(wc -w < $$entry)" ;\
 	done > $@
 
@@ -105,8 +104,8 @@ article: **/ **/**/ ## Write a new article
 	[ -d "$(@D)" ] || mkdir $(@D)
 	printf '%s\n' '---' >> $@
 	printf 'title: %s\n' '$(TITLE)' >> $@
-	tags="$$(echo $(@D) | sed 's#/$$#"# ; s#/#", "#g ; s#^#"#' )" \
-	&& printf 'tags [ %s ]\n' "$$tags" >> $@
+	echo "tags: " >> $@
+	echo $(@D) | sed 's#\/#\n- #g' >> $@
 	printf '%s\n\n' '---' >> $@
 	$(EDITOR) +5 $@
 	git add $@

@@ -1,6 +1,7 @@
 ---
-title: "locating"
-tags: [ "basics" ]
+title: locating
+tags: 
+- basics
 ---
 # Type
 

@@ -1,6 +1,9 @@
 ---
-title: "Mapping the Net"
-tags: [ "networking", "graph", "fun" ]
+title: Mapping the Net
+tags: 
+- networking
+- graph
+- fun
 ---
 
 Find the path to a domain:

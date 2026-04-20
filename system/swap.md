@@ -1,6 +1,7 @@
 ---
-title: "swap"
-tags: [ "system" ]
+title: swap
+tags: 
+- system
 ---
 # Making a Swap File
 

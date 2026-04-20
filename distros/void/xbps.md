@@ -1,6 +1,7 @@
 ---
-title: "xbps"
-tags: [ "void" ]
+title: xbps
+tags: 
+- void
 ---
 ## Search
 

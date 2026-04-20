@@ -1,6 +1,9 @@
 ---
-title: "ijq"
-tags: [ "data", "json", "TUI" ]
+title: ijq
+tags: 
+- data
+- json
+- TUI
 ---
 
 Analyse `json` easier with `ijq`.

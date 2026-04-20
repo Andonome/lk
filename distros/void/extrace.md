@@ -1,6 +1,7 @@
 ---
-title: "extrace"
-tags: [ "void" ]
+title: extrace
+tags: 
+- void
 ---
 Monitor all processes:
 

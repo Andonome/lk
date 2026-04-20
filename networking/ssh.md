@@ -1,6 +1,7 @@
 ---
-title: "ssh"
-tags: [ "networking" ]
+title: ssh
+tags: 
+- networking
 ---
 
 # Basic `ssh`

@@ -1,6 +1,7 @@
 ---
-title: "pipewire"
-tags: [ "sound" ]
+title: pipewire
+tags: 
+- sound
 ---
 
 Install `wireplumber` and `pipewire`, then add your user to any `pipewire` group.

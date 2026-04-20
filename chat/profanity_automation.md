@@ -1,7 +1,10 @@
 ---
-title: "profanity automation"
-tags: [ "chat", "omemo" ]
-requires: [ "profanity" ]
+title: profanity automation
+tags: 
+- chat
+- omemo
+requires: 
+- profanity
 ---
 
 Automate profanity with `--cmd`.

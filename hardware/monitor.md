@@ -1,6 +1,7 @@
 ---
-title: "monitor"
-tags: [ "hardware" ]
+title: monitor
+tags: 
+- hardware
 ---
 See screen size
 

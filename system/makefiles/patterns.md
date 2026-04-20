@@ -1,6 +1,8 @@
 ---
-title: "Makefile Patterns"
-tags: [ "system", "make" ]
+title: Makefile Patterns
+tags: 
+- system
+- make
 ---
 
 Using the [basic example](../makefiles.md), you can make a complete backup of all backup files.

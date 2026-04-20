@@ -1,6 +1,9 @@
 ---
-title: "ssh to phone"
-tags: [ "networking", "ssh", "android" ]
+title: ssh to phone
+tags: 
+- networking
+- ssh
+- android
 ---
 
 1. Install fdroid on phone.

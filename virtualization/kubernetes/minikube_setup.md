@@ -1,6 +1,10 @@
 ---
-title: "Kubernetes Setup"
-tags: [ "virtualization", "kubernetes", "minikube", "docker" ]
+title: Kubernetes Setup
+tags: 
+- virtualization
+- kubernetes
+- minikube
+- docker
 ---
 
 # Install `minikube`

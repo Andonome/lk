@@ -1,6 +1,7 @@
 ---
-title: "systemd"
-tags: [ "systemd" ]
+title: systemd
+tags: 
+- systemd
 ---
 ```sh
 systemctl list-units

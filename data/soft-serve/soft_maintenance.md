@@ -1,7 +1,12 @@
 ---
-title: "Soft Serve Maintenance"
-tags: [ "data", "git server", "maintenance" ]
-requires: [ "git", "nginx" ]
+title: Soft Serve Maintenance
+tags: 
+- data
+- git server
+- maintenance
+requires: 
+- git
+- nginx
 ---
 
 Over time git repositories become bloated with old data, but never get cleaned.

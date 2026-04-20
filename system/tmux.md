@@ -1,6 +1,7 @@
 ---
-title: "tmux"
-tags: [ "system" ]
+title: tmux
+tags: 
+- system
 ---
 Start with:
 

@@ -1,7 +1,9 @@
 ---
-title: "virtualbox"
-tags: [ "system" ]
-requires: [ "groups" ]
+title: virtualbox
+tags: 
+- system
+requires: 
+- groups
 ---
 # Setup
 

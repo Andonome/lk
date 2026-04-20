@@ -1,7 +1,12 @@
 ---
-title: "Ansible Basics"
-tags: [ "system", "ansible", "orchestration" ]
-requires: [ "ssh", "pass" ]
+title: Ansible Basics
+tags: 
+- system
+- ansible
+- orchestration
+requires: 
+- ssh
+- pass
 ---
 
 # Start Locally

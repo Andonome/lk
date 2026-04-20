@@ -1,7 +1,10 @@
 ---
-title: "git-lfs"
-tags: [ "data", "git" ]
-requires: [ "git" ]
+title: git-lfs
+tags: 
+- data
+- git
+requires: 
+- git
 ---
 
 Git Large File Storage ('LFS') needs to change your `~/.gitconfig` to check out those binary files:

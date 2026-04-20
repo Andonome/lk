@@ -1,6 +1,7 @@
 ---
-title: "Base 16"
-tags: [ "data" ]
+title: Base 16
+tags: 
+- data
 ---
 
 Base 16 numbers often use `0x` at the start, so '10' just means '10', but `0x10` means '10 in base 16' which means '16'.

@@ -1,6 +1,8 @@
 ---
-title: "Ach Linux GPU Setup"
-tags: [ "arch", "GPU" ]
+title: Ach Linux GPU Setup
+tags: 
+- arch
+- GPU
 ---
 # Step 1: Multilib
 

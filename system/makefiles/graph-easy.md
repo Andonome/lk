@@ -1,6 +1,9 @@
 ---
-title: "Makefile Graphs"
-tags: [ "system", "make", "graph" ]
+title: Makefile Graphs
+tags: 
+- system
+- make
+- graph
 ---
 
 If you have `graph-easy` (often in the package `perl-graph-easy` or similar), you can make a graph from the makefile with `make2graph` (the package is often called `makefile2graph`).

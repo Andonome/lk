@@ -1,7 +1,9 @@
 ---
-title: "fail2ban"
-tags: [ "networking" ]
-requires: [ "ssh" ]
+title: fail2ban
+tags: 
+- networking
+requires: 
+- ssh
 ---
 # SSH Daemon Jail
 

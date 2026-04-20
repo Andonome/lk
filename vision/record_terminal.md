@@ -1,6 +1,8 @@
 ---
-title: "Record a Terminal Session"
-tags: [ "vision", "share" ]
+title: Record a Terminal Session
+tags: 
+- vision
+- share
 ---
 
 Record a terminal command, then press 'Control + d' to exit.

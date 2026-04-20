@@ -1,6 +1,8 @@
 ---
-title: "Convert Spreadsheets"
-tags: [ "data", "sc-im" ]
+title: Convert Spreadsheets
+tags: 
+- data
+- sc-im
 ---
 
 Convert between spreadsheet formats with `sc-im`.

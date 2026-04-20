@@ -1,7 +1,11 @@
 ---
-title: "vim navigation"
-tags: [ "vim", "navigation", "TUI" ]
-requires: [ "vim" ]
+title: vim navigation
+tags: 
+- vim
+- navigation
+- TUI
+requires: 
+- vim
 ---
 
 | Move                    | Command      |

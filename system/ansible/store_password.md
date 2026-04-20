@@ -1,6 +1,8 @@
 ---
-title: "Store Host Password"
-tags: [ "system", "ansible" ]
+title: Store Host Password
+tags: 
+- system
+- ansible
 ---
 
 Make a hosts file with one host (your computer) and one variable, just to test:

@@ -1,6 +1,8 @@
 ---
-title: "exiftool"
-tags: [ "metadata", "exifdata" ]
+title: exiftool
+tags: 
+- metadata
+- exifdata
 ---
 
 Find metadata:

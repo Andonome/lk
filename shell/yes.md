@@ -1,6 +1,7 @@
 ---
-title: "yes"
-tags: [ "basics" ]
+title: yes
+tags: 
+- basics
 ---
 # The Best Linux Program: `yes`
 

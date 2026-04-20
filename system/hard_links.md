@@ -1,6 +1,8 @@
 ---
-title: "hard links"
-tags: [ "basics", "links" ]
+title: hard links
+tags: 
+- basics
+- links
 ---
 
 A hard link is one file which exists in multiple locations.

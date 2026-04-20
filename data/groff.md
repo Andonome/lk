@@ -1,6 +1,8 @@
 ---
-title: "groff"
-tags: [ "data", "logic" ]
+title: groff
+tags: 
+- data
+- logic
 ---
 # Basic Documents
 

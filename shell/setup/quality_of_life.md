@@ -1,6 +1,8 @@
 ---
-title: "Quality of Life"
-tags: [ "basics", "setup" ]
+title: Quality of Life
+tags: 
+- basics
+- setup
 ---
 
 This & That

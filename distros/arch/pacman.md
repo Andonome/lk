@@ -1,6 +1,7 @@
 ---
-title: "pacman"
-tags: [ "distros" ]
+title: pacman
+tags: 
+- distros
 requirements: [ "Install Arch" ]
 ---
 

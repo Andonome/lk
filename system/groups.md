@@ -1,6 +1,7 @@
 ---
-title: "Managing Groups"
-tags: [ "system" ]
+title: Managing Groups
+tags: 
+- system
 ---
 
 Check which groups you are in, and which are available:

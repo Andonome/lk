@@ -1,6 +1,8 @@
 ---
-title: "awk"
-tags: [ "system", ".csv" ]
+title: awk
+tags: 
+- system
+- .csv
 ---
 # Basics
 

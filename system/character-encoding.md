@@ -1,6 +1,8 @@
 ---
-title: "character-encoding"
-tags: [ "system", "encoding" ]
+title: character-encoding
+tags: 
+- system
+- encoding
 ---
 
 Convert a text file from one encoding type to another with:

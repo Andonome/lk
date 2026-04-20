@@ -1,6 +1,8 @@
 ---
-title: "Search Video Audio"
-tags: [ "data", "video" ]
+title: Search Video Audio
+tags: 
+- data
+- video
 ---
 
 Check subtitles available:

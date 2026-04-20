@@ -1,7 +1,10 @@
 ---
-title: "Docker"
-tags: [ "documentation", "virtualization" ]
-requires: [ "groups" ]
+title: Docker
+tags: 
+- documentation
+- virtualization
+requires: 
+- groups
 ---
 ```sh
 sudo pacman -S docker

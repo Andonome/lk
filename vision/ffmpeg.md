@@ -1,6 +1,8 @@
 ---
-title: "ffmpeg"
-tags: [ "sound", "vision" ]
+title: ffmpeg
+tags: 
+- sound
+- vision
 ---
 # Basics 
 

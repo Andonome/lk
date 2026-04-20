@@ -1,6 +1,8 @@
 ---
-title: "Archives"
-tags: [ "archives", "backups" ]
+title: Archives
+tags: 
+- archives
+- backups
 ---
 
 # Create

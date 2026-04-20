@@ -1,6 +1,9 @@
 ---
-title: "Sharing Secrets"
-tags: [ "data", "death", "secrets" ]
+title: Sharing Secrets
+tags: 
+- data
+- death
+- secrets
 ---
 
 You can share parts of a secret with multiple people, so only some of them need to agree to see the secret.

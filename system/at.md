@@ -1,6 +1,8 @@
 ---
-title: "at"
-tags: [ "basics", "time" ]
+title: at
+tags: 
+- basics
+- time
 ---
 Install with:
 

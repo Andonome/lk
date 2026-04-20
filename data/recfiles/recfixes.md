@@ -1,7 +1,10 @@
 ---
-title: "Recfixes"
-tags: [ "data", "recfiles" ]
-requires: [ "recfiles" ]
+title: Recfixes
+tags: 
+- data
+- recfiles
+requires: 
+- recfiles
 ---
 
 Sometimes `recsel` chokes on a large query, and you need to break the query into chunks with a pipe.

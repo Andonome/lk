@@ -1,6 +1,10 @@
 ---
-title: "PDF Metadata Erasure"
-tags: [ "metadata", "ghost script", "gs", ".pdf" ]
+title: PDF Metadata Erasure
+tags: 
+- metadata
+- ghost script
+- gs
+- .pdf
 ---
 
 You cannot erase pdf metadata with `exiftool` (it only *appends* your changes).

@@ -1,6 +1,7 @@
 ---
-title: "LaTeX Packages"
-tags: [ "writing" ]
+title: LaTeX Packages
+tags: 
+- writing
 ---
 
 # Warm Up

@@ -1,7 +1,10 @@
 ---
-title: "Clean up a bloated git repo"
-tags: [ "data", "setup" ]
-requires: [ "git" ]
+title: Clean up a bloated git repo
+tags: 
+- data
+- setup
+requires: 
+- git
 ---
 
 

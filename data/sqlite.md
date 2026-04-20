@@ -1,6 +1,7 @@
 ---
-title: "sqlite"
-tags: [ "data" ]
+title: sqlite
+tags: 
+- data
 ---
 
 Work with a database:

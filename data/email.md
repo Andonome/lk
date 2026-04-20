@@ -1,6 +1,8 @@
 ---
-title: "e-mail"
-tags: [ "data", "smtp" ]
+title: e-mail
+tags: 
+- data
+- smtp
 ---
 
 This is bare-bones, original, primitive e-mail.

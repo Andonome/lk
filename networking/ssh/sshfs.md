@@ -1,7 +1,9 @@
 ---
-title: "sshfs"
-tags: [ "networking" ]
-requires: [ "ssh" ]
+title: sshfs
+tags: 
+- networking
+requires: 
+- ssh
 ---
 # Mount 
 

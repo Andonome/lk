@@ -1,6 +1,7 @@
 ---
-title: "Brand Name Wallpaper"
-tags: [ "void" ]
+title: Brand Name Wallpaper
+tags: 
+- void
 ---
 
 To automatically stick the logo onto your background, do these commands in the directory.

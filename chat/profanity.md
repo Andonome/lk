@@ -1,6 +1,8 @@
 ---
-title: "profanity"
-tags: [ "chat", "omemo" ]
+title: profanity
+tags: 
+- chat
+- omemo
 ---
 
 # Setup (Commands)

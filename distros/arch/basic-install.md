@@ -1,7 +1,9 @@
 ---
-title: "Install Arch"
-tags: [ "arch" ]
-requires: [ "partitions" ]
+title: Install Arch
+tags: 
+- arch
+requires: 
+- partitions
 ---
 Keyboard layout changed.
 

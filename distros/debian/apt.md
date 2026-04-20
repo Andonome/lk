@@ -1,6 +1,7 @@
 ---
-title: "apt troubleshooting"
-tags: [ "debian" ]
+title: apt troubleshooting
+tags: 
+- debian
 ---
 
 Messed up a package's configuration files?

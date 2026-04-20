@@ -1,6 +1,8 @@
 ---
-title: "Void locale"
-tags: [ "void", "locale" ]
+title: Void locale
+tags: 
+- void
+- locale
 ---
 
 Check the current locales:

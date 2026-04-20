@@ -1,7 +1,11 @@
 ---
-title: "pass"
-tags: [ "data", "credentials", "secrets" ]
-requires: [ "gpg" ]
+title: pass
+tags: 
+- data
+- credentials
+- secrets
+requires: 
+- gpg
 ---
 
 Setup [gpg](gpg.md) keys.

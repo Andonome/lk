@@ -1,6 +1,9 @@
 ---
-title: "Xen Volume Management"
-tags: [ "xe", "virtualization", "volume" ]
+title: Xen Volume Management
+tags: 
+- xe
+- virtualization
+- volume
 ---
 # Make a local iso repository
 

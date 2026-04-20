@@ -1,7 +1,10 @@
 ---
-title: "Kubernetes Basics"
-tags: [ "virtualization", "kubernetes" ]
-requires: [ "minikube_setup" ]
+title: Kubernetes Basics
+tags: 
+- virtualization
+- kubernetes
+requires: 
+- minikube_setup
 ---
 
 Install `kubectl`.

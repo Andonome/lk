@@ -1,6 +1,7 @@
 ---
-title: "khard"
-tags: [ "data" ]
+title: khard
+tags: 
+- data
 ---
 Get the basic config:
 

@@ -1,6 +1,7 @@
 ---
-title: "eval"
-tags: [ "basics" ]
+title: eval
+tags: 
+- basics
 ---
 
 Compose a statement for execution.

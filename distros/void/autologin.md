@@ -1,6 +1,7 @@
 ---
-title: "Void Autologin"
-tags: [ "void" ]
+title: Void Autologin
+tags: 
+- void
 ---
 
 Make the autologin service:

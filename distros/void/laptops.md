@@ -1,6 +1,8 @@
 ---
-title: "Laptops with Void Linux"
-tags: [ "void", "laptop" ]
+title: Laptops with Void Linux
+tags: 
+- void
+- laptop
 ---
 
 Install and enable `tlp`.

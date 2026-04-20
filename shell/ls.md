@@ -1,6 +1,7 @@
 ---
-title: "ls"
-tags: [ "basics" ]
+title: ls
+tags: 
+- basics
 ---
 
 Firstly, your `ls` is probably aliased to something.

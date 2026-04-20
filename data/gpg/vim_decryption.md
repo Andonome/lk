@@ -1,7 +1,13 @@
 ---
-title: "Edit gpg encrypted files easily"
-tags: [ "vim", "data", "gpg" ]
-requires: [ "gpg", "vim", "comfy" ]
+title: Edit gpg encrypted files easily
+tags: 
+- vim
+- data
+- gpg
+requires: 
+- gpg
+- vim
+- comfy
 ---
 
 The `vim-gnupg` plug-in lets vim edit gpg-encrypted files as if they were unencrypted.

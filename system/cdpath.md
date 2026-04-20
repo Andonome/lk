@@ -1,6 +1,8 @@
 ---
-title: "Instantly cd anywhere in bash"
-tags: [ "system", "bash" ]
+title: Instantly cd anywhere in bash
+tags: 
+- system
+- bash
 ---
 
 Change locations quickly with the `bash` built-in variable: `$CDPATH`.

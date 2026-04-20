@@ -1,7 +1,12 @@
 ---
-title: "Ansible with Docker"
-tags: [ "system", "ansible", "docker" ]
-requires: [ "docker", "ansible" ]
+title: Ansible with Docker
+tags: 
+- system
+- ansible
+- docker
+requires: 
+- docker
+- ansible
 ---
 
 'Docker module', you say?

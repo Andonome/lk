@@ -1,6 +1,8 @@
 ---
-title: "mpd with pipewire"
-tags: [ "sound", "pipewire" ]
+title: mpd with pipewire
+tags: 
+- sound
+- pipewire
 requirements: [ "pipewire" ]
 ---
 # Setup

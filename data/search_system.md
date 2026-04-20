@@ -1,7 +1,11 @@
 ---
-title: "Search System"
-tags: [ "data", "search", "locate", "plocate" ]
-requires: "cron"
+title: Search System
+tags: 
+- data
+- search
+- locate
+- plocate
+requires: cron
 ---
 
 You can search every file on the computer instantly by installing `plocate`.

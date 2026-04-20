@@ -1,6 +1,8 @@
 ---
-title: "Newsraft"
-tags: [ "data", "RSS" ]
+title: Newsraft
+tags: 
+- data
+- RSS
 ---
 
 # Setup

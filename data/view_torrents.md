@@ -1,6 +1,9 @@
 ---
-title: "View Torrents"
-tags: [ "data", "transmission", "torrenting" ]
+title: View Torrents
+tags: 
+- data
+- transmission
+- torrenting
 ---
 
 

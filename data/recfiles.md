@@ -1,6 +1,8 @@
 ---
-title: "Recfiles"
-tags: [ "data", "database" ]
+title: Recfiles
+tags: 
+- data
+- database
 ---
 
 Create:

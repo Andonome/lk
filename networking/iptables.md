@@ -1,6 +1,7 @@
 ---
-title: "iptables"
-tags: [ "networking" ]
+title: iptables
+tags: 
+- networking
 ---
 # Intro
 

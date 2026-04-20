@@ -1,6 +1,7 @@
 ---
-title: "wireless"
-tags: [ "networking" ]
+title: wireless
+tags: 
+- networking
 ---
 
 Check wifi's working

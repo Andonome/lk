@@ -1,6 +1,7 @@
 ---
-title: "w3m"
-tags: [ "browser" ]
+title: w3m
+tags: 
+- browser
 ---
 Open a search tab:
 

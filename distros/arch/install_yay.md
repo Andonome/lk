@@ -1,6 +1,8 @@
 ---
-title: "Install yay"
-tags: [ "distros", "arch" ]
+title: Install yay
+tags: 
+- distros
+- arch
 requirements: [ "pacman" ]
 ---
 

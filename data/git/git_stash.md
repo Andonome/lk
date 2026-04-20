@@ -1,7 +1,10 @@
 ---
-title: "git stash"
-tags: [ "data", "git" ]
-requires: [ "git" ]
+title: git stash
+tags: 
+- data
+- git
+requires: 
+- git
 ---
 
 Save file-changes without committing anything.
