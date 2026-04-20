@@ -1,7 +1,7 @@
 ---
 title: "GPG Password Entry"
 tags: [ "vim", "secrets", "TUI" ]
-requires: [ "GPG Basics", "vim basics" ]
+requires: [ "gpg", "vim" ]
 ---
 
 
@@ -11,7 +11,7 @@ Check your current gpg-agent configuration:
 gpgconf --list-options gpg-agent
 ```
 
-Create file, if it doesnt exit `~/.gnupg/gpg-agent.conf`:
+Create file, if it doesn't exit `~/.gnupg/gpg-agent.conf`:
 
 ```
 # Force terminal prompts for passwords
@@ -22,6 +22,7 @@ pinentry-program /usr/bin/pinentry-tty
 ```
 
 Then restart gpg-agent:
+
 ```sh
 gpg-connect-agent reloadagent /bye
 ```

@@ -1,7 +1,7 @@
 ---
 title: "IP Addresses with Recfiles"
 tags: [ "data", "recfiles", "games" ]
-requires: "Recfiles"
+requires: "recfiles"
 ---
 
 ## Download the Database

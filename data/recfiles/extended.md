@@ -1,6 +1,7 @@
 ---
 title: "Recfiles Extended Example"
 tags: [ "data", "database", "recfiles" ]
+requires: [ "recfiles" ]
 ---
 
 ## Create
