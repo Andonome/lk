@@ -16,6 +16,8 @@ Uncomment the lines about `/var/lib/tor/hidden_services`, including port 22 (or 
 
 # SSH over tor
 
-install package `torsocks`, and add it before `ssh` command, for easier use, add it to `.ssh/config`
+Install package `torsocks`, and add it before `ssh` command, for easier use, add it to `.ssh/config`.
 
-`torsocks ssh user@{someonionhash}.onion`
+```sh
+torsocks ssh ${user}@{someonionhash}.onion
+```

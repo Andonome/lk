@@ -1,6 +1,6 @@
 ---
 title: "Easy Network Graph"
-tags: [ "networking" ]
+tags: [ "flowchart" ]
 ---
 Set up a file like this, called `troubleshooting.txt`.
 

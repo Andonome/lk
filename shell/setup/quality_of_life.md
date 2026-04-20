@@ -1,7 +1,6 @@
 ---
 title: "Quality of Life"
 tags: [ "basics", "setup" ]
-dependencies: [ "vi", "basics" ]
 ---
 
 This & That

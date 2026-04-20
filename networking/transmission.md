@@ -2,7 +2,6 @@
 title: "transmission"
 tags: [ "networking", "torrenting" ]
 ---
-# Torrench
 
 Search for a torrent, e.g. 'sita sings the blues'.
 

@@ -1,15 +1,12 @@
 ---
-title: "apt"
-tags: [ "distros" ]
+title: "apt troubleshooting"
+tags: [ "debian" ]
 ---
-## apt
-
-### Configurations?
 
 Messed up a package's configuration files?
 
 ```sh
-sudo apt-get purge [thing]
+sudo apt-get purge ${package}
 ```
 
 ```sh
@@ -19,16 +16,16 @@ sudo apt autoremove
 Check if you still have related things:
 
 ```sh
-apt search [thing]
+apt search ${package}
 ```
 
 ```sh
-sudo apt-get install [ thing ]
+sudo apt-get install ${package}
 ```
 
 Still have problems?
 
 ```sh
-sudo dpgk --force-confmiss -i /var/cache/apt/archives/[thing]
+sudo dpgk --force-confmiss -i /var/cache/apt/archives/${package}
 ```
 

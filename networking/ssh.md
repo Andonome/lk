@@ -2,6 +2,7 @@
 title: "ssh"
 tags: [ "networking" ]
 ---
+
 # Basic `ssh`
 
 Try out basic ssh by accessing `git.charm.sh`, without needing authentication:
@@ -35,7 +36,7 @@ Test it works by using ssh into your own system, from inside:
 
 
 ```sh
-ssh $USER@localhost
+ssh ${user}@localhost
 ```
 
 Access the computer from another computer on the same local network by finding your computer's IP address.
@@ -83,7 +84,7 @@ The other is secret.
 Now send those keys to a remote computer:
 
 ```sh
-ssh-copy-id $USERNAME@IP_ADDRESS
+ssh-copy-id ${username}@{ip_address}
 ```
 
 Now you can log in without a password.

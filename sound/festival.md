@@ -2,6 +2,7 @@
 title: "festival"
 tags: [ "sound" ]
 ---
+
 # Basics
 
 Add your user to the audio group, and install `festival-english`.

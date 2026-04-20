@@ -1,6 +1,7 @@
 ---
 title: "unison"
 tags: [ "backups", "synch" ]
+requires: [ "ssh" ]
 ---
 
 Install unison on both machines, and make sure both have the same version of unison, with the same version of the ocaml compiler (the smallest difference will cause problems).
@@ -14,7 +15,7 @@ Create the `~/.unison` directory on both machines.
 Make a job called `backup`:
 
 ```sh
-JOB=backup
+job=backup
 ```
 
 Here is an example job, which synchronizes the `~/music` directory with a remote machine which has the same username.
@@ -24,16 +25,16 @@ Here is an example job, which synchronizes the `~/music` directory with a remote
 echo "
 auto = true
 root=$HOME
-root=ssh://$USER@$IP_ADDRESS/$HOME
+root=ssh://${user}@${ip_address}/$HOME
 
 path=music
 
 ignore=Name *.flac
-" > ~/.unison/"$JOB".prf
+" > ~/.unison/"${job}".prf
 
 ```
 
-Remember to specify `$IP_ADDRESS`
+Remember to specify `${ip_address}`
 
 The last command means it will ignore any file with a name ending in `.flac`.
 
@@ -43,7 +44,7 @@ The first command means this will run but also confirm which files will be delet
 Or you can deleted that line in the `.prf` file and run it with a flag:
 
 ```sh
-unison -batch *backup*.prf
+unison -batch ${job}.prf
 ```
 
 Set unison to run with crontab or a systemd unit file to have directories synchronize automatically.
