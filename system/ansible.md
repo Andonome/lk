@@ -1,7 +1,7 @@
 ---
 title: "Ansible Basics"
 tags: [ "system", "ansible", "orchestration" ]
-requires: [ "ssh" ]
+requires: [ "ssh", "pass" ]
 ---
 
 # Start Locally
@@ -95,7 +95,7 @@ all:
 Check the inventory in yaml format:
 
 ```sh
-ansible-inventory --list -y -i
+ansible-inventory --list -y -i hosts
 ```
 
 ```sh

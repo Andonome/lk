@@ -1,7 +1,7 @@
 ---
 title: "pass"
 tags: [ "data", "credentials", "secrets" ]
-requires: "gpg"
+requires: [ "gpg" ]
 ---
 
 Setup [gpg](gpg.md) keys.

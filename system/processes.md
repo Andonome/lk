@@ -2,7 +2,7 @@
 title: "processes"
 tags: [ "basics" ]
 ---
-# Proccesses
+# Processes
 
 See running items in current terminal with 
 
