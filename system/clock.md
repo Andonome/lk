@@ -62,6 +62,6 @@ sudo apt-get install -y ntp
 The shell command for this is `ntpq`.  Monitor the service providers using:
 
 ```sh
-ntpq -p
+ntpd -q
 ```
 

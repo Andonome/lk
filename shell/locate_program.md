@@ -26,8 +26,3 @@ Which one of these is the binary file which you actually use?
 ```sh
 which grep
 ```
-
-# More
-
-- [Search instantly with `plocate`](data/search_system.md)
-
