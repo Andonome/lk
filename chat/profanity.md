@@ -2,12 +2,13 @@
 title: "profanity"
 tags: [ "chat", "omemo" ]
 ---
+
 # Setup (Commands)
 
 Sign up to an account somewhere.
 
 ```
-/connect bob@bobserver.org
+/connect ${name}@${host}
 ```
 
 Check if someone wants to be your friend:
@@ -19,13 +20,13 @@ Check if someone wants to be your friend:
 Accept a friend's subscription request:
 
 ```
-/sub add alice@aliceserver.org
+/sub add ${name}@${host}
 ```
 
 Join a room:
 
 ```
-/join room1@bobserver.org
+/join ${room}@${host}
 ```
 
 Save your configuration so you don't have to do this again:
@@ -41,11 +42,11 @@ Check your `~/.config/profanity/profrc` for how to data's saved.
 To automatically sign in, add your password to [pass](../data/pass.md).
 
 ```
-/account set *malin@oosm.org* eval_password pass *xmpp*
+/account set ${name}@${host} eval_password pass *xmpp*
 ```
 
 ```
-/autoconnect set *malin@oosm.org*
+/autoconnect set ${name}@${host}}
 ```
 
 ```
@@ -59,7 +60,7 @@ Remember to save the config for other commands too.
 ## Messages
 
 ```
-/msg alice@aliceserver.org
+/msg ${name}@${host}}
 ```
 
 This opens in a new tab.
@@ -96,7 +97,7 @@ Tell it how to save files:
 Then get the file with:
 
 ```
-/urlsave *<Tab>*
+/urlsave <Tab>
 ```
 
 Same for `/urlopen`
@@ -140,5 +141,3 @@ You can ensure omemo automatcally turns on:
 ```
 /omemo policy automatic
 ```
----
-
