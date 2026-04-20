@@ -50,13 +50,3 @@ Working with mpd will be easier if you have access to its files, so maybe:
 sudo usermod -aG mpd $USER
 ```
 
-
-
-# Notifications (AUR)
-
-Install `mpd-notification` and then start the service:
-
-```sh
-systemctl --user enable mpd-notification
-```
-
