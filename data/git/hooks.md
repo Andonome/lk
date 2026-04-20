@@ -6,7 +6,7 @@ tags: [ "data", "git" ]
 Check out the sample hooks:
 
 ```sh
-cd $GIT_REPO
+cd ${git_repo}
 ls .git/hooks
 head .git/hooks/pre-commit.sample
 ```
@@ -21,7 +21,9 @@ chmod u+x .git/hooks/commit-msg
 
 ## Committing
 
-Your `git hooks` will not enter the repository, but you can commit them to a repository, then request others add these git hooks to their own branch, by putting a note in the project's `README.md`.
+The `git hooks` will not work on other people who use the repository, but you
+can commit them to a repository, then request others add these git hooks to
+their own branch, by putting a note in the project's `README.md`.
 
 ```markdown
 The project comes with recommended git hooks.

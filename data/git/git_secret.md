@@ -1,6 +1,6 @@
 ---
 title: "git-secret"
-tags: [ "data", "git" ]
+tags: [ "data", "git", "review" ]
 ---
 
 This utility is largely useless, as it can only identify people by their email.
