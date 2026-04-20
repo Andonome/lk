@@ -1,7 +1,7 @@
 ---
 title: "find and replace"
 tags: [ "vim", "search", "replace", "find", "TUI" ]
-requires: [ "vim basics" ]
+requires: [ "vim" ]
 ---
 Search for the next and or previous occurrence of the word under your cursor with `*` and `#`.
 

@@ -1,7 +1,7 @@
 ---
 title: "Install Arch"
 tags: [ "arch" ]
-requires: [ "partitions", "time" ]
+requires: [ "partitions" ]
 ---
 Keyboard layout changed.
 

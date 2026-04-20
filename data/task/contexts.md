@@ -1,7 +1,7 @@
 ---
 title: "Taskwarrior Contexts"
 tags: [ "data", "task" ]
-requires: [ "Taskwarrior" ]
+requires: [ "task" ]
 ---
 
 # Contexts

@@ -1,7 +1,7 @@
 ---
 title: "virtualbox"
 tags: [ "system" ]
-requires: [ "Managing Groups" ]
+requires: [ "groups" ]
 ---
 # Setup
 

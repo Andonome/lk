@@ -1,7 +1,7 @@
 ---
 title: "sc-im"
 tags: [ "TUI", "data", "spreadsheet", "csv" ]
-requires: [ "vim basics" ]
+requires: [ "vim" ]
 ---
 
 - [Sample file](sc-im/sample.sc)

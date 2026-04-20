@@ -1,7 +1,7 @@
 ---
 title: "Taskwarrior Configuration"
 tags: [ "data", "task" ]
-requires: [ "Taskwarrior" ]
+requires: [ "task" ]
 ---
 
 Show your current config:

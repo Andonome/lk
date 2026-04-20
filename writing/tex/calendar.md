@@ -1,7 +1,7 @@
 ---
 title: "Calendar"
 tags: [ "writing", "tex", "fun" ]
-requires: [ "LaTeX Packages" ]
+requires: [ "tex_packages" ]
 ---
 
 ```sh

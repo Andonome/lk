@@ -1,7 +1,7 @@
 ---
 title: "vim linewrap"
 tags: [ "vim", "format", "linewrap", "TUI" ]
-requires: [ "vim basics" ]
+requires: [ "vim" ]
 ---
 
 Wrap lines in a file to 80 characters with `gqG`.

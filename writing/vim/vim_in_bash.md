@@ -1,7 +1,7 @@
 ---
 title: "vim in bash"
 tags: [ "vim", "bash", "inputrc", "TUI" ]
-requires: [ "vim basics" ]
+requires: [ "vim" ]
 ---
 
 Put bash in vim mode!

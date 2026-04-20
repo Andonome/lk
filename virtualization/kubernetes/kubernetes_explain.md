@@ -1,7 +1,7 @@
 ---
 title: "Kubernetes Docs"
 tags: [ "virtualization", "kubernetes", "WTFM", "hosts", "DNS" ]
-requires: [ "Kubernetes Basics" ]
+requires: [ "minikube_setup" ]
 ---
 
 `kubectl` provides easy high-level overviews:

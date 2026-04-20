@@ -1,7 +1,7 @@
 ---
 title: "How to Learn `vim`"
 tags: [ "vim", "learning", "TUI" ]
-requires: [ "vim basics" ]
+requires: [ "vim" ]
 ---
 
 1. Uninstall `vim`.

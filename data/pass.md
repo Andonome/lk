@@ -1,10 +1,10 @@
 ---
 title: "pass"
 tags: [ "data", "credentials", "secrets" ]
-requires: "GPG Basics"
+requires: "gpg"
 ---
 
-Setup [gpg](./gpg.md) keys.
+Setup [gpg](gpg.md) keys.
 
 Show your gpg secret it:
 

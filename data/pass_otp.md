@@ -1,7 +1,7 @@
 ---
 title: "pass with otp"
 tags: [ "data", "credentials", "secrets", "2fa", "otp" ]
-requires: "pass"
+requires: [ "pass" ]
 ---
 
 Need a Microsoft or Google authenticator?

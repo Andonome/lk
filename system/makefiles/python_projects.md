@@ -1,7 +1,7 @@
 ---
 title: "Python Projects with Makefiles"
 tags: [ "tutorial", "system", "makefiles", "graphviz", "python" ]
-requires: [ "Makefiles" ]
+requires: [ "makefiles" ]
 ---
 
 If you have a python script which requires a packages - e.g. `graphviz` - you can automate the setup with a `Makefile`.

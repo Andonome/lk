@@ -1,7 +1,7 @@
 ---
 title: "Proxy API"
 tags: [ "virtualization", "kubernetes" ]
-requires: [ "Kubernetes Basics" ]
+requires: [ "minikube_setup" ]
 ---
 
 Start the proxy:

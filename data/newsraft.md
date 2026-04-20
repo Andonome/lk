@@ -1,7 +1,6 @@
 ---
 title: "Newsraft"
 tags: [ "data", "RSS" ]
-requires: [ "Shell Scripts" ]
 ---
 
 # Setup
