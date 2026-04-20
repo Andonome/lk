@@ -2,6 +2,7 @@
 title: "Basic Sound"
 tags: [ "sound" ]
 ---
+
 # Pulse
 
 If you have pulse, use pulse.

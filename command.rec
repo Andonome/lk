@@ -85,6 +85,7 @@ cmd: vim scp://${user}@${server}:${port}//${path}/${file}
 shell: sh
 bin: vim
 bin: scp
+tag: network
 
 aim: Hard reset ntp service
 cmd: sudo ntpd -q -g -x -n

@@ -1,6 +1,6 @@
 ---
 title: "sc-im"
-tags: [ "TUI", "data", "spreadsheet", ".csv" ]
+tags: [ "TUI", "data", "spreadsheet", "csv" ]
 requires: [ "vim basics" ]
 ---
 
