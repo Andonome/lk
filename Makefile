@@ -41,7 +41,7 @@ include cmd.mk
 $(databases): .dbs/%.rec: %/ | .dbs/
 	$(info making $(@F))
 	for entry in $(shell find $< -type f -name "*.md") ; do \
-		printf "file: %s\n" "$$entry" ;\
+		printf "path: %s\n" "$$entry" ;\
 		sed -n '2,/^---$$/ {/^---$$/d; p}' "$$entry"  |\
 		tr -d '[]' | tr -s ' ' |\
 		sed '/tags: /s/, /\ntag: /g ; s/tags:/tag:/ ; /requires/s/, /\nrequires: /g' ;\
