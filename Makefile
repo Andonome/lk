@@ -61,7 +61,7 @@ db.rec: $(databases)
 	recsel $@ -e "requires != ''" -CR title,requires |\
 	while read title requires; do \
 		for provider in "$$requires" ; do \
-			recset $@ -e "title = '$${provider}'" -f provides -a "$${title}" ;\
+			recset --verbose $@ -e "title = '$${provider}'" -f provides -a "$${title}" ;\
 		done ;\
 	done
 	sed -i 's/"//g' $@

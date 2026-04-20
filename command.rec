@@ -86,3 +86,19 @@ shell: sh
 bin: vim
 bin: scp
 
+aim: Hard reset ntp service
+cmd: sudo ntpd -q -g -x -n
+bin: ntpd
+tag: time
+
+aim: Convert markdown table to csv
+cmd: mlr --imarkdown --ocsv cat ''.md
+bin: mlr
+tag: csv
+tag: markdown
+tag: data
+
+aim: Convert a csv file to markdown
+cmd: mlr --icsv --omd cat ''.csv
+bin: mlr
+tag: data
