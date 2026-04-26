@@ -28,3 +28,9 @@ Paste in the file then load the result to the right-hand clipboard:
 wgetpaste -s dpaste -X
 ```
 
+---
+title: 
+tags: 
+chat
+---
+

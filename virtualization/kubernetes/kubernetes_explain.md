@@ -3,11 +3,11 @@ title: Kubernetes Docs
 tags: 
 - virtualization
 - kubernetes
-- WTFM
+- wtfm
 - hosts
-- DNS
+- dns
 requires: 
-- minikube_setup
+- virtualization/kubernetes/minikube_setup.md
 ---
 
 `kubectl` provides easy high-level overviews:
@@ -25,7 +25,7 @@ The `kubectl explain` resources cannot use tab-completion.
 But you can find the same resources listed with `api-resources`, and use a fuzzy-finder, to get the same effect.
 
 ```sh
-t="$(kubectl api-resources  | fzy | gawk '{print $1}')"
+t="$(kubectl api-resources | fzf | gawk '{print $1}')"
 kubectl explain ${t}
 ```
 

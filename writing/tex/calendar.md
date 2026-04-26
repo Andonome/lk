@@ -1,11 +1,11 @@
 ---
-title: Calendar
+title: Output a LaTeX Calendar
 tags: 
 - writing
 - tex
 - fun
 requires: 
-- tex_packages
+- writing/tex/tex_packages.md
 ---
 
 ```sh

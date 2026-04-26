@@ -13,7 +13,7 @@ mkdir ~/.config/newsboat
 echo 'https://voidlinux.org/atom.xml foss tech' >> ~/.config/newsboat/urls
 ```
 
-Start `newsobat` and press `r` to load your feed.
+Start `newsboat` and press `r` to load your feed.
 
 To add a feed, you can press `E` to edit that `urls` file.
 

@@ -2,7 +2,8 @@
 title: pacman - Extras
 tags: 
 - distros
-requirements: [ "pacman" ]
+requires: 
+- distros/arch/pacman.md
 ---
 
 ## Unattended Actions
@@ -24,7 +25,7 @@ You can tell `pacman` that this is a dependency for another package:
 
 
 ```sh
-pacman -S --noconfirm --asdeps <weird music player>
+pacman -S --noconfirm --asdeps ${weird_music_player}
 ```
 
 When you [remove orphaned packages](pacman.md), the package will be automatically uninstalled.

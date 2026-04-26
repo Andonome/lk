@@ -5,7 +5,8 @@ tags:
 - search
 - locate
 - plocate
-requires: cron
+requires:
+- system/cron.md
 ---
 
 You can search every file on the computer instantly by installing `plocate`.

@@ -1,5 +1,5 @@
 ---
-title: dns
+title: DNS Record List
 tags: 
 - networking
 - host
@@ -12,10 +12,9 @@ tags:
 | CNAME       | Alternative Address | "$domain".rs, "$subdomain.$domain".com |
 | NS          | Nameserver          | ns1.fastname.com                       |
 | MX          | Email server        | "$domain".com                          |
-| TXT         | Literally anything,including ownership of a domain |         |
-|             |                     |                                        |
+| TXT         | Literally anything,including ownership of a domain | -       |
 
-Query a host with the `host` command.
+Query a host's IP and email handlers with the `host` command.
 
 ```sh
 host $domain.$tld

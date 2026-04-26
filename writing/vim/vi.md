@@ -5,7 +5,7 @@ tags:
 - learning
 - TUI
 requires: 
-- vim
+- writing/vim.md
 ---
 
 1. Uninstall `vim`.

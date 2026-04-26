@@ -5,8 +5,8 @@ tags:
 - recfiles
 - logs
 requires: 
-- recfiles
-- nginx
+- data/recfiles.md
+- networking/nginx.md
 ---
 
 The standard `nginx` log format has such a lack of consistency or meaning that you might squint your face into a whirlpool making sense of them:

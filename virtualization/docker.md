@@ -4,8 +4,9 @@ tags:
 - documentation
 - virtualization
 requires: 
-- groups
+- system/groups.md
 ---
+
 ```sh
 sudo pacman -S docker
 ```
@@ -21,7 +22,7 @@ sudo systemctl start docker
 You need to either log out and back in again to be in the docker group, or run everything as root.
 
 ```sh
-# docker info
+docker info | less -Ri
 ```
 
 This should show you things are working.

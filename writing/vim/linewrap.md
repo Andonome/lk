@@ -6,7 +6,7 @@ tags:
 - linewrap
 - TUI
 requires: 
-- vim
+- writing/vim.md
 ---
 
 Wrap lines in a file to 80 characters with `gqG`.

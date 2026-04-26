@@ -4,7 +4,7 @@ tags:
 - virtualization
 - kubernetes
 requires: 
-- minikube_setup
+- virtualization/kubernetes/minikube_setup.md
 ---
 
 Install `kubectl`.

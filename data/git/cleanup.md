@@ -4,7 +4,7 @@ tags:
 - data
 - setup
 requires: 
-- git
+- data/git.md
 ---
 
 

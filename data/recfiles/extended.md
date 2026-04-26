@@ -5,7 +5,7 @@ tags:
 - database
 - recfiles
 requires: 
-- recfiles
+- data/recfiles.md
 ---
 
 ## Create

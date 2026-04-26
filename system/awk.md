@@ -2,7 +2,7 @@
 title: awk
 tags: 
 - system
-- .csv
+- csv
 ---
 # Basics
 

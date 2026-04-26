@@ -2,7 +2,9 @@
 title: Arch Maintenance
 tags: 
 - arch
-requirements: [ "pacman" ]
+requires: 
+- pacman
+- vim
 ---
 
 # Package Cache

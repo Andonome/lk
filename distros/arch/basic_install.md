@@ -3,7 +3,7 @@ title: Install Arch
 tags: 
 - arch
 requires: 
-- partitions
+- system/partitions.md
 ---
 Keyboard layout changed.
 

@@ -1,13 +1,15 @@
 ---
-title: Arch Maintenance with yay
+title: Arch maintenance with yay
 tags: 
 - arch
-requirements: [ "Arch Maintenance" ]
+- maintenance
+requires: 
+- distros/arch/maintenance.md
 ---
 
 # Package Cache
 
-Just like `pacman`
+Just like `[pacman](distros/arch/pacman.md)` with a couple of extras.
 
 ```sh
 ls ~/.cache/yay/ | wc -l

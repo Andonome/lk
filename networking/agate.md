@@ -4,6 +4,8 @@ tags:
 - networking
 - arch
 - gemini
+requires:
+- distros/arch/install_yay.md
 ---
 
 Docs are [here](https://github.com/mbrubeck/agate).
@@ -54,7 +56,7 @@ agate --content $GEMDIR --certs $GEMDIR/.certs \
 
 Once that works, it's time to make a service file; select any name for it:
 
-`SVFILE=st`
+`${svfile}=st`
 
 ```
 echo "
@@ -63,27 +65,27 @@ CERT=--certs $GEMDIR/.certs
 ADDR=--addr [::]:1965 --addr 0.0.0.0:1965
 HOSTNAME=--hostname $DOMAIN1 --hostname $DOMAIN2
 LANG=--lang $LANG
-" > $SVFILE.conf
+" > ${svfile}.conf
 ```
 
 Check the service file has all those variables and looks right:
 
-`cat $SVFILE.conf`
+`cat ${svfile}.conf`
 
 Now move it into the agate config directory:
 
-`mv $SVFILE.conf /etc/agate/`
+`mv ${svfile}.conf /etc/agate/`
 
 And finally, start the service:
 
 ```
 systemctl daemon-reload
-systemctl enable --now agate@$SVFILE.conf
+systemctl enable --now agate@${svfile}.conf
 ```
 
 Your Gemini capsule should be available, and you should be able to see any access in the logs:
 
 ```
-journalctl -xeu agate@$SVFILE.conf
+journalctl -xeu agate@${svfile}.conf
 ```
 

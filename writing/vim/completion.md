@@ -5,7 +5,7 @@ tags:
 - completion
 - TUI
 requires: 
-- vim
+- writing/vim.md
 ---
 
 Complete the word by searching for the *n*ext similar word:

@@ -2,9 +2,10 @@
 title: Use the terminal in vi-mode
 tags: 
 - shell
-- vi
+- vim
 - comfy
 - readline
+- python
 ---
 
 # Vi-Commands

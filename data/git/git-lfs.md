@@ -4,7 +4,7 @@ tags:
 - data
 - git
 requires: 
-- git
+- data/git.md
 ---
 
 Git Large File Storage ('LFS') needs to change your `~/.gitconfig` to check out those binary files:

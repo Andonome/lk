@@ -4,7 +4,7 @@ tags:
 - data
 - git
 requires: 
-- git
+- data/git.md
 ---
 
 Save file-changes without committing anything.

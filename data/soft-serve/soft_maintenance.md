@@ -5,8 +5,8 @@ tags:
 - git server
 - maintenance
 requires: 
-- git
-- nginx
+- data/git.md
+- networking/nginx.md
 ---
 
 Over time git repositories become bloated with old data, but never get cleaned.

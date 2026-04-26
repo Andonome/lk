@@ -5,8 +5,8 @@ tags:
 - ansible
 - docker
 requires: 
-- docker
-- ansible
+- virtualization/docker.md
+- system/ansible.md
 ---
 
 'Docker module', you say?

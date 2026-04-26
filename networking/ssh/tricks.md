@@ -5,7 +5,7 @@ tags:
 - ssh
 - tricks
 requires: 
-- ssh
+- networking/ssh.md
 ---
 
 Mount a remote filesystem locally with fuse-sshfs:

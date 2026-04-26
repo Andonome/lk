@@ -7,7 +7,7 @@ tags:
 - find
 - TUI
 requires: 
-- vim
+- writing/vim.md
 ---
 
 Search for the next and or previous occurrence of the word under your cursor with `*` and `#`.

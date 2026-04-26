@@ -5,7 +5,7 @@ tags:
 - navigation
 - TUI
 requires: 
-- vim
+- writing/vim.md
 ---
 
 | Move                    | Command      |

@@ -4,7 +4,8 @@ tags:
 - data
 - recfiles
 - games
-requires: recfiles
+requires:
+- data/recfiles.md
 ---
 
 ## Download the Database

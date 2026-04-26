@@ -4,10 +4,10 @@ tags:
 - vim
 - data
 - gpg
-requires: 
-- gpg
-- vim
 - comfy
+requires: 
+- data/gpg.md
+- writing/vim.md
 ---
 
 The `vim-gnupg` plug-in lets vim edit gpg-encrypted files as if they were unencrypted.

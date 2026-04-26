@@ -3,7 +3,8 @@ title: mpd with pipewire
 tags: 
 - sound
 - pipewire
-requirements: [ "pipewire" ]
+requires: 
+- sound/pipewire.md
 ---
 # Setup
 

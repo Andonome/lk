@@ -7,7 +7,7 @@ tags:
 - 2fa
 - otp
 requires: 
-- pass
+- data/pass.md
 ---
 
 Need a Microsoft or Google authenticator?

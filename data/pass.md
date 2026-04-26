@@ -5,7 +5,7 @@ tags:
 - credentials
 - secrets
 requires: 
-- gpg
+- data/gpg.md
 ---
 
 Setup [gpg](gpg.md) keys.

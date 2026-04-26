@@ -6,9 +6,9 @@ tags:
 - recfiles
 - tex
 requires: 
-- recfiles
-- tex
-- makefiles
+- data/recfiles.md
+- writing/tex.md
+- system/makefiles.md
 ---
 
 Store your bibliography in a `recfile` database, then extract any part with `make`.

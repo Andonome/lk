@@ -1,61 +1,103 @@
----
-title: Linux Knowledge Base
----
+# Linux Knowledge Base
 
-The Linux Knowledge-Base provides quick-start guides for working with terminal programs.
+These notes Linux programs have grown into a searchable knowledge base.
 
-If you like this style of short articles with a miniature database, then join me in my quest to remove the nausea of poorly-written documentation.
+# Usage
 
-# Setup
+## Setup
 
-Install `make`, `recutils`, and any fuzzy-finder (i.e. `sk`, `fzy`, or `fzf`).
+Install `make`, `recutils`, and any a fuzzy-finder (like `fzf` or `sk`).
 
-## Usage
+To find the options, run `make`.
 
-Set up the database and try a few queries:
+## Queries
+
+The fuzzy finder opens an interactive menu to find information.
+
+There are two types of notes:
+
+1. Short commands, catalogued by aim (in `command.rec`).
+1. Short notes, mostly on getting set up with something (in the markdown files).
+
+### Short Commands
+
+Running `make check` will start a search of the snippets, ordered by what you
+want to do, not by the name of the binary:
+
+```
+    Hard reset ntp service
+ -> Quickly find and open run-command files
+    Turn markdown into a man page
+    Rotate a video
+    Translate a media file to a new type
+```
+
+The output is a couple of lines of code, with changeable components as variables:
+
+```
+alias rrc='$PAGER "$(find . -maxdepth 2 -name "*rc" | fzf)"'
+```
+
+### Guides
+
+The notes are mostly written like a heavily commented script.
+Most are setup guides.
+
+### The Function
+
+Running `make function` outputs a shell function which searches through this
+knowledge base, so you don't have to `cd` to use it.
+
 
 ```sh
-make
-make database
+lk(){
+	/usr/bin/mdless "$(recsel ${your-path-here}/lk/db.rec \
+    -q "$(recsel ${your-path-here}/lk/db.rec -CP title,tag \
+    | sort -u \
+    | /usr/bin/fzf )" -CP path \
+    | fzf --sync -1 --preview='less -iR {}' )"
+}
+```
 
-recsel db.rec -m 3
-recsel db.rec -q database
-recsel db.rec -e "title = 'ssh'"
-recsel db.rec -e "title ~ 'ssh'"
-recsel db.rec -e "title ~ 'bash'" -R title,wordcount
+Add the function to your bash shell like this:
 
-recsel db.rec -t guide -j provides -G title \
-    -e "title = 'ssh'" \
-    -p 'sum(provides_wordcount)'
+```bash
+make function
+make function >> ~/.bashrc
+exec bash
+lk
 ```
 
 # Style
 
-## No History, No Context
-
-- Nobody cares about how the project started.
-- Nobody wants to read what `ffmpeg` is, because anyone who wants to use it already knows what it is.
-
 ## State Knowledge Dependencies
 
-Articles should state what you need to understand in order to read them *at the start*.
-They should not assume the reader knows much beyond common terminal commands, and should not provide a link to some other resource half-way through an article.
+Articles should never link to other resources part-way through.
+If the article assumes an understanding of GPG keys, then it should say that at the top.
+People should be able to read documentation from the beginning, then keep going until the end, and then stop.
+Setup guides should not send the reader on a detour through labyrinths of links.
 
-People should be able to read an article from the beginning, then keep going until the end, and then stop.
-Articles should not take a detour through a chain of other articles of unknown size.
+## No History, No Context
 
-[Do not Jaquays documentation](https://splint.rs/posts/no_links)
+Anyone who wants to read how to use OTP with GPG already knows what those words mean, so guides should not spend time explaining.
+Anyone who doesn't know what GPG keys are can find the link to using them, which explains them better than using door-blocking devices as a metaphor for prime number factorization.
+
+## Index by Purpose
+
+Nobody wants to read about `grep`, they want to find words, like 'cat'.
+They want to 'download a website', not learn about `wget`.
+Guides should be created and indexed by purpose, not by binary.
 
 ## Be Opinionated
 
-- Guides should not ask the reader to select options half-way through.
+- Guides should not ask the reader to pick from a list of options.
 - Options for different filesystems, databases, et c., should be written as separate guides.
 
 ## Repetition Beats Reference
 
 If a database requires three commands to set up, it's better to repeat those three commands for every program that requires a database than to just link to another file which discusses databases.
 
-## Show Arguments as Variables
+## Show Options as Variables
 
 Look at this line:
 
@@ -82,20 +124,43 @@ The answer is not obvious.
 It's better to make all arbitrary values variables.
 
 ```sh
-git branch $branch_name
-git checkout $branch_name
+name=new
+git branch ${name}
+git checkout ${name}
 PAGER='less -R'
 grep ls --color=always $HISTFILE | $PAGER
 ```
 
 Now we can see what can be changed.
 
-## Assume People Follow the Instructions
+### Show, Don't Tell
 
 Articles should say what to type, not the output.
 If the command is `ls`, users will see files once they try the command, but the article does not need to provide an example list of files unless an important point has to be made about output.
 
+Once a user enters a new group, the change doesn't take effect until you log
+in.  This could be explained at length, or the reader can see what this means
+for themselves:
+
+
+```sh
+groups
+grep audio /etc/group
+
+sudo usermod -aG audio $USER
+groups
+grep audio /etc/group
+
+su $USER
+groups
+grep audio /etc/group
+```
+
+Troubleshooting steps can often be implied by adding commands which do nothing but check the results of previous commands.
+
 # What's Wrong with Everything Else?
+
+Why bother writing yet another cheat-sheet collection?
 
 ## Man pages
 
@@ -103,7 +168,7 @@ If the command is `ls`, users will see files once they try the command, but the 
 - Often presumes you know everything except that one program.
 - Often written in the 80's, and it shows.
 - Zero respect for your time.
-- Often references `info` pages (yuck).
+- Sometimes reference `info` pages (yuck).
 
 ## `curl cheat.sh`
 
@@ -114,9 +179,6 @@ If the command is `ls`, users will see files once they try the command, but the 
 
 # Current State
 
-This started as a few personal notes, and will probably continue to look like that for some time.
 It's a bit of a mess.
-
-Systemd is taken as a default.
-Non-systemd commands are mentioned when required for a distro, e.g. runit for Void Linux.
+If you like the format, send me a pull request.
 

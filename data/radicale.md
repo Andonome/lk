@@ -4,8 +4,7 @@ tags:
 - data
 - calendar
 requires: 
-- nginx
-- certbot
+- networking/nginx.md
 ---
 
 Check before you start:

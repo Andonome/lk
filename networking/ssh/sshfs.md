@@ -3,7 +3,7 @@ title: sshfs
 tags: 
 - networking
 requires: 
-- ssh
+- networking/ssh.md
 ---
 # Mount 
 

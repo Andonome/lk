@@ -2,7 +2,8 @@
 title: pacman
 tags: 
 - distros
-requirements: [ "Install Arch" ]
+requires: 
+- distros/arch/basic_install.md
 ---
 
 Packages are kept in /var/cache/pacman/pkg.

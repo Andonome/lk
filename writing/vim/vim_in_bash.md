@@ -6,7 +6,7 @@ tags:
 - inputrc
 - TUI
 requires: 
-- vim
+- writing/vim.md
 ---
 
 Put bash in vim mode!

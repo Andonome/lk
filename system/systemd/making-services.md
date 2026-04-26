@@ -1,13 +1,23 @@
----
+-
 title: Making Services
 tags: 
 - systemd
 ---
-# Basics
 
-A service can consist of two files - the .sh script to run, and the .service file which describes its run conditions.
+A service can consist of two files - the script to run (usually a shell
+script), and the `.service` file which describes when it runs.
 
-The .service file goes in /etc/systemd/system.  The scripts themselves might be best placed in $HOME/.local/bin.
+The service file goes into the memorably-named directory `/usr/lib/systemd/system/`, where `systemd` will not notice your new service file.
+Try not to confuse this with `/usr/share/systemd/` or `/var/lib/systemd/`, but *do*
+
+To make a formal introduction between `systemd` and your service file, reload the daemon and check the list of units.
+
+```sh
+sudo systemctl daemon-reload
+sudo systemctl list-units | grep ${service}
+```
+
+Once you enable the service, `systemd` makes a symbolic link from `/usr/lib/systemd/system/` to `/etc/systemd/system/`.
 
 # Example - tracker.service
 
@@ -21,18 +31,10 @@ ExecStart=/path/to/script
 
 [Install]
 WantedBy=multi-user.target
-
-
 ```
 
-After making the new service, systemd requires reloading:
+## Types
 
-```sh
-sudo systemctl daemon-reload
-```
-
-# Types
-
-* simple - the service cannot be called on by others.  It runs on repeat.
-* oneshot - the service executes once, then stops.
+* `simple` - the service runs forever.  Other services do not stop it.
+* `oneshot` - the service executes once, then stops.
 

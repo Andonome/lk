@@ -5,8 +5,8 @@ tags:
 - secrets
 - TUI
 requires: 
-- gpg
-- vim
+- data/gpg.md
+- writing/vim.md
 ---
 
 

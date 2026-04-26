@@ -4,7 +4,7 @@ tags:
 - chat
 - omemo
 requires: 
-- profanity
+- chat/profanity.md
 ---
 
 Automate profanity with `--cmd`.

@@ -5,7 +5,7 @@ tags:
 - recfiles
 - games
 requires: 
-- recfiles
+- data/recfiles.md
 ---
 
 You can play with a board games database from boardgamegeek.com.

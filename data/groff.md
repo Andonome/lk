@@ -1,7 +1,8 @@
 ---
 title: groff
 tags: 
-- data
+- documentation
+- typography
 - logic
 ---
 # Basic Documents
@@ -61,8 +62,6 @@ The equation shorthands are predictable:
 | Greater than or equal to | >= |
 | Not equal  | !=      |
 | Superscript | sup {thing} |
-
-- [List of symbols](https://www.math-linux.com/man/man7/groff_char.7.html)
 
 ### Examples
 

@@ -2,7 +2,7 @@
 title: Markdown to PDF
 tags: 
 - markdown
-- .pdf
+- pdf
 - vision
 ---
 

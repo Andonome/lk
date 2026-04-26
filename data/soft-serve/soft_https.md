@@ -5,8 +5,8 @@ tags:
 - git server
 - lfs
 requires: 
-- git
-- nginx
+- data/git.md
+- networking/nginx.md
 ---
 
 ## `http` Setup

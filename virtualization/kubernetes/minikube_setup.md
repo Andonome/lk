@@ -4,10 +4,12 @@ tags:
 - virtualization
 - kubernetes
 - minikube
-- docker
+requires: 
+- virtualization/docker.md
 ---
 
 # Install `minikube`
+
 Set up a practice environment with `minikube`, using either Docker or VirtualBox.
 
 1. Install the driver (VirtualBox is a good choice).

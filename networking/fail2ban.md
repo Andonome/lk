@@ -3,7 +3,7 @@ title: fail2ban
 tags: 
 - networking
 requires: 
-- ssh
+- networking/ssh.md
 ---
 # SSH Daemon Jail
 

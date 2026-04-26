@@ -5,8 +5,8 @@ tags:
 - ansible
 - orchestration
 requires: 
-- ssh
-- pass
+- networking/ssh.md
+- data/pass.md
 ---
 
 # Start Locally

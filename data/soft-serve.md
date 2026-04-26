@@ -6,8 +6,8 @@ tags:
 - lfs
 - TUI
 requires: 
-- git
-- nginx
+- data/git.md
+- networking/nginx.md
 ---
 
 - [Soft-Serve with https](soft-serve/soft_https.md)

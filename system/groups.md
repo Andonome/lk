@@ -7,33 +7,46 @@ tags:
 Check which groups you are in, and which are available:
 
 ```sh
-cat /etc/group
 groups
-cat /etc/group | grep $USER
+cat /etc/group
+column -ts: /etc/group
+grep $USER !$
 ```
 
-Remove yourself from all groups, and add yourself back to only `wheel`, `audio`, and your own group:
+Remove yourself from all groups, and add yourself back to only `mail`, `audio`, and your own group:
 
 ```sh
-sudo usermod --groups wheel,audio,$USER
+sudo usermod --groups mail,audio,$USER
 ```
 
-Add yourself to the `docker` group:
-
-```sh
-su root -c "usermod --append --groups docker $USER"
-```
-Add yourself to the `network` group:
+Add yourself to the `docker` group, if there is one:
 
 ```sh
-sudo usermod -aG network $USER
+grep docker /etc/group
+sudo usermod --append --groups docker $USER
 ```
+
+Add yourself to the `games` group:
+
+```sh
+sudo usermod -aG games $USER
+```
+
+You are now legally permitted to play [games](shell/games.md).
 
 The changes have not taken effect, so log into your own account again with `su`:
 
 
 ```sh
 groups
-sudo su $USER
+grep audio /etc/group
+
+sudo usermod -aG audio $USER
 groups
+grep audio /etc/group
+
+su $USER
+groups
+grep audio /etc/group
 ```
+

@@ -4,7 +4,7 @@ tags:
 - data
 - git
 requires: 
-- git
+- data/git.md
 ---
 
 You can make Alice the author, while you are still the commiter:

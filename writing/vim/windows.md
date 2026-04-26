@@ -4,7 +4,7 @@ tags:
 - vim
 - TUI
 requires: 
-- vim
+- writing/vim.md
 ---
 
 | Command                   | Keys                |

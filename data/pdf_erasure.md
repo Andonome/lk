@@ -4,7 +4,7 @@ tags:
 - metadata
 - ghost script
 - gs
-- .pdf
+- pdf
 ---
 
 You cannot erase pdf metadata with `exiftool` (it only *appends* your changes).
