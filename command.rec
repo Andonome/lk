@@ -429,6 +429,13 @@ cmd: urldecode() { echo -e "${@//%/\\x}"; }
 tag: web
 shell: bash
 
+aim: Choose which parts to commit with git
+cmd: git commit -p
+note: Use `P` to see big changes which cannot fit on the screen.
+tag: comfy
+bin: git
+shell: sh
+
 aim: Request a definition from the terminal.
 cmd: word='abderian'
 + curl -s dict://dict.org/define:${word}:
