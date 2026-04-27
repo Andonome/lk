@@ -1,25 +1,25 @@
 ---
-title: $EDITOR
+title: Setting an EDITOR
 tags: 
 - system
+- defaults
 ---
-The System's default text editor can be defined within /etc/profile.  It's given the variable `EDITOR`.
 
-Add these lines to `/etc/profile.d/custom.sh`:
+Programs expect a default 'line EDITOR' and 'VISUAL editor' so they know how you want to edit text.
 
-```sh
-echo 'export EDITOR=vim' >> /etc/profile.d/custom.sh
-echo 'export VISUAL=$EDITOR' >> /etc/profile.d/custom.sh
-```
-
-Then reload that profile with:
+Add these lines to automatically set the variables in `bash`:
 
 ```sh
-source /etc/profile
+echo 'export EDITOR=vim' >> ~/.bashrc
+echo 'export VISUAL=$EDITOR' >> ~/.bashrc
 ```
 
-If you want to ensure `nano` never appears again:
+Make the change system-wide by adding them to `/etc/profile.d/custom.sh` instead, which is loaded at startup.
+
+You can add a GUI editor as the `$VISUAL` editor:
 
 ```sh
-sudo ln -sf $(which vim) $(which nano)
+VISUAL=gedit
 ```
+
+To use a true line editor, as `$EDITOR`, see [ed][writing/ed.md].

@@ -3,7 +3,12 @@ title: Ed: The Standard Editor
 tags: 
 - writing
 - guide
+- sed
+- vim
 ---
+
+Understanding `ed` will let you understand all that feels strange about the system.
+It set the standards for `sed` and `vi`.
 
 `ed` was designed for real terminals, i.e. a typewriter.
 You would type a command to the computer, and it would type out any errors.
@@ -11,7 +16,6 @@ It would not waste paper, ink, and time by typing out `COMMAND RUN SUCCESSFULLY`
 A silent machine meant a happy machine.
 
 To fully appreciate `ed`, you can slow down your terminal with the following command:
-
 
 ```sh
 ff=/tmp/bashpipe
@@ -23,7 +27,6 @@ mkfifo $ff
 Try running `dir` and `dir -F`!
 
 Okay, now onto `ed`...
-
 
 # Basic Usage
 
@@ -67,10 +70,7 @@ Delete the current line:
 d
 ```
 
-
-
 Write the 'buffer' to disk:
-
 
 ```ed
 w
@@ -85,7 +85,6 @@ q
 # Working with Lines
 
 Open that file:
-
 
 ```ed
 ed file.md
