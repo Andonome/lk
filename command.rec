@@ -115,7 +115,6 @@ bin: ntpd
 tag: time
 tag: system
 
-
 aim: Check a service
 cmd: sudo systemctl status mpd
 shell: sh
@@ -123,14 +122,12 @@ bin: systemd
 tag: system
 tag: service
 
-
 aim: Recognize service changes
 cmd: sudo systemctl daemon-reload
 shell: sh
 bin: systemd
 tag: system
 tag: service
-
 
 aim: Start a service (it stops when the computer shuts down)
 cmd: sudo systemctl taskd.service start
@@ -140,7 +137,6 @@ bin: systemd
 tag: system
 tag: service
 
-
 aim: Find out why the computer takes so long to start
 cmd: sudo systemd-analyze
 + sudo systemd-analyze blame
@@ -148,7 +144,6 @@ shell: sh
 bin: systemd
 tag: system
 tag: boot
-
 
 aim: See what the computer is doing
 cmd: journalctl -f
@@ -187,7 +182,6 @@ cmd: logger "Installed new dnsmasq"
 shell: sh
 bin: journalctl
 tag: system
-
 
 aim: Convert markdown table to csv
 cmd: mlr --imarkdown --ocsv cat ${file}.md
@@ -359,7 +353,6 @@ tag: vision
 tag: video
 shell: sh
 
-
 aim: Convert video to audio
 cmd: ffmpeg -i ${input}.mp4 -vn ${output}.mp3
 bin: ffmpeg
@@ -374,7 +367,6 @@ cmd: for i in *.mkv; do
 bin: ffmpeg
 tag: vision
 shell: sh
-
 
 aim: Change resolution
 cmd: ffmpeg -i ${input}.mp4 -filter:v scale=1280:720 -c:a copy ${output}.mp4
