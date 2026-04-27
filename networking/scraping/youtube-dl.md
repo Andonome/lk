@@ -2,29 +2,30 @@
 title: Download videos
 tags: 
 - scraping
+- video
 ---
 Install `yt-dlp`.
 
 ```sh
-yt-dlp --write-auto-sub *<URL>*
+yt-dlp --write-auto-sub ${url}
 ```
 
 It will default to English, but you can specify another language with the flag --sub-lang:
 
 ```sh
-youtube-dl --sub-lang sv --write-auto-sub *<URL>*
+youtube-dl --sub-lang sv --write-auto-sub ${url}
 ```
 
 You can list all available subtitles with:
 
 ```sh
-yt-dlp --list-subs *<URL>*
+yt-dlp --list-subs ${url}
 ```
 
 It's also possible to skip the video and only download the subtitle if you add the flag --skip-download:
 
 ```sh
-yt-dlp --sub-lang sv --write-auto-sub --skip-download *<URL>*
+yt-dlp --sub-lang sv --write-auto-sub --skip-download ${url}
 ```
 
 ## Alternative

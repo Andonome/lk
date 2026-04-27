@@ -4,10 +4,6 @@ tags:
 - networking
 - VPN
 ---
-<!--
-from 
-https://engineerworkshop.com/blog/how-to-set-up-wireguard-on-a-raspberry-pi/
--->
 
 ## On Server
 

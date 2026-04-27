@@ -3,6 +3,7 @@ title: rclone
 tags: 
 - networking
 - synch
+- backup
 ---
 The manpage's 'Synopsis' provides a fast reference.
 ```

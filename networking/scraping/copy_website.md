@@ -3,6 +3,7 @@ title: Download Website
 tags: 
 - networking
 - scraping
+- web
 ---
 
 ```sh

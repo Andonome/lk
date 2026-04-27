@@ -33,6 +33,7 @@ Then start that service:
 ```sh
 sudo systemctl start sshd
 ```
+
 Test it works by using ssh into your own system, from inside:
 
 
@@ -77,6 +78,7 @@ Look at your keys:
 
 ```sh
 ls ~/.ssh
+ls -l ~/.ssh
 ```
 
 You can share the one ending in `.pub` freely.
@@ -86,6 +88,7 @@ Now send those keys to a remote computer:
 
 ```sh
 ssh-copy-id ${username}@{ip_address}
+ssh ${username}@{ip_address}
 ```
 
 Now you can log in without a password.
