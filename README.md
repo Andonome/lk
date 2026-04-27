@@ -38,11 +38,6 @@ The output is a couple of lines of code, with changeable components as variables
 alias rrc='$PAGER "$(find . -maxdepth 2 -name "*rc" | fzf)"'
 ```
 
-### Guides
-
-The notes are mostly written like a heavily commented script.
-Most are setup guides.
-
 ### The Function
 
 Running `make function` outputs a shell function which searches through this
@@ -132,6 +127,16 @@ grep ls --color=always $HISTFILE | $PAGER
 ```
 
 Now we can see what can be changed.
+
+### Aim to Script
+
+Guides should read like a heavily commented script, so CLI commands are preferred to GUI commands.
+
+- Bad: '*edit the file `.config/tspreed/tspreed.rc` and change `focuscolor` to '2'.*'
+- Good: `sed -i '/focuscolor/s/=1/=2/' ~/.config/tspreed/tspreed.rc`
+    * `cat !$`
+
+Despite being 'script-like', interactive bash commands like `cat !$` are still fine just to show how to double-check results when setting things up interactively.
 
 ### Show, Don't Tell
 
