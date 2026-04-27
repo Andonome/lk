@@ -1,21 +1,19 @@
 ---
-title: Docker
+title: Setup Docker
 tags: 
 - documentation
-- virtualization
+- setup
+- containers
 requires: 
 - system/groups.md
 ---
 
+Install docker, add your user to the docker group, and start the service.
+
 ```sh
 sudo pacman -S docker
-```
-
-```sh
 sudo usermod -aG docker $USER
-```
-
-```sh
+sudo su $USER
 sudo systemctl start docker
 ```
 
@@ -69,9 +67,9 @@ docker rm 97796727e883
 
 # Networking
 
-Get a list of docker container ips
+Get a list of docker container IPs
 
 ```sh
-docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' *container_name_or_id*
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' ${name}
 ```
 

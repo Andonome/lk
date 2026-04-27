@@ -1,11 +1,12 @@
 ---
-title: virtualbox
+title: Setup Virtualbox
 tags: 
 - system
+- setup
+- virtualization
 requires: 
 - system/groups.md
 ---
-# Setup
 
 Load the modules (or just reboot):
 
