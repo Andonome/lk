@@ -5,25 +5,6 @@ tags:
 - comfy
 ---
 
-# This & That
-
-Refer to 'that last thing', and 'the first thing':
-
-```sh
-fortune -l > file1
-cat !$  | tr -d u
-diff !^ !$
-```
-
-**NB:** this can go wrong:
-
-```sh
-ls -l file1 file2
-cat !^
-```
-
-**NB:** this only works when running `bash` interactively, never in scripts.
-
 # Done
 
 `<C-d>`
