@@ -10,27 +10,27 @@ shell: sh
 bin: column
 tag: format
 
-aim: Reformat file with an explicit separator (`-s`)
+aim: Reformat user accounts with an explicit separator (`-s`)
 cmd: column -ts: /etc/passwd
 shell: sh
 bin: column
 tag: format
 
-aim: Sort lines into columns with names
+aim: Sort user accounts into columns with names
 cmd: column -ts: -N User,PW,UID,GID,Description,Home,shell -H PW,GID /etc/passwd
 note: Hide some columns with `-H`.
 shell: sh
 bin: column
 tag: format
 
-aim: Sort lines into columns and reorder them
+aim: Sort user accounts into columns and reorder them
 cmd: column -ts: -N User,PW,UID,GID,Description,Home,shell -H PW,GID -O User,Description,shell /etc/passwd 
 note: Unspecified items remain.
 shell: sh
 bin: column
 tag: format
 
-aim: Output to json format with `-J`
+aim: Output user accounts in json format with `-J`
 cmd: column -J -ts: -H PW,GID,shell -N User,PW,UID,GID,Description,Home,shell /etc/passwd
 shell: sh
 bin: column
