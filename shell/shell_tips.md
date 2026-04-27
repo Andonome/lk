@@ -22,6 +22,8 @@ ls -l file1 file2
 cat !^
 ```
 
+**NB:** this only works when running `bash` interactively, never in scripts.
+
 # Done
 
 `<C-d>`
@@ -29,9 +31,8 @@ cat !^
 - If you have a command, Control + d will execute the command.
 - If you have nothing, `exit`.
 
-# Clear Search Highlights
+# Search & Clear Highlights
 
-`<Esc>+u`
-
-Works in most programs with search.
+You can search in many programs by using `/`.
+Most programs let you clearn the highlighting with `<Esc>+u`.
 
