@@ -68,6 +68,7 @@ include cmd.mk
 	sed '/^%/d' $^ | recsel -G path | recsel -U >> $@
 
 default += db.rec
+ignored += db.rec
 db.rec: command.rec .dbs/notes.rec
 	recinf -d $< > $@
 	echo '' >> $@
@@ -75,7 +76,7 @@ db.rec: command.rec .dbs/notes.rec
 	$(info Making main database: $@)
 
 
-.git/info/exclude: $(default)
+.git/info/exclude: $(ignored)
 	@echo $^ | tr ' ' '\n' > $@
 
 default += .git/info/exclude
