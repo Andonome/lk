@@ -58,5 +58,5 @@ brightnessctl s 10%+
 
 - [autologin](autologin.md)
 - [services](sv.md)
-- [wifi](../../networking/wpa_supplicant.md)
+- [wifi](networking/wpa_supplicant.md)
 

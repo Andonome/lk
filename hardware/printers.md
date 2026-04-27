@@ -3,9 +3,10 @@ title: printers
 tags: 
 - hardware
 ---
+
 # Cups: The Common Unix Printing System
 
-Configure cups at /etc/cups/supsd.conf, or visit the local webpage at http://localhost:631 if you want to use the Apple interface, otherwise, it's the printing daemon.
+Configure cups at `/etc/cups/supsd.conf`, or visit the local webpage at http://localhost:631 if you want to use the Apple interface, otherwise, it's the printing daemon.
 
 # The Printing Daemon
 

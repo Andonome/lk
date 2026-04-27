@@ -26,7 +26,7 @@ Once you have the database, you can find nearly any file instantly.
 - Search for jpg images with 'dog' or 'Dog' in the name: `locate -i dog jpg`
 - Search for videos: `plocate --regex '.mp4$|.mkv$|.wmv$|.webm$|.mov$|.avi$'`
 
-For best results, run `updatedb` regularly, perhaps in [crontab](../system/cron.md).
+For best results, run `updatedb` regularly, perhaps in [crontab](system/cron.md).
 
 ## Search More Places
 

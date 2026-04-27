@@ -44,10 +44,11 @@ You might get it in the `apache` package or similar.
 `htpasswd` allows you to generate passwords for users, and place them in `/etc/radicale/users`.
 
 ```sh
-PASS="$(xkcdpass)"
-htpasswd -nb $USER "$PASS" | sudo tee -a /etc/radicale/users
-echo "Your username is $USER"
-echo "Your password is $PASS"
+pass="$(xkcdpass)"
+username=alice
+htpasswd -nb ${username} "${pass}" | sudo tee -a /etc/radicale/users
+echo "Your username is ${username}"
+echo "Your password is ${pass}"
 ```
 Right now, you can't sign into the server except through the localhost, which is pointless.
 So now we add a subdomain to `nginx`.
@@ -97,8 +98,8 @@ sudo ln -s /etc/nginx/sites-available/radicale /etc/nginx/sites-enables/
 Finally, replace the example `DOMAIN` with your actual domain name.
 
 ```sh
-DOMAIN=whatever.com
-sudo sed -i "s/DOMAIN/$DOMAIN/g" /etc/nginx/sites-available/radicale 
+domain=whatever.com
+sudo sed -i "s/DOMAIN/${domain}/g" /etc/nginx/sites-available/radicale 
 ```
 
 (optional: replace that `cal.` prefix with anything else)
@@ -111,7 +112,7 @@ sudo nginx -t
 You will almost certainly need a new SSL certificate for the site:
 
 ```sh
-sudo certbod -d cal.$DOMAIN
+sudo certbod -d cal.${domain}
 ```
 
 Start or restart both services:

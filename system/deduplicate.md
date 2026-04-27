@@ -16,7 +16,7 @@ rdfind $dir
 $EDITOR results.txt
 ```
 
-Replace the duplicated files with [hard links](../basics/hard_links.md).
+Replace the duplicated files with [hard links](system/hard_links.md).
 
 ```sh
 rdfind -makehardlinks true $dir
