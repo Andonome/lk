@@ -448,6 +448,7 @@ shell: sh
 
 aim: Email a pull request which points to your git server
 tag: git
+bin: git
 tag: email
 tag: pr
 cmd: repo=ssh://soft.dmz.rs:2222/mkdots/
@@ -456,3 +457,12 @@ cmd: repo=ssh://soft.dmz.rs:2222/mkdots/
 + git request-pull "${theirHead}" "${repo}" "${head}"
 note: You can note where your branch diverged from theirs with a commit hash,
 + or a relative position, like `HEAD^^` (e.g. 'two commits before your latest').
+
+aim: Clean up a bloated git repo
+cmd: git fsck --full
++ git gc --prune=now --aggressive
++ git repack
+bin: git
+tag: maintenance
+shell: sh
+
