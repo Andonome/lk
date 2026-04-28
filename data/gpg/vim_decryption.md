@@ -1,5 +1,5 @@
 ---
-title: Edit gpg encrypted files easily
+title: Edit gpg encrypted files with vim
 tags: 
 - vim
 - data
