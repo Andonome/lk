@@ -1,8 +1,10 @@
 ---
-title: Ach Linux GPU Setup
+title: Arch Linux GPU Setup
 tags: 
 - arch
 - GPU
+requires:
+- distros/arch/install_yay.md
 ---
 # Step 1: Multilib
 
