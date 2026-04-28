@@ -24,11 +24,11 @@ Note the asterisk marking the boot partition.
 
 # IDs
 
-| ID | Meaning |
-|----|:--------|
-|83  |Linux    |
-| 5  |Extended |
-| 82 |Swap     |
+| ID         | Meaning    |
+|:----------:|:-----------|
+| 83         |   Linux    |
+| 5          |   Extended |
+| 82         |   Swap     |
 
 fdisk will not help with a GPT formatted drive.  For this, use gdisk, which is mostly the same.
 
@@ -52,15 +52,15 @@ mkreiserfs /dev/sdc2
 
 # File System Types
 
-| Type | Advantages | Disadvantages |
-|------|:-----------|:--------------|
-|ext2  |            |No journaling means that the file offers no crash recovery.
-|ext3  | Journaling | 
-|ext4  | Journaling and handles files of up to 16TB.| 
-|reiserfs| Journalin and stable.|
-|btrfs |Reliable and stable| 
-|XFS   |Journaling, great for large files.| 
-|VFAT  |Comptable with Windows, like FAT32| 
+| Type           | Advantages                                    | Disadvantages                                                |
+|----------------|:----------------------------------------------|:-------------------------------------------------------------|
+|  ext2          |                                               | No journaling means that the file offers no crash recovery.  |
+|  ext3          |  Journaling                                   |                                                              |
+|  ext4          |  Journaling and handles files of up to 16TB.  |                                                              |
+|  reiserfs      |  Journalin and stable.                        |                                                              |
+|  btrfs         |  Reliable and stable                          |                                                              |
+|  XFS           |  Journaling, great for large files.           |                                                              |
+|  VFAT          |  Comptable with Windows, like FAT32           |                                                              |
 
 # Parted
 

@@ -12,7 +12,7 @@ tags:
 | CNAME       | Alternative Address | "$domain".rs, "$subdomain.$domain".com |
 | NS          | Nameserver          | ns1.fastname.com                       |
 | MX          | Email server        | "$domain".com                          |
-| TXT         | Literally anything,including ownership of a domain | -       |
+| TXT         | Literally anything  | "drunk giraffes can't spell"           |
 
 Query a host's IP and email handlers with the `host` command.
 
