@@ -1,5 +1,5 @@
 ---
-title: pdf to txt
+title: Convert a scanned pdf to text
 tags: 
 - data
 - pdf
