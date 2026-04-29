@@ -20,9 +20,9 @@ Keybind to exit this mode is `Ctrl+q`
 
 ## Extras
 
-- [Learning Vim](vim/vi.md)
-- [Navigation](vim/navigate.md)
-- [Completion](vim/completion.md)
-- [Window Splits](vim/windows.md)
-- [Use vim bindings in bash](vim/vim_in_bash.md)
+- [Learning Vim](writing/vim/vi.md)
+- [Navigation](writing/vim/navigate.md)
+- [Completion](writing/vim/completion.md)
+- [Window Splits](writing/vim/windows.md)
+- [Use vim bindings in bash](writing/vim/vim_in_bash.md)
 - [A game to learn  how to code in Vim](https://www.vim-hero.com/)
