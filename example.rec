@@ -120,3 +120,36 @@ content: output: all
 + 
 + clean :
 + 	rm -rf public html
+
+filename: Makefile
+bin: make
+usage: make
+content: ### Variables
++ 
++ PAGER ?= $(shell command -v mdless bat less | head -1 )
++ EDITOR ?= vi
++ 
++ requirements += lowdown
++ 
++ ### Dependencies
++ 
++ out: help
++ 
++ ### Patterns
++ 
++ 
++ ### Phonies
++ 
++ .PHONY: help
++ help:
++ 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | \
++ 		sort | \
++ 		column -s ':' -t
++ 
++ .PHONY: check
++ check: ## Check you have the required dependencies
++ 	@$(foreach dep, $(requirements), type $(dep) >/dev/null || echo "Install $(dep)." ; )
++ 
++ .PHONY: clean
++ clean: ## Remove generated files.
++ 	$(RM) $(defaults)
