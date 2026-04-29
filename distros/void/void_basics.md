@@ -54,9 +54,8 @@ brightnessctl s 10%-
 brightnessctl s 10%+
 ```
 
-# Other Tricks
+# Related
 
-- [autologin](autologin.md)
-- [services](sv.md)
-- [wifi](networking/wpa_supplicant.md)
+- [autologin](distros/void/autologin.md)
+- [services](distros/void/sv.md)
 

@@ -12,14 +12,6 @@ Turn a markdown file into a pdf:
 lowdown -stms "$FILE".md | pdfroff -itk -mspdf > "$FILE".pdf
 ```
 
-*Example:* put [this Makefile](lowdown/example.txt) in a directory, rename it `Makefile`, then do:
-
-
-```sh
-make example
-make
-```
-
 To give the document a title, put that title in the metadata:
 
 ```sh

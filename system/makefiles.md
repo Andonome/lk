@@ -180,6 +180,6 @@ In this case, the makefile can see that `backup` depends on the current backup f
 
 # The Rest
 
-- [File patterns](makefiles/patterns.md)
-- [Makefile graphs](makefiles/graph-easy.md)
-- [In-build help](makefiles/help.md)
+- [File patterns](system/makefiles/patterns.md)
+- [Makefile graphs](system/makefiles/graph-easy.md)
+- [In-build help](system/makefiles/help.md)

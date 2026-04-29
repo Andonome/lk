@@ -9,8 +9,6 @@ requires:
 - writing/vim.md
 ---
 
-- [Sample file](sc-im/sample.sc)
-
 # Basic Commands
 
 ## See Cells

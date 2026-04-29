@@ -25,3 +25,4 @@ Keybind to exit this mode is `Ctrl+q`
 - [Completion](vim/completion.md)
 - [Window Splits](vim/windows.md)
 - [Use vim bindings in bash](vim/vim_in_bash.md)
+- [A game to learn  how to code in Vim](https://www.vim-hero.com/)
