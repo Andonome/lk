@@ -20,9 +20,6 @@ $(lists): lists/%.md: command.rec | lists/
 	@printf '%s\n' '---' >> $@
 	@$(call list_commands,$(basename $(notdir $@))) >> $@
 
-.PHONY: cmd
-cmd: $(lists) ## Big lists of commands
-
 .PHONY: function
 function: ## Output a search function for .bashrc
 	${MAKE} --silent --touch query
