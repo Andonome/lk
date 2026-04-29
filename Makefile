@@ -5,6 +5,8 @@ PAGER ?= less -Ri
 READER != command -v mdless bat glow less more pg | head -1
 FZF != command -v fzf sk | head -1
 
+markdown = $(wildcard */*.md */*/*.md)
+
 ifeq "$(FZF)" ""
   $(info Install fzf)
 endif
@@ -40,7 +42,7 @@ include cmd.mk
 	printf '%s\n' '%type: wordcount int' >> $@
 	printf '%s\n\n' '%sort: wordcount' >> $@
 
-.dbs/new.rec: $(wildcard */*.md */*/*.md) | .dbs/head.rec
+.dbs/new.rec: $(markdown) | .dbs/head.rec
 	$(info Updating: $?)
 	grep -q guide $@ 2>/dev/null || cp $| $@
 	@-$(foreach entry, $?, \
