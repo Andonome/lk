@@ -46,5 +46,5 @@ Just press `!`, e.g. `!ls`.
 
 # Edit a File
 
-While reading a file, press `v` to edit it ('v' stands of `vi`).
+While reading a file, press `v` to edit it ('v' stands for `vi`).
 
