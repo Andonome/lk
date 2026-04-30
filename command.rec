@@ -163,6 +163,13 @@ shell: sh
 bin: journalctl
 tag: system
 
+aim: Get back terminal after ssh freezes remote machine
+cmd: <Return>~.
+shell: sh
+bin: ssh
+tag: system
+tag: comfy
+
 aim: Find errors since a date
 cmd: date=2027-01-01
 + journalctl --since=${date} --grep="EXT4-fs error"
