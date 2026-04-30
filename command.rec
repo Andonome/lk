@@ -157,6 +157,24 @@ shell: sh
 bin: journalctl
 tag: system
 
+aim: Edit users in /etc/passwd directly
+cmd: sudo vipw
+note: You can't edit passwords with black magic.
+shell: sh
+bin: vipw
+bin: sudo
+tag: system
+tag: users
+
+aim: Edit groups in /etc/group directly
+cmd: sudo vigr
+note: You can't edit passwords with black magic.
+shell: sh
+bin: vipw
+bin: sudo
+tag: system
+tag: groups
+
 aim: Follow the `ssh` daemon service
 cmd: journalctl -f -u sshd
 shell: sh
