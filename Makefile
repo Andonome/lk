@@ -34,7 +34,7 @@ default += .dbs/map.fmt
 
 include cmd.mk
 
-.dbs/head.rec: | .dbs/ $(lists)
+.dbs/head.rec: | .dbs/
 	printf '%s\n' '%rec: guide' > $@
 	printf '%s\n' '%key: path' >> $@
 	printf '%s\n' '%type: requires rec guide' >> $@

@@ -2,8 +2,6 @@
 cmds != recsel command.rec -t command -G bin -CP bin | sort -u
 lists = $(patsubst %,lists/%.md, $(cmds))
 
-default += $(lists)
-
 get_title = printf 'title: %s\n' '${1}'
 get_tags = recsel -t $(basename $<) $< -G bin \
 	-e 'bin = "$(1)"' -U -CP tag,bin | \
