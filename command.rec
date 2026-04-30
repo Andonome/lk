@@ -243,8 +243,8 @@ cmd: grep -o "\b${word}\b" ${file}
 bin: grep
 tag: search
 
-aim: Reformat variable for shell input
-cmd: printf "%q\n" "${variable}"
+aim: Reformat text for shell input
+cmd: printf "%q\n" "${text}"
 bin: printf
 tag: xargs
 tag: stdout
