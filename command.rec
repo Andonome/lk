@@ -195,18 +195,22 @@ shell: sh
 bin: journalctl
 tag: system
 
-aim: Limit the journal's size to 2 gigabytes
+aim: Limit the systemd's journal size to 2 gigabytes
 cmd: journalctl --vacuum-size=2G
++ journalctl --disk-usage
 shell: sh
 bin: journalctl
 tag: system
+tag: logs
 
 aim: Log the fact that you've installed your own `dnsmasq` on your system to `journalctl`, so that you can determine why your system's broken later
 cmd: logger "Installed new dnsmasq"
 + sudo journalctl -f
 shell: sh
 bin: journalctl
+bin: logger
 tag: system
+tag: logs
 
 aim: Convert markdown table to csv
 cmd: mlr --imarkdown --ocsv cat ${file}.md
