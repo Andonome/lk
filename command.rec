@@ -10,6 +10,24 @@ shell: sh
 bin: column
 tag: format
 
+aim: Run commands in background
+cmd: du -sh .* | sort -h | tail &
+cmd: jobs
+cmd: grep -ri password /etc/ &
+cmd: jobs
+shell: sh
+bin: jobs
+tag: shell
+tag: comfy
+
+aim: Stop background command having output
+cmd: disown
+note: The command will continue as it was.  You can see it with `top`.
+shell: sh
+bin: jobs
+tag: shell
+tag: comfy
+
 aim: Reformat user accounts with an explicit separator (`-s`)
 cmd: column -ts: /etc/passwd
 shell: sh
