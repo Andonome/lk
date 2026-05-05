@@ -111,6 +111,18 @@ bin: vim
 bin: scp
 tag: network
 
+aim: Read info files with vim
+cmd: info () 
++ { 
++     [ -n "$1" ] && file="${1}" || file="$(ls /usr/share/info/ | sed 's/\.info.gz$//' | fzf )";
++     file="$(ls /usr/share/info/"$file"* | fzf -1 )"
++     vim "$file"
++ }
+shell: sh
+bin: vim
+bin: info
+tag: documentation
+
 aim: Find and replace across all files open in vim
 cmd: :bufdo! %s/${pattern}/${replacement}/g
 shell: sh
