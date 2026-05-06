@@ -4,6 +4,13 @@
 %allowed: aim cmd bin tag note shell
 %unique: shell
 
+aim: Uncompress a PDF
+cmd: pdftk ${input}.pdf output ${output}.pdf uncompress
+shell: sh
+bin: pdftk
+tag: pdf
+tag: compression
+
 aim: Put output into columns
 cmd: ip a | grep inet | column  -ts' '
 shell: sh
