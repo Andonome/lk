@@ -1,39 +1,60 @@
 %rec: command
 %doc: shell command examples
-%type: aim line
+%type: aim,bin line
 %allowed: aim cmd bin tag note shell
 %unique: shell
+%sort: shell bin
 
-aim: Uncompress a PDF
-cmd: pdftk ${input}.pdf output ${output}.pdf uncompress
+aim: Roll a die
+cmd: echo $(( RANDOM % 6+1 ))
+shell: bash
+tag: random
+
+aim: Decode a URL with function
+cmd: urldecode() { echo -e "${@//%/\\x}"; }
++ urldecode "${magnet}"
+tag: web
+shell: bash
+
+aim: Find your public IP address
+cmd: dig +short myip.opendns.com @resolver$((RANDOM % 4 + 1)).opendns.com
+shell: bash
+bin: dig
+tag: ip
+tag: network
+
+aim: Turn markdown into a man page
+cmd: man <(lowdown -stman ${file}.md)
+cmd: top_title="Bugs in netcat"
++ someplace=LK
++ vol=Security
++ sec=6
++ lowdown -m manheader="${top_title}" -m source="${someplace}" -m volume="${vol}" -m section=${sec} -stman ${file}.md > ${file}.${sec}
++ man ./${file}.${sec}
+shell: bash
+bin: lowdown
+bin: groff
+bin: man
+tag: markdown
+
+aim: Rotate a video
+cmd: ffmpeg -i "${input}" -vf "transpose=1" "${out.mov}"
+note: 
++ | No. | Degrees | Flip                                         |
++ |:---:|:-------:|:---------------------------------------------|
++ | 0   | 90      | Counterclockwise and verfical flip (default) |
++ | 1   | 90      | Clockwise                                    |
++ | 2   | 90      | CounterClockwise                             |
++ | 3   | 90      | Clockwise and vertical flip                  |
+tag: vision
+tag: video
 shell: sh
-bin: pdftk
-tag: pdf
-tag: compression
 
 aim: Put output into columns
 cmd: ip a | grep inet | column  -ts' '
 shell: sh
 bin: column
 tag: format
-
-aim: Run commands in background
-cmd: du -sh .* | sort -h | tail &
-cmd: jobs
-cmd: grep -ri password /etc/ &
-cmd: jobs
-shell: sh
-bin: jobs
-tag: shell
-tag: comfy
-
-aim: Stop background command having output
-cmd: disown
-note: The command will continue as it was.  You can see it with `top`.
-shell: sh
-bin: jobs
-tag: shell
-tag: comfy
 
 aim: Reformat user accounts with an explicit separator (`-s`)
 cmd: column -ts: /etc/passwd
@@ -62,335 +83,21 @@ bin: column
 tag: format
 tag: json
 
-aim: Make a QR Code image
-cmd: qrencode 'https://play.google.com/store/apps/details?id=org.briarproject.briar.android' -o "${file}".png
-shell: sh
-bin: qrencode
-tag: qr
-
-aim: Make a QR Coded message in the terminal
-cmd: qrencode -t ansi "Hello World"
-shell: sh
-bin: qrencode
-tag: qr
-
-aim: Read a QR Code image
-cmd: zbarimg ${file}
-shell: sh
-bin: qrencode
-tag: qr
-
-aim: Show wifi QR code (only with Network Manager)
-cmd: nmcli device wifi show-password
-shell: sh
-bin: qrencode
-bin: nmcli
-tag: qr
-tag: wifi
-
-aim: Combine many recfiles of different types into one
-cmd: sed '1i\ ' *.rec > all.rec
-shell: sh
-bin: sed
-tag: recfiles
-tag: database
-
-aim: Combine many recfiles of the same type into one
-cmd: recinf -d -t ${type} ${one}.rec > ${all}.rec
-+ sed '/^%/d' ${one}.rec ${two}.rec > all.rec
-note: The strange syntax used by `sed` only makes sense after using [ed](writing/ed.md)
-shell: sh
-bin: sed
-bin: recinf
-tag: recfiles
-tag: database
-
-aim: Roll a die
-cmd: echo $(( RANDOM % 6+1 ))
-shell: bash
-tag: random
-
-aim: Remotely edit a file with vim
-cmd: vim scp://${server}/~/${file}
-cmd: vim scp://${user}@${server}:${port}//${path}/${file}
-shell: sh
-bin: vim
-bin: scp
-tag: network
-
-aim: Read info files with vim
-cmd: info () 
-+ { 
-+     [ -n "$1" ] && file="${1}" || file="$(ls /usr/share/info/ | sed 's/\.info.gz$//' | fzf )";
-+     file="$(ls /usr/share/info/"$file"* | fzf -1 )"
-+     vim "$file"
+aim: Request a definition from the terminal.
+cmd: word='abderian'
++ curl -s dict://dict.org/define:${word}:
+cmd: function wotsa(){
++ 	def="$(curl -s dict://dict.org/define:${1// /+}: | grep -vP '^\d\d\d ')"
++ 	if [ "$def" = "" ]; then
++ 		echo no definition
++ 	else
++ 		echo "$def" | $PAGER
++ 	fi
 + }
-shell: sh
-bin: vim
-bin: info
-tag: documentation
-
-aim: Find and replace across all files open in vim
-cmd: :bufdo! %s/${pattern}/${replacement}/g
-shell: sh
-bin: vim
+bin: curl
 tag: writing
-tag: replace
-
-aim: Find and replace words, but confirm each replacement
-cmd: vim -c "%s/${pattern}/${replacement}/gc" -c 'wq' ${file}
-shell: sh
-bin: vim
-tag: replace
-tag: substitution
-tag: TUI
-tag: writing
-
-aim: Hard reset ntp service
-cmd: sudo ntpd -q -g -x -n
-bin: ntpd
-tag: time
-tag: system
-
-aim: Check a service
-cmd: sudo systemctl status mpd
-shell: sh
-bin: systemd
-tag: system
-tag: service
-
-aim: Recognize service changes
-cmd: sudo systemctl daemon-reload
-shell: sh
-bin: systemd
-tag: system
-tag: service
-
-aim: Start a service (it stops when the computer shuts down)
-cmd: sudo systemctl taskd.service start
-+ sudo systemctl daemon-reload
-shell: sh
-bin: systemd
-tag: system
-tag: service
-
-aim: Find out why the computer takes so long to start
-cmd: sudo systemd-analyze
-+ sudo systemd-analyze blame
-shell: sh
-bin: systemd
-tag: system
-tag: boot
-
-aim: See what the computer is doing
-cmd: journalctl -f
-shell: sh
-bin: journalctl
-tag: system
-
-aim: Check your own user services:
-cmd: journalctl -f
-shell: sh
-bin: journalctl
-tag: system
-
-aim: Edit users in /etc/passwd directly
-cmd: sudo vipw
-note: You can't edit passwords with black magic.
-shell: sh
-bin: vipw
-bin: sudo
-tag: system
-tag: users
-
-aim: Edit groups in /etc/group directly
-cmd: sudo vigr
-note: You can't edit passwords with black magic.
-shell: sh
-bin: vipw
-bin: sudo
-tag: system
-tag: groups
-
-aim: Follow the `ssh` daemon service
-cmd: journalctl -f -u sshd
-shell: sh
-bin: journalctl
-tag: system
-
-aim: Get back terminal after ssh freezes remote machine
-cmd: <Return>~.
-shell: sh
-bin: ssh
-tag: system
 tag: comfy
-
-aim: Find errors since a date
-cmd: date=2027-01-01
-+ journalctl --since=${date} --grep="EXT4-fs error"
-shell: sh
-bin: journalctl
-tag: system
-
-aim: Limit the systemd's journal size to 2 gigabytes
-cmd: journalctl --vacuum-size=2G
-+ journalctl --disk-usage
-shell: sh
-bin: journalctl
-tag: system
-tag: logs
-
-aim: Log the fact that you've installed your own `dnsmasq` on your system to `journalctl`, so that you can determine why your system's broken later
-cmd: logger "Installed new dnsmasq"
-+ sudo journalctl -f
-shell: sh
-bin: journalctl
-bin: logger
-tag: system
-tag: logs
-
-aim: Convert markdown table to csv
-cmd: mlr --imarkdown --ocsv cat ${file}.md
-bin: mlr
-tag: csv
-tag: markdown
-tag: data
-
-aim: Convert a csv file to markdown
-cmd: mlr --icsv --omd cat ${file}.csv
-bin: mlr
-tag: csv
-tag: markdown
-
-aim: Quickly find and open run-command files
-cmd: alias rrc='$PAGER "$(find . -maxdepth 2 -name "*rc" | fzf)"'
-bin: fzf
-bin: find
-tag: comfy
-
-aim: Quickly hunt and kill processes
-cmd: kill $(pgrep less | fzf -m --preview='ps {}')
-note: Select many with shift/tab.
-bin: fzf
-tag: comfy
-
-aim: Search for a short word
-cmd: grep "\b${word}\b" ${file}
-bin: grep
-tag: search
-
-aim: Extract words in quotes
-cmd: grep -o "\b${word}\b" ${file}
-bin: grep
-tag: search
-
-aim: Reformat text for shell input
-cmd: printf "%q\n" "${text}"
-bin: printf
-tag: xargs
-tag: stdout
-
-aim: Find your public IP address
-cmd: dig +short myip.opendns.com @resolver$((RANDOM % 4 + 1)).opendns.com
-shell: bash
-bin: dig
-tag: ip
-tag: network
-
-aim: Turn markdown into a man page
-cmd: man <(lowdown -stman ${file}.md)
-cmd: top_title="Bugs in netcat"
-+ someplace=LK
-+ vol=Security
-+ sec=6
-+ lowdown -m manheader="${top_title}" -m source="${someplace}" -m volume="${vol}" -m section=${sec} -stman ${file}.md > ${file}.${sec}
-+ man ./${file}.${sec}
-shell: bash
-bin: lowdown
-bin: groff
-bin: man
-tag: markdown
-
-aim: Convert jpg to png
-cmd: magick ${input}.jpg ${output}.png
-bin: magick
-tag: vision
-
-aim: Reduce jpg size by reducing quality
-cmd: quality=70
-+ magick ${input}.jpg -quality ${quality} ${output}.jpg
-cmd: size=50
-+ magick -resize ${size}% ${input}.jpg ${output}.jpg
-bin: magick
-tag: vision
-
-aim: Reduce png size
-cmd: magick ${input}.png png8:${output}.png
-bin: magick
-tag: vision
-
-aim: Invert jpg colours
-cmd: magick ${input}.jpg ${output}.jpg -negate
-bin: magick
-tag: vision
-
-aim: Make jpg smaller
-cmd: magick ${input}.jpg -resize 25% ${output}.jpg
-bin: magick
-tag: vision
-
-aim: Trim images to border
-cmd: magick -trim ${image}.png ${output}.png
-bin: magick
-tag: vision
-
-aim: Make the white of an image transparent
-cmd: magick -transparent white -fuzz 10% ${input}.png ${output}.png
-bin: magick
-tag: vision
-note: The 'fuzz' option tells the computer that 'close to white' is fine.  You might want to use 20% or higher fuzz.
-
-aim: Give transparrent image a dropshadow
-cmd: magick ${input}.png \( +clone -background black -shadow 50x8+0+5 \) +swap -background none -layers merge +repage ${output}.png
-bin: magick
-tag: vision
-
-aim: Convert every jpg in directory to png
-cmd: mogrify -format png *.jpg
-bin: magick
-tag: vision
-
-aim: Convert from jpg to svg
-cmd: magick -flatten ${input}.jpg ${output}.ppm
-+ potrace -s ${output}.ppm -o ${svgout}.svg
-bin: magick
-tag: vision
-
-aim: Make an image showing day of the week
-cmd: magick -list font
-+ font="$(magick -list font | grep -oP 'Font: \K.*' | head -1)"
-+ 
-+ magick -fill blue -font "${font}" -gravity center -pointsize 79 label:$(date +%A) day.png
-bin: magick
-tag: vision
-
-aim: Make a meme
-cmd: magick ${input} -font impact -fill white -pointsize 84 -stroke black -strokewidth 3 -gravity north -annotate +0+20 'TOP MEME TEXT' -gravity south -annotate +0+20 'BOTTOM MEME TEXT' ${output}
-bin: magick
-tag: vision
-tag: memes
-
-aim: Rotate a video
-cmd: ffmpeg -i "${input}" -vf "transpose=1" "${out.mov}"
-note: 
-+ | No. | Degrees | Flip                                   |
-+ |:---:|:-------:|:---------------------------------------|
-+ | 0   | 90 Counterclockwise and verfical flip (default)  |
-+ | 1   | 90 Clockwise                                     |
-+ | 2   | 90 CounterClockwise                              |
-+ | 3   | 90Clockwise and vertical flip                    |
-tag: vision
-tag: video
+tag: dict
 shell: sh
 
 aim: Translate a media file to a new type
@@ -479,48 +186,23 @@ bin: ffmpeg
 tag: vision
 shell: sh
 
-aim: Convert a web page to markdown
-cmd: curl -sL "${url}" | html2markdown > "${file}}".md
-cmd: curl -sL "${url}" | html2text > "${file}}".md
-note: The `[html2markdown](https://github.com/JohannesKaufmann/html-to-markdown)` and `html2md` programs works better than any other.
-bin: html2markdown
-bin: curl
-tag: writing
-tag: web
+aim: Quickly find and open run-command files
+cmd: alias rrc='$PAGER "$(find . -maxdepth 2 -name "*rc" | fzf)"'
 shell: sh
-
-aim: Decode a URL with function
-cmd: urldecode() { echo -e "${@//%/\\x}"; }
-+ urldecode "${magnet}"
-tag: web
-shell: bash
-
-aim: Choose which parts to commit with git
-cmd: git commit -p
-note: Use `P` to see big changes which cannot fit on the screen.
+bin: fzf
+bin: find
 tag: comfy
-bin: git
-shell: sh
 
-aim: Request a definition from the terminal.
-cmd: word='abderian'
-+ curl -s dict://dict.org/define:${word}:
-cmd: function wotsa(){
-+ 	def="$(curl -s dict://dict.org/define:${1// /+}: | grep -vP '^\d\d\d ')"
-+ 	if [ "$def" = "" ]; then
-+ 		echo no definition
-+ 	else
-+ 		echo "$def" | $PAGER
-+ 	fi
-+ }
-bin: curl
-tag: writing
-tag: comfy
-tag: dict
+aim: Quickly hunt and kill processes
+cmd: kill $(pgrep less | fzf -m --preview='ps {}')
+note: Select many with shift/tab.
 shell: sh
+bin: fzf
+tag: comfy
 
 aim: Email a pull request which points to your git server
 tag: git
+shell: sh
 bin: git
 tag: email
 tag: pr
@@ -531,6 +213,13 @@ cmd: repo=ssh://soft.dmz.rs:2222/mkdots/
 note: You can note where your branch diverged from theirs with a commit hash,
 + or a relative position, like `HEAD^^` (e.g. 'two commits before your latest').
 
+aim: Choose which parts to commit with git
+cmd: git commit -p
+note: Use `P` to see big changes which cannot fit on the screen.
+tag: comfy
+bin: git
+shell: sh
+
 aim: Clean up a bloated git repo
 cmd: git fsck --full
 + git gc --prune=now --aggressive
@@ -539,3 +228,335 @@ bin: git
 tag: maintenance
 shell: sh
 
+aim: Search for a short word
+cmd: grep "\b${word}\b" ${file}
+shell: sh
+bin: grep
+tag: search
+
+aim: Extract words in quotes
+cmd: grep -o "\b${word}\b" ${file}
+shell: sh
+bin: grep
+tag: search
+
+aim: Convert a web page to markdown
+cmd: curl -sL "${url}" | html2markdown > "${file}}".md
+cmd: curl -sL "${url}" | html2text > "${file}}".md
+note: The `[html2markdown](https://github.com/JohannesKaufmann/html-to-markdown)` and `html2md` programs works better than any other.
+bin: html2markdown
+bin: curl
+tag: writing
+tag: web
+shell: sh
+
+aim: Run commands in background
+cmd: du -sh .* | sort -h | tail &
+cmd: jobs
+cmd: grep -ri password /etc/ &
+cmd: jobs
+shell: sh
+bin: jobs
+tag: shell
+tag: comfy
+
+aim: Stop background command having output
+cmd: disown
+note: The command will continue as it was.  You can see it with `top`.
+shell: sh
+bin: jobs
+tag: shell
+tag: comfy
+
+aim: See what the computer is doing
+cmd: journalctl -f
+shell: sh
+bin: journalctl
+tag: system
+
+aim: Check your own user services:
+cmd: journalctl -f
+shell: sh
+bin: journalctl
+tag: system
+
+aim: Follow the `ssh` daemon service
+cmd: journalctl -f -u sshd
+shell: sh
+bin: journalctl
+tag: system
+
+aim: Find errors since a date
+cmd: date=2027-01-01
++ journalctl --since=${date} --grep="EXT4-fs error"
+shell: sh
+bin: journalctl
+tag: system
+
+aim: Limit the systemd's journal size to 2 gigabytes
+cmd: journalctl --vacuum-size=2G
++ journalctl --disk-usage
+shell: sh
+bin: journalctl
+tag: system
+tag: logs
+
+aim: Log the fact that you've installed your own `dnsmasq` on your system to `journalctl`, so that you can determine why your system's broken later
+cmd: logger "Installed new dnsmasq"
++ sudo journalctl -f
+shell: sh
+bin: journalctl
+bin: logger
+tag: system
+tag: logs
+
+aim: Convert jpg to png
+cmd: magick ${input}.jpg ${output}.png
+shell: sh
+bin: magick
+tag: vision
+
+aim: Reduce jpg size by reducing quality
+cmd: quality=70
++ magick ${input}.jpg -quality ${quality} ${output}.jpg
+cmd: size=50
++ magick -resize ${size}% ${input}.jpg ${output}.jpg
+shell: sh
+bin: magick
+tag: vision
+
+aim: Reduce png size
+cmd: magick ${input}.png png8:${output}.png
+shell: sh
+bin: magick
+tag: vision
+
+aim: Invert jpg colours
+cmd: magick ${input}.jpg ${output}.jpg -negate
+shell: sh
+bin: magick
+tag: vision
+
+aim: Make jpg smaller
+cmd: magick ${input}.jpg -resize 25% ${output}.jpg
+shell: sh
+bin: magick
+tag: vision
+
+aim: Trim images to border
+cmd: magick -trim ${image}.png ${output}.png
+shell: sh
+bin: magick
+tag: vision
+
+aim: Make the white of an image transparent
+cmd: magick -transparent white -fuzz 10% ${input}.png ${output}.png
+shell: sh
+bin: magick
+tag: vision
+note: The 'fuzz' option tells the computer that 'close to white' is fine.  You might want to use 20% or higher fuzz.
+
+aim: Give transparrent image a dropshadow
+cmd: magick ${input}.png \( +clone -background black -shadow 50x8+0+5 \) +swap -background none -layers merge +repage ${output}.png
+shell: sh
+bin: magick
+tag: vision
+
+aim: Convert every jpg in directory to png
+cmd: mogrify -format png *.jpg
+shell: sh
+bin: magick
+tag: vision
+
+aim: Convert from jpg to svg
+cmd: magick -flatten ${input}.jpg ${output}.ppm
++ potrace -s ${output}.ppm -o ${svgout}.svg
+shell: sh
+bin: magick
+tag: vision
+
+aim: Make an image showing day of the week
+cmd: magick -list font
++ font="$(magick -list font | grep -oP 'Font: \K.*' | head -1)"
++ 
++ magick -fill blue -font "${font}" -gravity center -pointsize 79 label:$(date +%A) day.png
+shell: sh
+bin: magick
+tag: vision
+
+aim: Make a meme
+cmd: magick ${input} -font impact -fill white -pointsize 84 -stroke black -strokewidth 3 -gravity north -annotate +0+20 'TOP MEME TEXT' -gravity south -annotate +0+20 'BOTTOM MEME TEXT' ${output}
+shell: sh
+bin: magick
+tag: vision
+tag: memes
+
+aim: Convert markdown table to csv
+cmd: mlr --imarkdown --ocsv cat ${file}.md
+shell: sh
+bin: mlr
+tag: csv
+tag: markdown
+tag: data
+
+aim: Convert a csv file to markdown
+cmd: mlr --icsv --omd cat ${file}.csv
+shell: sh
+bin: mlr
+tag: csv
+tag: markdown
+
+aim: Hard reset ntp service
+cmd: sudo ntpd -q -g -x -n
+shell: sh
+bin: ntpd
+tag: time
+tag: system
+
+aim: Uncompress a PDF
+cmd: pdftk ${input}.pdf output ${output}.pdf uncompress
+shell: sh
+bin: pdftk
+tag: pdf
+tag: compression
+
+aim: Reformat text for shell input
+cmd: printf "%q\n" "${text}"
+shell: sh
+bin: printf
+tag: xargs
+tag: stdout
+
+aim: Make a QR Code image
+cmd: qrencode 'https://play.google.com/store/apps/details?id=org.briarproject.briar.android' -o "${file}".png
+shell: sh
+bin: qrencode
+tag: qr
+
+aim: Make a QR Coded message in the terminal
+cmd: qrencode -t ansi "Hello World"
+shell: sh
+bin: qrencode
+tag: qr
+
+aim: Read a QR Code image
+cmd: zbarimg ${file}
+shell: sh
+bin: qrencode
+tag: qr
+
+aim: Show wifi QR code (only with Network Manager)
+cmd: nmcli device wifi show-password
+shell: sh
+bin: qrencode
+bin: nmcli
+tag: qr
+tag: wifi
+
+aim: Combine many recfiles of different types into one
+cmd: sed '1i\ ' *.rec > all.rec
+shell: sh
+bin: sed
+tag: recfiles
+tag: database
+
+aim: Combine many recfiles of the same type into one
+cmd: recinf -d -t ${type} ${one}.rec > ${all}.rec
++ sed '/^%/d' ${one}.rec ${two}.rec > all.rec
+note: The strange syntax used by `sed` only makes sense after using [ed](writing/ed.md)
+shell: sh
+bin: sed
+bin: recinf
+tag: recfiles
+tag: database
+
+aim: Get back terminal after ssh freezes remote machine
+cmd: <Return>~.
+shell: sh
+bin: ssh
+tag: system
+tag: comfy
+
+aim: Check a service
+cmd: sudo systemctl status mpd
+shell: sh
+bin: systemd
+tag: system
+tag: service
+
+aim: Recognize service changes
+cmd: sudo systemctl daemon-reload
+shell: sh
+bin: systemd
+tag: system
+tag: service
+
+aim: Start a service (it stops when the computer shuts down)
+cmd: sudo systemctl taskd.service start
++ sudo systemctl daemon-reload
+shell: sh
+bin: systemd
+tag: system
+tag: service
+
+aim: Find out why the computer takes so long to start
+cmd: sudo systemd-analyze
++ sudo systemd-analyze blame
+shell: sh
+bin: systemd
+tag: system
+tag: boot
+
+aim: Remotely edit a file with vim
+cmd: vim scp://${server}/~/${file}
+cmd: vim scp://${user}@${server}:${port}//${path}/${file}
+shell: sh
+bin: vim
+bin: scp
+tag: network
+
+aim: Read info files with vim
+cmd: info () 
++ { 
++     [ -n "$1" ] && file="${1}" || file="$(ls /usr/share/info/ | sed 's/\.info.gz$//' | fzf )";
++     file="$(ls /usr/share/info/"$file"* | fzf -1 )"
++     vim "$file"
++ }
+shell: sh
+bin: vim
+bin: info
+tag: documentation
+
+aim: Find and replace across all files open in vim
+cmd: :bufdo! %s/${pattern}/${replacement}/g
+shell: sh
+bin: vim
+tag: writing
+tag: replace
+
+aim: Find and replace words, but confirm each replacement
+cmd: vim -c "%s/${pattern}/${replacement}/gc" -c 'wq' ${file}
+shell: sh
+bin: vim
+tag: replace
+tag: substitution
+tag: TUI
+tag: writing
+
+aim: Edit users in /etc/passwd directly
+cmd: sudo vipw
+note: You can't edit passwords with black magic.
+shell: sh
+bin: vipw
+bin: sudo
+tag: system
+tag: users
+
+aim: Edit groups in /etc/group directly
+cmd: sudo vigr
+note: You can't edit passwords with black magic.
+shell: sh
+bin: vipw
+bin: sudo
+tag: system
+tag: groups
