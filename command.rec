@@ -251,10 +251,10 @@ tag: web
 shell: sh
 
 aim: Run commands in background
-cmd: du -sh .* | sort -h | tail &
-cmd: jobs
-cmd: grep -ri password /etc/ &
-cmd: jobs
+cmd: ls -Rilt ~ &
++ jobs
++ find ~/.cache/ -type d  -exec du '{}' -h ';' | sort -h &
++ jobs
 shell: sh
 bin: jobs
 tag: shell
