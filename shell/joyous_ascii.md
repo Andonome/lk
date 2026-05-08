@@ -25,3 +25,9 @@ until [ "$x" -eq "1" ]; do
     sleep 1
 done
 ```
+
+[Slow down the terminal][slow] then enjoy some [old ASCII art][ascii].
+
+[slow]: shell/slow.md
+[ascii]: http://artscene.textfiles.com/vt100/
+

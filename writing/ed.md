@@ -15,18 +15,9 @@ You would type a command to the computer, and it would type out any errors.
 It would not waste paper, ink, and time by typing out `COMMAND RUN SUCCESSFULLY` after each command.
 A silent machine meant a happy machine.
 
-To fully appreciate `ed`, you can slow down your terminal with the following command:
+To fully appreciate `ed`, you should [slow down your terminal].
 
-```sh
-ff=/tmp/bashpipe
-mkfifo $ff
-( cat $ff | perl -We 'use Time::HiRes;$|++;while(read(STDIN,$c,1)){Time::HiRes::usleep(15000);print $c;}' ) & exec &> $ff
-
-```
-
-Try running `dir` and `dir -F`!
-
-Okay, now onto `ed`...
+[slow]: shell/slow.md
 
 # Basic Usage
 
