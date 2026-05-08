@@ -44,7 +44,7 @@ Check your `~/.config/profanity/profrc` for how to data's saved.
 To automatically sign in, add your password to [pass](data/pass.md).
 
 ```
-/account set ${name}@${host} eval_password pass *xmpp*
+/account set ${name}@${host} eval_password "pass ${account}"
 ```
 
 ```
