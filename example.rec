@@ -159,3 +159,98 @@ content: ### Variables
 + .PHONY: clean
 + clean: ## Remove generated files.
 + 	$(RM) $(defaults)
+
+name: Issues tracker
+filename: Makefile
+bin: make
+content: hdr = @printf "\n\033[37;1;4m%s\033[0m\n"
++ msg = @printf "\033[37;1m%s\033[0m\n"
++ 
++ issues = $(wildcard open/*) $(wildcard closed/*)
++ 
++ number_of_issues != echo $(issues) | wc -w
++ 
++ name = open/issue_$(number_of_issues).md
++ 
++ last_modified != ls -t open/* 2>/dev/null | head -1
++ ifndef last_modified
++ setup:
++ 	@mkdir open closed
++ 	@git init
++ 	@echo '---' > open/issue_1.md
++ 	@echo 'title: Setup git' >> open/issue_1.md
++ 	@echo 'priority: high' >> open/issue_1.md
++ 	@printf 'responsible: ' >> open/issue_1.md
++ 	@git config user.name >> open/issue_1.md
++ 	@echo '---' >> open/issue_1.md
++ 	@echo 'Push to a remote repository' >> open/issue_1.md
++ 	@git add $(MAKEFILE_LIST) open/issue_1.md
++ 	@git commit -m'Init the git!'
++ 	$(info Check issue 1)
++ 	$(info Run make again)
++ endif
++ 
++ open_issues = $(wildcard open/*)
++ closed_issues = $(patsubst open/%, closed/%, $(open_issues))
++ 
++ EDITOR ?= vi
++ 
++ close_issue_command = @git commit --message "Close $$(basename -s .md $(last_modified) | tr '_' ' ')"
++ 
++ random_helper = $(shell git shortlog -se | sort -R | head -1 | cut -d '<' -f2 | tr -d '>')
++ 
++ contact = Get outside help
++ ifeq ($(MAKECMDGOALS),help)
++   contact = Email $(random_helper)
++ endif
++ 
++ help:
++ 	@printf "\033[36m%s\t\033[0m %s\n" "help" "$(contact)"
++ 	@printf "\033[36m%s\t" "done"
++ 	@printf "\033[0m %s " "Close $$(basename -s .md $(last_modified) | tr '_' ' ')"
++ 	@printf "\033[0m %s\n" "[$$(grep -Pom1 'title: \K.*' $(last_modified))]"
++ 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | \
++ 		column -s ':' -t
++ 
++ $(closed_issues): closed/%.md: open/%.md
++ 	@git add $<
++ 	@git mv $< $@
++ 	$(close_issue_command)
++ 
++ .PHONY: issue
++ issue: $(name) ## Make an issue
++ $(name):
++ 	@echo '---' > $(name)
++ 	@read -p 'Title? ' title && echo title: $$title >> $@
++ 	@echo priority: low >> $@
++ 	@echo responsible: $(shell git config user.name) >> $@
++ 	@echo '---' >> $@
++ 	@printf '\n\n' >> $@
++ 	@$(EDITOR) +7 $@
++ 	@git add $@
++ 	@git commit --quiet --message "$$(grep -Pom1 'title: \K.*' $@)"
++ 	$(info Commit created, remember to push!)
++ 
++ .PHONY: done
++ done:
++ 	$(info Closing $(shell basename -s .md $(last_modified) | tr '_' ' '))
++ 	@git add $(last_modified)
++ 	@git mv $(last_modified) closed/
++ 	$(close_issue_command)
++ 
++ .PHONY: stats
++ stats: ## Summarise issue
++ 	$(hdr) "Priorities"
++ 	$(msg) "$$(head -n 7 $(wildcard open/*) | sort | grep -Po 'priority: \K.*' | uniq -c)"
++ 	$(msg) "$$(ls closed/ | wc -l) closed"
++ 	$(hdr) "Holders"
++ 	$(msg) "$$(head -n 7 $(wildcard open/*) | grep -Po 'responsible: \K.*' | tr [:upper:] [:lower:] | sort | uniq -c)"
++ 
++ .PHONY: rundown
++ rundown: ## Summarize events
++ 	@printf "\033[33;5m# %s\033[0m\n" "Outstanding Calamities"
++ 	@$(foreach bug, $(wildcard open/*.md), \
++ 		a="$$(lowdown -X responsible $(bug))" && \
++ 		n="$$(echo $(bug) | cut -d_ -f2 | cut -d. -f1)" && \
++ 		t="$$(lowdown -X title $(bug))" && echo "$$n: $$t ($$a)" ;\
++ 	)
