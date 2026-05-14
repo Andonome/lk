@@ -3,6 +3,7 @@ title: profanity automation
 tags: 
 - chat
 - omemo
+- TUI
 requires: 
 - chat/profanity.md
 ---

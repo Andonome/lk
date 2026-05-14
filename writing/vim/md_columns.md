@@ -4,6 +4,7 @@ tags:
 - writing
 - vim
 - markdown
+- TUI
 ---
 
 Got a wonky markdown table?

@@ -3,6 +3,7 @@ title: profanity
 tags: 
 - chat
 - omemo
+- TUI
 ---
 
 # Setup (Commands)
