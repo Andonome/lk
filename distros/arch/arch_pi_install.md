@@ -2,7 +2,6 @@
 title: Arch on a Raspberry Pi 4
 tags: 
 - distros
-- raspberry pi
 - rpi
 ---
 
