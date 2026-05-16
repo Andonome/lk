@@ -1,23 +1,4 @@
 
-cmds != recsel command.rec -t command -G bin -CP bin | sort -u
-lists = $(patsubst %,lists/%.md, $(cmds))
-
-get_title = printf 'title: %s\n' '${1}'
-get_tags = recsel -t $(basename $<) $< -G bin \
-	-e 'bin = "$(1)"' -U -CP tag,bin | \
-	sed 's/.*/- &/'
-
-list_commands = recsel -t $(basename $<) $< -e 'bin = "$(1)"' | \
-	recfmt -f lists.fmt
-
-$(lists): lists/%.md: command.rec | lists/
-	@printf '%s\n' '---' > $@
-	@$(call get_title,$(basename $(notdir $@))) >> $@
-	@printf '%s\n' 'tags: ' >> $@
-	@$(call get_tags,$(basename $(notdir $@))) >> $@
-	@printf '%s\n' '---' >> $@
-	@$(call list_commands,$(basename $(notdir $@))) >> $@
-
 .PHONY: function
 function: ## Output a search function for .bashrc
 	${MAKE} --silent --touch query

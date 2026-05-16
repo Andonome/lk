@@ -33,6 +33,7 @@ default += .dbs/map.fmt
 	echo '*' > $@.gitignore
 
 include cmd.mk
+include pub.mk
 
 .dbs/head.rec: | .dbs/
 	printf '%s\n' '%rec: guide' > $@
@@ -100,7 +101,7 @@ map: .dbs/requires.rec .dbs/map.fmt ## Show knowledge dependency map
 
 .PHONY: clean
 clean: ## Remove all generated files
-	$(RM) -r $(default) .dbs/
+	$(RM) -r $(default) .dbs/ .publish/
 
 .PHONY: article
 article: */ */*/ ## Write a new article
