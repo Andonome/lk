@@ -1,6 +1,6 @@
 
 .PHONY: function
-function: ## Output a search function for .bashrc
+function: | db.rec ## Output a search function for .bashrc
 	${MAKE} --silent --touch query
 	printf '%s\n' 'lk(){'
 	${MAKE} --silent --dry-run query | sed 's/^/\t/'

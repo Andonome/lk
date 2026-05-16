@@ -59,6 +59,7 @@ include pub.mk
 		sed '1,/^---$$/d' $$entry | sed 's/^.*/+ &/' ;\
 		echo '' ;\
 	done >> $@
+	recfix $@
 
 .dbs/requires.rec: .dbs/new.rec
 	recinf -d $< > $@
