@@ -4,8 +4,6 @@ tags:
 - vim
 - learning
 - TUI
-requires: 
-- writing/vim.md
 ---
 
 1. Uninstall `vim`.
