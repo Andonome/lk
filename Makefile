@@ -110,7 +110,7 @@ article: */ */*/ ## Write a new article
 	&& filename="$$(echo "$$name" \
 		| cut -d: -f1 \
 		| tr '[A-Z ]' '[a-z_]' | tr -cd '[:alpha:]_' )" \
-	&& $(MAKE) -e TITLE="$$name" "$$category"/"$$filename.md"
+	&& $(MAKE) -e TITLE="$$name" "$$category""$$filename.md"
 
 .PHONY: all
 all: $(default) ## All file targets
