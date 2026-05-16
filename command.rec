@@ -545,7 +545,7 @@ tag: writing
 
 aim: Edit users in /etc/passwd directly
 cmd: sudo vipw
-note: You can't edit passwords with black magic.
+note: You can't edit passwords without strange cyphers.
 shell: sh
 bin: vipw
 bin: sudo
@@ -554,7 +554,6 @@ tag: users
 
 aim: Edit groups in /etc/group directly
 cmd: sudo vigr
-note: You can't edit passwords with black magic.
 shell: sh
 bin: vipw
 bin: sudo
