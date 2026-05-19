@@ -113,6 +113,8 @@ article: */ */*/ ## Write a new article
 		| tr '[A-Z ]' '[a-z_]' | tr -cd '[:alpha:]_' )" \
 	&& $(MAKE) -e TITLE="$$name" "$$category""$$filename.md"
 
+default += $(lists) $(publish)
+
 .PHONY: all
 all: $(default) ## All file targets
 
