@@ -22,4 +22,4 @@ You can add a GUI editor as the `$VISUAL` editor:
 VISUAL=gedit
 ```
 
-To use a true line editor, as `$EDITOR`, see [ed][writing/ed.md].
+To use a true line editor, as `$EDITOR`, see [ed](writing/ed.md).
