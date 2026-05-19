@@ -1,5 +1,5 @@
 ---
-title: Ed: The Standard Editor
+title: "Ed: The Standard Editor"
 tags: 
 - writing
 - guide
