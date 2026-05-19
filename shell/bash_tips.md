@@ -68,3 +68,9 @@ x="$(!!)"
 echo $x
 for file in $x ; do fortune > $file ; done
 ```
+
+# See Also
+
+- [Readline](shell/readline.md)
+- [Shell tips](shell/shell_tips.md)
+
