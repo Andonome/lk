@@ -1,5 +1,5 @@
 ---
-title: git-secret
+title: "Review: git-secret"
 tags: 
 - data
 - git
