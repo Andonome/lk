@@ -6,6 +6,7 @@ tags:
 - makefiles
 - graphviz
 - python
+- Setup
 requires: 
 - system/makefiles.md
 ---

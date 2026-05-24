@@ -3,6 +3,7 @@ title: Newsraft
 tags: 
 - data
 - RSS
+- Setup
 ---
 
 # Setup

@@ -2,6 +2,8 @@
 title: fail2ban
 tags: 
 - networking
+- system
+- Setup
 requires: 
 - networking/ssh.md
 ---

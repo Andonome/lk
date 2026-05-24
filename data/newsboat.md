@@ -2,6 +2,7 @@
 title: newsboat
 tags: 
 - RSS
+- Setup
 ---
 Create the configuration directory before you start, and add at least 1 URL.
 
