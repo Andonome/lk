@@ -4,6 +4,7 @@ tags:
 - virtualization
 - kubernetes
 - minikube
+- Setup
 requires: 
 - virtualization/docker.md
 ---

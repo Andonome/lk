@@ -1,5 +1,5 @@
 ---
-title: Proxy API
+title: Kubernetes Proxy API
 tags: 
 - virtualization
 - kubernetes
