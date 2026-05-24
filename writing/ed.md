@@ -15,7 +15,7 @@ You would type a command to the computer, and it would type out any errors.
 It would not waste paper, ink, and time by typing out `COMMAND RUN SUCCESSFULLY` after each command.
 A silent machine meant a happy machine.
 
-To fully appreciate `ed`, you should [slow down your terminal].
+To fully appreciate `ed`, you should [slow down your terminal][slow].
 
 [slow]: shell/slow.md
 
