@@ -1,5 +1,5 @@
 ---
-title: fail2ban
+title: fail2ban for ssh
 tags: 
 - networking
 - system
