@@ -4,9 +4,6 @@ tags:
 - basics
 - time
 ---
-# Cronie
-
-The `cronie` program is also known as `crond`.
 
 ## Install
 
