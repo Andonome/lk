@@ -1,7 +1,8 @@
 ---
-title: pass
+title: Store passwords
 tags: 
 - data
+- Setup
 - credentials
 - secrets
 requires: 
