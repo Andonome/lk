@@ -1,5 +1,5 @@
 ---
-title: git
+title: Setup git
 tags: 
 - data
 - setup
