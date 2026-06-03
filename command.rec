@@ -309,14 +309,6 @@ bin: journalctl
 tag: system
 tag: logs
 
-aim: List enabled systemd services
-cmd: systemctl list-unit-files  --state enabled
-cmd: systemctl --user list-unit-files  --state enabled
-shell: sh
-bin: systemd
-tag: system
-tag: service
-
 aim: Log the fact that you've installed your own `dnsmasq` on your system to `journalctl`, so that you can determine why your system's broken later
 cmd: logger "Installed new dnsmasq"
 + sudo journalctl -f
@@ -499,6 +491,14 @@ shell: sh
 bin: ssh
 tag: system
 tag: comfy
+
+aim: List enabled systemd services
+cmd: systemctl list-unit-files  --state enabled
+cmd: systemctl --user list-unit-files  --state enabled
+shell: sh
+bin: systemd
+tag: system
+tag: service
 
 aim: Check a service
 cmd: sudo systemctl status mpd
