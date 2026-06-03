@@ -200,6 +200,13 @@ shell: sh
 bin: fzf
 tag: comfy
 
+aim: Read the minimal size of a git repo
+cmd: git count-objects -vH | grep -Po 'size-pack: \K.*'
+note: Git repositories are never at their minimal size.
+shell: sh
+bin: git
+tag: size
+
 aim: Email a pull request which points to your git server
 tag: git
 shell: sh
@@ -421,6 +428,13 @@ shell: sh
 bin: ntpd
 tag: time
 tag: system
+
+aim: Convert bytes to human readable size
+cmd: b=10392309
++ echo "$b" | numfmt --to=eic
+shell: sh
+bin: numfmt
+tag: size
 
 aim: Uncompress a PDF
 cmd: pdftk ${input}.pdf output ${output}.pdf uncompress
