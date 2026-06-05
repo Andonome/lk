@@ -8,9 +8,8 @@ tags:
 
 Try out basic ssh by accessing `git.charm.sh`, without needing authentication:
 
-
 ```sh
-ssh git.charm.sh
+ssh -t git.charm.sh
 ```
 
 Start an ssh server to try it out.

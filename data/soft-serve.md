@@ -10,5 +10,6 @@ requires:
 - networking/nginx.md
 ---
 
+- [Soft-Serve with https](soft-serve/commands.md)
 - [Soft-Serve with https](soft-serve/soft_https.md)
 - [Maintenance](soft-serve/soft_maintenance.md)
