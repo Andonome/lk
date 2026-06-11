@@ -582,3 +582,18 @@ bin: vipw
 bin: sudo
 tag: system
 tag: groups
+
+aim: Check current keyboard layout on sway
+cmd: swaymsg -t get_inputs --raw | jq -r '.[0].xkb_active_layout_name'
+bin: sway
+bin: jq
+tag: keyboard
+tag: locale
+shell: sh
+
+aim: Show name of currently selected app in sway
+cmd: swaymsg -t get_tree | jq -C '.. | select(.type?) | select(.focused==true)'
+bin: sway
+bin: jq
+tag: bar
+shell: sh
