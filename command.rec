@@ -597,3 +597,14 @@ bin: sway
 bin: jq
 tag: bar
 shell: sh
+
+aim: Share a directory as a local website
+cmd: python3 -m http.server
+note: Anyone can go to your computer's IP address and access all files in the current directory.
+shell: sh
+bin: python3
+tag: tip
+tag: network
+tag: share
+cmd: qrencode -t ansi "$(ip route show | grep -Pom1 'src \K[\d.]+')"
++ sudo python -m http.server 80
