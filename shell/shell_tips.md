@@ -23,14 +23,15 @@ Most programs let you clear the highlighting with `<Esc>+u`.
 Follow a file as new lines are added to it:
 
 ```sh
-tail -f *somefile*
+tail -f "${file}"
 ```
 
-See changes in a directory, as it changes:
+Watch which files in `${directory}` have most recently changed.
 
-`watch -d ls *directory*`
+`watch -d ls -t ${directory}/
 
 Or use the `-g` flag to exit once the output changes.
+
 This command will look at whether you're connected to the internet, and turn into a rainbow once the connection hits.
 
 > watch -g ip address && clear && ip address | lolcat

@@ -1,5 +1,5 @@
 ---
-title: make help target
+title: Make help target
 tags: 
 - system
 - make
