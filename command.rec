@@ -59,6 +59,16 @@ tag: vision
 tag: video
 shell: sh
 
+aim: Find disk UUID
+cmd: blkid
+cmd: blkid | fzf | grep -oPm1 'UUID="\K[^"]+' | head -1
+bin: blkid
+bin: fzf
+shell: sh
+tag: disk
+tag: system
+tag: boot
+
 aim: Put output into columns
 cmd: ip a | grep inet | column  -ts' '
 shell: sh
