@@ -147,7 +147,8 @@ content: ### Variables
 + 
 + .PHONY: help
 + help:
-+ 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | + 		sort | + 		column -s ':' -t
++ 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) \
++ | sort | column -s ':' -t
 + 
 + .PHONY: check
 + check: ## Check you have the required dependencies
