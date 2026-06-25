@@ -5,6 +5,15 @@
 %unique: shell
 %sort: shell bin
 
+aim: Change a CSV header
+cmd: from=number
++ to=quantity
++ sed -i "1 s///" "".csv
+bin: sed
+tag: csv
+tag: substitute
+tag: replace
+
 aim: Roll a die
 cmd: echo $(( RANDOM % 6+1 ))
 shell: bash
@@ -22,16 +31,6 @@ shell: bash
 bin: dig
 tag: ip
 tag: network
-
-aim: Launch GUI app as root
-cmd: app=gparted
-+ sudo -E ${app}
-note: Useful for launching gparted in sway.
-shell: sh
-bin: sudo
-tag: wayland
-tag: gui
-tag: sway
 
 aim: Turn markdown into a man page
 cmd: man <(lowdown -stman ${file}.md)
@@ -452,6 +451,17 @@ bin: printf
 tag: xargs
 tag: stdout
 
+aim: Share a directory as a local website
+cmd: python3 -m http.server
+note: Anyone can go to your computer's IP address and access all files in the current directory.
+shell: sh
+bin: python3
+tag: tip
+tag: network
+tag: share
+cmd: qrencode -t ansi "$(ip route show | grep -Pom1 'src \K[\d.]+')"
++ sudo python -m http.server 80
+
 aim: Make a QR Code image
 cmd: qrencode 'https://play.google.com/store/apps/details?id=org.briarproject.briar.android' -o "${file}".png
 shell: sh
@@ -495,12 +505,43 @@ bin: recinf
 tag: recfiles
 tag: database
 
+aim: Remove non-printable characters
+cmd: sed -i 's/[^[:print:]]//g' ${file}
+shell: sh
+bin: sed
+tag: text
+
 aim: Get back terminal after ssh freezes remote machine
 cmd: <Return>~.
 shell: sh
 bin: ssh
 tag: system
 tag: comfy
+
+aim: Launch GUI app as root
+cmd: app=gparted
++ sudo -E ${app}
+note: Useful for launching gparted in sway.
+shell: sh
+bin: sudo
+tag: wayland
+tag: gui
+tag: sway
+
+aim: Check current keyboard layout on sway
+cmd: swaymsg -t get_inputs --raw | jq -r '.[0].xkb_active_layout_name'
+bin: sway
+bin: jq
+tag: keyboard
+tag: locale
+shell: sh
+
+aim: Show name of currently selected app in sway
+cmd: swaymsg -t get_tree | jq -C '.. | select(.type?) | select(.focused==true)'
+bin: sway
+bin: jq
+tag: bar
+shell: sh
 
 aim: List enabled systemd services
 cmd: systemctl list-unit-files  --state enabled
@@ -592,38 +633,3 @@ bin: vipw
 bin: sudo
 tag: system
 tag: groups
-
-aim: Check current keyboard layout on sway
-cmd: swaymsg -t get_inputs --raw | jq -r '.[0].xkb_active_layout_name'
-bin: sway
-bin: jq
-tag: keyboard
-tag: locale
-shell: sh
-
-aim: Show name of currently selected app in sway
-cmd: swaymsg -t get_tree | jq -C '.. | select(.type?) | select(.focused==true)'
-bin: sway
-bin: jq
-tag: bar
-shell: sh
-
-aim: Share a directory as a local website
-cmd: python3 -m http.server
-note: Anyone can go to your computer's IP address and access all files in the current directory.
-shell: sh
-bin: python3
-tag: tip
-tag: network
-tag: share
-cmd: qrencode -t ansi "$(ip route show | grep -Pom1 'src \K[\d.]+')"
-+ sudo python -m http.server 80
-
-aim: Change a CSV header
-cmd: from=number
-+ to=quantity
-+ sed -i "1 s///" "".csv
-bin: sed
-tag: csv
-tag: substitute
-tag: replace
