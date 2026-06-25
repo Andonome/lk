@@ -28,7 +28,7 @@ tail -f "${file}"
 
 Watch which files in `${directory}` have most recently changed.
 
-`watch -d ls -t ${directory}/
+`watch -d dir -t ${directory}/
 
 Or use the `-g` flag to exit once the output changes.
 
