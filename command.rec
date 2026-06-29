@@ -643,3 +643,10 @@ bin: vipw
 bin: sudo
 tag: system
 tag: groups
+
+aim: Edit file as root
+cmd: sudo -e ${file}
+bin: sudo
+tag: tip
+tag: edit
+tag: security
