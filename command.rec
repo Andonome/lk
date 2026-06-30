@@ -542,6 +542,7 @@ shell: sh
 bin: ssh
 tag: system
 tag: comfy
+tag: TUI
 
 aim: Launch GUI app as root
 cmd: app=gparted
