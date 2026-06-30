@@ -14,6 +14,13 @@ tag: csv
 tag: substitute
 tag: replace
 
+aim: Edit file as root
+cmd: sudo -e ${file}
+bin: sudo
+tag: tip
+tag: edit
+tag: security
+
 aim: Roll a die
 cmd: echo $(( RANDOM % 6+1 ))
 shell: bash
@@ -45,6 +52,14 @@ bin: lowdown
 bin: groff
 bin: man
 tag: markdown
+
+aim: Remove crap from bash history
+cmd: sed -i -r '/([^ ]{100,})\s?$/d' $HISTFILE
+shell: bash
+bin: sed
+tag: tip
+tag: shell
+tag: maintenance
 
 aim: Rotate a video
 cmd: ffmpeg -i "${input}" -vf "transpose=1" "${out.mov}"
@@ -643,10 +658,3 @@ bin: vipw
 bin: sudo
 tag: system
 tag: groups
-
-aim: Edit file as root
-cmd: sudo -e ${file}
-bin: sudo
-tag: tip
-tag: edit
-tag: security
