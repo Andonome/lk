@@ -269,6 +269,13 @@ bin: git
 tag: maintenance
 shell: sh
 
+aim: Show git commits as a recfile
+cmd: git log --all --pretty=tformat:"Date: %aI%nCommit: %H%nAuthor: %an%nMessage: %s%nRef: %S%nParent: %P%n"
+shell: sh
+bin: git
+bin: recsel
+tag: data
+
 aim: Search for a short word
 cmd: grep "\b${word}\b" ${file}
 shell: sh
