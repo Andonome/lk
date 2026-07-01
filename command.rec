@@ -622,6 +622,15 @@ bin: vim
 bin: scp
 tag: network
 
+aim: Show a script in HTML
+cmd: source=~/.bashrc
++ target=bash.html
++ vim - --not-a-term -c '%TOhtml' -c "f ${target}" -c 'x!' -c 'qa!' < ${source}
+shell: sh
+bin: vim
+tag: html
+tag: documentation
+
 aim: Read info files with vim
 cmd: info () 
 + { 
