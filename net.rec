@@ -1,0 +1,3624 @@
+%rec: Port
+%doc: Networking ports, and what they do
+%key: port
+%allowed: protocol port description url tag
+%sort: port
+%type: port int
+%type: protocol enum TCP UDP
+%type: description,url line
+%typedef: word regexp /^[a-z]+[0-9]*$/
+%type: tag word
+
+port: 0
+protocol: TCP
+protocol: UDP
+description: Reserved
+
+port: 1
+protocol: TCP
+protocol: UDP
+description: Port Service Multiplexer
+
+port: 2
+protocol: TCP
+protocol: UDP
+description: Management Utility
+
+port: 3
+protocol: TCP
+protocol: UDP
+description: Compression Process
+
+port: 4
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 5
+protocol: TCP
+protocol: UDP
+description: Remote Job Entry
+
+port: 6
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 7
+protocol: TCP
+protocol: UDP
+description: Echo
+
+port: 8
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 9
+protocol: TCP
+protocol: UDP
+description: Discard
+
+port: 10
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 11
+protocol: TCP
+protocol: UDP
+description: Active Users
+
+port: 12
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 13
+protocol: TCP
+protocol: UDP
+description: Daytime (RFC 867)
+description: Daytime
+
+port: 14
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 15
+protocol: TCP
+protocol: UDP
+description: Unassigned [was netstat]
+description: Unassigned
+
+port: 16
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 17
+protocol: TCP
+protocol: UDP
+description: Quote of the Day
+
+port: 18
+protocol: TCP
+protocol: UDP
+description: Message Send Protocol
+
+port: 19
+protocol: TCP
+protocol: UDP
+description: Character Generator
+
+port: 20
+protocol: TCP
+protocol: UDP
+description: File Transfer [Default Data]
+
+port: 21
+protocol: TCP
+protocol: UDP
+description: File Transfer [Control]
+
+port: 22
+protocol: TCP
+protocol: UDP
+description: SSH Remote Login Protocol
+
+port: 23
+protocol: TCP
+protocol: UDP
+description: Telnet
+
+port: 24
+protocol: TCP
+protocol: UDP
+description: any private mail system
+
+port: 25
+protocol: TCP
+protocol: UDP
+description: Simple Mail Transfer
+
+port: 26
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 27
+protocol: TCP
+protocol: UDP
+description: NSW User System FE
+
+port: 28
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 29
+protocol: TCP
+protocol: UDP
+description: MSG ICP
+
+port: 30
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 31
+protocol: TCP
+protocol: UDP
+description: MSG Authentication
+
+port: 32
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 33
+protocol: TCP
+protocol: UDP
+description: Display Support Protocol
+
+port: 34
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 35
+protocol: TCP
+protocol: UDP
+description: any private printer server
+
+port: 36
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 37
+protocol: TCP
+protocol: UDP
+description: Time / W32.Sober.I virus
+description: Time
+
+port: 38
+protocol: TCP
+protocol: UDP
+description: Route Access Protocol
+
+port: 39
+protocol: TCP
+protocol: UDP
+description: Resource Location Protocol
+
+port: 40
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 41
+protocol: TCP
+protocol: UDP
+description: Graphics
+
+port: 42
+protocol: TCP
+protocol: UDP
+description: Host Name Server
+
+port: 43
+protocol: TCP
+protocol: UDP
+description: WhoIs
+description: Who Is
+
+port: 44
+protocol: TCP
+protocol: UDP
+description: MPM FLAGS Protocol
+
+port: 45
+protocol: TCP
+protocol: UDP
+description: Message Processing Module [recv]
+
+port: 46
+protocol: TCP
+protocol: UDP
+description: MPM [default send]
+
+port: 47
+protocol: TCP
+protocol: UDP
+description: NI FTP
+
+port: 48
+protocol: TCP
+protocol: UDP
+description: Digital Audit Daemon
+
+port: 49
+protocol: TCP
+protocol: UDP
+description: Login Host Protocol (TACACS)
+
+port: 50
+protocol: TCP
+protocol: UDP
+description: Remote Mail Checking Protocol
+
+port: 51
+protocol: TCP
+protocol: UDP
+description: IMP Logical Address Maintenance
+
+port: 52
+protocol: TCP
+protocol: UDP
+description: XNS Time Protocol
+
+port: 53
+protocol: TCP
+protocol: UDP
+description: Domain Name Server
+
+port: 54
+protocol: TCP
+protocol: UDP
+description: XNS Clearinghouse
+
+port: 55
+protocol: TCP
+protocol: UDP
+description: ISI Graphics Language
+
+port: 56
+protocol: TCP
+protocol: UDP
+description: XNS Authentication
+
+port: 57
+protocol: TCP
+protocol: UDP
+description: any private terminal access
+
+port: 58
+protocol: TCP
+protocol: UDP
+description: XNS Mail
+
+port: 59
+protocol: TCP
+protocol: UDP
+description: any private file service
+
+port: 60
+protocol: TCP
+protocol: UDP
+description: Unassigned
+
+port: 61
+protocol: TCP
+protocol: UDP
+description: NI MAIL
+
+port: 62
+protocol: TCP
+protocol: UDP
+description: ACA Services
+
+port: 63
+protocol: TCP
+protocol: UDP
+description: whois++
+
+port: 64
+protocol: TCP
+protocol: UDP
+description: Communications Integrator (CI)
+
+port: 65
+protocol: TCP
+protocol: UDP
+description: TACACS-Database Service
+
+port: 66
+protocol: TCP
+protocol: UDP
+description: Oracle SQL*NET
+
+port: 67
+protocol: TCP
+protocol: UDP
+description: Bootstrap Protocol Server
+
+port: 68
+protocol: TCP
+protocol: UDP
+description: Bootstrap Protocol Client
+
+port: 69
+protocol: TCP
+protocol: UDP
+description: Trivial File Transfer
+
+port: 70
+protocol: TCP
+protocol: UDP
+description: Gopher
+
+port: 71
+protocol: TCP
+protocol: UDP
+description: Remote Job Service
+
+port: 72
+protocol: TCP
+protocol: UDP
+description: Remote Job Service
+
+port: 73
+protocol: TCP
+protocol: UDP
+description: Remote Job Service
+
+port: 74
+protocol: TCP
+protocol: UDP
+description: Remote Job Service
+
+port: 75
+protocol: TCP
+protocol: UDP
+description: any private dial out service
+
+port: 76
+protocol: TCP
+protocol: UDP
+description: Distributed External Object Store
+
+port: 77
+protocol: TCP
+protocol: UDP
+description: any private RJE service
+
+port: 78
+protocol: TCP
+protocol: UDP
+description: vettcp
+
+port: 79
+protocol: TCP
+protocol: UDP
+description: Finger
+
+port: 80
+protocol: TCP
+protocol: UDP
+description: World Wide Web HTTP
+tag: http
+
+port: 81
+protocol: TCP
+protocol: UDP
+description: HOSTS2 Name Server / Bagle-AZ worm / Win32.Rbot worm
+description: HOSTS2 Name Server
+
+port: 82
+protocol: TCP
+protocol: UDP
+description: XFER Utility
+
+port: 83
+protocol: TCP
+protocol: UDP
+description: MIT ML Device
+
+port: 84
+protocol: TCP
+protocol: UDP
+description: Common Trace Facility
+
+port: 85
+protocol: TCP
+protocol: UDP
+description: MIT ML Device
+
+port: 86
+protocol: TCP
+protocol: UDP
+description: Micro Focus Cobol
+
+port: 87
+protocol: TCP
+protocol: UDP
+description: any private terminal link
+
+port: 88
+protocol: TCP
+protocol: UDP
+description: Kerberos
+
+port: 89
+protocol: TCP
+protocol: UDP
+description: SU/MIT Telnet Gateway
+
+port: 90
+protocol: TCP
+protocol: UDP
+description: DNSIX Securit Attribute Token Map
+
+port: 91
+protocol: TCP
+protocol: UDP
+description: MIT Dover Spooler
+
+port: 92
+protocol: TCP
+protocol: UDP
+description: Network Printing Protocol
+
+port: 93
+protocol: TCP
+protocol: UDP
+description: Device Control Protocol
+
+port: 94
+protocol: TCP
+protocol: UDP
+description: Tivoli Object Dispatcher
+
+port: 95
+protocol: TCP
+protocol: UDP
+description: SUPDUP
+
+port: 96
+protocol: TCP
+protocol: UDP
+description: DIXIE Protocol Specification
+
+port: 97
+protocol: TCP
+protocol: UDP
+description: Swift Remote Virtural File Protocol
+
+port: 98
+protocol: TCP
+protocol: UDP
+description: Linuxconf / TAC News
+description: TAC News
+
+port: 99
+protocol: TCP
+protocol: UDP
+description: Metagram Relay
+
+port: 100
+protocol: TCP
+description: [unauthorized use]
+
+port: 101
+protocol: TCP
+protocol: UDP
+description: NIC Host Name Server
+
+port: 102
+protocol: TCP
+protocol: UDP
+description: MSExchangeMTA X.400 / ISO-TSAP Class 0
+description: ISO-TSAP Class 0
+
+port: 103
+protocol: TCP
+protocol: UDP
+description: Genesis Point-to-Point Trans Net
+
+port: 104
+protocol: TCP
+protocol: UDP
+description: ACR-NEMA Digital Imag. & Comm. 300
+
+port: 105
+protocol: TCP
+protocol: UDP
+description: Mailbox Name Nameserver
+
+port: 106
+protocol: TCP
+protocol: UDP
+description: 3COM-TSMUX
+
+port: 107
+protocol: TCP
+protocol: UDP
+description: Remote Telnet Service
+
+port: 108
+protocol: TCP
+protocol: UDP
+description: SNA Gateway Access Server
+
+port: 109
+protocol: TCP
+protocol: UDP
+description: Post Office Protocol - Version 2
+
+port: 110
+protocol: TCP
+protocol: UDP
+description: Post Office Protocol - Version 3
+
+port: 111
+protocol: TCP
+protocol: UDP
+description: SUN Remote Procedure Call
+
+port: 112
+protocol: TCP
+protocol: UDP
+description: McIDAS Data Transmission Protocol
+
+port: 113
+protocol: TCP
+protocol: UDP
+description: Authentication Service
+
+port: 114
+protocol: TCP
+protocol: UDP
+description: Audio News Multicast
+
+port: 115
+protocol: TCP
+protocol: UDP
+description: Simple File Transfer Protocol
+
+port: 116
+protocol: TCP
+protocol: UDP
+description: ANSA REX Notify
+
+port: 117
+protocol: TCP
+protocol: UDP
+description: UUCP Path Service
+
+port: 118
+protocol: TCP
+protocol: UDP
+description: SQL Services
+
+port: 119
+protocol: TCP
+protocol: UDP
+description: Network News Transfer Protocol
+
+port: 120
+protocol: TCP
+protocol: UDP
+description: CFDPTKT
+
+port: 121
+protocol: TCP
+protocol: UDP
+description: Encore Expedited Remote Pro.Call
+
+port: 122
+protocol: TCP
+protocol: UDP
+description: SMAKYNET
+
+port: 123
+protocol: TCP
+protocol: UDP
+description: Network Time Protocol
+
+port: 124
+protocol: TCP
+protocol: UDP
+description: ANSA REX Trader
+
+port: 125
+protocol: TCP
+protocol: UDP
+description: Locus PC-Interface Net Map Ser
+
+port: 126
+protocol: TCP
+protocol: UDP
+description: Unisys Unitary Login
+
+port: 127
+protocol: TCP
+protocol: UDP
+description: Locus PC-Interface Conn Server
+
+port: 128
+protocol: TCP
+protocol: UDP
+description: GSS X License Verification
+
+port: 129
+protocol: TCP
+protocol: UDP
+description: Password Generator Protocol
+url: https://www.rfc-editor.org/info/rfc972/
+
+port: 130
+protocol: TCP
+protocol: UDP
+description: cisco FNATIVE
+
+port: 131
+protocol: TCP
+protocol: UDP
+description: cisco TNATIVE
+
+port: 132
+protocol: TCP
+protocol: UDP
+description: cisco SYSMAINT
+
+port: 133
+protocol: TCP
+protocol: UDP
+description: Statistics Service
+
+port: 134
+protocol: TCP
+protocol: UDP
+description: INGRES-NET Service
+
+port: 135
+protocol: TCP
+protocol: UDP
+description: DCE endpoint resolution
+
+port: 136
+protocol: TCP
+protocol: UDP
+description: PROFILE Naming System
+
+port: 137
+protocol: TCP
+protocol: UDP
+description: NETBIOS Name Service
+
+port: 138
+protocol: TCP
+protocol: UDP
+description: NETBIOS Datagram Service
+
+port: 139
+protocol: TCP
+protocol: UDP
+description: NETBIOS Session Service
+
+port: 140
+protocol: TCP
+protocol: UDP
+description: EMFIS Data Service
+
+port: 141
+protocol: TCP
+protocol: UDP
+description: EMFIS Control Service
+
+port: 142
+protocol: TCP
+protocol: UDP
+description: Britton-Lee IDM
+
+port: 143
+protocol: TCP
+protocol: UDP
+description: Internet Message Access Protocol
+
+port: 144
+protocol: TCP
+protocol: UDP
+description: Universal Management Architecture
+
+port: 145
+protocol: TCP
+protocol: UDP
+description: UAAC Protocol
+
+port: 146
+protocol: TCP
+protocol: UDP
+description: ISO-IP0
+
+port: 147
+protocol: TCP
+protocol: UDP
+description: ISO-IP
+
+port: 148
+protocol: TCP
+protocol: UDP
+description: Jargon
+
+port: 149
+protocol: TCP
+protocol: UDP
+description: AED 512 Emulation Service
+
+port: 150
+protocol: TCP
+protocol: UDP
+description: SQL-NET
+
+port: 151
+protocol: TCP
+protocol: UDP
+description: HEMS
+
+port: 152
+protocol: TCP
+protocol: UDP
+description: Background File Transfer Program
+
+port: 153
+protocol: TCP
+protocol: UDP
+description: SGMP
+
+port: 154
+protocol: TCP
+protocol: UDP
+description: NETSC
+
+port: 155
+protocol: TCP
+protocol: UDP
+description: NETSC
+
+port: 156
+protocol: TCP
+protocol: UDP
+description: SQL Service
+
+port: 157
+protocol: TCP
+protocol: UDP
+description: KNET/VM Command/Message Protocol
+
+port: 158
+protocol: TCP
+protocol: UDP
+description: PCMail Server
+
+port: 159
+protocol: TCP
+protocol: UDP
+description: NSS-Routing
+
+port: 160
+protocol: TCP
+protocol: UDP
+description: SGMP-TRAPS
+
+port: 161
+protocol: TCP
+protocol: UDP
+description: SNMP
+
+port: 162
+protocol: TCP
+protocol: UDP
+description: SNMPTRAP
+
+port: 163
+protocol: TCP
+protocol: UDP
+description: CMIP/TCP Manager
+
+port: 164
+protocol: TCP
+protocol: UDP
+description: CMIP/TCP Agent
+
+port: 165
+protocol: TCP
+protocol: UDP
+description: Xerox
+
+port: 166
+protocol: TCP
+protocol: UDP
+description: Sirius Systems
+
+port: 167
+protocol: TCP
+protocol: UDP
+description: NAMP
+
+port: 168
+protocol: TCP
+protocol: UDP
+description: RSVD
+
+port: 169
+protocol: TCP
+protocol: UDP
+description: SEND
+
+port: 170
+protocol: TCP
+protocol: UDP
+description: Network PostScript
+
+port: 171
+protocol: TCP
+protocol: UDP
+description: Network Innovations Multiplex
+
+port: 172
+protocol: TCP
+protocol: UDP
+description: Network Innovations CL/1
+
+port: 173
+protocol: TCP
+protocol: UDP
+description: Xyplex
+
+port: 174
+protocol: TCP
+protocol: UDP
+description: MAILQ
+
+port: 175
+protocol: TCP
+protocol: UDP
+description: VMNET
+
+port: 176
+protocol: TCP
+protocol: UDP
+description: GENRAD-MUX
+
+port: 177
+protocol: TCP
+protocol: UDP
+description: X Display Manager Control Protocol
+
+port: 178
+protocol: TCP
+protocol: UDP
+description: NextStep Window Server
+
+port: 179
+protocol: TCP
+protocol: UDP
+description: Border Gateway Protocol
+
+port: 180
+protocol: TCP
+protocol: UDP
+description: Intergraph
+
+port: 181
+protocol: TCP
+protocol: UDP
+description: Unify
+
+port: 182
+protocol: TCP
+protocol: UDP
+description: Unisys Audit SITP
+
+port: 183
+protocol: TCP
+protocol: UDP
+description: OCBinder
+
+port: 184
+protocol: TCP
+protocol: UDP
+description: OCServer
+
+port: 185
+protocol: TCP
+protocol: UDP
+description: Remote-KIS
+
+port: 186
+protocol: TCP
+protocol: UDP
+description: KIS Protocol
+
+port: 187
+protocol: TCP
+protocol: UDP
+description: Application Communication Interface
+
+port: 188
+protocol: TCP
+protocol: UDP
+description: Plus Five's MUMPS
+
+port: 189
+protocol: TCP
+protocol: UDP
+description: Queued File Transport
+
+port: 190
+protocol: TCP
+protocol: UDP
+description: Gateway Access Control Protocol
+
+port: 191
+protocol: TCP
+protocol: UDP
+description: Prospero Directory Service
+
+port: 192
+protocol: TCP
+protocol: UDP
+description: OSU Network Monitoring System
+
+port: 193
+protocol: TCP
+protocol: UDP
+description: Spider Remote Monitoring Protocol
+
+port: 194
+protocol: TCP
+protocol: UDP
+description: Internet Relay Chat Protocol
+
+port: 195
+protocol: TCP
+protocol: UDP
+description: DNSIX Network Level Module Audit
+
+port: 196
+protocol: TCP
+protocol: UDP
+description: DNSIX Session Mgt Module Audit Redir
+
+port: 197
+protocol: TCP
+protocol: UDP
+description: Directory Location Service
+
+port: 198
+protocol: TCP
+protocol: UDP
+description: Directory Location Service Monitor
+
+port: 199
+protocol: TCP
+protocol: UDP
+description: SMUX
+
+port: 200
+protocol: TCP
+protocol: UDP
+description: IBM System Resource Controller
+
+port: 201
+protocol: TCP
+protocol: UDP
+description: AppleTalk Routing Maintenance
+
+port: 202
+protocol: TCP
+protocol: UDP
+description: AppleTalk Name Binding
+
+port: 203
+protocol: TCP
+protocol: UDP
+description: AppleTalk Unused
+
+port: 204
+protocol: TCP
+protocol: UDP
+description: AppleTalk Echo
+
+port: 205
+protocol: TCP
+protocol: UDP
+description: AppleTalk Unused
+
+port: 206
+protocol: TCP
+protocol: UDP
+description: AppleTalk Zone Information
+
+port: 207
+protocol: TCP
+protocol: UDP
+description: AppleTalk Unused
+
+port: 208
+protocol: TCP
+protocol: UDP
+description: AppleTalk Unused
+
+port: 209
+protocol: TCP
+protocol: UDP
+description: The Quick Mail Transfer Protocol
+
+port: 210
+protocol: TCP
+protocol: UDP
+description: ANSI Z39.50
+
+port: 211
+protocol: TCP
+protocol: UDP
+description: Texas Instruments 914C/G Terminal
+
+port: 212
+protocol: TCP
+protocol: UDP
+description: ATEXSSTR
+
+port: 213
+protocol: TCP
+protocol: UDP
+description: IPX
+
+port: 214
+protocol: TCP
+protocol: UDP
+description: VM PWSCS
+
+port: 215
+protocol: TCP
+protocol: UDP
+description: Insignia Solutions
+
+port: 216
+protocol: TCP
+protocol: UDP
+description: Computer Associates Int'l License Server
+
+port: 217
+protocol: TCP
+protocol: UDP
+description: dBASE Unix
+
+port: 218
+protocol: TCP
+protocol: UDP
+description: Netix Message Posting Protocol
+
+port: 219
+protocol: TCP
+protocol: UDP
+description: Unisys ARPs
+
+port: 220
+protocol: TCP
+protocol: UDP
+description: Interactive Mail Access Protocol v3
+
+port: 221
+protocol: TCP
+protocol: UDP
+description: Berkeley rlogind with SPX auth
+
+port: 222
+protocol: TCP
+protocol: UDP
+description: Berkeley rshd with SPX auth
+
+port: 223
+protocol: TCP
+protocol: UDP
+description: Certificate Distribution Center
+
+port: 224
+protocol: TCP
+protocol: UDP
+description: masqdialer
+
+port: 242
+protocol: TCP
+protocol: UDP
+description: Direct
+
+port: 243
+protocol: TCP
+protocol: UDP
+description: Survey Measurement
+
+port: 244
+protocol: TCP
+protocol: UDP
+description: inbusiness
+
+port: 245
+protocol: TCP
+protocol: UDP
+description: LINK
+
+port: 246
+protocol: TCP
+protocol: UDP
+description: Display Systems Protocol
+
+port: 247
+protocol: TCP
+protocol: UDP
+description: SUBNTBCST_TFTP
+
+port: 248
+protocol: TCP
+protocol: UDP
+description: bhfhs
+
+port: 256
+protocol: TCP
+protocol: UDP
+description: RAP/Checkpoint SNMP
+description: RAP
+
+port: 257
+protocol: TCP
+protocol: UDP
+description: Check Point / Secure Electronic Transaction
+description: Secure Electronic Transaction
+
+port: 258
+protocol: TCP
+protocol: UDP
+description: Check Point / Yak Winsock Personal Chat
+description: Yak Winsock Personal Chat
+
+port: 259
+protocol: TCP
+protocol: UDP
+description: Check Point Firewall-1 telnet auth / Efficient Short Remote Operations
+description: Efficient Short Remote Operations
+
+port: 260
+protocol: TCP
+protocol: UDP
+description: Openport
+
+port: 261
+protocol: TCP
+protocol: UDP
+description: IIOP Name Service over TLS/SSL
+
+port: 262
+protocol: TCP
+protocol: UDP
+description: Arcisdms
+
+port: 263
+protocol: TCP
+protocol: UDP
+description: HDAP
+
+port: 264
+protocol: TCP
+protocol: UDP
+description: BGMP / Check Point
+description: BGMP
+
+port: 265
+protocol: TCP
+protocol: UDP
+description: X-Bone CTL
+
+port: 266
+protocol: TCP
+protocol: UDP
+description: SCSI on ST
+
+port: 267
+protocol: TCP
+protocol: UDP
+description: Tobit David Service Layer
+
+port: 268
+protocol: TCP
+protocol: UDP
+description: Tobit David Replica
+
+port: 280
+protocol: TCP
+protocol: UDP
+description: HTTP-mgmt
+
+port: 281
+protocol: TCP
+protocol: UDP
+description: Personal Link
+
+port: 282
+protocol: TCP
+protocol: UDP
+description: Cable Port A/X
+
+port: 283
+protocol: TCP
+protocol: UDP
+description: rescap
+
+port: 284
+protocol: TCP
+protocol: UDP
+description: corerjd
+
+port: 286
+protocol: TCP
+protocol: UDP
+description: FXP-1
+
+port: 287
+protocol: TCP
+protocol: UDP
+description: K-BLOCK
+
+port: 308
+protocol: TCP
+protocol: UDP
+description: Novastor Backup
+
+port: 309
+protocol: TCP
+protocol: UDP
+description: EntrustTime
+
+port: 310
+protocol: TCP
+protocol: UDP
+description: bhmds
+
+port: 311
+protocol: TCP
+protocol: UDP
+description: AppleShare IP WebAdmin
+
+port: 312
+protocol: TCP
+protocol: UDP
+description: VSLMP
+
+port: 313
+protocol: TCP
+protocol: UDP
+description: Magenta Logic
+
+port: 314
+protocol: TCP
+protocol: UDP
+description: Opalis Robot
+
+port: 315
+protocol: TCP
+protocol: UDP
+description: DPSI
+
+port: 316
+protocol: TCP
+protocol: UDP
+description: decAuth
+
+port: 317
+protocol: TCP
+protocol: UDP
+description: Zannet
+
+port: 318
+protocol: TCP
+protocol: UDP
+description: PKIX TimeStamp
+
+port: 319
+protocol: TCP
+protocol: UDP
+description: PTP Event
+
+port: 320
+protocol: TCP
+protocol: UDP
+description: PTP General
+
+port: 321
+protocol: TCP
+protocol: UDP
+description: PIP
+
+port: 322
+protocol: TCP
+protocol: UDP
+description: RTSPS
+
+port: 333
+protocol: TCP
+protocol: UDP
+description: Texar Security Port
+
+port: 344
+protocol: TCP
+protocol: UDP
+description: Prospero Data Access Protocol
+
+port: 345
+protocol: TCP
+protocol: UDP
+description: Perf Analysis Workbench
+
+port: 346
+protocol: TCP
+protocol: UDP
+description: Zebra server
+
+port: 347
+protocol: TCP
+protocol: UDP
+description: Fatmen Server
+
+port: 348
+protocol: TCP
+protocol: UDP
+description: Cabletron Management Protocol
+
+port: 349
+protocol: TCP
+protocol: UDP
+description: mftp
+
+port: 350
+protocol: TCP
+protocol: UDP
+description: MATIP Type A
+
+port: 351
+protocol: TCP
+protocol: UDP
+description: bhoetty (added 5/21/97)
+description: bhoetty
+
+port: 352
+protocol: TCP
+protocol: UDP
+description: bhoedap4 (added 5/21/97)
+description: bhoedap4
+
+port: 353
+protocol: TCP
+protocol: UDP
+description: NDSAUTH
+
+port: 354
+protocol: TCP
+protocol: UDP
+description: bh611
+
+port: 355
+protocol: TCP
+protocol: UDP
+description: DATEX-ASN
+
+port: 356
+protocol: TCP
+protocol: UDP
+description: Cloanto Net 1
+
+port: 357
+protocol: TCP
+protocol: UDP
+description: bhevent
+
+port: 358
+protocol: TCP
+protocol: UDP
+description: Shrinkwrap
+
+port: 359
+protocol: TCP
+protocol: UDP
+description: Tenebris Network Trace Service
+
+port: 360
+protocol: TCP
+protocol: UDP
+description: scoi2odialog
+
+port: 361
+protocol: TCP
+protocol: UDP
+description: Semantix
+
+port: 362
+protocol: TCP
+protocol: UDP
+description: SRS Send
+
+port: 363
+protocol: TCP
+protocol: UDP
+description: RSVP Tunnel
+
+port: 364
+protocol: TCP
+protocol: UDP
+description: Aurora CMGR
+
+port: 365
+protocol: TCP
+protocol: UDP
+description: DTK
+
+port: 366
+protocol: TCP
+protocol: UDP
+description: ODMR
+
+port: 367
+protocol: TCP
+protocol: UDP
+description: MortgageWare
+
+port: 368
+protocol: TCP
+protocol: UDP
+description: QbikGDP
+
+port: 369
+protocol: TCP
+protocol: UDP
+description: rpc2portmap
+
+port: 370
+protocol: TCP
+protocol: UDP
+description: codaauth2
+
+port: 371
+protocol: TCP
+protocol: UDP
+description: Clearcase
+
+port: 372
+protocol: TCP
+protocol: UDP
+description: ListProcessor
+
+port: 373
+protocol: TCP
+protocol: UDP
+description: Legent Corporation
+
+port: 374
+protocol: TCP
+protocol: UDP
+description: Legent Corporation
+
+port: 375
+protocol: TCP
+protocol: UDP
+description: Hassle
+
+port: 376
+protocol: TCP
+protocol: UDP
+description: Amiga Envoy Network Inquiry Proto
+
+port: 377
+protocol: TCP
+protocol: UDP
+description: NEC Corporation
+
+port: 378
+protocol: TCP
+protocol: UDP
+description: NEC Corporation
+
+port: 379
+protocol: TCP
+protocol: UDP
+description: TIA/EIA/IS-99 modem client
+
+port: 380
+protocol: TCP
+protocol: UDP
+description: TIA/EIA/IS-99 modem server
+
+port: 381
+protocol: TCP
+protocol: UDP
+description: hp performance data collector
+
+port: 382
+protocol: TCP
+protocol: UDP
+description: hp performance data managed node
+
+port: 383
+protocol: TCP
+protocol: UDP
+description: hp performance data alarm manager
+
+port: 384
+protocol: TCP
+protocol: UDP
+description: A Remote Network Server System
+
+port: 385
+protocol: TCP
+protocol: UDP
+description: IBM Application
+
+port: 386
+protocol: TCP
+protocol: UDP
+description: ASA Message Router Object Def.
+
+port: 387
+protocol: TCP
+protocol: UDP
+description: Appletalk Update-Based Routing Pro.
+
+port: 388
+protocol: TCP
+protocol: UDP
+description: Unidata LDM
+
+port: 389
+protocol: TCP
+protocol: UDP
+description: Lightweight Directory Access Protocol / Internet Locator Service (ILS)
+description: Lightweight Directory Access Protocol
+
+port: 390
+protocol: TCP
+protocol: UDP
+description: UIS
+
+port: 391
+protocol: TCP
+protocol: UDP
+description: SynOptics SNMP Relay Port
+
+port: 392
+protocol: TCP
+protocol: UDP
+description: SynOptics Port Broker Port
+
+port: 393
+protocol: TCP
+protocol: UDP
+description: Data Interpretation System
+
+port: 394
+protocol: TCP
+protocol: UDP
+description: EMBL Nucleic Data Transfer
+
+port: 395
+protocol: TCP
+protocol: UDP
+description: NETscout Control Protocol
+
+port: 396
+protocol: TCP
+protocol: UDP
+description: Novell Netware over IP
+
+port: 397
+protocol: TCP
+protocol: UDP
+description: Multi Protocol Trans. Net.
+
+port: 398
+protocol: TCP
+protocol: UDP
+description: Kryptolan
+
+port: 399
+protocol: TCP
+protocol: UDP
+description: ISO Transport Class 2 Non-Control over TCP
+
+port: 400
+protocol: TCP
+protocol: UDP
+description: Workstation Solutions
+
+port: 401
+protocol: TCP
+protocol: UDP
+description: Uninterruptible Power Supply
+
+port: 402
+protocol: TCP
+protocol: UDP
+description: Genie Protocol
+
+port: 403
+protocol: TCP
+protocol: UDP
+description: decap
+
+port: 404
+protocol: TCP
+protocol: UDP
+description: nced
+
+port: 405
+protocol: TCP
+protocol: UDP
+description: ncld
+
+port: 406
+protocol: TCP
+protocol: UDP
+description: Interactive Mail Support Protocol
+
+port: 407
+protocol: TCP
+protocol: UDP
+description: Timbuktu
+
+port: 408
+protocol: TCP
+protocol: UDP
+description: Prospero Resource Manager Sys. Man.
+
+port: 409
+protocol: TCP
+protocol: UDP
+description: Prospero Resource Manager Node Man.
+
+port: 410
+protocol: TCP
+protocol: UDP
+description: DECLadebug Remote Debug Protocol
+
+port: 411
+protocol: TCP
+protocol: UDP
+description: Remote MT Protocol
+
+port: 412
+protocol: TCP
+protocol: UDP
+description: NeoModus Direct Connect (Windows file sharing program) / Trap Convention Port
+description: Trap Convention Port
+
+port: 413
+protocol: TCP
+protocol: UDP
+description: SMSP
+
+port: 414
+protocol: TCP
+protocol: UDP
+description: InfoSeek
+
+port: 415
+protocol: TCP
+protocol: UDP
+description: BNet
+
+port: 416
+protocol: TCP
+protocol: UDP
+description: Silverplatter
+
+port: 417
+protocol: TCP
+protocol: UDP
+description: Onmux
+
+port: 418
+protocol: TCP
+protocol: UDP
+description: Hyper-G
+
+port: 419
+protocol: TCP
+protocol: UDP
+description: Ariel
+
+port: 420
+protocol: TCP
+protocol: UDP
+description: SMPTE
+
+port: 421
+protocol: TCP
+protocol: UDP
+description: Ariel
+
+port: 422
+protocol: TCP
+protocol: UDP
+description: Ariel
+
+port: 423
+protocol: TCP
+protocol: UDP
+description: IBM Operations Planning and Control Start
+
+port: 424
+protocol: TCP
+protocol: UDP
+description: IBM Operations Planning and Control Track
+
+port: 425
+protocol: TCP
+protocol: UDP
+description: ICAD
+
+port: 426
+protocol: TCP
+protocol: UDP
+description: smartsdp
+
+port: 427
+protocol: TCP
+protocol: UDP
+description: Server Location
+
+port: 428
+protocol: TCP
+protocol: UDP
+description: OCS_CMU
+
+port: 429
+protocol: TCP
+protocol: UDP
+description: OCS_AMU
+
+port: 430
+protocol: TCP
+protocol: UDP
+description: UTMPSD
+
+port: 431
+protocol: TCP
+protocol: UDP
+description: UTMPCD
+
+port: 432
+protocol: TCP
+protocol: UDP
+description: IASD
+
+port: 433
+protocol: TCP
+protocol: UDP
+description: NNSP
+
+port: 434
+protocol: TCP
+protocol: UDP
+description: MobileIP-Agent
+
+port: 435
+protocol: TCP
+protocol: UDP
+description: MobilIP-MN
+
+port: 436
+protocol: TCP
+protocol: UDP
+description: DNA-CML
+
+port: 437
+protocol: TCP
+protocol: UDP
+description: comscm
+
+port: 438
+protocol: TCP
+protocol: UDP
+description: dsfgw
+
+port: 439
+protocol: TCP
+protocol: UDP
+description: dasp
+
+port: 440
+protocol: TCP
+protocol: UDP
+description: sgcp
+
+port: 441
+protocol: TCP
+protocol: UDP
+description: decvms-sysmgt
+
+port: 442
+protocol: TCP
+protocol: UDP
+description: cvc_hostd
+
+port: 443
+protocol: TCP
+protocol: UDP
+description: HTTP protocol over TLS/SSL
+tag: http
+
+port: 444
+protocol: TCP
+protocol: UDP
+description: Simple Network Paging Protocol
+
+port: 445
+protocol: TCP
+protocol: UDP
+description: Microsoft-DS
+
+port: 446
+protocol: TCP
+protocol: UDP
+description: DDM-RDB
+
+port: 447
+protocol: TCP
+protocol: UDP
+description: DDM-RFM
+
+port: 448
+protocol: TCP
+protocol: UDP
+description: DDM-SSL
+
+port: 449
+protocol: TCP
+protocol: UDP
+description: AS Server Mapper
+
+port: 450
+protocol: TCP
+protocol: UDP
+description: TServer
+
+port: 451
+protocol: TCP
+protocol: UDP
+description: Cray Network Semaphore server
+
+port: 452
+protocol: TCP
+protocol: UDP
+description: Cray SFS config server
+
+port: 453
+protocol: TCP
+protocol: UDP
+description: CreativeServer
+
+port: 454
+protocol: TCP
+protocol: UDP
+description: ContentServer
+
+port: 455
+protocol: TCP
+protocol: UDP
+description: CreativePartnr
+
+port: 456
+protocol: TCP
+protocol: UDP
+description: macon-tcp
+description: macon-udp
+
+port: 457
+protocol: TCP
+protocol: UDP
+description: scohelp
+
+port: 458
+protocol: TCP
+protocol: UDP
+description: apple quick time
+
+port: 459
+protocol: TCP
+protocol: UDP
+description: ampr-rcmd
+
+port: 460
+protocol: TCP
+protocol: UDP
+description: skronk
+
+port: 461
+protocol: TCP
+protocol: UDP
+description: DataRampSrv
+
+port: 462
+protocol: TCP
+protocol: UDP
+description: DataRampSrvSec
+
+port: 463
+protocol: TCP
+protocol: UDP
+description: alpes
+
+port: 464
+protocol: TCP
+protocol: UDP
+description: kpasswd
+
+port: 465
+protocol: TCP
+protocol: UDP
+description: SMTPS
+description: SMTP protocol over TLS/SSL
+
+port: 466
+protocol: TCP
+protocol: UDP
+description: digital-vrc
+
+port: 467
+protocol: TCP
+protocol: UDP
+description: mylex-mapd
+
+port: 468
+protocol: TCP
+protocol: UDP
+description: proturis
+
+port: 469
+protocol: TCP
+protocol: UDP
+description: Radio Control Protocol
+
+port: 470
+protocol: TCP
+protocol: UDP
+description: scx-proxy
+
+port: 471
+protocol: TCP
+protocol: UDP
+description: Mondex
+
+port: 472
+protocol: TCP
+protocol: UDP
+description: ljk-login
+
+port: 473
+protocol: TCP
+protocol: UDP
+description: hybrid-pop
+
+port: 474
+protocol: TCP
+protocol: UDP
+description: tn-tl-w1
+description: tn-tl-w2
+
+port: 475
+protocol: TCP
+protocol: UDP
+description: tcpnethaspsrv
+
+port: 476
+protocol: TCP
+protocol: UDP
+description: tn-tl-fd1
+
+port: 477
+protocol: TCP
+protocol: UDP
+description: ss7ns
+
+port: 478
+protocol: TCP
+protocol: UDP
+description: spsc
+
+port: 479
+protocol: TCP
+protocol: UDP
+description: iafserver
+
+port: 480
+protocol: TCP
+protocol: UDP
+description: iafdbase
+
+port: 481
+protocol: TCP
+protocol: UDP
+description: Ph service
+
+port: 482
+protocol: TCP
+protocol: UDP
+description: bgs-nsi
+
+port: 483
+protocol: TCP
+protocol: UDP
+description: ulpnet
+
+port: 484
+protocol: TCP
+protocol: UDP
+description: Integra Software Management Environment
+
+port: 485
+protocol: TCP
+protocol: UDP
+description: Air Soft Power Burst
+
+port: 486
+protocol: TCP
+protocol: UDP
+description: avian
+
+port: 487
+protocol: TCP
+protocol: UDP
+description: saft Simple Asynchronous File Transfer
+
+port: 488
+protocol: TCP
+protocol: UDP
+description: gss-HTTP
+
+port: 489
+protocol: TCP
+protocol: UDP
+description: nest-protocol
+
+port: 490
+protocol: TCP
+protocol: UDP
+description: micom-pfs
+
+port: 491
+protocol: TCP
+protocol: UDP
+description: go-login
+
+port: 492
+protocol: TCP
+protocol: UDP
+description: Transport Independent Convergence for FNA
+
+port: 493
+protocol: TCP
+protocol: UDP
+description: Transport Independent Convergence for FNA
+
+port: 494
+protocol: TCP
+protocol: UDP
+description: POV-Ray
+
+port: 495
+protocol: TCP
+protocol: UDP
+description: intecourier
+
+port: 496
+protocol: TCP
+protocol: UDP
+description: PIM-RP-DISC
+
+port: 497
+protocol: TCP
+protocol: UDP
+description: dantz
+
+port: 498
+protocol: TCP
+protocol: UDP
+description: siam
+
+port: 499
+protocol: TCP
+protocol: UDP
+description: ISO ILL Protocol
+
+port: 500
+protocol: TCP
+protocol: UDP
+description: ISAKMP
+
+port: 501
+protocol: TCP
+protocol: UDP
+description: STMF
+
+port: 502
+protocol: TCP
+protocol: UDP
+description: asa-appl-proto
+
+port: 503
+protocol: TCP
+protocol: UDP
+description: Intrinsa
+
+port: 504
+protocol: TCP
+protocol: UDP
+description: citadel
+
+port: 505
+protocol: TCP
+protocol: UDP
+description: mailbox-lm
+
+port: 506
+protocol: TCP
+protocol: UDP
+description: ohimsrv
+
+port: 507
+protocol: TCP
+protocol: UDP
+description: crs
+
+port: 508
+protocol: TCP
+protocol: UDP
+description: xvttp
+
+port: 509
+protocol: TCP
+protocol: UDP
+description: snare
+
+port: 510
+protocol: TCP
+protocol: UDP
+description: FirstClass Protocol
+
+port: 511
+protocol: TCP
+protocol: UDP
+description: PassGo
+
+port: 512
+protocol: TCP
+protocol: UDP
+description: Remote process execution
+description: used by mail system to notify users
+
+port: 513
+protocol: TCP
+protocol: UDP
+description: Remote Login
+description: maintains data bases showing who's
+
+port: 514
+protocol: TCP
+protocol: UDP
+description: Remote Shell
+description: BSD syslogd
+
+port: 515
+protocol: TCP
+protocol: UDP
+description: spooler
+
+port: 516
+protocol: TCP
+protocol: UDP
+description: videotex
+
+port: 517
+protocol: TCP
+protocol: UDP
+description: like tenex link but across
+
+port: 518
+protocol: TCP
+protocol: UDP
+description: talkd
+
+port: 519
+protocol: TCP
+protocol: UDP
+description: unixtime
+
+port: 520
+protocol: TCP
+protocol: UDP
+description: extended file name server
+description: Routing Information Protocol
+
+port: 521
+protocol: TCP
+protocol: UDP
+description: ripng
+
+port: 522
+protocol: TCP
+protocol: UDP
+description: User Location Service / ULP
+description: ULP
+
+port: 523
+protocol: TCP
+protocol: UDP
+description: IBM-DB2
+
+port: 524
+protocol: TCP
+protocol: UDP
+description: NCP
+
+port: 525
+protocol: TCP
+protocol: UDP
+description: timeserver
+
+port: 526
+protocol: TCP
+protocol: UDP
+description: newdate
+
+port: 527
+protocol: TCP
+protocol: UDP
+description: Stock IXChange
+
+port: 528
+protocol: TCP
+protocol: UDP
+description: Customer IXChange
+
+port: 529
+protocol: TCP
+protocol: UDP
+description: IRC-SERV
+
+port: 530
+protocol: TCP
+protocol: UDP
+description: rpc
+
+port: 531
+protocol: TCP
+protocol: UDP
+description: chat
+
+port: 532
+protocol: TCP
+protocol: UDP
+description: readnews
+
+port: 533
+protocol: TCP
+protocol: UDP
+description: for emergency broadcasts
+
+port: 534
+protocol: TCP
+protocol: UDP
+description: MegaMedia Admin
+
+port: 535
+protocol: TCP
+protocol: UDP
+description: iiop
+
+port: 536
+protocol: TCP
+protocol: UDP
+description: opalis-rdv
+
+port: 537
+protocol: TCP
+protocol: UDP
+description: Networked Media Streaming Protocol
+
+port: 538
+protocol: TCP
+protocol: UDP
+description: gdomap
+
+port: 539
+protocol: TCP
+protocol: UDP
+description: Apertus Technologies Load Determination
+
+port: 540
+protocol: TCP
+protocol: UDP
+description: uucpd
+
+port: 541
+protocol: TCP
+protocol: UDP
+description: uucp-rlogin
+
+port: 542
+protocol: TCP
+protocol: UDP
+description: commerce
+
+port: 543
+protocol: TCP
+protocol: UDP
+description: kerberos (v4/v5)
+
+port: 544
+protocol: TCP
+protocol: UDP
+description: krcmd
+
+port: 545
+protocol: TCP
+protocol: UDP
+description: appleqtcsrvr
+
+port: 546
+protocol: TCP
+protocol: UDP
+description: DHCPv6 Client
+
+port: 547
+protocol: TCP
+protocol: UDP
+description: DHCPv6 Server
+
+port: 548
+protocol: TCP
+protocol: UDP
+description: AppleShare AFP over TCP
+description: AFP over TCP
+
+port: 549
+protocol: TCP
+protocol: UDP
+description: IDFP
+
+port: 550
+protocol: TCP
+protocol: UDP
+description: new-who
+
+port: 551
+protocol: TCP
+protocol: UDP
+description: cybercash
+
+port: 552
+protocol: TCP
+protocol: UDP
+description: deviceshare
+
+port: 553
+protocol: TCP
+protocol: UDP
+description: pirp
+
+port: 554
+protocol: TCP
+protocol: UDP
+description: Real Time Stream Control Protocol
+
+port: 555
+protocol: TCP
+protocol: UDP
+description: phAse Zero backdoor (Win 9x, NT) / dsf
+description: phAse Zero backdoor (Windows) / dsf
+
+port: 556
+protocol: TCP
+protocol: UDP
+description: rfs server
+
+port: 557
+protocol: TCP
+protocol: UDP
+description: openvms-sysipc
+
+port: 558
+protocol: TCP
+protocol: UDP
+description: SDNSKMP
+
+port: 559
+protocol: TCP
+protocol: UDP
+description: TEEDTAP / Backdoor.Domwis Win32 trojan
+description: TEEDTAP
+
+port: 560
+protocol: TCP
+protocol: UDP
+description: rmonitord
+
+port: 561
+protocol: TCP
+protocol: UDP
+description: monitor
+
+port: 562
+protocol: TCP
+protocol: UDP
+description: chcmd
+
+port: 563
+protocol: TCP
+protocol: UDP
+description: AOL IM / NNTP protocol over TLS/SSL
+description: NNTP protocol over TLS/SSL
+
+port: 564
+protocol: TCP
+protocol: UDP
+description: plan 9 file service
+
+port: 565
+protocol: TCP
+protocol: UDP
+description: whoami
+
+port: 566
+protocol: TCP
+protocol: UDP
+description: streettalk
+
+port: 567
+protocol: TCP
+protocol: UDP
+description: banyan-rpc
+
+port: 568
+protocol: TCP
+protocol: UDP
+description: microsoft shuttle
+
+port: 569
+protocol: TCP
+protocol: UDP
+description: microsoft rome
+
+port: 570
+protocol: TCP
+protocol: UDP
+description: demon
+
+port: 571
+protocol: TCP
+protocol: UDP
+description: udemon
+
+port: 572
+protocol: TCP
+protocol: UDP
+description: sonar
+
+port: 573
+protocol: TCP
+protocol: UDP
+description: banyan-vip
+
+port: 574
+protocol: TCP
+protocol: UDP
+description: FTP Software Agent System
+
+port: 575
+protocol: TCP
+protocol: UDP
+description: VEMMI
+
+port: 576
+protocol: TCP
+protocol: UDP
+description: ipcd
+
+port: 577
+protocol: TCP
+protocol: UDP
+description: vnas
+
+port: 578
+protocol: TCP
+protocol: UDP
+description: ipdd
+
+port: 579
+protocol: TCP
+protocol: UDP
+description: decbsrv
+
+port: 580
+protocol: TCP
+protocol: UDP
+description: SNTP HEARTBEAT
+
+port: 581
+protocol: TCP
+protocol: UDP
+description: Bundle Discovery Protocol
+
+port: 582
+protocol: TCP
+protocol: UDP
+description: SCC Security
+
+port: 583
+protocol: TCP
+protocol: UDP
+description: Philips Video-Conferencing
+
+port: 584
+protocol: TCP
+protocol: UDP
+description: Key Server
+
+port: 585
+protocol: TCP
+protocol: UDP
+description: IMAP4+SSL
+
+port: 586
+protocol: TCP
+protocol: UDP
+description: Password Change
+
+port: 587
+protocol: TCP
+protocol: UDP
+description: Message Submission (Sendmail)
+description: Submission
+
+port: 588
+protocol: TCP
+protocol: UDP
+description: CAL
+
+port: 589
+protocol: TCP
+protocol: UDP
+description: EyeLink
+
+port: 590
+protocol: TCP
+protocol: UDP
+description: TNS CML
+
+port: 591
+protocol: TCP
+protocol: UDP
+description: FileMaker Inc. - HTTP Alternate
+
+port: 592
+protocol: TCP
+protocol: UDP
+description: Eudora Set
+
+port: 593
+protocol: TCP
+protocol: UDP
+description: HTTP RPC Ep Map
+
+port: 594
+protocol: TCP
+protocol: UDP
+description: TPIP
+
+port: 595
+protocol: TCP
+protocol: UDP
+description: CAB Protocol
+
+port: 596
+protocol: TCP
+protocol: UDP
+description: SMSD
+
+port: 597
+protocol: TCP
+protocol: UDP
+description: PTC Name Service
+
+port: 598
+protocol: TCP
+protocol: UDP
+description: SCO Web Server Manager 3
+
+port: 599
+protocol: TCP
+protocol: UDP
+description: Aeolon Core Protocol
+
+port: 600
+protocol: TCP
+protocol: UDP
+description: Sun IPC server
+
+port: 606
+protocol: TCP
+protocol: UDP
+description: Cray Unified Resource Manager
+
+port: 607
+protocol: TCP
+protocol: UDP
+description: nqs
+
+port: 608
+protocol: TCP
+protocol: UDP
+description: Sender-Initiated/Unsolicited File Transfer
+
+port: 609
+protocol: TCP
+protocol: UDP
+description: npmp-trap
+
+port: 610
+protocol: TCP
+protocol: UDP
+description: Apple Admin Service / npmp-local
+description: npmp-local
+
+port: 611
+protocol: TCP
+protocol: UDP
+description: npmp-gui
+
+port: 612
+protocol: TCP
+protocol: UDP
+description: HMMP Indication
+
+port: 613
+protocol: TCP
+protocol: UDP
+description: HMMP Operation
+
+port: 614
+protocol: TCP
+protocol: UDP
+description: SSLshell
+
+port: 615
+protocol: TCP
+protocol: UDP
+description: Internet Configuration Manager
+
+port: 616
+protocol: TCP
+protocol: UDP
+description: SCO System Administration Server
+
+port: 617
+protocol: TCP
+protocol: UDP
+description: SCO Desktop Administration Server
+
+port: 618
+protocol: TCP
+protocol: UDP
+description: DEI-ICDA
+
+port: 619
+protocol: TCP
+protocol: UDP
+description: Digital EVM
+
+port: 620
+protocol: TCP
+protocol: UDP
+description: SCO WebServer Manager
+
+port: 621
+protocol: TCP
+protocol: UDP
+description: ESCP
+
+port: 622
+protocol: TCP
+protocol: UDP
+description: Collaborator
+
+port: 623
+protocol: TCP
+protocol: UDP
+description: Aux Bus Shunt
+
+port: 624
+protocol: TCP
+protocol: UDP
+description: Crypto Admin
+
+port: 625
+protocol: TCP
+protocol: UDP
+description: DEC DLM
+
+port: 626
+protocol: TCP
+protocol: UDP
+description: ASIA
+
+port: 627
+protocol: TCP
+protocol: UDP
+description: PassGo Tivoli
+
+port: 628
+protocol: TCP
+protocol: UDP
+description: QMQP
+
+port: 629
+protocol: TCP
+protocol: UDP
+description: 3Com AMP3
+
+port: 630
+protocol: TCP
+protocol: UDP
+description: RDA
+
+port: 631
+protocol: TCP
+protocol: UDP
+description: IPP (Internet Printing Protocol)
+
+port: 632
+protocol: TCP
+protocol: UDP
+description: bmpp
+
+port: 633
+protocol: TCP
+protocol: UDP
+description: Service Status update (Sterling Software)
+
+port: 634
+protocol: TCP
+protocol: UDP
+description: ginad
+
+port: 635
+protocol: TCP
+protocol: UDP
+description: RLZ DBase
+
+port: 636
+protocol: TCP
+protocol: UDP
+description: LDAP protocol over TLS/SSL
+
+port: 637
+protocol: TCP
+protocol: UDP
+description: lanserver
+
+port: 638
+protocol: TCP
+protocol: UDP
+description: mcns-sec
+
+port: 639
+protocol: TCP
+protocol: UDP
+description: MSDP
+
+port: 640
+protocol: TCP
+protocol: UDP
+description: entrust-sps
+
+port: 641
+protocol: TCP
+protocol: UDP
+description: repcmd
+
+port: 642
+protocol: TCP
+protocol: UDP
+description: ESRO-EMSDP V1.3
+
+port: 643
+protocol: TCP
+protocol: UDP
+description: SANity
+
+port: 644
+protocol: TCP
+protocol: UDP
+description: dwr
+
+port: 645
+protocol: TCP
+protocol: UDP
+description: PSSC
+
+port: 646
+protocol: TCP
+protocol: UDP
+description: LDP
+
+port: 647
+protocol: TCP
+protocol: UDP
+description: DHCP Failover
+
+port: 648
+protocol: TCP
+protocol: UDP
+description: Registry Registrar Protocol (RRP)
+
+port: 649
+protocol: TCP
+protocol: UDP
+description: Aminet
+
+port: 650
+protocol: TCP
+protocol: UDP
+description: OBEX
+
+port: 651
+protocol: TCP
+protocol: UDP
+description: IEEE MMS
+
+port: 652
+protocol: TCP
+protocol: UDP
+description: UDLR_DTCP
+
+port: 653
+protocol: TCP
+protocol: UDP
+description: RepCmd
+
+port: 654
+protocol: TCP
+protocol: UDP
+description: AODV
+
+port: 655
+protocol: TCP
+protocol: UDP
+description: TINC
+
+port: 656
+protocol: TCP
+protocol: UDP
+description: SPMP
+
+port: 657
+protocol: TCP
+protocol: UDP
+description: RMC
+
+port: 658
+protocol: TCP
+protocol: UDP
+description: TenFold
+
+port: 659
+protocol: TCP
+protocol: UDP
+description: URL Rendezvous
+
+port: 660
+protocol: TCP
+protocol: UDP
+description: MacOS Server Admin
+
+port: 661
+protocol: TCP
+protocol: UDP
+description: HAP
+
+port: 662
+protocol: TCP
+protocol: UDP
+description: PFTP
+
+port: 663
+protocol: TCP
+protocol: UDP
+description: PureNoise
+
+port: 664
+protocol: TCP
+protocol: UDP
+description: Secure Aux Bus
+
+port: 665
+protocol: TCP
+protocol: UDP
+description: Sun DR
+
+port: 666
+protocol: TCP
+protocol: UDP
+description: doom Id Software
+
+port: 667
+protocol: TCP
+protocol: UDP
+description: campaign contribution disclosures - SDR Technologies
+
+port: 668
+protocol: TCP
+protocol: UDP
+description: MeComm
+
+port: 669
+protocol: TCP
+protocol: UDP
+description: MeRegister
+
+port: 670
+protocol: TCP
+protocol: UDP
+description: VACDSM-SWS
+
+port: 671
+protocol: TCP
+protocol: UDP
+description: VACDSM-APP
+
+port: 672
+protocol: TCP
+protocol: UDP
+description: VPPS-QUA
+
+port: 673
+protocol: TCP
+protocol: UDP
+description: CIMPLEX
+
+port: 674
+protocol: TCP
+protocol: UDP
+description: ACAP
+
+port: 675
+protocol: TCP
+protocol: UDP
+description: DCTP
+
+port: 676
+protocol: TCP
+protocol: UDP
+description: VPPS Via
+
+port: 677
+protocol: TCP
+protocol: UDP
+description: Virtual Presence Protocol
+
+port: 678
+protocol: TCP
+protocol: UDP
+description: GNU Gereration Foundation NCP
+description: GNU Generation Foundation NCP
+
+port: 679
+protocol: TCP
+protocol: UDP
+description: MRM
+
+port: 680
+protocol: TCP
+protocol: UDP
+description: entrust-aaas
+
+port: 681
+protocol: TCP
+protocol: UDP
+description: entrust-aams
+
+port: 682
+protocol: TCP
+protocol: UDP
+description: XFR
+
+port: 683
+protocol: TCP
+protocol: UDP
+description: CORBA IIOP
+
+port: 684
+protocol: TCP
+protocol: UDP
+description: CORBA IIOP SSL
+
+port: 685
+protocol: TCP
+protocol: UDP
+description: MDC Port Mapper
+
+port: 686
+protocol: TCP
+protocol: UDP
+description: Hardware Control Protocol Wismar
+
+port: 687
+protocol: TCP
+protocol: UDP
+description: asipregistry
+
+port: 688
+protocol: TCP
+protocol: UDP
+description: REALM-RUSD
+
+port: 689
+protocol: TCP
+protocol: UDP
+description: NMAP
+
+port: 690
+protocol: TCP
+protocol: UDP
+description: VATP
+
+port: 691
+protocol: TCP
+protocol: UDP
+description: MS Exchange Routing
+
+port: 692
+protocol: TCP
+protocol: UDP
+description: Hyperwave-ISP
+
+port: 693
+protocol: TCP
+protocol: UDP
+description: connendp
+
+port: 694
+protocol: TCP
+protocol: UDP
+description: ha-cluster
+
+port: 695
+protocol: TCP
+protocol: UDP
+description: IEEE-MMS-SSL
+
+port: 696
+protocol: TCP
+protocol: UDP
+description: RUSHD
+
+port: 697
+protocol: TCP
+protocol: UDP
+description: UUIDGEN
+
+port: 698
+protocol: TCP
+protocol: UDP
+description: OLSR
+
+port: 704
+protocol: TCP
+protocol: UDP
+description: errlog copy/server daemon
+
+port: 705
+protocol: TCP
+protocol: UDP
+description: AgentX
+
+port: 706
+protocol: TCP
+protocol: UDP
+description: SILC
+
+port: 707
+protocol: TCP
+protocol: UDP
+description: W32.Nachi Worm / Borland DSJ
+description: Borland DSJ
+
+port: 709
+protocol: TCP
+protocol: UDP
+description: Entrust Key Management Service Handler
+
+port: 710
+protocol: TCP
+protocol: UDP
+description: Entrust Administration Service Handler
+
+port: 711
+protocol: TCP
+protocol: UDP
+description: Cisco TDP
+
+port: 729
+protocol: TCP
+protocol: UDP
+description: IBM NetView DM/6000 Server/Client
+
+port: 730
+protocol: TCP
+protocol: UDP
+description: IBM NetView DM/6000 send/tcp
+
+port: 731
+protocol: TCP
+protocol: UDP
+description: IBM NetView DM/6000 receive/tcp
+
+port: 740
+protocol: TCP
+protocol: UDP
+description: (old) NETscout Control Protocol (old)
+
+port: 741
+protocol: TCP
+protocol: UDP
+description: netGW
+
+port: 742
+protocol: TCP
+protocol: UDP
+description: Network based Rev. Cont. Sys.
+
+port: 744
+protocol: TCP
+protocol: UDP
+description: Flexible License Manager
+
+port: 747
+protocol: TCP
+protocol: UDP
+description: Fujitsu Device Control
+
+port: 748
+protocol: TCP
+protocol: UDP
+description: Russell Info Sci Calendar Manager
+
+port: 749
+protocol: TCP
+protocol: UDP
+description: kerberos administration
+
+port: 750
+protocol: TCP
+protocol: UDP
+description: rfile
+description: kerberos version iv
+
+port: 751
+protocol: TCP
+protocol: UDP
+description: pump
+
+port: 752
+protocol: TCP
+protocol: UDP
+description: Kerberos password server
+
+port: 753
+protocol: TCP
+protocol: UDP
+description: Kerberos userreg server
+
+port: 754
+protocol: TCP
+protocol: UDP
+description: send
+
+port: 758
+protocol: TCP
+protocol: UDP
+description: nlogin
+
+port: 759
+protocol: TCP
+protocol: UDP
+description: con
+
+port: 760
+protocol: TCP
+protocol: UDP
+description: kreg, kerberos/4 registration
+description: ns
+
+port: 761
+protocol: TCP
+protocol: UDP
+description: kpwd, Kerberos/4 password
+description: rxe
+
+port: 762
+protocol: TCP
+protocol: UDP
+description: quotad
+
+port: 763
+protocol: TCP
+protocol: UDP
+description: cycleserv
+
+port: 764
+protocol: TCP
+protocol: UDP
+description: omserv
+
+port: 765
+protocol: TCP
+protocol: UDP
+description: webster
+
+port: 767
+protocol: TCP
+protocol: UDP
+description: phone
+
+port: 769
+protocol: TCP
+protocol: UDP
+description: vid
+
+port: 770
+protocol: TCP
+protocol: UDP
+description: cadlock
+
+port: 771
+protocol: TCP
+protocol: UDP
+description: rtip
+
+port: 772
+protocol: TCP
+protocol: UDP
+description: cycleserv2
+
+port: 773
+protocol: TCP
+protocol: UDP
+description: submit
+description: notify
+
+port: 774
+protocol: TCP
+protocol: UDP
+description: rpasswd
+description: acmaint_dbd
+
+port: 775
+protocol: TCP
+protocol: UDP
+description: entomb
+description: acmaint_transd
+
+port: 776
+protocol: TCP
+protocol: UDP
+description: wpages
+
+port: 777
+protocol: TCP
+protocol: UDP
+description: Multiling HTTP
+
+port: 780
+protocol: TCP
+protocol: UDP
+description: wpgs
+
+port: 781
+protocol: TCP
+protocol: UDP
+description: HP performance data collector
+
+port: 782
+protocol: TCP
+protocol: UDP
+description: node HP performance data managed node
+
+port: 783
+protocol: TCP
+protocol: UDP
+description: HP performance data alarm manager
+
+port: 786
+protocol: TCP
+protocol: UDP
+description: Concert
+
+port: 787
+protocol: TCP
+protocol: UDP
+description: QSC
+
+port: 799
+protocol: TCP
+description: ControlIT / Remotely Possible
+
+port: 800
+protocol: TCP
+protocol: UDP
+description: Remotely Possible
+description: mdbs_daemon
+
+port: 801
+protocol: TCP
+protocol: UDP
+description: device
+
+port: 808
+protocol: TCP
+description: CCProxy
+
+port: 810
+protocol: TCP
+protocol: UDP
+description: FCP
+description: FCP Datagram
+
+port: 828
+protocol: TCP
+protocol: UDP
+description: itm-mcell-s
+
+port: 829
+protocol: TCP
+protocol: UDP
+description: PKIX-3 CA/RA
+
+port: 871
+protocol: TCP
+description: SUP server
+
+port: 873
+protocol: TCP
+protocol: UDP
+description: rsync
+
+port: 886
+protocol: TCP
+protocol: UDP
+description: ICL coNETion locate server
+
+port: 887
+protocol: TCP
+protocol: UDP
+description: ICL coNETion server info
+
+port: 888
+protocol: TCP
+protocol: UDP
+description: CD Database Protocol
+description: AccessBuilder
+
+port: 900
+protocol: TCP
+protocol: UDP
+description: Check Point Firewall-1 HTTP administration
+description: OMG Initial Refs
+
+port: 901
+protocol: TCP
+protocol: UDP
+description: Samba Web Administration Tool
+description: Realsecure
+description: NetDevil trojan
+description: SMPNAMERES
+
+port: 902
+protocol: TCP
+protocol: UDP
+description: VMware Authentication Daemon
+description: IDEAFARM-CHAT
+
+port: 903
+protocol: TCP
+protocol: UDP
+description: NetDevil trojan
+description: IDEAFARM-CATCH
+
+port: 911
+protocol: TCP
+protocol: UDP
+description: xact-backup
+
+port: 912
+protocol: TCP
+description: VMware Authentication Daemon
+
+port: 989
+protocol: TCP
+protocol: UDP
+description: FTP protocol data over TLS/SSL
+
+port: 990
+protocol: TCP
+protocol: UDP
+description: FTP protocol control over TLS/SSL
+
+port: 991
+protocol: TCP
+protocol: UDP
+description: Netnews Administration System
+
+port: 992
+protocol: TCP
+protocol: UDP
+description: Telnet protocol over TLS/SSL
+
+port: 993
+protocol: TCP
+protocol: UDP
+description: IMAP4 protocol over TLS/SSL
+
+port: 994
+protocol: TCP
+protocol: UDP
+description: IRC protocol over TLS/SSL
+
+port: 995
+protocol: TCP
+protocol: UDP
+description: POP3 protocol over TLS/SSL
+description: W32/Sobig virus
+
+port: 996
+protocol: TCP
+protocol: UDP
+description: vsinet
+description: W32/Sobig virus
+
+port: 997
+protocol: TCP
+protocol: UDP
+description: maitrd
+description: W32/Sobig virus
+
+port: 998
+protocol: TCP
+protocol: UDP
+description: busboy
+description: puparp / W32/Sobig virus
+
+port: 999
+protocol: TCP
+protocol: UDP
+description: puprouter
+description: Applix ac / W32/Sobig virus
+
+port: 1000
+protocol: TCP
+protocol: UDP
+description: cadlock
+description: ock
+
+port: 1002
+protocol: TCP
+description: Microsoft Site Server Internet Locator Service (Netmeeting/ICF)
+
+port: 1008
+protocol: TCP
+protocol: UDP
+description: UFS-aware server
+description: Solaris
+
+port: 1010
+protocol: TCP
+protocol: UDP
+description: surf
+
+port: 1011
+protocol: TCP
+description: Doly (Windows Trojan)
+
+port: 1012
+protocol: UDP
+description: This is rstatd on a openBSD box
+
+port: 1015
+protocol: TCP
+description: Doly (Windows Trojan)
+
+port: 1023
+protocol: TCP
+protocol: UDP
+description: Reserved
+
+port: 1024
+protocol: TCP
+protocol: UDP
+description: Reserved
+
+port: 1025
+protocol: TCP
+protocol: UDP
+description: network blackjack
+
+port: 1026
+protocol: TCP
+description: MSTASK / Remote Login Network Terminal
+
+port: 1030
+protocol: TCP
+protocol: UDP
+description: BBN IAD
+
+port: 1031
+protocol: TCP
+protocol: UDP
+description: InetInfo / BBN IAD
+description: BBN IAD
+
+port: 1032
+protocol: TCP
+protocol: UDP
+description: BBN IAD
+
+port: 1042
+protocol: TCP
+description: W32.Mydoom.L virus
+
+port: 1047
+protocol: TCP
+protocol: UDP
+description: Sun's NEO Object Request Broker
+
+port: 1313
+protocol: TCP
+description: Hugo local test page
+tag: http
+
+port: 5900
+protocol: TCP
+protocol: UDP
+description: wireguard
+
+port: 8000
+protocol: TCP
+protocol: UDP
+description: Local website test
+tag: http
+
+port: 8080
+protocol: TCP
+protocol: UDP
+description: Local website test
+tag: http
