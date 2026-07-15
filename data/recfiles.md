@@ -49,6 +49,7 @@ recset -f "$new_field" --delete $database
 - [Playing with IP addresses](recfiles/ip_asn.md)
 - [Manage LaTeX Bibliographies](recfiles/bibliography.md)
 - [Fixes](recfiles/recfixes.md)
+- [Fixes](recfiles/recfile_bugs.md)
 
 # Resources
 
