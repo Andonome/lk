@@ -4,6 +4,7 @@ EDITOR ?= vi
 PAGER ?= less -Ri
 READER != command -v mdless bat glow less more pg | head -1
 FZF != command -v fzf sk | head -1
+.DEFAULT_GOAL = help
 
 markdown = $(wildcard */*.md */*/*.md)
 
@@ -16,11 +17,6 @@ ifeq "$(FZF)" "/usr/bin/fzy"
 endif
 
 spill_contents = sed -e '1,/---/d'
-
-help: ## Print the help message
-	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | \
-		sort | \
-		column -s ':' -t
 
 articles != find * -type f -name "*.md"
 
@@ -114,6 +110,11 @@ article: */ */*/ ## Write a new article
 	&& $(MAKE) -e TITLE="$$name" "$$category""$$filename.md"
 
 default += $(lists) $(publish)
+
+help: ## Print the help message
+	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | \
+		sort | \
+		column -s ':' -t
 
 .PHONY: all
 all: $(default) ## All file targets

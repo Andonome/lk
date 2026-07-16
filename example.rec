@@ -130,15 +130,13 @@ filename: Makefile
 bin: make
 usage: make
 content: ### Variables
-+ 
++ .DEFAULT_GOAL = help
 + PAGER ?= $(shell command -v mdless bat less | head -1 )
 + EDITOR ?= vi
 + 
 + requirements += lowdown
 + 
 + ### Dependencies
-+ 
-+ out: help
 + 
 + ### Patterns
 + 
