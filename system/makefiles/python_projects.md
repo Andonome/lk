@@ -6,7 +6,7 @@ tags:
 - makefiles
 - graphviz
 - python
-- Setup
+- virtualenv
 requires: 
 - system/makefiles.md
 ---

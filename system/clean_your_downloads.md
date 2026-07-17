@@ -3,6 +3,7 @@ title: Clean Your Downloads
 tags: 
 - system
 - tmpfs
+- tip
 ---
 
 'Downloads` directory always too full of crap?
