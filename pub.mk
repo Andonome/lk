@@ -39,5 +39,5 @@ $(lists): .publish/lists/%.md: command.rec | .publish/lists/
 
 
 .PHONY: publish
-publish: $(lists) $(publish) ## Web publishable web pages
+publish: $(lists) $(publish) ## Make HTML pages
 
