@@ -7,6 +7,7 @@ publish = $(patsubst %, .publish/%, $(markdown))
 	echo "- [{{requires_title}}]({{requires_path}})" > $@
 
 $(publish): .publish/%.md: %.md | .dbs/notes.rec .dbs/requires.fmt
+	$(info Publishing $(*D): $(*F) )
 	mkdir -p $(@D)
 	sed -n '1,/^---$$/p' $< > $@
 	test "$$(recsel -t guide -j requires .dbs/notes.rec -e "path = '$<'" -c)" -lt 1 \
@@ -30,11 +31,11 @@ list_commands = recsel -t $(basename $<) $< -e 'bin = "$(1)"' | \
 
 $(lists): .publish/lists/%.md: command.rec | .publish/lists/
 	@printf '%s\n' '---' > $@
-	@$(call get_title,$(basename $(notdir $@))) >> $@
+	@$(call get_title,$*) >> $@
 	@printf '%s\n' 'tags: ' >> $@
-	@$(call get_tags,$(basename $(notdir $@))) >> $@
+	@$(call get_tags,$*) >> $@
 	@printf '%s\n' '---' >> $@
-	@$(call list_commands,$(basename $(notdir $@))) >> $@
+	@$(call list_commands,$*) >> $@
 
 
 .PHONY: publish
