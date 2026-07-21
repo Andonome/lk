@@ -298,6 +298,15 @@ tag: writing
 tag: web
 shell: sh
 
+aim: Find out what's using the bandwidth
+cmd: sudo iftop
+note: Press `h` to see the options.
+shell: sh
+bin: iftop
+tag: hog
+tag: using
+tag: network
+
 aim: Run commands in background
 cmd: ls -Rilt ~ &
 + jobs
