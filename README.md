@@ -1,60 +1,17 @@
 # Linux Knowledge Base
 
-These notes Linux programs have grown into a searchable knowledge base.
-
-# Usage
-
 ## Setup
 
-Install `make`, `recutils`, and any a fuzzy-finder (like `fzf` or `sk`).
-
+- Install `make`, `recutils`, and any a fuzzy-finder (like `fzf` or `sk`).
 To find the options, run `make`.
+- Run `make`.
 
-## Queries
+## Finding Notes
 
-The fuzzy finder opens an interactive menu to find information.
+Run `make query` to find a note.
 
-There are two types of notes:
-
-1. Short commands, catalogued by aim (in `command.rec`).
-1. Short notes, mostly on getting set up with something (in the markdown files).
-
-### Short Commands
-
-Running `make check` will start a search of the snippets, ordered by what you
-want to do, not by the name of the binary:
-
-```
-    Hard reset ntp service
- -> Quickly find and open run-command files
-    Turn markdown into a man page
-    Rotate a video
-    Translate a media file to a new type
-```
-
-The output is a couple of lines of code, with changeable components as variables:
-
-```
-alias rrc='$PAGER "$(find . -maxdepth 2 -name "*rc" | fzf)"'
-```
-
-### The Function
-
-Running `make function` outputs a shell function which searches through this
-knowledge base, so you don't have to `cd` to use it.
-
-
-```sh
-lk(){
-	/usr/bin/mdless "$(recsel ${your-path-here}/lk/db.rec \
-    -q "$(recsel ${your-path-here}/lk/db.rec -CP title,tag \
-    | sort -u \
-    | /usr/bin/fzf )" -CP path \
-    | fzf --sync -1 --preview='less -iR {}' )"
-}
-```
-
-Add the function to your bash shell like this:
+You can also run `make function` and LK spits out a `bash` function for your
+`~/.bashrc` so you can run queries from anywhere.
 
 ```bash
 make function
@@ -63,11 +20,19 @@ exec bash
 lk
 ```
 
-# Style
+The notes assume readers will type the commands to see the output, so most
+notes do not show the expected output.
 
-## State Knowledge Dependencies
+## Writing Notes
 
-Articles should never link to other resources part-way through.
+To note down a single command, add the command to `command.rec`.
+For longer articles, run `make article`.
+
+# Writing Style
+
+## State Knowledge Dependencies Up-Front
+
+Articles should never link to other resources after at the start.
 If the article assumes an understanding of GPG keys, then it should say that at the top.
 People should be able to read documentation from the beginning, then keep going until the end, and then stop.
 Setup guides should not send the reader on a detour through labyrinths of links.
@@ -75,7 +40,7 @@ Setup guides should not send the reader on a detour through labyrinths of links.
 ## No History, No Context
 
 Anyone who wants to read how to use OTP with GPG already knows what those words mean, so guides should not spend time explaining.
-Anyone who doesn't know what GPG keys are can find the link to using them, which explains them better than using door-blocking devices as a metaphor for prime number factorization.
+Anyone who doesn't know what GPG keys are can learn faster by using them than by reading metaphors about doors to represent tricks with prime numbers.
 
 ## Index by Purpose
 
@@ -86,7 +51,7 @@ Guides should be created and indexed by purpose, not by binary.
 ## Be Opinionated
 
 - Guides should not ask the reader to pick from a list of options.
-- Options for different filesystems, databases, et c., should be written as separate guides.
+- Options for different file-systems, databases, et c., should be written as separate guides.
 
 ## Repetition Beats Reference
 
@@ -136,7 +101,7 @@ Guides should read like a heavily commented script, so CLI commands are preferre
 - Good: `sed -i '/focuscolor/s/=1/=2/' ~/.config/tspreed/tspreed.rc`
     * `cat !$`
 
-Despite being 'script-like', interactive bash commands like `cat !$` are still fine just to show how to double-check results when setting things up interactively.
+Interactive bash commands like `cat !$` work fine, even if they don't work in scripts.
 
 ### Show, Don't Tell
 
@@ -181,9 +146,9 @@ Why bother writing yet another cheat-sheet collection?
 - Too short to get you started on many programs.
 - Poor understanding of priority (`git stash` is covered before `git commit`).
 - Repetitive
+- Keeps going offline.
 
 # Current State
 
-It's a bit of a mess.
-If you like the format, send me a pull request.
+LK has been working well for some years, but needs more outside eyes.
 

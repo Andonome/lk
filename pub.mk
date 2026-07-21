@@ -41,3 +41,18 @@ $(lists): .publish/lists/%.md: command.rec | .publish/lists/
 .PHONY: publish
 publish: $(lists) $(publish) ## Make HTML pages
 
+######
+
+mans = $(patsubst %.md, .mans/%.6, $(notdir $(markdown)))
+
+default += $(mans)
+
+VPATH=$(shell echo $(categories) | tr ' ' ':')
+
+$(mans): .mans/%.6: %.md | .mans/
+	sed '3isection: 6\nvolume: 2\nsource: lk' $< \
+	| lowdown -stman > $@ 
+
+.PHONY: mans
+mans: $(mans) ## Turn the guides into local man pages
+

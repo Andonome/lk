@@ -6,6 +6,8 @@ READER != command -v mdless bat glow less more pg | head -1
 FZF != command -v fzf sk | head -1
 .DEFAULT_GOAL = help
 
+categories=$(wildcard */ */*/ */*/*/ )
+
 markdown = $(wildcard */*.md */*/*.md)
 
 ifeq "$(FZF)" ""
@@ -98,7 +100,7 @@ map: .dbs/requires.rec .dbs/map.fmt ## Show knowledge dependency map
 
 .PHONY: clean
 clean: ## Remove all generated files
-	$(RM) -r $(default) .dbs/ .publish/
+	$(RM) -r $(default) .dbs/ .publish/ .mans/
 
 .PHONY: article
 article: */ */*/ ## Write a new article
