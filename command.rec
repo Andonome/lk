@@ -368,6 +368,15 @@ bin: logger
 tag: system
 tag: logs
 
+aim: Live web build from a markdown file
+cmd: lowdown ${file}.md -m 'htmlheader: <meta http-equiv="refresh" content="3">'${file}.html
+shell: sh
+note: This tells the output to refresh every three seconds.
+tag: markdown
+tag: web
+tag: html
+bin: lowdown
+
 aim: Convert jpg to png
 cmd: magick ${input}.jpg ${output}.png
 shell: sh
