@@ -9,7 +9,7 @@ function: | db.rec ## Output a search function for .bashrc
 .PHONY: query
 query: db.rec ## Search the setup notes
 	passes=0 count=0; until [ "$$count" -eq "1" ] || [ "$$passes" -gt 2 ] ; do \
-		query="$$(recsel "${PWD}"/db.rec -p aim,tag | recsel -iq "$$query" -CP aim,tag | sort -u | fzf --preview='recsel "${PWD}"/db.rec -e "aim~{}"')" \
+		query="$$(recsel "${PWD}"/db.rec -p aim,tag | recsel -iq "$$query" -CP aim,tag | sort -u | fzf --preview='recsel "${PWD}"/db.rec -e "aim~{}" -P aim,cmd | lowdown -tterm')" \
 		&& count="$$(recsel "${PWD}"/db.rec -q "$$query" -c )" ;\
 		passes=$$(( passes + 1 )) ;\
 	done \
