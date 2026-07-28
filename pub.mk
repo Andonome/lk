@@ -58,12 +58,9 @@ $(mans): .mans/%.6: %.md | .mans/
 .PHONY: mans
 mans: $(mans) ## Turn the guides into local man pages
 
-${HOME}/.local/share/man/man6/: | ${HOME}/.local/share/man/
+${HOME}/.local/share/man/man6:
+	mkdir -p
 
 $(local_mans): ${HOME}/.local/share/man/man6/%: .mans/% | ${HOME}/.local/share/man/man6/
 	cp -flr $< $@
-
-.PHONY: install
-install: $(local_mans) ## Install local man pages
-	$(manupdate)
 

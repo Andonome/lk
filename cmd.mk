@@ -15,3 +15,18 @@ query: db.rec ## Search the setup notes
 	done \
 	&& recsel "${PWD}"/db.rec -q "$$query" | recfmt -f "${PWD}/lists.fmt" | ${PAGER}
 
+${HOME}/.local/bin/lk: db.rec
+	echo '#!/bin/sh' > $@
+	chmod u+x $@
+	$(MAKE) function >> $@
+	echo lk >> $@
+
+.PHONY: install
+install: $(local_mans) ${HOME}/.local/bin/lk ## Install local man pages
+	$(manupdate)
+
+.PHONY: uninstall
+uninstall: ## Remove local man pages
+	$(RM) $(local_mans) ${HOME}/.local/bin/lk
+	$(manupdate)
+
