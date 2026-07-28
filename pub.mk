@@ -45,7 +45,9 @@ publish: $(lists) $(publish) ## Make HTML pages
 
 mans = $(patsubst %.md, .mans/%.6, $(notdir $(markdown)))
 
-default += $(mans)
+local_mans = $(patsubst .mans/%,${HOME}/.local/share/man/man6/%,$(mans))
+
+manupdate != command -v mandb makewhatis | head -1
 
 VPATH=$(shell echo $(categories) | tr ' ' ':')
 
@@ -55,4 +57,13 @@ $(mans): .mans/%.6: %.md | .mans/
 
 .PHONY: mans
 mans: $(mans) ## Turn the guides into local man pages
+
+${HOME}/.local/share/man/man6/: | ${HOME}/.local/share/man/
+
+$(local_mans): ${HOME}/.local/share/man/man6/%: .mans/% | ${HOME}/.local/share/man/man6/
+	cp -flr $< $@
+
+.PHONY: install
+install: $(local_mans) ## Install local man pages
+	$(manupdate)
 
