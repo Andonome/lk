@@ -15,9 +15,9 @@ lowdown -stms "$FILE".md | pdfroff -itk -mspdf > "$FILE".pdf
 To give the document a title, put that title in the metadata:
 
 ```sh
-sed -i "1 i---" "$FILE".md
-sed -i 1 ititle: $TITLE $FILE.md
-sed -i "1 i---" "$FILE".md
+sed -i "1i---" "$FILE".md
+sed -i "1ititle: $TITLE" $FILE.md
+sed -i "1i---" "$FILE".md
 lowdown -L "$FILE".md
 lowdown -X title "$FILE".md
 lowdown -stms "$FILE".md | pdfroff -itk -mspdf > "$FILE".pdf
