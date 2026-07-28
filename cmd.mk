@@ -25,7 +25,7 @@ ${HOME}/.local/bin/lk: db.rec
 
 .PHONY: install
 install: $(local_mans) ${HOME}/.local/bin/lk ## Install local man pages
-	$(manupdate)
+	$(manupdate) 2>/dev/null >/dev/null
 
 .PHONY: uninstall
 uninstall: ## Remove local man pages

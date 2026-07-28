@@ -30,6 +30,7 @@ list_commands = recsel -t $(basename $<) $< -e 'bin = "$(1)"' | \
 .publish/lists/:| .publish/
 
 $(lists): .publish/lists/%.md: command.rec | .publish/lists/
+	$(info Creating new list for $*)
 	@printf '%s\n' '---' > $@
 	@$(call get_title,$*) >> $@
 	@printf '%s\n' 'tags: ' >> $@

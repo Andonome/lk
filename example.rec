@@ -205,7 +205,7 @@ content: hdr = @printf "\n\033[37;1;4m%s\033[0m\n"
 + 	@printf "\033[36m%s\t" "done"
 + 	@printf "\033[0m %s " "Close $$(basename -s .md $(last_modified) | tr '_' ' ')"
 + 	@printf "\033[0m %s\n" "[$$(grep -Pom1 'title: \K.*' $(last_modified))]"
-+ 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | + 		column -s ':' -t
++ 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | column -s ':' -t
 + 
 + $(closed_issues): closed/%.md: open/%.md
 + 	@git add $<
@@ -244,7 +244,7 @@ content: hdr = @printf "\n\033[37;1;4m%s\033[0m\n"
 + .PHONY: rundown
 + rundown: ## Summarize events
 + 	@printf "\033[33;5m# %s\033[0m\n" "Outstanding Calamities"
-+ 	@$(foreach bug, $(wildcard open/*.md), + 		a="$$(lowdown -X responsible $(bug))" && + 		n="$$(echo $(bug) | cut -d_ -f2 | cut -d. -f1)" && + 		t="$$(lowdown -X title $(bug))" && echo "$$n: $$t ($$a)" ;+ 	)
++ 	@$(foreach bug, $(wildcard open/*.md), a="$$(lowdown -X responsible $(bug))" && n="$$(echo $(bug) | cut -d_ -f2 | cut -d. -f1)" && t="$$(lowdown -X title $(bug))" && echo "$$n: $$t ($$a)" ;)
 
 name: RSS feed
 filename: rss.xml

@@ -5,6 +5,7 @@ PAGER ?= less -Ri
 READER != command -v mdless bat glow less more pg | head -1
 FZF != command -v fzf sk | head -1
 .DEFAULT_GOAL = help
+.SILENT:
 
 categories=$(wildcard */ */*/ */*/*/ )
 
@@ -44,7 +45,7 @@ include cmd.mk
 .dbs/new.rec: $(markdown) | .dbs/head.rec
 	$(info Updating: $?)
 	grep -q guide $@ 2>/dev/null || cp $| $@
-	@-$(foreach entry, $?, \
+	-$(foreach entry, $?, \
 		recdel -t guide $@ -e "path = '$(entry)'" 2>/dev/null ;\
 	)
 	for entry in $? ; do \
