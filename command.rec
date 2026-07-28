@@ -303,8 +303,7 @@ cmd: sudo iftop
 note: Press `h` to see the options.
 shell: sh
 bin: iftop
-tag: hog
-tag: using
+tag: maintenance
 tag: network
 
 aim: Run commands in background
