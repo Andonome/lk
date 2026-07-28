@@ -9,15 +9,21 @@ required: writing/vim/windows.md
 Make an empty script:
 
 
-```sh echo '#!/bin/sh' > ${file}.sh chmod u+x !$ vim !$ ```
+```sh
+echo '#!/bin/sh' > ${file}.sh chmod u+x !$ vim !$
+```
 
 Open a terminal in Vim:
 
-```vim :vert term ```
+```vim
+:vert term
+```
 
 Inside that terminal, run the script on repeat:
 
-```sh watch -d ./${file}.sh ```
+```sh
+watch -d ./${file}.sh
+```
 
 Switch back to editing the script with `Control+w h`.
 
