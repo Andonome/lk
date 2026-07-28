@@ -291,7 +291,7 @@ tag: search
 aim: Convert a web page to markdown
 cmd: curl -sL "${url}" | html2markdown > "${file}}".md
 cmd: curl -sL "${url}" | html2text > "${file}}".md
-note: The `[html2markdown](https://github.com/JohannesKaufmann/html-to-markdown)` and `html2md` programs works better than any other.
+note: The [`html2markdown`](https://github.com/JohannesKaufmann/html-to-markdown) and `html2md` programs works better than any other.
 bin: html2markdown
 bin: curl
 tag: writing
