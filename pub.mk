@@ -59,8 +59,8 @@ $(mans): .mans/%.6: %.md | .mans/
 mans: $(mans) ## Turn the guides into local man pages
 
 ${HOME}/.local/share/man/man6:
-	mkdir -p
+	mkdir -p $@
 
-$(local_mans): ${HOME}/.local/share/man/man6/%: .mans/% | ${HOME}/.local/share/man/man6/
+$(local_mans): ${HOME}/.local/share/man/man6/%: .mans/% | ${HOME}/.local/share/man/man6
 	cp -flr $< $@
 

@@ -30,8 +30,8 @@ default += .dbs/map.fmt
 	mkdir $@
 	echo '*' > $@.gitignore
 
-include cmd.mk
 include pub.mk
+include cmd.mk
 
 .dbs/head.rec: | .dbs/
 	printf '%s\n' '%rec: guide' > $@
