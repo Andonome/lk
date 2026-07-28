@@ -1,3 +1,5 @@
+manupdate != command -v mandb makewhatis | head -1
+
 
 .PHONY: function
 function: | db.rec ## Output a search function for .bashrc

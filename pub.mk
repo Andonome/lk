@@ -47,8 +47,6 @@ mans = $(patsubst %.md, .mans/%.6, $(notdir $(markdown)))
 
 local_mans = $(patsubst .mans/%,${HOME}/.local/share/man/man6/%,$(mans))
 
-manupdate != command -v mandb makewhatis | head -1
-
 VPATH=$(shell echo $(categories) | tr ' ' ':')
 
 $(mans): .mans/%.6: %.md | .mans/
