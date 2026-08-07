@@ -39,6 +39,14 @@ bin: dig
 tag: ip
 tag: network
 
+aim: Encrypt text with rot13
+cmd: g?ip
++ .
+note: People once used this as a spoiler warning, since anyone can decrypt it, but nobody can read it accidentally.
+shell: sh
+bin: vim
+tag: fun
+
 aim: Turn markdown into a man page
 cmd: man <(lowdown -stman ${file}.md)
 cmd: top_title="Bugs in netcat"
