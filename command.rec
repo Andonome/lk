@@ -21,6 +21,13 @@ tag: tip
 tag: edit
 tag: security
 
+aim: Replace first instance of word
+cmd: sed '0,/${word}/s//${replacement}/' ${file}
+bin: sed
+tag: writing
+tag: data
+tag: replace
+
 aim: Roll a die
 cmd: echo $(( RANDOM % 6+1 ))
 shell: bash
@@ -38,14 +45,6 @@ shell: bash
 bin: dig
 tag: ip
 tag: network
-
-aim: Encrypt text with rot13
-cmd: g?ip
-+ .
-note: People once used this as a spoiler warning, since anyone can decrypt it, but nobody can read it accidentally.
-shell: sh
-bin: vim
-tag: fun
 
 aim: Turn markdown into a man page
 cmd: man <(lowdown -stman ${file}.md)
@@ -638,6 +637,14 @@ shell: sh
 bin: systemd
 tag: system
 tag: boot
+
+aim: Encrypt text with rot13
+cmd: g?ip
++ .
+note: People once used this as a spoiler warning, since anyone can decrypt it, but nobody can read it accidentally.
+shell: sh
+bin: vim
+tag: fun
 
 aim: Remotely edit a file with vim
 cmd: vim scp://${server}/~/${file}
