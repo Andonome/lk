@@ -28,6 +28,17 @@ tag: writing
 tag: data
 tag: replace
 
+aim: Make wifi QR code image
+cmd: wifi_name="$(iw dev | grep -Po '\s+ssid \K.*')"
++ password="A very secure password"
++ out=/tmp/wifi.png
++ qrencode -s 6 -l H -o "$out" "WIFI:T:WPA;S:<$ssid>;P:<$pass>;;"
++ xdg-open $out
+bin: qrencode
+tag: qr
+tag: wifi
+tag: network
+
 aim: Roll a die
 cmd: echo $(( RANDOM % 6+1 ))
 shell: bash
@@ -536,13 +547,14 @@ shell: sh
 bin: qrencode
 tag: qr
 
-aim: Show wifi QR code (only with Network Manager)
+aim: Show wifi QR code with Network Manager
 cmd: nmcli device wifi show-password
 shell: sh
 bin: qrencode
 bin: nmcli
 tag: qr
 tag: wifi
+tag: network
 
 aim: Combine many recfiles of different types into one
 cmd: sed '1i\ ' *.rec > all.rec
