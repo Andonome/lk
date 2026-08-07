@@ -145,8 +145,7 @@ content: ### Variables
 + 
 + .PHONY: help
 + help:
-+ 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) \
-+ | sort | column -s ':' -t
++ 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) + | sort | column -s ':' -t
 + 
 + .PHONY: check
 + check: ## Check you have the required dependencies
@@ -275,3 +274,74 @@ note: The last content field closes the XML tags opened in the first content fie
 content: </channel>
 + 
 + </rss>
+
+filename: mpres.md
+name: TUI Presentation Slides
+bin: lowdown
+usage: mdp ${file}
+content: %title: Presenting with `mdp`
++ %author: ghost
++ %date: 2016-02-07
++ 
++ # Sizes
++ 
++ Make the terminal font bigger.
++ 
++ ^
++ ...but not too big, or the slides won't have enough space!
++ 
++ 
++ ***
++ 
++ # Features
++ 
++ Start a new slide with `***`.
++ 
++ ^
++ 
++ -> ## Centred Headers <-
++ 
++ Put stuff right in the middle with `-> this <-`.
++ 
++ ^
++ 
++ ## Code
++ 
++     echo "Indent with four spaces to start"
++     echo "a code block"
++ 
++ ^
++ 
++ Or the usual way:
++ 
++     ```python
++     import os
++     ```
++ 
++ ## Quotes
++ 
++ > Quotes are great.
++ > 
++ > - *Me*
++ 
++ ***
++ 
++ # Beware!
++ 
++ - When you can't see the words, try `mdp -ie`.
++ ^
++ - All files must be created specifically for mdp!
++ ^
++ - You only have two header levels.
++ ^
++ - You can't use random markdown files.
++ ^
++ - There are no tables.
++ ^
++ - Ordered lists are not ordered automatically.
++ ^
++ - Always check how the projector works before you begin.
++ ^
++ - ...especially when using a tiling window manager.
++ ^
++ - There is no spoon.
