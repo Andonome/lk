@@ -91,3 +91,7 @@ ssh ${username}@{ip_address}
 ```
 
 Now you can log in without a password.
+
+---
+
+If you expose your IP to the outside world, remember to set up a [jail](networking/defend_ssh.md).
