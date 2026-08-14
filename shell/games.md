@@ -10,3 +10,4 @@ Games are a great way to learn bash.
     1. Install telnet.
     1. `telnet mapscii.me`
 - [Over the Wire](https://overthewire.org/wargames) teaches bash with small challenging you can do over `ssh`.
+- [Doom](https://github.com/wojciech-graj/doom-ascii)!  Try it online with `telnet doom.w-graj.net 666`.
