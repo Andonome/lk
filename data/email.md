@@ -1,5 +1,5 @@
 ---
-title: e-mail
+title: Understanding E-Mail
 tags: 
 - data
 - smtp
@@ -9,7 +9,7 @@ This is bare-bones, original, primitive e-mail.
 
 Install `opensmtpd` (or similar), then `ncat` or `nc` or `netcat` (this mysterious cat has many names).
 
-Start the `opensmtpd` service, then use netcat to speak with the mail-daemon:
+Start the `opensmtpd` service, then use `netcat` to speak with the mail-daemon:
 
 ```sh
 nc localhost 25
