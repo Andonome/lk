@@ -88,4 +88,5 @@ laden: false
 ...but it's not.
 The file `bird.rec` has a proper record set, but `recutils` simply reports a memory problem.
 
+Foreign keys with a `%sort` entry ignore this entry.
 
