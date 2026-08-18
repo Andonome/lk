@@ -135,6 +135,14 @@ bin: column
 tag: format
 tag: json
 
+aim: Convert a csv file to markdown
+cmd: column -o '|' -ts, "$1" + | sed -r '0,/./p ; 0,/./s/[a-zA-Z ]/-/g; 0,/^|/s/\|-/|:/g'
+shell: sh
+bin: column
+bin: sed
+tag: csv
+tag: markdown
+
 aim: Request a definition from the terminal.
 cmd: word='abderian'
 + curl -s dict://dict.org/define:${word}:
@@ -476,19 +484,12 @@ tag: vision
 tag: memes
 
 aim: Convert markdown table to csv
-cmd: mlr --imarkdown --ocsv cat ${file}.md
+cmd: mlr --m2c cat ${file}.md
 shell: sh
 bin: mlr
 tag: csv
 tag: markdown
 tag: data
-
-aim: Convert a csv file to markdown
-cmd: mlr --icsv --omd cat ${file}.csv
-shell: sh
-bin: mlr
-tag: csv
-tag: markdown
 
 aim: Hard reset ntp service
 cmd: sudo ntpd -q -g -x -n
