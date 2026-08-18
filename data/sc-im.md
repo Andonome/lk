@@ -35,7 +35,6 @@ echo 'set autowrap' >> .config/sc-im/scimrc
 | insert middle                       | \   |
 | insert left                         | \>  |
 | insert right                        | <   |
-| to to cell b4                       | gb4 |
 | see all text in cells               | aa  |
 | format cells so you can see it.     | f   |
 | format wider right                  | fl  |
