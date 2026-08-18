@@ -185,7 +185,7 @@ In /etc/group, a group file may look like this:
 
 `sudo:x:27:mike,steve`
 
-We can use groupmod, like like usermod, e.g. to change a name:
+We can use groupmod, like usermod, e.g. to change a name:
 
 ```sh
 groupmod -n frontoffice backoffice

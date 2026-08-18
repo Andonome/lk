@@ -24,7 +24,7 @@ source $PREFIX/etc/profile.d/start-services.sh
     * `yes | ssh-keygen`
     * `cat $pubkey.pub >> ~/.ssh/authorized_hosts`.
     * Check its ip address with `ifconfig | grep broadcast`
-    * Check the phone's username with with `whoami`
+    * Check the phone's username with `whoami`
     * `sshd -D`
 6. On the PC:
     * `ssh -p 8022 -l $phone_username $phone_ip`
