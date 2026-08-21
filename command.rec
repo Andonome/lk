@@ -5,6 +5,12 @@
 %unique: shell
 %sort: shell bin
 
+aim: Find repeating words in a text file.
+cmd: grep -r --color=always -E '(\b\S+\b)\s+\b\1\b'"$1"
+tag: writing
+tag: comfy
+bin: grep
+
 aim: Change a CSV header
 cmd: from=number
 + to=quantity
