@@ -5,11 +5,26 @@
 %unique: shell
 %sort: shell bin
 
-aim: Find repeating words in a text file.
+aim: Find repeating words in a text file
 cmd: grep -r --color=always -E '(\b\S+\b)\s+\b\1\b'"$1"
 tag: writing
 tag: comfy
 bin: grep
+
+aim: Open, view, and change a zipped archive without unzipping it
+cmd: t="$(mktemp -d)"
++ backup-31.tgz
++ archivemount "$archive" $t
++ ls $t
++ time fortune > $t/fortune.txt
++ umount $t
++ rmdir $t
+note: It works with .zip files too.
+bin: archivemount
+tag: backup
+tag: zip
+tag: tar
+tag: gunzip
 
 aim: Change a CSV header
 cmd: from=number
