@@ -675,7 +675,7 @@ tag: boot
 aim: Encrypt text with rot13
 cmd: g?ip
 + .
-note: People once used this as a spoiler warning, since anyone can decrypt it, but nobody can read it accidentally.
+note: People once used this as a spoiler warning, since anyone can decrypt it, but nobody can read it accidentally
 shell: sh
 bin: vim
 tag: fun
@@ -746,3 +746,13 @@ bin: vipw
 bin: sudo
 tag: system
 tag: groups
+
+aim:  Automatically reformat text
+cmd: set formatoptions=wantcorql
+note: This works especially well with markdown.
++ Check the options with `help fo-table`.
+shell: vim
+bin: vim
+tag: markdown
+tag: writing
+tag: TUI
