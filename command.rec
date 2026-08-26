@@ -679,6 +679,7 @@ note: People once used this as a spoiler warning, since anyone can decrypt it, b
 shell: sh
 bin: vim
 tag: fun
+tag: TUI
 
 aim: Remotely edit a file with vim
 cmd: vim scp://${server}/~/${file}
@@ -687,6 +688,7 @@ shell: sh
 bin: vim
 bin: scp
 tag: network
+tag: TUI
 
 aim: Show a script in HTML
 cmd: source=~/.bashrc
@@ -696,6 +698,7 @@ shell: sh
 bin: vim
 tag: html
 tag: documentation
+tag: TUI
 
 aim: Read info files with vim
 cmd: info () 
@@ -708,6 +711,7 @@ shell: sh
 bin: vim
 bin: info
 tag: documentation
+tag: TUI
 
 aim: Find and replace across all files open in vim
 cmd: :bufdo! %s/${pattern}/${replacement}/g
@@ -715,6 +719,7 @@ shell: sh
 bin: vim
 tag: writing
 tag: replace
+tag: TUI
 
 aim: Find and replace words, but confirm each replacement
 cmd: vim -c "%s/${pattern}/${replacement}/gc" -c 'wq' ${file}
