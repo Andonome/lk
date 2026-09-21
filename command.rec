@@ -11,6 +11,24 @@ tag: writing
 tag: comfy
 bin: grep
 
+aim: Find which font has a unicode letter or symbol
+cmd: glyph=1F74D
++ fc-list :charset=$glyph
+note: No longer will you hunt in vain for the letters '🝿' and '🜒'.
+tag: writing
+tag: font
+tag: unicode
+bin: fc-list
+
+aim: List installed fonts in the mono family.
+cmd: #f=file
++ f=family
++ fc-list : $f | grep Mono
+tag: writing
+tag: font
+tag: unicode
+bin: fc-list
+
 aim: Open, view, and change a zipped archive without unzipping it
 cmd: t="$(mktemp -d)"
 + backup-31.tgz
