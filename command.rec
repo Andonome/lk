@@ -5,79 +5,6 @@
 %unique: shell
 %sort: shell bin
 
-aim: Find repeating words in a text file
-cmd: grep -r --color=always -E '(\b\S+\b)\s+\b\1\b'"$1"
-tag: writing
-tag: comfy
-bin: grep
-
-aim: Find which font has a unicode letter or symbol
-cmd: glyph=1F74D
-+ fc-list :charset=$glyph
-note: No longer will you hunt in vain for the letters '🝿' and '🜒'.
-tag: writing
-tag: font
-tag: unicode
-bin: fc-list
-
-aim: List installed fonts in the mono family.
-cmd: #f=file
-+ f=family
-+ fc-list : $f | grep Mono
-tag: writing
-tag: font
-tag: unicode
-bin: fc-list
-
-aim: Open, view, and change a zipped archive without unzipping it
-cmd: t="$(mktemp -d)"
-+ backup-31.tgz
-+ archivemount "$archive" $t
-+ ls $t
-+ time fortune > $t/fortune.txt
-+ umount $t
-+ rmdir $t
-note: It works with .zip files too.
-bin: archivemount
-tag: backup
-tag: zip
-tag: tar
-tag: gunzip
-
-aim: Change a CSV header
-cmd: from=number
-+ to=quantity
-+ sed -i "1 s///" "".csv
-bin: sed
-tag: csv
-tag: substitute
-tag: replace
-
-aim: Edit file as root
-cmd: sudo -e ${file}
-bin: sudo
-tag: tip
-tag: edit
-tag: security
-
-aim: Replace first instance of word
-cmd: sed '0,/${word}/s//${replacement}/' ${file}
-bin: sed
-tag: writing
-tag: data
-tag: replace
-
-aim: Make wifi QR code image
-cmd: wifi_name="$(iw dev | grep -Po '\s+ssid \K.*')"
-+ password="A very secure password"
-+ out=/tmp/wifi.png
-+ qrencode -s 6 -l H -o "$out" "WIFI:T:WPA;S:<$ssid>;P:<$pass>;;"
-+ xdg-open $out
-bin: qrencode
-tag: qr
-tag: wifi
-tag: network
-
 aim: Roll a die
 cmd: echo $(( RANDOM % 6+1 ))
 shell: bash
@@ -130,6 +57,22 @@ note:
 tag: vision
 tag: video
 shell: sh
+
+aim: Open, view, and change a zipped archive without unzipping it
+cmd: t="$(mktemp -d)"
++ backup-31.tgz
++ archivemount "$archive" $t
++ ls $t
++ time fortune > $t/fortune.txt
++ umount $t
++ rmdir $t
+note: It works with .zip files too.
+shell: sh
+bin: archivemount
+tag: backup
+tag: zip
+tag: tar
+tag: gunzip
 
 aim: Find disk UUID
 cmd: blkid
@@ -198,6 +141,26 @@ tag: writing
 tag: comfy
 tag: dict
 shell: sh
+
+aim: Find which font has a unicode letter or symbol
+cmd: glyph=1F74D
++ fc-list :charset=$glyph
+note: No longer will you hunt in vain for the letters '🝿' and '🜒'.
+shell: sh
+tag: writing
+tag: font
+tag: unicode
+bin: fc-list
+
+aim: List installed fonts in the mono family.
+cmd: #f=file
++ f=family
++ fc-list : $f | grep Mono
+shell: sh
+tag: writing
+tag: font
+tag: unicode
+bin: fc-list
 
 aim: Translate a media file to a new type
 cmd: ffmpeg -formats
@@ -340,6 +303,13 @@ shell: sh
 bin: git
 bin: recsel
 tag: data
+
+aim: Find repeating words in a text file
+cmd: grep -r --color=always -E '(\b\S+\b)\s+\b\1\b'"$1"
+shell: sh
+tag: writing
+tag: comfy
+bin: grep
 
 aim: Search for a short word
 cmd: grep "\b${word}\b" ${file}
@@ -569,6 +539,18 @@ tag: share
 cmd: qrencode -t ansi "$(ip route show | grep -Pom1 'src \K[\d.]+')"
 + sudo python -m http.server 80
 
+aim: Make wifi QR code image
+cmd: wifi_name="$(iw dev | grep -Po '\s+ssid \K.*')"
++ password="A very secure password"
++ out=/tmp/wifi.png
++ qrencode -s 6 -l H -o "$out" "WIFI:T:WPA;S:<$ssid>;P:<$pass>;;"
++ xdg-open $out
+shell: sh
+bin: qrencode
+tag: qr
+tag: wifi
+tag: network
+
 aim: Make a QR Code image
 cmd: qrencode 'https://play.google.com/store/apps/details?id=org.briarproject.briar.android' -o "${file}".png
 shell: sh
@@ -595,6 +577,24 @@ bin: nmcli
 tag: qr
 tag: wifi
 tag: network
+
+aim: Change a CSV header
+cmd: from=number
++ to=quantity
++ sed -i "1 s///" "".csv
+shell: sh
+bin: sed
+tag: csv
+tag: substitute
+tag: replace
+
+aim: Replace first instance of word
+cmd: sed '0,/${word}/s//${replacement}/' ${file}
+shell: sh
+bin: sed
+tag: writing
+tag: data
+tag: replace
 
 aim: Combine many recfiles of different types into one
 cmd: sed '1i\ ' *.rec > all.rec
@@ -626,6 +626,14 @@ bin: ssh
 tag: system
 tag: comfy
 tag: TUI
+
+aim: Edit file as root
+cmd: sudo -e ${file}
+shell: sh
+bin: sudo
+tag: tip
+tag: edit
+tag: security
 
 aim: Launch GUI app as root
 cmd: app=gparted
