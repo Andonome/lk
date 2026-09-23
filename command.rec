@@ -500,6 +500,28 @@ tag: csv
 tag: markdown
 tag: data
 
+aim: Check what's using disk space
+cmd: ncdu
+note: Brighten up the interface in the config.
+cmd: mkdir ~/.config/ncdu
++ echo '--color dark' > !$/config
+bin: ncdu
+tag: maintenance
+tag: disk
+tag: TUI
+shell: sh
+
+aim: Check a remote computer's disk space in the 'images' directory
+cmd: dir=images
++ ssh ${host} ncdu -co- ${dir} | ncdu -f-
+note: Install `ncdu` on both computers.
+bin: ncdu
+tag: maintenance
+tag: comfy
+tag: disk
+tag: TUI
+shell: sh
+
 aim: Hard reset ntp service
 cmd: sudo ntpd -q -g -x -n
 shell: sh
