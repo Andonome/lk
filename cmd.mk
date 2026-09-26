@@ -1,4 +1,10 @@
-manupdate != command -v mandb makewhatis | head -1
+manupdate != command -v mandb
+
+ifeq "$(.SHELLSTATUS)" "0"
+  manupdate += --user-db -q
+else
+  manupdate != command -v makewhatis
+endif
 
 
 .PHONY: function
