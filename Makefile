@@ -3,7 +3,6 @@ MAKEFLAGS += -s
 EDITOR ?= vi
 PAGER ?= less -Ri
 READER != command -v mdless bat glow less more pg | head -1
-FZF != command -v fzf sk | head -1
 .DEFAULT_GOAL = help
 .SILENT:
 
@@ -11,12 +10,13 @@ categories=$(wildcard */ */*/ */*/*/ )
 
 markdown = $(wildcard */*.md */*/*.md)
 
-ifeq "$(FZF)" ""
-  $(info Install fzf)
-endif
+FZF != command -v fzf 2>/dev/null
 
-ifeq "$(FZF)" "/usr/bin/fzy"
-  FZF += -i
+ifeq "$(.SHELLSTATUS)" "127"
+  FZF != command -v sk
+  ifeq "$(.SHELLSTATUS)" "127"
+    $(error Install fzf)
+  endif
 endif
 
 spill_contents = sed -e '1,/---/d'
