@@ -1,5 +1,4 @@
 MAKEFLAGS += -j
-MAKEFLAGS += -s
 EDITOR ?= vi
 PAGER ?= less -Ri
 READER != command -v mdless bat glow less more pg | head -1
@@ -20,12 +19,6 @@ ifeq "$(.SHELLSTATUS)" "127"
 endif
 
 spill_contents = sed -e '1,/---/d'
-
-articles != find * -type f -name "*.md"
-
-default += .dbs/notes.rec
-default += .dbs/map.fmt
-
 
 %/:
 	mkdir $@
@@ -70,7 +63,6 @@ include cmd.mk
 	echo '' >> $@
 	sed '/^%/d' $^ | recsel -G path | recsel -U >> $@
 
-default += db.rec
 ignored += db.rec
 db.rec: command.rec .dbs/notes.rec
 	recinf -d $< > $@
@@ -85,7 +77,7 @@ db.rec: command.rec .dbs/notes.rec
 default += .git/info/exclude
 
 .PHONY: database
-database: $(default) ## Make a recfiles database
+database: db.rec ## Make a recfiles database
 
 .dbs/map.fmt:| .dbs/
 	printf '%s\n' '[ {{requires[0]}} ] --> [ {{path}} ] {border-style: dashed;}' > $@
@@ -101,7 +93,7 @@ map: .dbs/requires.rec .dbs/map.fmt ## Show knowledge dependency map
 
 .PHONY: clean
 clean: ## Remove all generated files
-	$(RM) -r $(default) .dbs/ .publish/ .mans/
+	$(RM) -r db.rec .dbs/ .publish/ .mans/
 
 .PHONY: article
 article: */ */*/ ## Write a new article
@@ -121,7 +113,6 @@ help: ## Print the help message
 
 .PHONY: all
 all: $(default) ## All file targets
-
 
 %.md: 
 	[ -d "$(@D)" ] || mkdir $(@D)
