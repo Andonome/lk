@@ -4,7 +4,7 @@ markdown = $(wildcard */*.md */*/*.md)
 publish = $(patsubst %, .publish/%, $(markdown))
 
 .dbs/requires.fmt: | .dbs/
-	echo "- [{{requires_title}}]({{requires_path}})" > $@
+	echo "- [{{requires_title}}](/{{requires_path}})" > $@
 
 $(publish): .publish/%.md: %.md | .dbs/notes.rec .dbs/requires.fmt
 	$(info Publishing $(*D): $(*F) )
