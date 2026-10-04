@@ -142,6 +142,33 @@ tag: comfy
 tag: dict
 shell: sh
 
+aim: Highlight ed like a rainbow
+cmd: ed ${file} | lolcat
+bin: ed
+bin: lolcat
+tag: writing
+shell: sh
+
+aim: Use ed with command history
+cmd: rlwrap ed ${file}
+bin: ed
+bin: rlwrap
+tag: writing
+shell: sh
+
+aim: Use ed with syntax highlighting
+cmd: type=sh
++ ed ${file}.${type} | pygmentize -s -l ${type}
+note: You need to specify the file's syntax type, because `pygmentize -s` reads the file one line at a time from the pipe's input.
+cmd: file=README.md
++ type="${file#*.}"
++ ed ${file} | pygmentize -s -l ${type}
+note: You cannot use the prompt flag with `ed` while piping into `pygmentize`.
+bin: ed
+bin: pygmentize
+tag: writing
+shell: sh
+
 aim: Find which font has a unicode letter or symbol
 cmd: glyph=1F74D
 + fc-list :charset=$glyph
