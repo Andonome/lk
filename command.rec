@@ -341,6 +341,32 @@ bin: iftop
 tag: maintenance
 tag: network
 
+aim: Find info page on a topic
+cmd: topic=color
++ info --apropos="${topic}"
+shell: sh
+bin: info
+tag: documentation
+tag: system
+
+aim: Search inside the `sed` info page on writing to a file
+cmd: term=write
++ page=sed
++ info "${page}" --index-search="${term}"
+shell: sh
+bin: info
+tag: documentation
+tag: system
+
+aim: Convert an info page to text
+cmd: page=sed
++ info "${page}" --subnodes --output -
+cmd: info "${page}" -s -o- | $PAGER
+shell: sh
+bin: info
+tag: documentation
+tag: system
+
 aim: Run commands in background
 cmd: ls -Rilt ~ &
 + jobs
@@ -760,32 +786,6 @@ bin: vim
 bin: info
 tag: documentation
 tag: TUI
-
-aim: Find info page on a topic
-cmd: topic=color
-+ info --apropos="${topic}"
-shell: sh
-bin: info
-tag: documentation
-tag: system
-
-aim: Search inside the `sed` info page on writing to a file
-cmd: term=write
-+ page=sed
-+ info "${page}" --index-search="${term}"
-shell: sh
-bin: info
-tag: documentation
-tag: system
-
-aim: Convert an info page to text
-cmd: page=sed
-+ info "${page}" --subnodes --output -
-cmd: info "${page}" -s -o- | $PAGER
-shell: sh
-bin: info
-tag: documentation
-tag: system
 
 aim: Find and replace across all files open in vim
 cmd: :bufdo! %s/${pattern}/${replacement}/g
