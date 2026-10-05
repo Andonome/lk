@@ -24,5 +24,6 @@ Keybind to exit this mode is `Ctrl+q`
 - [Navigation](writing/vim/navigate.md)
 - [Completion](writing/vim/completion.md)
 - [Window Splits](writing/vim/windows.md)
+- [Shrubbery](writing/vim/ni.md)
 - [Use vim bindings in bash](writing/vim/vim_in_bash.md)
 - [A game to learn  how to code in Vim](https://www.vim-hero.com/)
