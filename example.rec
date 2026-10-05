@@ -174,8 +174,10 @@ content: hdr = @printf "\n\033[37;1;4m%s\033[0m\n"
 + issues = $(wildcard open/*) $(wildcard closed/*)
 + 
 + number_of_issues != echo $(issues) | wc -w
++ next_number != echo $$(( $(number_of_issues) + 1 ))
 + 
 + name = open/issue_$(number_of_issues).md
++ next_name = open/issue_$(next_number).md
 + 
 + last_modified != ls -t open/* 2>/dev/null | head -1
 + ifndef last_modified
@@ -191,6 +193,7 @@ content: hdr = @printf "\n\033[37;1;4m%s\033[0m\n"
 + 	@echo 'Push to a remote repository' >> open/issue_1.md
 + 	@git add $(MAKEFILE_LIST) open/issue_1.md
 + 	@git commit -m'Init the git!'
++ 	@sed -i '/ifndef last_modified/,/^endif/d' Makefile
 + 	$(info Check issue 1)
 + 	$(info Run make again)
 + endif
@@ -222,9 +225,12 @@ content: hdr = @printf "\n\033[37;1;4m%s\033[0m\n"
 + 	$(close_issue_command)
 + 
 + .PHONY: issue
-+ issue: $(name) ## Make an issue
-+ $(name):
-+ 	@echo '---' > $(name)
++ issue: $(next_name) ## Make an issue
++ 	$(info Created $<)
++ 	$(info Remember to push!)
++ 
++ $(next_name):
++ 	@echo '---' > $@
 + 	@read -p 'Title? ' title && echo title: $$title >> $@
 + 	@echo priority: low >> $@
 + 	@echo responsible: $(shell git config user.name) >> $@
@@ -233,7 +239,6 @@ content: hdr = @printf "\n\033[37;1;4m%s\033[0m\n"
 + 	@$(EDITOR) +7 $@
 + 	@git add $@
 + 	@git commit --quiet --message "$$(grep -Pom1 'title: \K.*' $@)"
-+ 	$(info Commit created, remember to push!)
 + 
 + .PHONY: done
 + done:
