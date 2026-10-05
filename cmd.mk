@@ -26,7 +26,7 @@ query: db.rec ## Search the setup notes
 ${HOME}/.local/bin/lk: db.rec
 	echo '#!/bin/sh' > $@
 	chmod u+x $@
-	$(MAKE) function >> $@
+	$(MAKE) --no-print-directory function >> $@
 	echo lk >> $@
 
 .PHONY: install
