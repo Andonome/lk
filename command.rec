@@ -37,7 +37,7 @@ bin: groff
 bin: man
 tag: markdown
 
-aim: Remove crap from bash history
+aim: Remove long lines from bash history
 cmd: sed -i -r '/([^ ]{100,})\s?$/d' $HISTFILE
 shell: bash
 bin: sed
