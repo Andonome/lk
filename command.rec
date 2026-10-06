@@ -14,6 +14,14 @@ tag: data
 tag: json
 tag: TUI
 
+aim: Read json with a pager
+cmd: jless "${file}".json
+bin: jless
+tag: data
+tag: json
+tag: pager
+tag: TUI
+
 aim: Roll a die
 cmd: echo $(( RANDOM % 6+1 ))
 shell: bash
