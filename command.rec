@@ -5,6 +5,15 @@
 %unique: shell
 %sort: shell bin
 
+aim: Analyse `json` easier with `ijq`
+cmd: column -J -ts: -H PW,GID,shell -N User,PW,UID,GID,Description,Home,shell /etc/passwd > host.json
++ ijq !$
+note: If you get stuck, try adding `.[]`.
+bin: ijq
+tag: data
+tag: json
+tag: TUI
+
 aim: Roll a die
 cmd: echo $(( RANDOM % 6+1 ))
 shell: bash
