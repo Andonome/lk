@@ -22,6 +22,15 @@ tag: json
 tag: pager
 tag: TUI
 
+aim: Automatically select commits from the current branch during a merge
+cmd: git checkout "${master}"
++ git merge "${branch}"
++ git checkout --ours "${master}"
+note: These flags can be counterintuitive in other contexts.
++ 
++ <https://nitaym.github.io/ourstheirs/>
+bin: git
+
 aim: Roll a die
 cmd: echo $(( RANDOM % 6+1 ))
 shell: bash
