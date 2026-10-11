@@ -1,3 +1,51 @@
+name: Convert taskwarrior database to a recfile
+filename: task2rec.sh
+bin: recsel
+bin: mlr
+bin: task
+tag: data
+usage: ./{{filename}}
+content: #!/bin/sh
++ 
++ set -e
++ 
++ recfile=task.rec
++ 
++ no_tasks="$(task count)"
++ 
++ uuids="$(task uuids)"
++ #uuids="$(shuf -e $(task uuids) | head -n 80 )"
++ 
++ cat > "$recfile" << EOF
++ %rec: Task
++ %doc: Tasks from taskwarrior
++ %key: uuid
++ %type: uuid uuid
++ %type: project line
++ %type: urgency real
++ %type: status enum completed deleted pending
++  
++ EOF
++ 
++ echo "$uuids" | while read id ; do
++     task $id export +     | mlr --ijson --orecutils cat +     | sed '/^\w\+\.\w\+: /s/\.\w\+:/:/; s/\.\w\./_/' +     | recsel +     | sed '1i\ ' +     | tee -a "$recfile"
++ done
++ 
++ cat >> "$recfile" << EOF
++ 
++ %rec: Annotation
++ %doc: Notes on tasks
++ %type: task rec Task
++  
++ EOF
++ 
++ recsel "$recfile" -t Task -e 'annotations_entry != ""' +     -p 'uuid:task,annotations_entry:entry,annotations_description:description' | tee -a "$recfile"
++ 
++ recset -t Task "$recfile" -f annotations_entry -d
++ recset -t Task "$recfile" -f annotations_description -d
++ 
++ recfix "$recfile"
+
 %rec: example
 %key: name
 
