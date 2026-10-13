@@ -71,6 +71,29 @@ tag: tip
 tag: shell
 tag: maintenance
 
+aim: Show variable until delimiter
+cmd: file=metadata_erasure.md
++ delimiter=_
++ echo "${file#*$delimiter}"
+note: This outputs `metadata`.
+cmd: basename ${file} .md
+shell: sh
+tag: string
+
+aim: Show a file's extension
+cmd: file=metadata_erasure.md
++ ext=.md
++ basename ${file} .${ext}
+shell: sh
+tag: string
+
+aim: Show how many characters or letters in a variable
+cmd: file="$(ls | tail -1)"
++ echo ${#file}
+shell: sh
+tag: length
+tag: string
+
 aim: Rotate a video
 cmd: ffmpeg -i "${input}" -vf "transpose=1" "${out.mov}"
 note: 
