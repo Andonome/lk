@@ -96,7 +96,7 @@ clean: ## Remove all generated files
 	$(RM) -r db.rec .dbs/ .publish/ .mans/
 
 .PHONY: article
-article: */ */*/ ## Write a new article
+article: */ */*/ new/ ## Write a new article
 	category=$(shell echo $^ | tr ' ' '\n' | $(FZF) --bind 'enter:accept-or-print-query' --prompt='Category? ') \
 	&& read -p "Article title? " name \
 	&& filename="$$(echo "$$name" \
