@@ -906,3 +906,10 @@ bin: vim
 tag: markdown
 tag: writing
 tag: TUI
+
+aim: Convert .mov to .mp4
+cmd: ffmpeg -i "${input}.mov" -c:v libx264 -crf 23 -preset medium -c:a aac "${output}.mp4"
+bin: ffmpeg
+tag: vision
+tag: video
+shell: sh
