@@ -410,3 +410,54 @@ content: %title: Presenting with `mdp`
 + - ...especially when using a tiling window manager.
 + ^
 + - There is no spoon.
+
+name: Makefile to track the contents of /etc/
+filename: Makefile
+bin: make
+bin: fzf
+tag: system
+tag: maintenance
+usage: make new
++ make
++ git -C etc/ init
++ git -C etc/ add -A
++ git -C etc/ commit --message='Track etc files'
++ 
+content: .SILENT:
++ 
++ 
++ define track
++ #!/bin/sh
++ 
++ mk=list.mk
++ config="$$(cd /etc/ && fzf --multi)"
++ 
++ echo "$${config}" | while read file ; do
++     grep -q "$${config}" "$${mk}" 2>/dev/null || { 
++ 		printf "\ndefault += etc/$${config}\n" >> "$${mk}"
++ 		printf "\netc/$${config}: /etc/$${config}\n\tcp --parents %s\n\n" '$$< .' >> "$${mk}"
++ 	}
++ done
++ endef
++ 
++ include list.mk
++ 
++ .PHONY: help
++ help:
++ 	@awk 'BEGIN {FS = ":.*?## "} /^[0-9a-zA-Z._-]+:.*?## / {printf "\033[36m%s\033[0m : %s\n", $$1, $$2}' $(MAKEFILE_LIST) | sort | column -s ':' -t
++ 
++ .PHONY: all
++ all: $(default) ## Update all files
++ 
++ list.mk:
++ 	echo '.DEFAULT_GOAL = all' > $@
++ 	$(MAKE) help
++ 
++ track:
++ 	$(file > $@, $(track) )
++ 	chmod u+x $@
++ 	$(MAKE) help
++ 
++ .PHONY: new
++ new: track ## Track a file in /etc/
++ 	./$<
