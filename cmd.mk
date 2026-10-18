@@ -23,6 +23,16 @@ query: db.rec ## Search the setup notes
 	done \
 	&& recsel "${PWD}"/db.rec -q "$$query" | recfmt -f "${PWD}/lists.fmt" | ${PAGER}
 
+.ONESHELL: command
+.PHONY: command
+command:
+	cmd="$$(bash -ic '(cat $$HISTFILE )' )"
+	cmd="$$(echo "$$cmd" | grep -vP "\w{40,}" | ${FZF} --tac --no-sort --print-query | tail -1 ) "
+	bin="$${cmd%% *}"
+	read -p 'What does that do? ' aim
+	tag="$$(recsel command.rec -t command -CP tag | sort -u | $(FZF) )"
+	recins command.rec -t command -r "aim: $$aim" -f cmd -v "$${cmd}" -f bin -v "$${bin}" -f tag -v "$${tag}"
+
 ${HOME}/.local/bin/lk: db.rec
 	echo '#!/bin/sh' > $@
 	chmod u+x $@
