@@ -27,11 +27,11 @@ query: db.rec ## Search the setup notes
 .PHONY: command
 command: ## Add a nifty command to the database
 	cmd="$$(bash -ic '(cat $$HISTFILE )' )"
-	cmd="$$(echo "$$cmd" | grep -vP "\w{40,}" | ${FZF} --tac --no-sort --print-query | tail -1 ) "
+	cmd="$$(echo "$$cmd" | grep -oP "[0-9] \K.*" | grep -P "^\w.{10,75}$$" | sort -u | ${FZF} --tac --print-query | tail -1 ) "
 	bin="$${cmd%% *}"
 	read -p 'What does that do? ' aim
-	tag="$$(recsel "${PWD}"/command.rec -t command -CP tag | sort -u | $(FZF) )"
-	recins "${PWD}"/command.rec -t command -r "aim: $$aim" -f cmd -v "$${cmd}" -f bin -v "$${bin}" -f tag -v "$${tag}"
+	tag="$$(recsel "${PWD}"/$@.rec -t $@ -CP tag | sort -u | $(FZF) )"
+	recins "${PWD}"/$@.rec -t $@ -r "aim: $$aim" -f cmd -v "$${cmd}" -f bin -v "$${bin}" -f tag -v "$${tag}"
 
 ${HOME}/.local/bin/lk: db.rec
 	echo '#!/bin/sh' > $@
