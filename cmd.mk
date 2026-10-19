@@ -24,7 +24,7 @@ command: ## Add a nifty command to the database
 	bin="$${cmd%% *}"
 	read -p 'What does that do? ' aim
 	tag="$$(recsel "${PWD}"/$@.rec -t $@ -CP tag | sort -u | $(FZF) )"
-	recins "${PWD}"/$@.rec -t $@ -r "aim: $$aim" -f cmd -v "$${cmd}" -f bin -v "$${bin}" -f tag -v "$${tag}"
+	recins "${PWD}"/$@.rec -t $@ -r "aim: $$aim" -f cmd -v "$${cmd}" -f bin -v "$${bin}" -f shell -v sh -f tag -v "$${tag}"
 
 .PHONY: search-function
 search-function: | db.rec ## Output a search function for .bashrc
