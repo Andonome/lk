@@ -7,13 +7,6 @@ else
 endif
 
 
-.PHONY: function
-function: | db.rec ## Output a search function for .bashrc
-	${MAKE} --silent --touch query
-	printf '%s\n' 'lk(){'
-	${MAKE} --silent --dry-run query | sed 's/^/\t/'
-	printf '%s\n' '}'
-
 .PHONY: query
 query: db.rec ## Search the setup notes
 	passes=0 count=0; until [ "$$count" -eq "1" ] || [ "$$passes" -gt 2 ] ; do \
@@ -33,11 +26,26 @@ command: ## Add a nifty command to the database
 	tag="$$(recsel "${PWD}"/$@.rec -t $@ -CP tag | sort -u | $(FZF) )"
 	recins "${PWD}"/$@.rec -t $@ -r "aim: $$aim" -f cmd -v "$${cmd}" -f bin -v "$${bin}" -f tag -v "$${tag}"
 
+.PHONY: search-function
+search-function: | db.rec ## Output a search function for .bashrc
+	${MAKE} --silent --touch query
+	printf '%s\n' 'lk(){'
+	${MAKE} --silent --dry-run query | sed 's/^/\t/'
+	printf '%s\n' '}'
+
+.PHONY: note-function
+note-function: ## Output a function to record commands
+	${MAKE} --silent --touch command
+	printf '%s\n' 'lkn(){'
+	${MAKE} --silent --dry-run command | sed 's/^/\t/'
+	printf '%s\n' '}'
+
 ${HOME}/.local/bin/lk: db.rec
 	echo '#!/bin/sh' > $@
 	chmod u+x $@
-	$(MAKE) --no-print-directory function >> $@
-	echo lk >> $@
+	$(MAKE) --no-print-directory search-function >> $@
+	$(MAKE) --no-print-directory note-function >> $@
+	echo '[ -z "$$@" ] && lk || lkn ' >> $@
 
 .PHONY: install
 install: $(local_mans) ${HOME}/.local/bin/lk ## Install local man pages
