@@ -913,3 +913,8 @@ bin: ffmpeg
 tag: vision
 tag: video
 shell: sh
+
+aim: Find broken links
+cmd: find -L ${path} -type l 
+bin: find
+tag: maintenance
