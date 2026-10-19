@@ -918,3 +918,9 @@ aim: Find broken links
 cmd: find -L ${path} -type l 
 bin: find
 tag: maintenance
+
+aim: Reset a broken terminal without losing text
+cmd: reset -w
+bin: reset
+tag: system
+shell: sh
