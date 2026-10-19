@@ -1,3 +1,6 @@
+%rec: example
+%key: name
+
 name: Convert taskwarrior database to a recfile
 filename: task2rec.sh
 bin: recsel
@@ -45,9 +48,6 @@ content: #!/bin/sh
 + recset -t Task "$recfile" -f annotations_description -d
 + 
 + recfix "$recfile"
-
-%rec: example
-%key: name
 
 name: Default systemd service file
 filename: default.service
