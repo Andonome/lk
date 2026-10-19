@@ -3,7 +3,7 @@ manupdate != command -v mandb
 ifeq "$(.SHELLSTATUS)" "0"
   manupdate += --user-db -q
 else
-  manupdate != command -v makewhatis
+  manupdate = makewhatis ${HOME}/.local/share/man
 endif
 
 
