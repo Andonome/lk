@@ -924,3 +924,19 @@ cmd: reset -w
 bin: reset
 tag: system
 shell: sh
+
+aim: Push the current branch to all remotes
+cmd: remotes="$(git remote show)"
++ git config remotes.all "$remotes" 
++ git push all
+bin: git
+shell: sh
+tag: git
+
+aim: Edit a file at an uncommited change in a git repo
+cmd: git jump 
+note: You might need to copy the script from `/usr/share/git/git-jump/`
+cmd: /usr/share/git/git-jump/git-jump ~/.local/bin/
+bin: git
+shell: sh
+tag: comfy
