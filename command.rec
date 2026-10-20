@@ -31,6 +31,11 @@ note: These flags can be counterintuitive in other contexts.
 + <https://nitaym.github.io/ourstheirs/>
 bin: git
 
+aim: Find broken links
+cmd: find -L ${path} -type l 
+bin: find
+tag: maintenance
+
 aim: Roll a die
 cmd: echo $(( RANDOM % 6+1 ))
 shell: bash
@@ -324,6 +329,13 @@ bin: ffmpeg
 tag: vision
 shell: sh
 
+aim: Convert .mov to .mp4
+cmd: ffmpeg -i "${input}.mov" -c:v libx264 -crf 23 -preset medium -c:a aac "${output}.mp4"
+bin: ffmpeg
+tag: vision
+tag: video
+shell: sh
+
 aim: Quickly find and open run-command files
 cmd: alias rrc='$PAGER "$(find . -maxdepth 2 -name "*rc" | fzf)"'
 shell: sh
@@ -379,6 +391,22 @@ shell: sh
 bin: git
 bin: recsel
 tag: data
+
+aim: Push the current branch to all remotes
+cmd: remotes="$(git remote show)"
++ git config remotes.all "$remotes" 
++ git push all
+bin: git
+shell: sh
+tag: git
+
+aim: Edit a file at an uncommited change in a git repo
+cmd: git jump 
+note: You might need to copy the script from `/usr/share/git/git-jump/`
+cmd: /usr/share/git/git-jump/git-jump ~/.local/bin/
+bin: git
+shell: sh
+tag: comfy
 
 aim: Find repeating words in a text file
 cmd: grep -r --color=always -E '(\b\S+\b)\s+\b\1\b'"$1"
@@ -702,6 +730,12 @@ tag: qr
 tag: wifi
 tag: network
 
+aim: Reset a broken terminal without losing text
+cmd: reset -w
+bin: reset
+tag: system
+shell: sh
+
 aim: Change a CSV header
 cmd: from=number
 + to=quantity
@@ -906,37 +940,3 @@ bin: vim
 tag: markdown
 tag: writing
 tag: TUI
-
-aim: Convert .mov to .mp4
-cmd: ffmpeg -i "${input}.mov" -c:v libx264 -crf 23 -preset medium -c:a aac "${output}.mp4"
-bin: ffmpeg
-tag: vision
-tag: video
-shell: sh
-
-aim: Find broken links
-cmd: find -L ${path} -type l 
-bin: find
-tag: maintenance
-
-aim: Reset a broken terminal without losing text
-cmd: reset -w
-bin: reset
-tag: system
-shell: sh
-
-aim: Push the current branch to all remotes
-cmd: remotes="$(git remote show)"
-+ git config remotes.all "$remotes" 
-+ git push all
-bin: git
-shell: sh
-tag: git
-
-aim: Edit a file at an uncommited change in a git repo
-cmd: git jump 
-note: You might need to copy the script from `/usr/share/git/git-jump/`
-cmd: /usr/share/git/git-jump/git-jump ~/.local/bin/
-bin: git
-shell: sh
-tag: comfy
