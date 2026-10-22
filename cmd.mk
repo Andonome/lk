@@ -6,7 +6,6 @@ else
   manupdate = makewhatis ${HOME}/.local/share/man
 endif
 
-
 .PHONY: query
 query: db.rec ## Search the setup notes
 	passes=0 count=0; until [ "$$count" -eq "1" ] || [ "$$passes" -gt 2 ] ; do \
@@ -54,6 +53,6 @@ install: $(local_mans) ${HOME}/.local/bin/lk ## Install local man pages
 
 .PHONY: uninstall
 uninstall: ## Remove local man pages
-	$(RM) $(local_mans) ${HOME}/.local/bin/lk
+	$(RM) $(wildcard $(local_mans) ${HOME}/.local/bin/lk )
 	$(manupdate)
 
