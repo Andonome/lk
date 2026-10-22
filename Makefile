@@ -23,6 +23,7 @@ spill_contents = sed -e '1,/---/d'
 %/:
 	mkdir $@
 	echo '*' > $@.gitignore
+	$(info Created $@)
 
 include pub.mk
 include cmd.mk

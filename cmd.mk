@@ -46,6 +46,7 @@ ${HOME}/.local/bin/lk: db.rec
 	$(MAKE) --no-print-directory search-function >> $@
 	$(MAKE) --no-print-directory note-function >> $@
 	echo '[ -z "$$@" ] && lk || lkn ' >> $@
+	$(info Installed at: $@ )
 
 .PHONY: install
 install: $(local_mans) ${HOME}/.local/bin/lk ## Install local man pages
