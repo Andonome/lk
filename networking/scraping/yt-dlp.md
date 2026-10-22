@@ -4,6 +4,7 @@ tags:
 - scraping
 - video
 ---
+
 Install `yt-dlp`.
 
 ```sh
@@ -13,7 +14,7 @@ yt-dlp --write-auto-sub ${url}
 It will default to English, but you can specify another language with the flag --sub-lang:
 
 ```sh
-youtube-dl --sub-lang sv --write-auto-sub ${url}
+yt-dlp --sub-lang sv --write-auto-sub ${url}
 ```
 
 You can list all available subtitles with:
@@ -28,7 +29,3 @@ It's also possible to skip the video and only download the subtitle if you add t
 yt-dlp --sub-lang sv --write-auto-sub --skip-download ${url}
 ```
 
-## Alternative
-
-Try `yt-dlp` for some additional features and workarounds.
-It uses the same flags as yt-dlp.
