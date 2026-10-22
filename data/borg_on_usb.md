@@ -8,22 +8,19 @@ requires:
 - hardware/mount_disk.md
 ---
 
-Mount the USB stick and create a password in `pass`.
+Mount the USB stick and make a directory for the backup.  Create a password in
+`pass` and select the directories to back up with `borg`.
 
 ```sh
 usbpath=/mnt/usb
 backup_directory="${usbpath}/borg"
-```
-
-
-```sh
 export BORG_PASSCOMMAND="pass ${borgpass}"
+targets='~/dl ~/img ~/pro' # Select directories to back up
 ```
 
-
+Initiate the `borg` repo.
 
 ```sh
-targets='~/dl ~/img ~/pro' # Select directories to back up
 
 borg init --encryption=repokey ${backup_directory}
 
