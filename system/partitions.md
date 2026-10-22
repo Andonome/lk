@@ -11,13 +11,10 @@ su root
 fdisk /dev/sda
 ```
 
-- m for help.
-
-- n to make a partition.
-
-- t to mark the partition type (see IDs below).
-
-- w to write the changes to the disk.
+- `m` for help.
+- `n` to make a partition.
+- `t` to mark the partition type (see IDs below).
+- `w` to write the changes to the disk.
 
 Note the asterisk marking the boot partition.
 
