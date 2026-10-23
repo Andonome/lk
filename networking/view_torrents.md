@@ -3,7 +3,7 @@ title: View Torrents
 tags: 
 - data
 - transmission
-- torrenting
+- torrent
 ---
 
 
