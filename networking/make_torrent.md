@@ -31,11 +31,14 @@ sudo chown -R :transmission ${dir}
 transmission-create $(pwd)/${dir}
 ```
 
-Add a tracker to the torrent, to make sure others can find you easily:
+Add a tracker to the torrent, to help others can find you easily:
 
 ```sh
 transmission-create --comment 'My Memes collection' -t 'udp://tracker.publicbt.com:80' -t 'udp://tracker.openbittorrent.com:80' --anonymize Memes
 ```
+
+Trackers are not required, but without them it can take a long time for a 
+client to find the torrent.
 
 Without the `--anonymize` flag, the torrent file output will have a 'created by' and 'created date'.
 
