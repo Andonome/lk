@@ -8,6 +8,8 @@ requires:
 - hardware/mount_disk.md
 ---
 
+Install `borg` and `python-llfuse`.
+
 Mount the USB stick and make a directory for the backup.  Create a password in
 `pass` and select the directories to back up with `borg`.
 
@@ -41,7 +43,17 @@ more ${backup_directory}/config
 Check the backups:
 
 
-```sh
+```bash
 borg list ${backup_directory}
+borg list ${backup_directory} | head -1 | awk '{print $1}'
+backup="!!"
 
+mnt=borg_backup_mount
+mkdir "${mnt}"
+borg mount "${backup}" "${mnt}"
+ls "${mnt}"
+borg umount "${mnt}"
+rmdir "${mnt}"
 ```
+
+
