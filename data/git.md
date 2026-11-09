@@ -5,13 +5,12 @@ tags:
 - setup
 ---
 
+You need to set up git once on each computer:
 
 ```sh
 git config --global user.email "${email}"
-```
-
-```sh
 git config --global user.name "${name}"
+git config --global pull.rebase true
 ```
 
 Decide on algorithm:
@@ -24,7 +23,9 @@ Decide on algorithm:
 Start a git in directory `${DIR}`:
 
 ```sh
-git init --object-format=${hash} ${DIR}
+hash=sha1
+dir=recipes
+git init --object-format=${hash} ${dir}
 cd ${dir}/
 ```
 
@@ -57,6 +58,7 @@ Check your history:
 
 ```sh
 git log
+git show HEAD
 ```
 
 # Remotes
