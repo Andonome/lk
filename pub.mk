@@ -1,6 +1,4 @@
 
-markdown = $(wildcard */*.md */*/*.md)
-
 publish = $(patsubst %, .publish/%, $(markdown))
 
 .dbs/requires.fmt: | .dbs/
