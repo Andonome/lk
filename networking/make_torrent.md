@@ -6,8 +6,6 @@ tags:
 requires: networking/transmission.md
 ---
 
-
-
 Check the name of the user running transmission.
 
 
@@ -44,18 +42,11 @@ Without the `--anonymize` flag, the torrent file output will have a 'created by'
 
 ## Open Trackers
 
-- udp://tracker.opentrackr.org:1337/announce
-- udp://opentracker.i2p.rocks:6969/announce
-- https://opentracker.i2p.rocks:443/announce
-- udp://9.rarbg.com:2810/announce
-- udp://open.demonii.com:1337/announce
-- udp://exodus.desync.com:6969/announce
-- udp://tracker.moeking.me:6969/announce
-- https://tracker.tamersunion.org:443/announce
-- udp://tracker1.bt.moack.co.kr:80/announce
-- udp://tracker.bitsearch.to:1337/announce
-- udp://p4p.arenabg.com:1337/announce
-- udp://explodie.org:6969/announce
+- <http://tracker2.dler.org:80/announce>
+- <udp://tracker.peerfect.org:6969/announce>
+- <http://tracker2.dler.org:80/announce>
+
+[List of trackers](https://raw.githubusercontent.com/ngosang/trackerslist/master/trackers_best.txt)
 
 ## Verify
 
@@ -78,6 +69,7 @@ If transmission cannot find it, then tell it where to find the torrent:
 ```sh
 transmission-remote -t "$number" --find "$(pwd)"
 ```
+
 ...and of course, make sure the permissions allow transmission to see the target.
 
 
