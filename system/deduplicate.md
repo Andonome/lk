@@ -12,12 +12,12 @@ tags:
 Ask if a directory has duplicates (`rdfind` will not delete anything):
 
 ```sh
-rdfind $dir
+nice rdfind $dir
 $EDITOR results.txt
 ```
 
 Replace the duplicated files with [hard links](system/hard_links.md).
 
 ```sh
-rdfind -makehardlinks true $dir
+nice rdfind -makehardlinks true $dir
 ```

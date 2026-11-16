@@ -8,7 +8,7 @@ tags:
 ```sh
 su root
 cd /var/cache/
-dd if=/dev/zero of=swapfile bs=1K count=4M
+ionice dd if=/dev/zero of=swapfile bs=1K count=4M
 ```
 
 This creates a swapfile of (1k x 4M) 4 Gigs.

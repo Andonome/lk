@@ -26,7 +26,7 @@ Initiate the `borg` repo.
 
 borg init --encryption=repokey ${backup_directory}
 
-borg create --filter AME --verbose --stats  \
+ionice borg create --filter AME --verbose --stats  \
 ${backup_directory}::'{hostname}-{now}' ${targets}
 
 borg prune ${backup_directory} --list --glob-archives '{hostname}-*' \

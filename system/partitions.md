@@ -29,7 +29,7 @@ Note the asterisk marking the boot partition.
 
 fdisk will not help with a GPT formatted drive.  For this, use gdisk, which is mostly the same.
 
-Now that we have a partition, we can make it into a fileSystem.  Most will use:
+Now that we have a partition, we can make it into a file-system.  Most will use:
 
 ```sh
 mkfs -t ext4 /dev/sdc1
@@ -41,7 +41,7 @@ or if you're making a swap partition, you can use:
 mkswap /dev/sdb2
 ```
 
-or for the reiser fileSystem, we can use:
+or for the reiser file-system, we can use:
 
 ```sh
 mkreiserfs /dev/sdc2
@@ -79,7 +79,7 @@ or  divide things by inode - the thing which records where files are?
 df -i
 ```
 
-Examine a fileSystem with:
+Examine a file-system with:
 
 ```sh
 dumpe2fs /dev/sda1 | less
@@ -105,7 +105,7 @@ tune2fs -L new_name /dev/sdb3
 ```
 
 # Repair
-Start by unmounting the fileSystem.
+Start by unmounting the file-system.
 
 ```sh
 umount /dev/sdc1
@@ -146,11 +146,11 @@ mount -a /dev/sdc1 /mnt/stick
 # File Systems
 xfs and zfs can only be expanded.
 
-# Shrink FileSystem
+# Shrink File-System
 
 NB: When I followed these instructions, the process destroyed my data. Seemed fine on the YouTube video.
 
-Check the fileSystem's health:
+Check the file-system's health:
 
 ```sh
 e2fsck -f /dev/sdb1
@@ -172,7 +172,7 @@ fdisk /dev/sdb
 d
 ```
 
-Then make a new fileSystem of the desired type with:
+Then make a new file-system of the desired type with:
 
 ```sh
 n

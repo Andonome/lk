@@ -9,8 +9,9 @@ requires:
 
 Check before you start:
 
-- you have a normally running site on nginx already.
-- your server has the directory `/etc/nginx/sites-enabled/` enabled in the nginx config.
+- you have a normally running site on `nginx` already.
+- your server has the directory `/etc/nginx/sites-enabled/` enabled in the 
+  `nginx` config.
 
 ## Installation and Service
 
@@ -50,7 +51,8 @@ htpasswd -nb ${username} "${pass}" | sudo tee -a /etc/radicale/users
 echo "Your username is ${username}"
 echo "Your password is ${pass}"
 ```
-Right now, you can't sign into the server except through the localhost, which is pointless.
+Right now, you can't sign into the server except through the `localhost`, which 
+is pointless.
 So now we add a subdomain to `nginx`.
 
 ```nginx
@@ -104,7 +106,7 @@ sudo sed -i "s/DOMAIN/${domain}/g" /etc/nginx/sites-available/radicale
 
 (optional: replace that `cal.` prefix with anything else)
 
-Check nginx is happy:
+Check `nginx` is happy:
 
 ```sh
 sudo nginx -t
