@@ -16,7 +16,7 @@ You can play with a board games database from boardgamegeek.com.
 mkdir board_games
 cd board_games
 curl -Lo bg.zip 'https://www.kaggle.com/api/v1/datasets/download/threnjen/board-games-database-from-boardgamegeek'
-unzip bg.zip
+ionice unzip bg.zip
 ```
 
 The header line shows fields with a bunch of colons, which will confused `recutils`, so we'll have to get rid of them.
