@@ -17,7 +17,6 @@ content: #!/bin/sh
 + no_tasks="$(task count)"
 + 
 + uuids="$(task uuids)"
-+ #uuids="$(shuf -e $(task uuids) | head -n 80 )"
 + 
 + cat > "$recfile" << EOF
 + %rec: Task
