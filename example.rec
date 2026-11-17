@@ -1,5 +1,9 @@
 %rec: example
 %key: name
+%mandatory: content
+%type: bin line
+%type: tag line
+%type: filename line
 
 name: Convert taskwarrior database to a recfile
 filename: task2rec.sh
