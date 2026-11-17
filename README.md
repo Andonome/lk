@@ -32,10 +32,14 @@ For longer articles, run `make article`.
 
 ## State Knowledge Dependencies Up-Front
 
-Articles should never link to other resources after at the start.
-If the article assumes an understanding of GPG keys, then it should say that at the top.
-People should be able to read documentation from the beginning, then keep going until the end, and then stop.
+People should be able to read documentation from the beginning, then keep going 
+until the end, and then stop.
 Setup guides should not send the reader on a detour through labyrinths of links.
+Therefore, all links to 'things you should know' must come at the start and not 
+half-way through the article.
+
+If the reader needs to use a password-manager, then it should be stated 
+up-front.
 
 ## No History, No Context
 
