@@ -34,7 +34,12 @@ content: #!/bin/sh
 + EOF
 + 
 + echo "$uuids" | while read id ; do
-+     task $id export +     | mlr --ijson --orecutils cat +     | sed '/^\w\+\.\w\+: /s/\.\w\+:/:/; s/\.\w\./_/' +     | recsel +     | sed '1i\ ' +     | tee -a "$recfile"
++     task $id export \ 
++     | mlr --ijson --orecutils cat \ 
++     | sed '/^\w\+\.\w\+: /s/\.\w\+:/:/; s/\.\w\./_/' \ 
++     | recsel\ 
++     | sed '1i\ '\ 
++     | tee -a "$recfile"
 + done
 + 
 + cat >> "$recfile" << EOF
@@ -45,7 +50,8 @@ content: #!/bin/sh
 +  
 + EOF
 + 
-+ recsel "$recfile" -t Task -e 'annotations_entry != ""' +     -p 'uuid:task,annotations_entry:entry,annotations_description:description' | tee -a "$recfile"
++ recsel "$recfile" -t Task -e 'annotations_entry != ""' \ 
++     -p 'uuid:task,annotations_entry:entry,annotations_description:description' | tee -a "$recfile"
 + 
 + recset -t Task "$recfile" -f annotations_entry -d
 + recset -t Task "$recfile" -f annotations_description -d
@@ -548,11 +554,11 @@ content: #!/bin/sh
 +     m) #^# -m Show a dangling note
 +     linkless="$(recsel "$db" -t note -e "link = ''" -CP id | sort -R )"
 +     for id in $linkless ; do
-+         [ "$(recsel "$db" -t note -e "link = '${id}'" -c )" -gt 0 ] \
++         [ "$(recsel "$db" -t note -e "link = '${id}'" -c )" -gt 0 ] \ 
 +             && continue
-+         recsel "$db" -t note -e "id = $id" | recfmt "$format" \
-+             | lowdown -stterm \
-+             | less -RFi \
++         recsel "$db" -t note -e "id = $id" | recfmt "$format" \ 
++             | lowdown -stterm \ 
++             | less -RFi \ 
 +         && break
 +     done
 +     exit 0
@@ -699,8 +705,8 @@ content: #!/bin/sh
 +     [ -n "$parser" ] || {
 +         echo Install offpunk
 +         exit 2
-+     } \
-+     && netcache "$url" >/dev/null \
++     } \ 
++     && netcache "$url" >/dev/null \ 
 +     || echo "No article copied"
 + }
 + 
