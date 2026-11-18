@@ -946,3 +946,11 @@ bin: vim
 tag: markdown
 tag: writing
 tag: TUI
+
+aim: Stop git annex making submodules read-only
+cmd: git submodule foreach --recursive git annex view && git config set core.sharedRepository true 
+bin: git
+bin: git-annex
+shell: sh
+tag: git
+tag: data
