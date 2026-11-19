@@ -954,3 +954,12 @@ bin: git-annex
 shell: sh
 tag: git
 tag: data
+
+aim: View all git tags
+cmd: git tag -n
+bin: git
+note: This shows the first line of the annotation.  You can see the full annotation with `git show ${tag}`.
+cmd: git show --no-patch  --format='' $(git tag -l --sort=-creatordate)
++ git show --color --no-patch  --format='' $(git tag -l --sort=-creatordate) | $PAGER
+shell: sh
+tag: git
