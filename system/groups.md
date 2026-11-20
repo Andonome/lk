@@ -6,7 +6,7 @@ tags:
 
 Check which groups you are in, and which are available:
 
-```sh
+```bash
 groups
 cat /etc/group
 column -ts: /etc/group

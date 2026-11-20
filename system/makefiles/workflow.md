@@ -10,7 +10,7 @@ requires:
 Makefiles can quickly become large and confusing.
 I found these steps keep them easy to understand later and quick to write.
 
-```sh
+```bash
 mkdir blog.rs
 cd !$
 for x in one two three

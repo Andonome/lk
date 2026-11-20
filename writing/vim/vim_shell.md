@@ -9,8 +9,10 @@ required: writing/vim/windows.md
 Make an empty script:
 
 
-```sh
-echo '#!/bin/sh' > ${file}.sh chmod u+x !$ vim !$
+```bash
+echo '#!/bin/sh' > ${file}.sh
+chmod u+x !$
+vim !$
 ```
 
 Open a terminal in Vim:

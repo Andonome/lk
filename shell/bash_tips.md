@@ -10,7 +10,7 @@ tags:
 
 Refer to 'that last thing', and 'the first thing':
 
-```sh
+```bash
 fortune -l > file1
 cat !$  | tr -d u > file2
 cat file1 !$
@@ -19,7 +19,7 @@ diff !^ !$
 
 **NB:** this can go wrong:
 
-```sh
+```bash
 ls -l file1 file2
 cat !^
 ```

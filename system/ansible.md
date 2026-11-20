@@ -21,7 +21,7 @@ ansible --module-name=ping localhost
 
 Ansible takes a lot of information about each machine during setup:
 
-```sh
+```bash
 TMP=$(mktemp)
 ansible --module-name=setup localhost  | tee $TMP
 less !$
@@ -63,11 +63,11 @@ ansible-playbook t.yaml -i hosts.yaml -e "ansible_become_password=${password}"
 If you have a password store, like `pass`, you can put that in a script:
 
 
-```sh
+```bash
 echo "#!/bin/sh
 pass $HOSTNAME" > pass.sh
 
-chmod u+x !$
+chmod u+x $_
 
 ansible --become --module-name=pacman --args "upgrade=true" localhost
 ```
